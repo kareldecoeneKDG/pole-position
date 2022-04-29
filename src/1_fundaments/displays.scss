@@ -1,0 +1,15 @@
+@import './spacers';
+
+.desktop {
+    display: none !important;
+}
+
+@media only screen and (min-width: $desktop-1) {
+    .mobile {
+        display: none;
+    }
+    
+    .desktop {
+        display: block !important;
+    }
+}
