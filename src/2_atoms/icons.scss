@@ -1,0 +1,21 @@
+@import '../1_fundaments/fundaments';
+
+.button {
+    .first-chevron {
+        margin-left: $icon-margin-button;
+    }
+
+    &.button-primary, &.button-secondary {
+        &:hover {
+            .first-chevron {
+                margin-left: $icon-margin-button-hover;
+            }
+        }
+    }
+}
+
+.tag {
+    i {
+        margin-right: $icon-margin-button;
+    }
+}
