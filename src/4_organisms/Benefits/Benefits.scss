@@ -1,0 +1,56 @@
+@import "../../1_fundaments/fundaments";
+@import "../../2_atoms/atoms";
+
+.benefits {
+    text-align: center;
+
+    &__h2 {
+        margin-bottom: 10px;
+    }
+
+    &__p {
+        margin-bottom: 50px;
+        color: $neutrals-700;
+    }
+
+    &__items {
+        margin-bottom: 50px;
+
+        .benefit {
+            background-color: $neutrals-200;
+            border-radius: 20px;
+            padding: 20px;
+            text-align: left;
+            margin-bottom: 20px;
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+
+            &__icon-container {
+                width: 40px;
+                height: 40px;
+                background-color: $primary-100;
+                border-radius: 10px;
+                text-align: center;
+                margin-bottom: 10px;
+
+                i {
+                    font-size: 16px;
+                    line-height: 16px;
+                    position: relative;
+                    top: 11px;
+                    color: $primary-600;
+                }
+            }
+
+            &__title {
+                margin-bottom: 10px;
+            }
+
+            &__p {
+                color: $neutrals-700;
+            }
+        }
+    }
+}

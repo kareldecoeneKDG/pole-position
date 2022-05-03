@@ -1,6 +1,10 @@
 @import '../1_fundaments/fundaments';
 
 .button {
+    i {
+        font-size: 12px;
+    }
+
     .first-chevron {
         margin-left: $icon-margin-button;
     }

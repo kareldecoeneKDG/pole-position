@@ -4,7 +4,17 @@ import styled, { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme, GlobalStyles } from "./themes.js";
 import { useTranslation } from "react-i18next";
 import i18n from "i18next";
-//import cookies from "js-cookie";
+
+import Nav from './4_organisms/Nav/Nav';
+import Header from './4_organisms/Header/Header';
+import LatestNews from './4_organisms/LatestNews/LatestNews';
+import Benefits from './4_organisms/Benefits/Benefits';
+import Platform from './4_organisms/Platform/Platform';
+
+import './4_organisms/container.scss';
+import './4_organisms/sections.scss';
+
+
 const cookies = require('js-cookie');
 
 //for the light/dark theme
@@ -31,7 +41,7 @@ const languages = [
 function App() {
     const currentLanguageCode = cookies.get('i18next') || 'en'
     const currentLanguage = languages.find(element => element.code === currentLanguageCode)
-    
+
     const { t } = useTranslation()
 
     const releaseDate = new Date('2021-03-07')
@@ -53,16 +63,22 @@ function App() {
         <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
             <GlobalStyles />
             <StyledApp>
+                {/* <div className="container"> */}
+
                 <div>
-                    <div className="dropdown">
-                        <button id="dropdownMenuButton1" type="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown button</button>
+                    <Nav />
+                    <Header />
+                    <LatestNews />
+                    <Benefits />
+                    <Platform />
+
+                    {/*<div className="dropdown">
                         <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                             <li><span>{t('language')}</span></li>
                             {languages.map(({ code, name, country_code }) => (
                                 <li key={country_code}>
                                     <button onClick={() => i18n.changeLanguage(code)}
                                     disabled={code === currentLanguageCode}>
-                                        {/* <span className={`flag-icon flag-icon-${country_code}`}></span> */}
                                         {name}
                                     </button>
                                 </li>
@@ -75,9 +91,10 @@ function App() {
                     <p>{t('days_since_release', { number_of_days })}</p>
 
                     <Test />
+                    
+                    <button onClick={() => themeToggler()}>Change theme</button>
+                    */}
                 </div>
-
-                <button onClick={() => themeToggler()}>Change theme</button>
             </StyledApp>
         </ThemeProvider>
     );

@@ -1,0 +1,39 @@
+@import "../../1_fundaments/fundaments";
+@import "../../2_atoms/atoms";
+
+.latestnews {
+    background-color: $neutrals-200;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+
+    h2 {
+        margin-bottom: 30px;
+    }
+
+    &__articles {
+        justify-content: flex-start;
+        gap: 20px;
+        margin-bottom: 50px;
+
+        &__article {
+            width: 100%;
+            height: 209px;
+            border-radius: 30px;
+            position: relative;
+
+            background-image: url(./article1.jpeg);
+            background: linear-gradient(180deg, #9999A1 0%, rgba(0, 0, 0, 0.1) 100%), url(./article1.jpeg) no-repeat;
+            background-size: cover;
+
+            h4 {
+                position: absolute;
+                bottom: 30px;
+                left: 30px;
+                text-align: left;
+                color: $neutrals-100;
+                width: calc(100% - 60px);
+            }
+        }
+    }
+}
