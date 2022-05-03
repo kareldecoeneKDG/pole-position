@@ -1,0 +1,56 @@
+@import "../../1_fundaments/fundaments";
+@import "../../2_atoms/atoms";
+
+.howsignup {
+    background-color: $neutrals-100;
+    text-align: center;
+
+    &__h2 {
+        margin-bottom: 10px;
+    }
+
+    &__p {
+        color: $neutrals-700;
+        margin-bottom: 50px;
+    }
+
+    &__steps {
+        margin-bottom: 50px;
+        
+        .step {
+            text-align: left;
+            background-color: $neutrals-200;
+            border-radius: 20px;
+            padding: 20px;
+            margin-bottom: 20px;
+            position: relative;
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+
+            &__title {
+                color: $neutrals-900;
+                margin-bottom: 10px;
+            }
+
+            &__p {
+                color: $neutrals-700;
+            }
+
+            &__number {
+                font-family: $primary-font;
+                font-size: 75px;
+                font-weight: 500;
+                line-height: 59px;
+
+                position: absolute;
+                top: 20px;
+                right: 20px;
+
+                color: $primary-600;
+                opacity: 15%;
+            }
+        }
+    }
+}

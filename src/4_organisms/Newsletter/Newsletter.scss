@@ -1,0 +1,72 @@
+@import "../../1_fundaments/fundaments";
+@import "../../2_atoms/atoms";
+
+.newsletter {
+    background-color: $neutrals-200;
+
+    &__content {
+        background-color: $neutrals-100;
+        border-radius: 20px;
+
+        &__img {
+            height: 235px;
+            object-fit: cover;
+            border-radius: 20px 20px 0px 0px;
+            margin-bottom: 30px;
+        }
+
+        &__container {
+            padding: 0px 20px;
+        }
+
+        &__title {
+            margin-bottom: 10px;
+        }
+
+        &__p {
+            color: $neutrals-700;
+            margin-bottom: 30px;
+        }
+
+        .form {
+            width: 100%;
+            margin-bottom: 50px;
+
+            &__input {
+                width: 100%;
+                border-radius: 10px;
+                border: 1px solid $neutrals-600;
+
+                font-family: $secondary-font;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 16px;
+
+                padding: 14px 20px;
+                margin-bottom: 10px;
+            }
+        }
+
+        .socials {
+            gap: 7px;
+            justify-content: flex-start;
+            padding-bottom: 30px;
+
+            &__item {
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                background-color: $primary-600;
+                text-align: center;
+
+                i {
+                    font-size: 20px;
+                    line-height: 20px;
+                    position: relative;
+                    top: 15px;
+                    color: $neutrals-100;
+                }
+            }
+        }
+    }
+}
