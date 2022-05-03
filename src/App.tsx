@@ -1,27 +1,32 @@
+// Core React
 import React, { useState, useEffect } from 'react';
-import Test from './1_fundaments/test/Test';
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+
+// Light/dark theme
 import styled, { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme, GlobalStyles } from "./themes.js";
+
+// Multilanguage
 import { useTranslation } from "react-i18next";
 import i18n from "i18next";
 
+// Components
 import Nav from './4_organisms/Nav/Nav';
-import Header from './4_organisms/Header/Header';
-import LatestNews from './4_organisms/LatestNews/LatestNews';
-import Benefits from './4_organisms/Benefits/Benefits';
-import Platform from './4_organisms/Platform/Platform';
-import HowSignUp from './4_organisms/HowSignUp/HowSignUp';
-import Newsletter from './4_organisms/Newsletter/Newsletter';
 import Footer from './4_organisms/Footer/Footer';
 
+// Pages
+import HomePage from './5_pages/HomePage/HomePage';
+import Dashboard from './5_pages/Dashboard/Dashboard';
+
+// Global styles
 import './4_organisms/container.scss';
 import './4_organisms/sections.scss';
 import './3_molecules/socials.scss';
 
-
+// Multilanguage cookies
 const cookies = require('js-cookie');
 
-//for the light/dark theme
+// Light/dark theme
 const StyledApp = styled.div`
 
     color: ${(props) => props.theme.fontColor};
@@ -64,22 +69,23 @@ function App() {
     };
 
     return (
-        <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
-            <GlobalStyles />
-            <StyledApp>
-                {/* <div className="container"> */}
+        <Router>
+            <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
+                <GlobalStyles />
+                <StyledApp>
+                    {/* <div className="container"> */}
 
-                <div>
-                    <Nav />
-                    <Header />
-                    <LatestNews />
-                    <Benefits />
-                    <Platform />
-                    <HowSignUp />
-                    <Newsletter />
-                    <Footer />
+                    <div>
+                        <Nav />
 
-                    {/*<div className="dropdown">
+                        <Routes>
+                            <Route path="/" element={<HomePage />} />
+                            <Route path="/dashboard" element={<Dashboard />} />
+                        </Routes>
+
+                        <Footer />
+
+                        {/*<div className="dropdown">
                         <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                             <li><span>{t('language')}</span></li>
                             {languages.map(({ code, name, country_code }) => (
@@ -101,9 +107,10 @@ function App() {
                     
                     <button onClick={() => themeToggler()}>Change theme</button>
                     */}
-                </div>
-            </StyledApp>
-        </ThemeProvider>
+                    </div>
+                </StyledApp>
+            </ThemeProvider>
+        </Router>
     );
 }
 

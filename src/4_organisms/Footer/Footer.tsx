@@ -5,6 +5,8 @@ import logoFooter from './logo-footer-mobile.png';
 function Footer() {
     return (
         <footer className="footer mobile">
+
+            {/* LOGO + SCROLLUP */}
             <div className="top flex">
                 <img className="logoFooter" src={logoFooter} alt="logo Pole Position footer" />
 
