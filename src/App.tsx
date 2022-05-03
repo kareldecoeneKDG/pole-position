@@ -12,9 +12,11 @@ import Benefits from './4_organisms/Benefits/Benefits';
 import Platform from './4_organisms/Platform/Platform';
 import HowSignUp from './4_organisms/HowSignUp/HowSignUp';
 import Newsletter from './4_organisms/Newsletter/Newsletter';
+import Footer from './4_organisms/Footer/Footer';
 
 import './4_organisms/container.scss';
 import './4_organisms/sections.scss';
+import './3_molecules/socials.scss';
 
 
 const cookies = require('js-cookie');
@@ -75,6 +77,7 @@ function App() {
                     <Platform />
                     <HowSignUp />
                     <Newsletter />
+                    <Footer />
 
                     {/*<div className="dropdown">
                         <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
