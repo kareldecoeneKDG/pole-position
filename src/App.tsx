@@ -2,10 +2,6 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
-// Light/dark theme
-import styled, { ThemeProvider } from "styled-components";
-import { lightTheme, darkTheme, GlobalStyles } from "./themes.js";
-
 // Multilanguage
 import { useTranslation } from "react-i18next";
 import i18n from "i18next";
@@ -22,16 +18,10 @@ import Dashboard from './5_pages/Dashboard/Dashboard';
 import './4_organisms/container.scss';
 import './4_organisms/sections.scss';
 import './3_molecules/socials.scss';
+import './3_molecules/lightDarkTheme.scss';
 
 // Multilanguage cookies
 const cookies = require('js-cookie');
-
-// Light/dark theme
-const StyledApp = styled.div`
-
-    color: ${(props) => props.theme.fontColor};
-
-`;
 
 const languages = [
     {
@@ -62,30 +52,63 @@ function App() {
         document.title = t('app_title');
     }, [currentLanguage, t])
 
-    const [theme, setTheme] = useState("light");
 
-    const themeToggler = () => {
-        theme === "light" ? setTheme("dark") : setTheme("light");
-    };
+
+    // Light/dark theme
+    let theme = localStorage.getItem('data-theme');
+
+    const changeThemeToDark = () => {
+        document.documentElement.setAttribute("data-theme", "dark") // set theme to dark
+        localStorage.setItem("data-theme", "dark") // save theme to local storage
+    }
+
+    const changeThemeToLight = () => {
+        document.documentElement.setAttribute("data-theme", "light") // set theme light
+        localStorage.setItem("data-theme", 'light') // save theme to local storage
+    }
+
+    // Get the element based on ID
+    const checkbox = document.getElementById("switch");
+
+    // Apply retrived them to the website
+    checkbox?.addEventListener('change', () => {
+        //let theme = localStorage.getItem('data-theme'); // Retrieve saved them from local storage
+
+        if (theme === 'dark') {
+            theme = 'light';
+            changeThemeToLight()
+            console.log('test');
+        } else {
+            theme = 'dark';
+            changeThemeToDark()
+            console.log('test2');
+        }
+    });
+
+
 
     return (
         <Router>
-            <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
+            {/*<ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
                 <GlobalStyles />
-                <StyledApp>
-                    {/* <div className="container"> */}
+                <StyledApp>*/}
+            {/* <div className="container"> */}
 
-                    <div>
-                        <Nav />
+            <div>
+                <Nav />
 
-                        <Routes>
-                            <Route path="/" element={<HomePage />} />
-                            <Route path="/dashboard" element={<Dashboard />} />
-                        </Routes>
+                <div className="toggle-container">
+                    <input type="checkbox" id="switch" name="theme" /><label htmlFor="switch">Toggle</label>
+                </div>
 
-                        <Footer />
+                <Routes>
+                    <Route path="/" element={<HomePage />} />
+                    <Route path="/dashboard" element={<Dashboard />} />
+                </Routes>
 
-                        {/*<div className="dropdown">
+                <Footer />
+
+                {/*<div className="dropdown">
                         <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                             <li><span>{t('language')}</span></li>
                             {languages.map(({ code, name, country_code }) => (
@@ -107,9 +130,9 @@ function App() {
                     
                     <button onClick={() => themeToggler()}>Change theme</button>
                     */}
-                    </div>
-                </StyledApp>
-            </ThemeProvider>
+            </div>
+            {/* </StyledApp>
+            </ThemeProvider> */}
         </Router>
     );
 }

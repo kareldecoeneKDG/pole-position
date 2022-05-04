@@ -1,6 +1,7 @@
 @import "../../1_fundaments/fundaments";
 @import "../../2_atoms/atoms";
 
+// Light mode
 .footer {
     padding: 50px 20px 30px 20px;
     background-color: $neutrals-900;
@@ -64,5 +65,12 @@
 
     .copyright {
         text-align: center;
+    }
+}
+
+// Dark mode
+@media (prefers-color-scheme: dark) {
+    .footer {
+        //background-color: $primary-600;
     }
 }
