@@ -1,9 +1,10 @@
 import React from 'react';
+import SubNav from '../../4_organisms/SubNav/SubNav';
 
 function Dashboard() {
     return (
-        <div>
-            Dashboard
+        <div className="dashboard">
+            <SubNav />
         </div>
     );
 }
