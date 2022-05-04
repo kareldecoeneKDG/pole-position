@@ -15,10 +15,7 @@ import HomePage from './5_pages/HomePage/HomePage';
 import Dashboard from './5_pages/Dashboard/Dashboard';
 
 // Global styles
-import './4_organisms/container.scss';
-import './4_organisms/sections.scss';
-import './3_molecules/socials.scss';
-import './3_molecules/lightDarkTheme.scss';
+import './style.scss';
 
 // Multilanguage cookies
 const cookies = require('js-cookie');
@@ -97,10 +94,9 @@ function App() {
             <div>
                 <Nav />
 
-                {/* <div className="toggle-container">
+                {/*<div className="toggle-container">
                     <input type="checkbox" id="switch" name="theme" /><label htmlFor="switch">Toggle</label>
-                    </div>
-                */}
+            </div>*/}
 
                 <Routes>
                     <Route path="/" element={<HomePage />} />

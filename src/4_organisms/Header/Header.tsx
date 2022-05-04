@@ -1,5 +1,5 @@
 import React from 'react';
-import './Header.scss';
+//import './Header.scss';
 import headerLogo from './header-logo.png';
 import placeholder from './placeholder.png';
 import backgroundRectangles from './bg-rectangles.png';

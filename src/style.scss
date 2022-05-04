@@ -1,0 +1,40 @@
+/* FUNDAMENTS */
+@import './1_fundaments/colors';
+@import './1_fundaments/displays';
+@import './1_fundaments/flexbox';
+@import './1_fundaments/fonts';
+@import './1_fundaments/reset';
+@import './1_fundaments/spacers';
+
+
+
+/* ATOMS */
+@import './2_atoms/buttons';
+@import './2_atoms/icons';
+@import './2_atoms/lines';
+@import './2_atoms/paragraphs';
+@import './2_atoms/tags';
+@import './2_atoms/teams';
+@import './2_atoms/titles';
+
+
+
+/* MOLECULES */
+@import './3_molecules/socials';
+@import './3_molecules/lightDarkTheme';
+
+
+
+/* ORGANISMS */
+@import './4_organisms/container';
+@import './4_organisms/sections';
+
+@import './4_organisms/Nav/Nav';
+@import './4_organisms/SubNav/SubNav';
+@import './4_organisms/Header/Header';
+@import './4_organisms/LatestNews/LatestNews';
+@import './4_organisms/Benefits/Benefits';
+@import './4_organisms/Platform/Platform';
+@import './4_organisms/HowSignUp/HowSignUp';
+@import './4_organisms/Newsletter/Newsletter';
+@import './4_organisms/Footer/Footer';

@@ -1,5 +1,4 @@
 import React from 'react';
-import './Newsletter.scss';
 import newsletterImage from './article1.jpeg';
 
 function Newsletter() {

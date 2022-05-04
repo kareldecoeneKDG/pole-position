@@ -1,6 +1,5 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, NavLink } from "react-router-dom";
-import './SubNav.scss';
 
 const subNav = document.querySelector(".subnav");
 const items = document.querySelectorAll(".subnav__list__item");

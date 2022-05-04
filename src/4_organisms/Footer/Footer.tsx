@@ -1,5 +1,4 @@
 import React from 'react';
-import './Footer.scss';
 import logoFooter from './logo-footer-mobile.png';
 
 function Footer() {

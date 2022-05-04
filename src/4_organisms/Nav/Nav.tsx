@@ -1,5 +1,5 @@
 import React from 'react';
-import './Nav.scss';
+//import './Nav.scss';
 import logo from './logo-hollow.png';
 
 function Nav() {

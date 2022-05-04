@@ -6,7 +6,7 @@ import { initReactI18next } from "react-i18next";
 import LanguageDetector from 'i18next-browser-languagedetector';
 import HttpApi from 'i18next-http-backend';
 
-import './index.scss';
+//import './index.scss';
 import App from './App';
 
 i18n
