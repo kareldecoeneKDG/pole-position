@@ -1,4 +1,6 @@
 /* FUNDAMENTS */
+
+// global
 @import './1_fundaments/colors';
 @import './1_fundaments/displays';
 @import './1_fundaments/flexbox';
@@ -9,7 +11,11 @@
 
 
 
+
+
 /* ATOMS */
+
+// global
 @import './2_atoms/buttons';
 @import './2_atoms/icons';
 @import './2_atoms/lines';
@@ -20,22 +26,35 @@
 
 
 
+
+
 /* MOLECULES */
+
+// global
 @import './3_molecules/socials';
 @import './3_molecules/lightDarkTheme';
 @import './3_molecules/standing';
 
+// components
 @import './3_molecules/Article/Article';
 @import './3_molecules/GrandPrix/GrandPrix';
 @import './3_molecules/StandingDriver/StandingDriver';
 @import './3_molecules/StandingTeam/StandingTeam';
+@import './3_molecules/FactNumber/FactNumber';
+
+
 
 
 
 /* ORGANISMS */
+
+// global
 @import './4_organisms/container';
 @import './4_organisms/sections';
+@import './4_organisms/detailHeader';
+@import './4_organisms/driverTeamItems';
 
+// components
 @import './4_organisms/Nav/Nav';
 @import './4_organisms/SubNav/SubNav';
 @import './4_organisms/Header/Header';
@@ -48,12 +67,19 @@
 @import './4_organisms/SavedBlogposts/SavedBlogposts';
 @import './4_organisms/LatestGP/LatestGP';
 @import './4_organisms/Settings/Settings';
+@import './4_organisms/DriverDetailHeader/DriverDetailHeader';
+@import './4_organisms/FactsNumbers/FactsNumbers';
+
+
 
 
 
 /* PAGES */
+
+// components
 @import './5_pages/HomePage/HomePage';
 @import './5_pages/Dashboard/Dashboard';
 @import './5_pages/GrandPrixs/GrandPrixs';
 @import './5_pages/GrandPrixDetail/GrandPrixDetail';
 @import './5_pages/Standings/Standings';
+@import './5_pages/DriverPage/DriverPage';

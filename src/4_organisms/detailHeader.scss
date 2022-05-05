@@ -1,0 +1,30 @@
+.detail-header {
+    padding: 50px 20px 75px 20px;
+
+    .top {
+        width: 100%;
+        justify-content: space-between;
+        gap: 20px;
+
+        &__info {
+            max-width: calc(100% - 122px);
+
+            &__logos {
+                justify-content: space-between;
+                align-items: center;
+                height: 30px;
+                margin-bottom: 20px;
+
+                &__team-logo, &__driver-logo {
+                    width: 30px;
+                    height: 30px;
+                    object-fit: contain;
+                }
+            }
+
+            &__title {
+                margin-bottom: 20px;
+            }
+        }
+    }
+}

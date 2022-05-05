@@ -1,0 +1,13 @@
+.detail-header {
+    .top {
+        .top-driver {
+            width: 122px; //gone
+
+            &__img {
+                width: 100%;
+                height: 175px;
+                object-fit: cover;
+            }
+        }
+    }
+}
