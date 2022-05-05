@@ -1,0 +1,17 @@
+.standing-team {
+    &__driver {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        position: absolute;
+        bottom: 0;
+
+        &.driver1 {
+            right: 70px;
+        }
+
+        &.driver2 {
+            right: 20px;
+        }
+    }
+}

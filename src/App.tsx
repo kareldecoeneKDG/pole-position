@@ -13,6 +13,9 @@ import Footer from './4_organisms/Footer/Footer';
 // Pages
 import HomePage from './5_pages/HomePage/HomePage';
 import Dashboard from './5_pages/Dashboard/Dashboard';
+import GrandPrixs from './5_pages/GrandPrixs/GrandPrixs';
+import GrandPrixDetail from './5_pages/GrandPrixDetail/GrandPrixDetail';
+import Standings from './5_pages/Standings/Standings';
 
 // Global styles
 import './style.scss';
@@ -101,6 +104,9 @@ function App() {
                 <Routes>
                     <Route path="/" element={<HomePage />} />
                     <Route path="/dashboard" element={<Dashboard />} />
+                    <Route path="/grandprixs" element={<GrandPrixs />} />
+                    <Route path="/grandprix-detail" element={<GrandPrixDetail />} />
+                    <Route path="/standings" element={<Standings />} />
                 </Routes>
 
                 <Footer />

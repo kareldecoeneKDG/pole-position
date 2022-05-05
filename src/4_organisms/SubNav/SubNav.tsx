@@ -26,6 +26,14 @@ function SubNav() {
                 </li>
 
                 <li className="subnav__list__item">
+                    <a className="subnav__list__item__link" href="#">Favorite driver</a>
+                </li>
+
+                <li className="subnav__list__item">
+                    <a className="subnav__list__item__link" href="#">Favorite team</a>
+                </li>
+
+                <li className="subnav__list__item">
                     <a className="subnav__list__item__link" href="#">Settings</a>
                 </li>
             </ul>

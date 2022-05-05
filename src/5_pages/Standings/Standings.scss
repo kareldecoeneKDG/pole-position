@@ -1,0 +1,18 @@
+.standings {
+    &__drivers {
+        padding: 50px 20px 75px 20px;
+
+        &__line {
+            background-color: $neutrals-500;
+            margin: 50px 0px;
+        }
+    }
+
+    .standing-driver, .standing-team {
+        margin-bottom: 20px;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+}

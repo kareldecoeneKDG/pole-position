@@ -11,8 +11,12 @@
     border: none;
     border-radius: 50px;
 
-    &.team, &.driver {
+    &.team, &.driver, &.circuit {
         background-color: $primary-100;
         color: $primary-600;
+    }
+
+    &.read {
+        padding: 0;
     }
 }

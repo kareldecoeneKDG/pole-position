@@ -1,0 +1,49 @@
+.settings {
+    padding-top: 50px;
+
+    &__group {
+        border-radius: 20px 20px 0px 0px;
+        margin-bottom: 50px;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+
+    &__header {
+        background-color: $neutrals-800;
+        padding: 20px;
+        border-radius: 20px 20px 0px 0px;
+
+        &__title, &__subtitle {
+            color: $neutrals-100;
+        }
+    }
+
+    &__item {
+        padding: 20px;
+
+        &:last-of-type {
+            border-radius: 0px 0px 20px 20px;
+        }
+
+        &.item-grey {
+            background-color: $neutrals-300;
+        }
+
+        .flex {
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        &__content {
+            &__title {
+                font-family: $primary-font;
+                font-weight: 600;
+                line-height: 16px;
+                color: $neutrals-900;
+                margin-bottom: 3px;
+            }
+        }
+    }
+}
