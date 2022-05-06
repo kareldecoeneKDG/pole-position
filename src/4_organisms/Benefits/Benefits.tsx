@@ -3,7 +3,7 @@ import React from 'react';
 function Benefits() {
     return (
         <section className="benefits section">
-            <h2 className="benefits__h2">Discuss the next F1 GP live with others</h2>
+            <h2 className="benefits__title section__title">Discuss the next F1 GP live with others</h2>
 
             <p className="benefits__p">
                 Het is al geruime tijd een bekend gegeven dat een lezer, tijdens het bekijken van de layout van een.
@@ -11,7 +11,7 @@ function Benefits() {
 
             <div className="benefits__items flex-desktop">
                 <div className="benefit">
-                    <div className="benefit__icon-container">
+                    <div className="icon-bg-lg">
                         <i className="fa fa-clock-o" aria-hidden="true"></i>
                     </div>
 
@@ -23,7 +23,7 @@ function Benefits() {
                 </div>
 
                 <div className="benefit">
-                    <div className="benefit__icon-container">
+                    <div className="icon-bg-lg">
                         <i className="fa fa-clock-o" aria-hidden="true"></i>
                     </div>
 
@@ -35,7 +35,7 @@ function Benefits() {
                 </div>
 
                 <div className="benefit">
-                    <div className="benefit__icon-container">
+                    <div className="icon-bg-lg">
                         <i className="fa fa-clock-o" aria-hidden="true"></i>
                     </div>
 
@@ -47,7 +47,7 @@ function Benefits() {
                 </div>
 
                 <div className="benefit">
-                    <div className="benefit__icon-container">
+                    <div className="icon-bg-lg">
                         <i className="fa fa-clock-o" aria-hidden="true"></i>
                     </div>
 

@@ -3,7 +3,7 @@ import React from 'react';
 function HowSignUp() {
     return (
         <section className="howsignup section">
-            <h2 className="howsignup__h2">How to sign up for this awesome blog?</h2>
+            <h2 className="howsignup__title section__title">How to sign up for this awesome blog?</h2>
 
             <p className="howsignup__p">
                 Het is al geruime tijd een bekend gegeven dat een lezer, tijdens het bekijken van de layout van een.
@@ -39,7 +39,9 @@ function HowSignUp() {
                 </div>
             </div>
 
-            <a className="button button-primary" href="#">Sign me up <i className="fa fa-chevron-right first-chevron" aria-hidden="true"></i><i className="fa fa-chevron-right" aria-hidden="true"></i></a>
+            <div className="center">
+                <a className="button button-primary" href="#">Sign me up <i className="fa fa-chevron-right first-chevron" aria-hidden="true"></i><i className="fa fa-chevron-right" aria-hidden="true"></i></a>
+            </div>
         </section>
     );
 }

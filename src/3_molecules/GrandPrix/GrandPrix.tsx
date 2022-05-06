@@ -10,7 +10,7 @@ function GrandPrix() {
                     <img className="flag" src={flag} alt="Flag of country GP" />
                     <h3>Italian GP</h3>
                 </div>
-                <div className="grandprix__header__subtitle">
+                <div className="tag detail">
                     Autodromo Nazionale Monza
                 </div>
             </div>

@@ -1,4 +1,7 @@
 import React from 'react';
+
+import Socials from '../../3_molecules/Socials/Socials';
+
 import logoFooter from './logo-footer-mobile.png';
 
 function Footer() {
@@ -9,7 +12,7 @@ function Footer() {
             <div className="top flex">
                 <img className="logoFooter" src={logoFooter} alt="logo Pole Position footer" />
 
-                <div className="scrollup">
+                <div className="scrollup icon-bg">
                     <i className="scrollup__icon fa fa-chevron-up" aria-hidden="true"></i>
                 </div>
             </div>
@@ -35,23 +38,7 @@ function Footer() {
             <div className="footer__section">
                 <h3>Socials</h3>
 
-                <div className="socials flex">
-                    <a className="socials__item" href="#">
-                        <i className="fa fa-twitter" aria-hidden="true"></i>
-                    </a>
-
-                    <a className="socials__item" href="#">
-                        <i className="fa fa-facebook" aria-hidden="true"></i>
-                    </a>
-
-                    <a className="socials__item" href="#">
-                        <i className="fa fa-linkedin" aria-hidden="true"></i>
-                    </a>
-
-                    <a className="socials__item" href="#">
-                        <i className="fa fa-instagram" aria-hidden="true"></i>
-                    </a>
-                </div>
+                <Socials />
             </div>
 
             {/* SITEMAP */}

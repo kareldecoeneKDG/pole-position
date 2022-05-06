@@ -19,7 +19,7 @@ function Settings() {
                             <p className="settings__item__content__value">Karel Decoene</p>
                         </div>
 
-                        <a className="button button-primary edit"><i className="fa fa-pencil" aria-hidden="true"></i></a>
+                        <a className="icon-bg-lg"><i className="fa fa-pencil" aria-hidden="true"></i></a>
                     </div>
                 </div>
 
@@ -39,7 +39,7 @@ function Settings() {
                             <p className="settings__item__content__value">oooooooo</p>
                         </div>
 
-                        <a className="button button-primary edit"><i className="fa fa-pencil" aria-hidden="true"></i></a>
+                        <a className="icon-bg-lg"><i className="fa fa-pencil" aria-hidden="true"></i></a>
                     </div>
                 </div>
 
@@ -69,7 +69,7 @@ function Settings() {
                             <p className="settings__item__content__value">Max Verstappen</p>
                         </div>
 
-                        <a className="button button-primary edit"><i className="fa fa-pencil" aria-hidden="true"></i></a>
+                        <a className="icon-bg-lg"><i className="fa fa-pencil" aria-hidden="true"></i></a>
                     </div>
                 </div>
 
@@ -80,7 +80,7 @@ function Settings() {
                             <p className="settings__item__content__value">Ferrari</p>
                         </div>
 
-                        <a className="button button-primary edit"><i className="fa fa-pencil" aria-hidden="true"></i></a>
+                        <a className="icon-bg-lg"><i className="fa fa-pencil" aria-hidden="true"></i></a>
                     </div>
                 </div>
 
@@ -91,7 +91,7 @@ function Settings() {
                             <p className="settings__item__content__value">ENG</p>
                         </div>
 
-                        <a className="button button-primary edit"><i className="fa fa-pencil" aria-hidden="true"></i></a>
+                        <a className="icon-bg-lg"><i className="fa fa-pencil" aria-hidden="true"></i></a>
                     </div>
                 </div>
             </div>

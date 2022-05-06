@@ -18,11 +18,11 @@ function StandingTeam() {
 
             <div className="standing__bottom">
                 <div className="standing__bottom__place flex">
-                    <div className="standing__bottom__place__placing">
+                    <div className="tag detail standing__bottom__place__div">
                         1st place
                     </div>
 
-                    <div className="standing__bottom__place__wins">
+                    <div className="tag detail standing__bottom__place__div">
                         12 wins
                     </div>
                 </div>

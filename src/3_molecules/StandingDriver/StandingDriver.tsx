@@ -12,18 +12,18 @@ function StandingDriver() {
                 </div>
 
                 <div className="standing__top__driver">
-                    <p className="standing__top__driver__firstname">Max</p>
+                    <p className="tag detail">Max</p>
                     <h4 className="standing__top__driver__lastname redBull">Verstappen</h4>
                 </div>
             </div>
 
             <div className="standing__bottom">
                 <div className="standing__bottom__place flex">
-                    <div className="standing__bottom__place__placing">
+                    <div className="tag detail standing__bottom__place__div">
                         1st place
                     </div>
 
-                    <div className="standing__bottom__place__wins">
+                    <div className="tag detail standing__bottom__place__div">
                         12 wins
                     </div>
                 </div>

@@ -4,7 +4,7 @@ function DriverTeamDetailItem() {
     return (
         <div className="item flex">
             <div className="flex">
-                <div className="item__icon-bg">
+                <div className="item__icon-bg icon-bg-lg">
                     <i className="fa fa-trophy" aria-hidden="true"></i>
                 </div>
 

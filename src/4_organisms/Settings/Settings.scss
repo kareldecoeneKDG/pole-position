@@ -34,6 +34,15 @@
         .flex {
             justify-content: space-between;
             align-items: center;
+
+            .icon-bg-lg {
+                background-color: $primary-600;
+                border-radius: 50%;
+
+                i {
+                    color: $neutrals-100;
+                }
+            }
         }
 
         &__content {

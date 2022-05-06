@@ -2,7 +2,7 @@
     text-align: center;
     background-color: $neutrals-100;
 
-    &__h2 {
+    &__title {
         margin-bottom: 10px;
     }
 
@@ -25,19 +25,11 @@
                 margin-bottom: 0;
             }
 
-            &__icon-container {
-                width: 40px;
-                height: 40px;
-                background-color: $primary-100;
-                border-radius: 10px;
-                text-align: center;
+            .icon-bg-lg {
                 margin-bottom: 10px;
+                background-color: $primary-100;
 
                 i {
-                    font-size: 16px;
-                    line-height: 16px;
-                    position: relative;
-                    top: 11px;
                     color: $primary-600;
                 }
             }

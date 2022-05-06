@@ -16,7 +16,8 @@
         color: $primary-600;
     }
 
-    &.read {
+    &.detail {
         padding: 0;
+        color: $neutrals-900;
     }
 }

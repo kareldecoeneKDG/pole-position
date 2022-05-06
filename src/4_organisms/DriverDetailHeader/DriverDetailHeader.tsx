@@ -1,6 +1,7 @@
 import React from 'react';
 
 import DriverTeamDetailItem from '../../3_molecules/DriverTeamDetailItem/DriverTeamDetailItem';
+import Socials from '../../3_molecules/Socials/Socials';
 
 import Max from './max.png';
 import MaxLogo from './Max-logo.png';
@@ -22,23 +23,7 @@ function DriverDetailHeader() {
 
                     <h2 className="top__info__title">Max<br /> Verstappen</h2>
 
-                    <div className="top__info__socials socials flex">
-                        <a className="socials__item" href="#">
-                            <i className="fa fa-twitter" aria-hidden="true"></i>
-                        </a>
-
-                        <a className="socials__item" href="#">
-                            <i className="fa fa-facebook" aria-hidden="true"></i>
-                        </a>
-
-                        <a className="socials__item" href="#">
-                            <i className="fa fa-linkedin" aria-hidden="true"></i>
-                        </a>
-
-                        <a className="socials__item" href="#">
-                            <i className="fa fa-instagram" aria-hidden="true"></i>
-                        </a>
-                    </div>
+                    <Socials />
                 </div>
             </div>
 

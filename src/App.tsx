@@ -12,10 +12,10 @@ import Footer from './4_organisms/Footer/Footer';
 
 // Pages
 import HomePage from './5_pages/HomePage/HomePage';
-import Dashboard from './5_pages/Dashboard/Dashboard';
-import GrandPrixs from './5_pages/GrandPrixs/GrandPrixs';
-import GrandPrixDetail from './5_pages/GrandPrixDetail/GrandPrixDetail';
-import Standings from './5_pages/Standings/Standings';
+import DashboardPage from './5_pages/DashboardPage/DashboardPage';
+import GrandPrixsPage from './5_pages/GrandPrixsPage/GrandPrixsPage';
+import GrandPrixDetailPage from './5_pages/GrandPrixDetailPage/GrandPrixDetailPage';
+import StandingsPage from './5_pages/StandingsPage/StandingsPage';
 import DriverPage from './5_pages/DriverPage/DriverPage';
 
 // Global styles
@@ -104,10 +104,10 @@ function App() {
 
                 <Routes>
                     <Route path="/" element={<HomePage />} />
-                    <Route path="/dashboard" element={<Dashboard />} />
-                    <Route path="/grandprixs" element={<GrandPrixs />} />
-                    <Route path="/grandprix-detail" element={<GrandPrixDetail />} />
-                    <Route path="/standings" element={<Standings />} />
+                    <Route path="/dashboard" element={<DashboardPage />} />
+                    <Route path="/grandprixs" element={<GrandPrixsPage />} />
+                    <Route path="/grandprix-detail" element={<GrandPrixDetailPage />} />
+                    <Route path="/standings" element={<StandingsPage />} />
                     <Route path="/driver" element={<DriverPage />} />
                 </Routes>
 

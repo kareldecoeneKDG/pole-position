@@ -4,7 +4,7 @@ import SubNav from '../../4_organisms/SubNav/SubNav';
 import StandingDriver from '../../3_molecules/StandingDriver/StandingDriver';
 import StandingTeam from '../../3_molecules/StandingTeam/StandingTeam';
 
-function Standings() {
+function StandingsPage() {
     return (
         <div className="standings">
             <SubNav />
@@ -64,4 +64,4 @@ function Standings() {
     );
 }
 
-export default Standings;
+export default StandingsPage;

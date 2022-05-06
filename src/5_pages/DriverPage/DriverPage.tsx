@@ -5,6 +5,7 @@ import Article from '../../3_molecules/Article/Article';
 import DriverDetailHeader from '../../4_organisms/DriverDetailHeader/DriverDetailHeader';
 import LatestNews from '../../4_organisms/LatestNews/LatestNews';
 import FactsNumbers from '../../4_organisms/FactsNumbers/FactsNumbers';
+import RecentShots from '../../4_organisms/RecentShots/RecentShots';
 
 function DriverPage() {
     return (
@@ -25,6 +26,8 @@ function DriverPage() {
                     <a className="button button-secondary" href="#">All latest news <i className="fa fa-chevron-right first-chevron" aria-hidden="true"></i><i className="fa fa-chevron-right" aria-hidden="true"></i></a>
                 </div>
             </div>
+
+            <RecentShots />
         </div>
     );
 }

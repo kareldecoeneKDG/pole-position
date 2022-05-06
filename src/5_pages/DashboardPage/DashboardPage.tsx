@@ -5,19 +5,19 @@ import SavedBlogposts from '../../4_organisms/SavedBlogposts/SavedBlogposts';
 import LatestGP from '../../4_organisms/LatestGP/LatestGP';
 import Settings from '../../4_organisms/Settings/Settings';
 
-function Dashboard() {
+function DashboardPage() {
     return (
         <div className="dashboard">
             <SubNav />
 
-            {/*
+            
             <SavedBlogposts />
             <LatestGP />
-            */}
+            
 
-            <Settings />
+            {/* <Settings /> */}
         </div>
     );
 }
 
-export default Dashboard;
+export default DashboardPage;

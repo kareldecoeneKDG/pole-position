@@ -1,4 +1,7 @@
 import React from 'react';
+
+import Socials from '../../3_molecules/Socials/Socials';
+
 import newsletterImage from './article1.jpeg';
 
 function Newsletter() {
@@ -19,23 +22,7 @@ function Newsletter() {
                         <button className="button button-primary">Sign me up <i className="fa fa-chevron-right first-chevron" aria-hidden="true"></i><i className="fa fa-chevron-right" aria-hidden="true"></i></button>
                     </form>
 
-                    <div className="socials flex">
-                        <a className="socials__item" href="#">
-                            <i className="fa fa-twitter" aria-hidden="true"></i>
-                        </a>
-
-                        <a className="socials__item" href="#">
-                            <i className="fa fa-facebook" aria-hidden="true"></i>
-                        </a>
-
-                        <a className="socials__item" href="#">
-                            <i className="fa fa-linkedin" aria-hidden="true"></i>
-                        </a>
-
-                        <a className="socials__item" href="#">
-                            <i className="fa fa-instagram" aria-hidden="true"></i>
-                        </a>
-                    </div>
+                    <Socials />
                 </div>
             </div>
         </section>

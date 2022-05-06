@@ -3,7 +3,7 @@ import React from 'react';
 function Platform() {
     return (
         <section className="platform section">
-            <h2 className="platform__h2">All-in-one platform</h2>
+            <h2 className="platform__title section__title">All-in-one platform</h2>
 
             <div className="platform__items ">
                 <div className="platform-item">

@@ -3,7 +3,7 @@ import React from 'react';
 function FactNumber() {
     return (
         <div className="factNumber">
-            <div className="factNumber__icon-bg">
+            <div className="factNumber__icon-bg icon-bg-lg">
                 <i className="fa fa-clock-o" aria-hidden="true"></i>
             </div>
 

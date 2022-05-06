@@ -20,7 +20,7 @@ function Nav() {
                     <img className="logo" src={logo} alt="Pole Position logo mobile"></img>
                 </a>
 
-                <div className="profile">
+                <div className="profile icon-bg">
                     <i className="profile__icon fa fa-user" aria-hidden="true"></i>
                 </div>
             </div>

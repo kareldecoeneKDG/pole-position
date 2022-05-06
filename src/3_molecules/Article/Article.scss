@@ -34,6 +34,14 @@
         &__bottom {
             justify-content: space-between;
             align-items: center;
+
+            .icon-bg {
+                background-color: $neutrals-900;
+
+                i {
+                    color: $neutrals-100;
+                }
+            }
         }
     }
 }

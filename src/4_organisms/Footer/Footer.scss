@@ -9,17 +9,12 @@
         margin-bottom: 30px;
 
         .scrollup {
-            width: 36px;
-            height: 36px;
             background-color: $primary-600;
-            border-radius: 50%;
-            text-align: center;
 
             &__icon {
-                font-size: 12px;
-                position: relative;
                 color: $neutrals-100;
-                top: 4px;
+                font-size: 12px;
+                top: 8px;
             }
         }
     }

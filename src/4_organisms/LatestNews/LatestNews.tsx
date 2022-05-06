@@ -4,7 +4,7 @@ import React from 'react';
 function LatestNews() {
     return (
         <section className="latestnews section">
-            <h2>Latest news</h2>
+            <h2 className="latestnews__title section__title">Latest news</h2>
 
             <div className="latestnews__articles flex-column">
                 <div className="latestnews__articles__article">

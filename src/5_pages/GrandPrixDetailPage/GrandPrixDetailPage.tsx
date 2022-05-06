@@ -4,7 +4,7 @@ import circuit from './gp-1.png';
 
 import Article from '../../3_molecules/Article/Article';
 
-function GrandPrixDetail() {
+function GrandPrixDetailPage() {
     return (
         <div className="grandprix-detail">
             <div className="banner">
@@ -20,7 +20,7 @@ function GrandPrixDetail() {
             </div>
 
             <section className="grandprix-detail__articles section">
-                <h2 className="grandprix-detail__articles__title">2022 Barcelona GP</h2>
+                <h2 className="section__title">2022 Barcelona GP</h2>
 
                 <Article />
                 <Article />
@@ -35,4 +35,4 @@ function GrandPrixDetail() {
     );
 }
 
-export default GrandPrixDetail;
+export default GrandPrixDetailPage;
