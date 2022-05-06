@@ -19,6 +19,11 @@ import StandingsPage from './5_pages/StandingsPage/StandingsPage';
 import DriverPage from './5_pages/DriverPage/DriverPage';
 import TeamPage from './5_pages/TeamPage/TeamPage';
 import BlogPage from './5_pages/BlogPage/BlogPage';
+import BlogDetailPage from './5_pages/BlogDetailPage/BlogDetailPage';
+import PrivacyPolicyPage from './5_pages/PrivacyPolicyPage/PrivacyPolicyPage';
+import LoginPage from './5_pages/LoginPage/LoginPage';
+import RegisterPage from './5_pages/RegisterPage/RegisterPage';
+import NotFoundPage from './5_pages/NotFoundPage/NotFoundPage';
 
 // Global styles
 import './style.scss';
@@ -113,6 +118,15 @@ function App() {
                     <Route path="/driver" element={<DriverPage />} />
                     <Route path="/team" element={<TeamPage />} />
                     <Route path="/blog" element={<BlogPage />} />
+                    <Route path="/blog-detail" element={<BlogDetailPage />} />
+                    <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+                    <Route path="/login" element={<LoginPage />} />
+                    <Route path="/register" element={<RegisterPage />} />
+                    <Route path="*" element={<NotFoundPage />} />
+
+
+
+                    <Route path="/404" element={<NotFoundPage />} />
                 </Routes>
 
                 <Footer />

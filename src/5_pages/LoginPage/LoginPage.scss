@@ -1,0 +1,12 @@
+.login {
+    padding-top: 50px;
+
+    &__title {
+        margin-bottom: 3px;
+    }
+
+    &__p {
+        margin-bottom: 30px;
+        color: $neutrals-700;
+    }
+}

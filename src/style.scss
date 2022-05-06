@@ -34,6 +34,7 @@
 @import './3_molecules/lightDarkTheme';
 @import './3_molecules/standing';
 @import './3_molecules/driver-team';
+@import './3_molecules/forms';
 
 // components
 @import './3_molecules/Article/Article';
@@ -93,3 +94,8 @@
 @import './5_pages/StandingsPage/StandingsPage';
 @import './5_pages/DriverPage/DriverPage';
 @import './5_pages/TeamPage/TeamPage';
+@import './5_pages/BlogDetailPage/BlogDetailPage';
+@import './5_pages/NotFoundPage/NotFoundPage';
+@import './5_pages/PrivacyPolicyPage/PrivacyPolicyPage';
+@import './5_pages/LoginPage/LoginPage';
+@import './5_pages/RegisterPage/RegisterPage';

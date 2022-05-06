@@ -1,0 +1,23 @@
+.privacyPolicy {
+    padding-top: 50px;
+    background-color: $neutrals-100;
+    
+    &__title {
+        text-align: left;
+        margin-bottom: 10px;
+    }
+
+    &__p {
+        color: $neutrals-700;
+        margin-bottom: 50px;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+
+    &__subtitle {
+        margin-bottom: 10px;
+        color: $neutrals-900;
+    }
+}
