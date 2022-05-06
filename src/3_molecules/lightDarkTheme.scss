@@ -48,14 +48,6 @@ body {
     margin-top: 2em;
 }
 
-// Input
-input[type="checkbox"] {
-    /* styling for input element */
-    height: 0;
-    width: 0;
-    visibility: hidden;
-}
-
 //toggle container WEGGGGGGGG???
 .toggle-container {
     label {
@@ -93,6 +85,14 @@ input[type="checkbox"] {
         left: calc(100% - 5px);
         -webkit-transform: translateX(-100%);
         transform: translateX(-100%);
+    }
+
+    // Input
+    input[type="checkbox"] {
+        /* styling for input element */
+        height: 0;
+        width: 0;
+        visibility: hidden;
     }
 
     label:active:after {

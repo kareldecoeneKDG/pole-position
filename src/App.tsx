@@ -23,6 +23,7 @@ import BlogDetailPage from './5_pages/BlogDetailPage/BlogDetailPage';
 import PrivacyPolicyPage from './5_pages/PrivacyPolicyPage/PrivacyPolicyPage';
 import LoginPage from './5_pages/LoginPage/LoginPage';
 import RegisterPage from './5_pages/RegisterPage/RegisterPage';
+import PaymentPage from './5_pages/PaymentPage/PaymentPage';
 import NotFoundPage from './5_pages/NotFoundPage/NotFoundPage';
 
 // Global styles
@@ -122,6 +123,7 @@ function App() {
                     <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
                     <Route path="/login" element={<LoginPage />} />
                     <Route path="/register" element={<RegisterPage />} />
+                    <Route path="/payment" element={<PaymentPage />} />
                     <Route path="*" element={<NotFoundPage />} />
 
 

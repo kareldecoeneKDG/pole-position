@@ -103,19 +103,16 @@ function RegisterPage() {
                     </div>
                 </div>
 
-                <p className="custom-form__disclaimer">
-                    By login you agree to <span className="custom-form__disclaimer__link">terms & conditions</span>
-                </p>
-
-                <div className="flex">
-                    <a className="button button-primary">Login <i className="fa fa-chevron-right first-chevron" aria-hidden="true"></i><i className="fa fa-chevron-right" aria-hidden="true"></i></a>
-                    <a className="custom-form__forgot-pw p" href="#">Forgot password?</a>
+                <div className="register__form__checkbox flex">
+                    <input id="newsletter" className="register__form__checkbox__box" type="checkbox" checked />
+                    <label className="checkbox-label" htmlFor="newsletter">Sign up for the Pole Position newsletter</label>
                 </div>
 
                 <p className="custom-form__no-acc p">
-                    Don't have an account yet?<br />
-                    <span className="custom-form__no-acc__link">Create account</span>
+                    By clicking on register you agree to the <span className="custom-form__no-acc__link">terms, conditions & privacy policy</span>
                 </p>
+
+                <button className="button button-primary">Payment <i className="fa fa-chevron-right first-chevron" aria-hidden="true"></i><i className="fa fa-chevron-right" aria-hidden="true"></i></button>
             </form>
         </section>
     );

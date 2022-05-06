@@ -9,4 +9,31 @@
         margin-bottom: 30px;
         color: $neutrals-700;
     }
+
+    .form__inputs-container {
+        margin-bottom: 15px;
+
+        .form__line {
+            background-color: $neutrals-500;
+            margin: 50px 0px;
+        }
+    }
+
+    &__form {
+        &__checkbox {
+            margin-bottom: 50px !important;
+
+            .checkbox-label {
+                font-family: $secondary-font;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 20px;
+                color: $neutrals-900;
+            }
+        }
+
+        .custom-form__no-acc {
+            margin-bottom: 10px;
+        }
+    }
 }

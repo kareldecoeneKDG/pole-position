@@ -8,6 +8,7 @@ import HttpApi from 'i18next-http-backend';
 
 //import './index.scss';
 import App from './App';
+import LoadingScreen from './4_organisms/LoadingScreen/LoadingScreen';
 
 i18n
     .use(initReactI18next) // passes i18n down to react-i18next
@@ -28,9 +29,7 @@ i18n
 
 /* show during loading */
 const loadingMarkup = (
-    <div>
-        <h2>Loading...</h2>
-    </div>
+    <LoadingScreen />
 )
 
 const root = ReactDOM.createRoot(
