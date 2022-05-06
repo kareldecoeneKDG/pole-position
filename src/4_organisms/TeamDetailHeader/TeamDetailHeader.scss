@@ -1,0 +1,26 @@
+.detail-header {
+    .top {
+        .top-team {
+            position: relative;
+            height: 160px;
+
+            &__img {
+                width: 80px;
+                height: 115px;
+                object-fit: cover;
+                object-position: top;
+                position: absolute;
+
+                &:first-of-type {
+                    top: 0;
+                    left: 0;
+                }
+
+                &:last-of-type {
+                    bottom: 0;
+                    right: 0;
+                }
+            }
+        }
+    }
+}

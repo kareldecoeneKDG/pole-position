@@ -6,6 +6,10 @@
         justify-content: space-between;
         gap: 20px;
 
+        &__drivers {
+            width: 122px;
+        }
+
         &__info {
             max-width: calc(100% - 122px);
 

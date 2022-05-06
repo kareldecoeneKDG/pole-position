@@ -17,6 +17,8 @@ import GrandPrixsPage from './5_pages/GrandPrixsPage/GrandPrixsPage';
 import GrandPrixDetailPage from './5_pages/GrandPrixDetailPage/GrandPrixDetailPage';
 import StandingsPage from './5_pages/StandingsPage/StandingsPage';
 import DriverPage from './5_pages/DriverPage/DriverPage';
+import TeamPage from './5_pages/TeamPage/TeamPage';
+import BlogPage from './5_pages/BlogPage/BlogPage';
 
 // Global styles
 import './style.scss';
@@ -109,6 +111,8 @@ function App() {
                     <Route path="/grandprix-detail" element={<GrandPrixDetailPage />} />
                     <Route path="/standings" element={<StandingsPage />} />
                     <Route path="/driver" element={<DriverPage />} />
+                    <Route path="/team" element={<TeamPage />} />
+                    <Route path="/blog" element={<BlogPage />} />
                 </Routes>
 
                 <Footer />

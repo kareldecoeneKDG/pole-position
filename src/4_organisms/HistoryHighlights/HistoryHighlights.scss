@@ -1,0 +1,13 @@
+.historyHighlights {
+    background-color: $neutrals-200;
+    text-align: center;
+
+    &__title {
+        margin-bottom: 10px;
+    }
+
+    &__p {
+        color: $neutrals-700;
+        margin-bottom: 50px;
+    }
+}

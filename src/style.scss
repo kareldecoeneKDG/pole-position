@@ -33,6 +33,7 @@
 // global
 @import './3_molecules/lightDarkTheme';
 @import './3_molecules/standing';
+@import './3_molecules/driver-team';
 
 // components
 @import './3_molecules/Article/Article';
@@ -41,6 +42,8 @@
 @import './3_molecules/StandingTeam/StandingTeam';
 @import './3_molecules/FactNumber/FactNumber';
 @import './3_molecules/Socials/Socials';
+@import './3_molecules/Driver/Driver';
+@import './3_molecules/HistoryHighlight/HistoryHighlight';
 
 
 
@@ -53,6 +56,7 @@
 @import './4_organisms/sections';
 @import './4_organisms/detailHeader';
 @import './4_organisms/driverTeamItems';
+@import './4_organisms/mightAlsoLike';
 
 // components
 @import './4_organisms/Nav/Nav';
@@ -70,6 +74,10 @@
 @import './4_organisms/DriverDetailHeader/DriverDetailHeader';
 @import './4_organisms/FactsNumbers/FactsNumbers';
 @import './4_organisms/RecentShots/RecentShots';
+@import './4_organisms/MightAlsoLikeDriver/MightAlsoLikeDriver';
+@import './4_organisms/TeamDetailHeader/TeamDetailHeader';
+@import './4_organisms/HistoryHighlights/HistoryHighlights';
+@import './4_organisms/BlogSearch/BlogSearch';
 
 
 
@@ -84,3 +92,4 @@
 @import './5_pages/GrandPrixDetailPage/GrandPrixDetailPage';
 @import './5_pages/StandingsPage/StandingsPage';
 @import './5_pages/DriverPage/DriverPage';
+@import './5_pages/TeamPage/TeamPage';

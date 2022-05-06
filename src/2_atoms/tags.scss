@@ -11,7 +11,7 @@
     border: none;
     border-radius: 50px;
 
-    &.team, &.driver, &.circuit {
+    &.tag-team, &.tag-driver, &.circuit {
         background-color: $primary-100;
         color: $primary-600;
     }

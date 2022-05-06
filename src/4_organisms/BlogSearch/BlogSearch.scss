@@ -1,0 +1,33 @@
+.blogSearch {
+    padding: 50px 20px 50px 20px;
+    text-align: center;
+    background-color: $neutrals-300;
+
+    &__title {
+        margin-bottom: 10px;
+    }
+
+    &__p {
+        color: $neutrals-700;
+        margin-bottom: 30px;
+    }
+
+    &__form {
+        text-align: center;
+
+        &__input {
+            display: block;
+            width: 100%;
+            font-family: $secondary-font;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 16px;
+            color: $neutrals-900;
+            padding: 14px 20px;
+            text-align: center;
+            border: 1px solid $neutrals-600;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+    }
+}
