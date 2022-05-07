@@ -51,3 +51,36 @@
         }
     }
 }
+
+/* DARK MODE */
+@media (prefers-color-scheme: dark) {
+    .howsignup {
+        background-color: $neutrals-900;
+    
+        &__title {
+            color: $neutrals-100;
+        }
+    
+        &__p {
+            color: $neutrals-500;
+        }
+    
+        &__steps {
+            .step {
+                background-color: $neutrals-800;
+    
+                &__title {
+                    color: $neutrals-100;
+                }
+    
+                &__p {
+                    color: $neutrals-500;
+                }
+    
+                &__number {
+                    opacity: 100%;
+                }
+            }
+        }
+    }
+}

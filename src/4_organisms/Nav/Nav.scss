@@ -43,3 +43,24 @@
         }
     }
 }
+
+/* MOBILE DARK MODE */
+@media (prefers-color-scheme: dark) {
+    .nav {
+        .mobile {
+            .burger {
+                .line {
+                    background-color: $neutrals-100;
+                }
+            }
+
+            .profile {
+                background-color: $neutrals-100;
+
+                &__icon {
+                    color: $neutrals-900;
+                }
+            }
+        }
+    }
+}

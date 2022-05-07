@@ -93,7 +93,7 @@ function RegisterPage() {
                     <div className="form-control-forms">
                         <div className="form-group">
                             <input id="password" className="form__input input" type="password" name="password" placeholder=" " required />
-                            <label htmlFor="password" className="form__label">Full Name</label>
+                            <label htmlFor="password" className="form__label">Password</label>
                             {/*
                             <i className="fa fa-check-circle" aria-hidden="true"></i>
                             <i className="fa fa-exclamation-triangle" aria-hidden="true"></i>
@@ -103,9 +103,20 @@ function RegisterPage() {
                     </div>
                 </div>
 
+                {/*
                 <div className="register__form__checkbox flex">
                     <input id="newsletter" className="register__form__checkbox__box" type="checkbox" checked />
                     <label className="checkbox-label" htmlFor="newsletter">Sign up for the Pole Position newsletter</label>
+                </div>
+                */}
+
+                {/* PIZZA CHECKBOX */}
+                <div className="register__form__checkbox flex">
+                    <label className="input-container">
+                        <input id="pizzaCheckbox" className="pizzaCheckbox input" type="checkbox" name="pizzaCheckbox" value="pizzaCheckbox" required />
+                        <span className="checkmark"></span>
+                    </label>
+                    <label className="pizza-label checkbox-label" htmlFor="pizzaCheckbox">Sign up for the Pole Position newsletter</label>
                 </div>
 
                 <p className="custom-form__no-acc p">

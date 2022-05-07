@@ -1,5 +1,15 @@
 .driverPage {
     .moreRecentNews {
         background-color: $neutrals-200;
+
+        .article {
+            background-color: $neutrals-100;
+        }
+    }
+
+    .mightAlsoLike {
+        .driver-team {
+            background-color: $neutrals-100;
+        }
     }
 }

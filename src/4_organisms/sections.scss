@@ -14,3 +14,10 @@
         margin-top: 50px;
     }
 }
+
+/* DARK MODE */
+@media (prefers-color-scheme: dark) {
+    .cta__p {
+        color: $neutrals-100;
+    }
+}

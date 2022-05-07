@@ -1,42 +1,17 @@
 import React from 'react';
 
+import PlatformItem from '../../3_molecules/PlatformItem/PlatformItem';
+
 function Platform() {
     return (
         <section className="platform section">
             <h2 className="platform__title section__title">All-in-one platform</h2>
 
             <div className="platform__items ">
-                <div className="platform-item">
-                    <h4 className="platform-item__title"><i className="fa fa-check" aria-hidden="true"></i> 24/7 access to latest news</h4>
-
-                    <p className="platform-item__p">
-                        Het is al geruime tijd een bekend gegeven dat een lezer, tijdens het.
-                    </p>
-                </div>
-
-                <div className="platform-item">
-                    <h4 className="platform-item__title"><i className="fa fa-check" aria-hidden="true"></i> 24/7 access to latest news</h4>
-
-                    <p className="platform-item__p">
-                        Het is al geruime tijd een bekend gegeven dat een lezer, tijdens het.
-                    </p>
-                </div>
-
-                <div className="platform-item">
-                    <h4 className="platform-item__title"><i className="fa fa-check" aria-hidden="true"></i> 24/7 access to latest news</h4>
-
-                    <p className="platform-item__p">
-                        Het is al geruime tijd een bekend gegeven dat een lezer, tijdens het.
-                    </p>
-                </div>
-
-                <div className="platform-item">
-                    <h4 className="platform-item__title"><i className="fa fa-check" aria-hidden="true"></i> 24/7 access to latest news</h4>
-
-                    <p className="platform-item__p">
-                        Het is al geruime tijd een bekend gegeven dat een lezer, tijdens het.
-                    </p>
-                </div>
+                <PlatformItem />
+                <PlatformItem />
+                <PlatformItem />
+                <PlatformItem />
             </div>
 
             <div className="signup flex-desktop">

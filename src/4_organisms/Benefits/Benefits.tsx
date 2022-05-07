@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Benefit from '../../3_molecules/Benefit/Benefit';
+
 function Benefits() {
     return (
         <section className="benefits section">
@@ -10,53 +12,10 @@ function Benefits() {
             </p>
 
             <div className="benefits__items flex-desktop">
-                <div className="benefit">
-                    <div className="icon-bg-lg">
-                        <i className="fa fa-clock-o" aria-hidden="true"></i>
-                    </div>
-
-                    <h4 className="benefit__title">Comment on live GP</h4>
-
-                    <p className="benefit__p">
-                        Het is al geruime tijd een bekend gegeven dat een lezer, tijdens het bekijken van de layout van een.
-                    </p>
-                </div>
-
-                <div className="benefit">
-                    <div className="icon-bg-lg">
-                        <i className="fa fa-clock-o" aria-hidden="true"></i>
-                    </div>
-
-                    <h4 className="benefit__title">Comment on live GP</h4>
-
-                    <p className="benefit__p">
-                        Het is al geruime tijd een bekend gegeven dat een lezer, tijdens het bekijken van de layout van een.
-                    </p>
-                </div>
-
-                <div className="benefit">
-                    <div className="icon-bg-lg">
-                        <i className="fa fa-clock-o" aria-hidden="true"></i>
-                    </div>
-
-                    <h4 className="benefit__title">Comment on live GP</h4>
-
-                    <p className="benefit__p">
-                        Het is al geruime tijd een bekend gegeven dat een lezer, tijdens het bekijken van de layout van een.
-                    </p>
-                </div>
-
-                <div className="benefit">
-                    <div className="icon-bg-lg">
-                        <i className="fa fa-clock-o" aria-hidden="true"></i>
-                    </div>
-
-                    <h4 className="benefit__title">Comment on live GP</h4>
-
-                    <p className="benefit__p">
-                        Het is al geruime tijd een bekend gegeven dat een lezer, tijdens het bekijken van de layout van een.
-                    </p>
-                </div>
+                <Benefit />
+                <Benefit />
+                <Benefit />
+                <Benefit />
             </div>
 
             <p className="cta__p">You've heard enough?</p>

@@ -34,3 +34,10 @@ a {
     color: $neutrals-1000;
     display: inline-block;
 }
+
+/* MOBILE DARK MODE */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: $neutrals-900 !important;
+    }
+}
