@@ -1,3 +1,14 @@
 .savedBlogposts {
     padding-top: 50px;
 }
+
+/* DARK MODE */
+@media (prefers-color-scheme: dark) {
+    .savedBlogposts {
+        .center {
+            .button {
+                background-color: $neutrals-800;
+            }
+        }
+    }
+}

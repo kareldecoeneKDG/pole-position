@@ -57,3 +57,38 @@
         bottom: 0;
     }
 }
+
+/* DARK MODE */
+@media (prefers-color-scheme: dark) {
+    .standing {
+        background-color: $neutrals-800 !important;
+    
+        &__top {
+            &__driver {
+                border-left: 1px solid $neutrals-100;
+
+                &__lastname {
+                    color: $neutrals-100 !important;
+                }
+
+                &__teamname {
+                    color: $neutrals-100 !important;
+                }
+            }
+        }
+    
+        &__bottom {
+            &__place {
+                &__div  {
+                    &:last-of-type {
+                        border-left: 1px solid $neutrals-100;
+                    }
+                }
+            }
+    
+            &__points {
+                color: $neutrals-100;
+            }
+        }
+    }
+}

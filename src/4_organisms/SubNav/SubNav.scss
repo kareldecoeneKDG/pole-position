@@ -40,3 +40,22 @@
         top: 17px;
     }
 }
+
+/* DARK MODE */
+@media (prefers-color-scheme: dark) {
+    .subnav {
+        background-color: $neutrals-800;
+    
+        &__list {
+            &__item {
+                &__link {
+                    color: $neutrals-100;
+                }
+            }
+        }
+    
+        &__icon {
+            color: $neutrals-100;
+        }
+    }
+}

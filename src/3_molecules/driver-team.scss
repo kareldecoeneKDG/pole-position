@@ -41,3 +41,20 @@
         }
     }
 }
+
+/* DARK MODE */
+@media (prefers-color-scheme: dark) {
+    .driver-team {
+        background-color: $neutrals-800;
+
+        &__content {
+            &__title {
+                color: $neutrals-100;
+            }
+
+            &__paragraph {
+                color: $neutrals-500;
+            }
+        }
+    }
+}

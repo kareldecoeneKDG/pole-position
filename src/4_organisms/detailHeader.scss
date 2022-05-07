@@ -32,3 +32,16 @@
         }
     }
 }
+
+/* DARK MODE */
+@media (prefers-color-scheme: dark) {
+    .detailHeader {
+        .top {
+            &__info {
+                &__title {
+                    color: $neutrals-100;
+                }
+            }
+        }
+    }
+}

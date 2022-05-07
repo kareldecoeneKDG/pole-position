@@ -17,7 +17,13 @@
 
 /* DARK MODE */
 @media (prefers-color-scheme: dark) {
-    .cta__p {
-        color: $neutrals-100;
+    .section {
+        &__title {
+            color: $neutrals-100;
+        }
+
+        .cta__p {
+            color: $neutrals-100;
+        }
     }
 }

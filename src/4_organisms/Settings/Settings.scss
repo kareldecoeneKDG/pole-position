@@ -15,7 +15,8 @@
         padding: 20px;
         border-radius: 20px 20px 0px 0px;
 
-        &__title, &__subtitle {
+        &__title,
+        &__subtitle {
             color: $neutrals-100;
         }
     }
@@ -52,6 +53,31 @@
                 line-height: 16px;
                 color: $neutrals-900;
                 margin-bottom: 3px;
+            }
+        }
+    }
+}
+
+
+
+/* DARK MODE */
+@media (prefers-color-scheme: dark) {
+    .settings {
+        &__item {
+            background-color: $neutrals-800;
+
+            &.item-grey {
+                background-color: $neutrals-900;
+            }
+
+            &__content {
+                &__title {
+                    color: $neutrals-100;
+                }
+
+                &__value {
+                    color: $neutrals-100;
+                }
             }
         }
     }
