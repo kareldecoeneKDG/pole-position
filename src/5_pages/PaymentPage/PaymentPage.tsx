@@ -2,9 +2,9 @@ import React from 'react';
 
 function PaymentPage() {
     return (
-        <section className="payment section">
-            <h2 className="payment__title">Payment</h2>
-            <p className="payment__p">Small cost, big value.</p>
+        <section className="payment section formPage">
+            <h2 className="title">Payment</h2>
+            <p className="p">Small cost, big value.</p>
 
             <form className="payment__form custom-form">
                 {/* TEXT INPUTS */}

@@ -11,7 +11,7 @@ import MightAlsoLikeDriver from '../../4_organisms/MightAlsoLikeDriver/MightAlso
 
 function DriverPage() {
     return (
-        <div className="driver-page">
+        <div className="driverPage">
             <DriverDetailHeader />
             <LatestNews />
             <FactsNumbers />

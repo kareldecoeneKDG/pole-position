@@ -8,7 +8,7 @@ import RedBullLogo from './redbull.png';
 
 function TeamDetailHeader() {
     return (
-        <div className="detail-header">
+        <div className="detailHeader">
             <div className="top flex">
                 <div className="top__drivers top-team">
                     <img className="top-team__img" src={Max} alt="Picture of driver" />

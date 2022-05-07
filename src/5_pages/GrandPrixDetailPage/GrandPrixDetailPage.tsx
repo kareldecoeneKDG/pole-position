@@ -6,7 +6,7 @@ import Article from '../../3_molecules/Article/Article';
 
 function GrandPrixDetailPage() {
     return (
-        <div className="grandprix-detail">
+        <div className="grandprixDetail">
             <div className="banner">
                 <div className="banner__bg"></div>
 
@@ -19,7 +19,7 @@ function GrandPrixDetailPage() {
                 </div>
             </div>
 
-            <section className="grandprix-detail__articles section">
+            <section className="grandprixDetail__articles section">
                 <h2 className="section__title">2022 Barcelona GP</h2>
 
                 <Article />

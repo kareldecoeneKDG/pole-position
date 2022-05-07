@@ -2,9 +2,9 @@ import React from 'react';
 
 function LoginPage() {
     return (
-        <section className="login section">
-            <h2 className="login__title">Login</h2>
-            <p className="login__p">Please enter your email and password.</p>
+        <section className="login section formPage">
+            <h2 className="title">Login</h2>
+            <p className="p">Please enter your email and password.</p>
 
             <form className="login__form custom-form">
 

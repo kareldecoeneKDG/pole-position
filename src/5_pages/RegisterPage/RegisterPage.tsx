@@ -2,9 +2,9 @@ import React from 'react';
 
 function RegisterPage() {
     return (
-        <section className="register section">
-            <h2 className="register__title">Register</h2>
-            <p className="register__p">To make a Pole Position account.</p>
+        <section className="register section formPage">
+            <h2 className="title">Register</h2>
+            <p className="p">To make a Pole Position account.</p>
 
             <form className="register__form custom-form">
 

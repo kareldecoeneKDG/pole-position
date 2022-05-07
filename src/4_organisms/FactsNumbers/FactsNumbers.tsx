@@ -4,7 +4,7 @@ import FactNumber from '../../3_molecules/FactNumber/FactNumber';
 
 function FactsNumbers() {
     return (
-        <div className="facts-numbers section">
+        <div className="factsNumbers section">
             <h2 className="section__title">Facts & numbers</h2>
 
             <div className="facts-numbers__items">
