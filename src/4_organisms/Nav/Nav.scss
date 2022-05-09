@@ -10,6 +10,10 @@
         justify-content: space-between;
         align-items: center;
 
+        .nav-links {
+            display: none;
+        }
+
         .burger {
             display: block;
             width: 20px;

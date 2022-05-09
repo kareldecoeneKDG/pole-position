@@ -10,3 +10,16 @@
         color: $neutrals-700;
     }
 }
+
+/* DARK MODE */
+@media (prefers-color-scheme: dark) {
+    .formPage {
+        .title {
+            color: $neutrals-100;
+        }
+    
+        .p {
+            color: $neutrals-500;
+        }
+    }
+}

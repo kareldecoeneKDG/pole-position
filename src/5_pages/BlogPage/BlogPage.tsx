@@ -5,7 +5,7 @@ import MoreRecentNews from '../../4_organisms/MoreRecentNews/MoreRecentNews';
 
 function BlogPage() {
     return (
-        <section className="blog">
+        <section className="blogPage">
             <BlogSearch />
             <MoreRecentNews />
         </section>

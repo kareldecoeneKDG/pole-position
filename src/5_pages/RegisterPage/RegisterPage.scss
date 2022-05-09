@@ -28,3 +28,16 @@
         }
     }
 }
+
+/* DARK MODE */
+@media (prefers-color-scheme: dark) {
+    .register {
+        &__form {
+            &__checkbox {
+                .checkbox-label {
+                    color: $neutrals-500;
+                }
+            }
+        }
+    }
+}

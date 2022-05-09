@@ -7,3 +7,24 @@
         background-color: $neutrals-100;
     }
 }
+
+/* DARK MODE */
+@media (prefers-color-scheme: dark) {
+    .teamPage {
+        .moreRecentNews {
+            .center {
+                .button {
+                    background-color: $neutrals-800 !important;
+                }
+            }
+        }
+
+        .recentShots {
+            background-color: $neutrals-800;
+        }
+
+        .mightAlsoLike {
+            background-color: $neutrals-900;
+        }
+    }
+}

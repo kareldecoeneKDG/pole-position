@@ -25,6 +25,7 @@ import LoginPage from './5_pages/LoginPage/LoginPage';
 import RegisterPage from './5_pages/RegisterPage/RegisterPage';
 import PaymentPage from './5_pages/PaymentPage/PaymentPage';
 import NotFoundPage from './5_pages/NotFoundPage/NotFoundPage';
+import TestPage from './5_pages/TestPage/TestPage';
 
 // Global styles
 import './style.scss';
@@ -127,11 +128,14 @@ function App() {
                     <Route path="*" element={<NotFoundPage />} />
 
 
+                    <Route path="/test" element={<TestPage />} />
+
+
 
                     <Route path="/404" element={<NotFoundPage />} />
                 </Routes>
 
-                <Footer />
+                {/* <Footer /> */}
 
                 {/*<div className="dropdown">
                         <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">

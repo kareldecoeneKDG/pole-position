@@ -11,3 +11,18 @@
         margin-bottom: 50px;
     }
 }
+
+/* DARK MODE */
+@media (prefers-color-scheme: dark) {
+    .historyHighlights {
+        background-color: $neutrals-800;
+
+        &__title {
+            color: $neutrals-100;
+        }
+
+        &__p {
+            color: $neutrals-500;
+        }
+    }
+}

@@ -26,3 +26,10 @@
         }
     }
 }
+
+/* DARK MODE */
+@media (prefers-color-scheme: dark) {
+    .loading {
+        background-color: $neutrals-900;
+    }
+}

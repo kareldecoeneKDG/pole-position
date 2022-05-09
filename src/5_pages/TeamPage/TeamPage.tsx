@@ -10,7 +10,7 @@ import MightAlsoLikeTeams from '../../4_organisms/MightAlsoLikeTeams/MightAlsoLi
 
 function TeamPage() {
     return (
-        <section className="team">
+        <section className="teamPage">
             <TeamDetailHeader />
             <LatestNews />
             <FactsNumbers />

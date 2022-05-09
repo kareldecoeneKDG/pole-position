@@ -1,12 +1,14 @@
 import React from 'react';
 
 import ErrorLogo from './error-logo.png';
+import ErrorLogoDark from './error-logo-dark.png';
 
 function NotFoundPage() {
     return (
         <section className="error404">
             <div className="error404__content">
-                <img className="error404__content__logo" src={ErrorLogo} alt="Error 404 logo" />
+                <img className="error404__content__logo light" src={ErrorLogo} alt="Error 404 logo" />
+                <img className="error404__content__logo dark" src={ErrorLogoDark} alt="Error Dark logo" />
 
                 <h2 className="error404__content__title">Oh no, something went wrong!</h2>
 

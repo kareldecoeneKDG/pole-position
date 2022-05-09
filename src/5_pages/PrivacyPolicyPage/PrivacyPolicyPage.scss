@@ -21,3 +21,22 @@
         color: $neutrals-900;
     }
 }
+
+/* DARK MODE */
+@media (prefers-color-scheme: dark) {
+    .privacyPolicy {
+        background-color: $neutrals-900;
+        
+        &__title {
+            color: $neutrals-100;
+        }
+    
+        &__p {
+            color: $neutrals-500;
+        }
+    
+        &__subtitle {
+            color: $neutrals-100;
+        }
+    }
+}

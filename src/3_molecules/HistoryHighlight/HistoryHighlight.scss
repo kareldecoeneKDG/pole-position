@@ -19,6 +19,7 @@
     }
 
     &__title {
+        color: $neutrals-900;
         margin-bottom: 10px;
     }
 
@@ -29,5 +30,22 @@
 
     &__date {
         color: $neutrals-600;
+    }
+}
+
+/* DARK MODE */
+@media (prefers-color-scheme: dark) {
+    .historyHighlight {
+        &__title {
+            color: $neutrals-100;
+        }
+
+        &__p {
+            color: $neutrals-500;
+        }
+
+        &__date {
+            color: $neutrals-600;
+        }
     }
 }

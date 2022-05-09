@@ -1,0 +1,12 @@
+/* DARK MODE */
+@media (prefers-color-scheme: dark) {
+    .blogPage {
+        .moreRecentNews {
+            .center {
+                .button {
+                    background-color: $neutrals-800;
+                }
+            }
+        }
+    }
+}
