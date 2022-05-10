@@ -34,3 +34,16 @@
         }
     }
 }
+
+/* TABLET PORTRAIT */
+@media only screen and (min-width: $tablet-portrait) {
+    .platform {
+        &__items {
+            padding: 0px 100px;
+        }
+    
+        .signup {
+            margin: 0px 100px;
+        }
+    }
+}

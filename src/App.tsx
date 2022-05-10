@@ -135,7 +135,7 @@ function App() {
                     <Route path="/404" element={<NotFoundPage />} />
                 </Routes>
 
-                {/* <Footer /> */}
+                <Footer />
 
                 {/*<div className="dropdown">
                         <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">

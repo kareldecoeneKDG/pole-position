@@ -27,7 +27,8 @@
             margin-bottom: 10px;
         }
 
-        &__p, &__a {
+        &__p,
+        &__a {
             display: block;
             font-family: $secondary-font;
             font-size: 16px;
@@ -60,9 +61,10 @@
     }
 }
 
-// Dark mode
-@media (prefers-color-scheme: dark) {
+/* TABLET PORTRAIT */
+@media only screen and (min-width: $tablet-portrait) {
+    // Light mode
     .footer {
-        //background-color: $primary-600;
+        padding: 50px 50px 30px 50px;
     }
 }

@@ -45,7 +45,7 @@
 @media (prefers-color-scheme: dark) {
     .subnav {
         background-color: $neutrals-800;
-    
+
         &__list {
             &__item {
                 &__link {
@@ -53,9 +53,26 @@
                 }
             }
         }
-    
+
         &__icon {
             color: $neutrals-100;
+        }
+    }
+}
+
+/* TABLET PORTRAIT */
+@media only screen and (min-width: $tablet-portrait) {
+    .subnav {
+        &__list {
+            &__item {
+                &__link {
+                    padding: 17px 50px 0px 50px;
+                }
+            }
+        }
+
+        &__icon {
+            right: 50px;
         }
     }
 }

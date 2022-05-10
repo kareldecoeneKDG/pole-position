@@ -30,3 +30,16 @@
         }
     }
 }
+
+/* TABLET PORTRAIT */
+@media only screen and (min-width: $tablet-portrait) {
+    .benefits {
+        &__p {
+            padding: 0px 100px;
+        }
+    
+        &__items {
+            padding: 0px 100px;
+        }
+    }
+}

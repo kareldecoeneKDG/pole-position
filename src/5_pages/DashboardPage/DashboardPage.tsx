@@ -11,13 +11,13 @@ function DashboardPage() {
             <SubNav />
 
             
-            {/*
+            
             <SavedBlogposts />
             <LatestGP />
-            */}
+            
             
 
-            <Settings />
+            {/* <Settings /> */}
         </div>
     );
 }

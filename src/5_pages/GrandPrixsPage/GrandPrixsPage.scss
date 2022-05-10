@@ -8,3 +8,14 @@
         text-align: center;
     }
 }
+
+/* TABLET PORTRAIT */
+@media only screen and (min-width: $tablet-portrait) {
+    .grandprixs {
+        .grandprixs-section {
+            &__items {
+                padding: 0px 100px;
+            }
+        }
+    }
+}
