@@ -1,3 +1,4 @@
+/* STANDARD CSS RULES */
 .nav {
     padding: 0px 20px;
     position: relative;
@@ -47,7 +48,49 @@
     }
 }
 
-/* MOBILE DARK MODE */
+/* LIGHT THEME COLORS */
+[data-theme="light"] {
+    .nav {
+        .mobile {
+            .burger {
+                .line {
+                    background-color: $neutrals-900;
+                }
+            }
+
+            .profile {
+                background-color: $neutrals-900;
+
+                &__icon {
+                    color: $neutrals-100;
+                }
+            }
+        }
+    }
+}
+
+/* DARK THEME COLORS */
+[data-theme="dark"] {
+    .nav {
+        .mobile {
+            .burger {
+                .line {
+                    background-color: $neutrals-100;
+                }
+            }
+
+            .profile {
+                background-color: $neutrals-100;
+
+                &__icon {
+                    color: $neutrals-900;
+                }
+            }
+        }
+    }
+}
+
+/* DARK THEME COLORS - VIA OPERATING SYSTEM */
 @media (prefers-color-scheme: dark) {
     .nav {
         .mobile {

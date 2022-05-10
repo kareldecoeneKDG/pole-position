@@ -12,6 +12,26 @@
     display: none;
 }
 
+[data-theme="light"] {
+    .light {
+        display: block;
+    }
+    
+    .dark {
+        display: none;
+    }
+}
+
+[data-theme="dark"] {
+    .light {
+        display: none;
+    }
+    
+    .dark {
+        display: block;
+    }
+}
+
 /* DARK MODE */
 @media (prefers-color-scheme: dark) {
     .light {

@@ -34,3 +34,14 @@
         }
     }
 }
+
+/* TABLET PORTRAIT */
+@media only screen and (min-width: $tablet-portrait) {
+    .recentShots {
+        .carousel {
+            width: calc(100% - 200px);
+            height: 309px;
+            margin: 0px 100px;
+        }
+    }
+}

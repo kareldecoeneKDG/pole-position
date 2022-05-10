@@ -24,3 +24,21 @@
         }
     }
 }
+
+/* TABLET PORTRAIT */
+@media only screen and (min-width: $tablet-portrait) {
+    .detailHeader {
+        .top {
+            height: 350px;
+
+            .top-team {
+                height: 100%;
+    
+                &__img {
+                    width: 160px;
+                    height: 230px;
+                }
+            }
+        }
+    }
+}

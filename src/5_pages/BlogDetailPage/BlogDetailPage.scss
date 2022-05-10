@@ -69,6 +69,10 @@
 
     .moreRecentNews {
         background-color: $neutrals-200;
+
+        .article {
+            background-color: $neutrals-100;
+        }
     }
 }
 
@@ -115,9 +119,27 @@
             .article {
                 background-color: $neutrals-900;
 
-                .button, .icon-bg {
+                .button,
+                .icon-bg {
                     background-color: $neutrals-800;
                 }
+            }
+        }
+    }
+}
+
+/* TABLET PORTRAIT */
+@media only screen and (min-width: $tablet-portrait) {
+    .blogDetail {
+        &__content {
+            padding: 50px 150px 75px 150px;
+
+            &__title {
+                padding: 0;
+            }
+
+            &__img {
+                height: 309px;
             }
         }
     }

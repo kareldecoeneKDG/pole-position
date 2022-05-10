@@ -40,3 +40,14 @@
         }
     }
 }
+
+/* TABLET PORTRAIT */
+@media only screen and (min-width: $tablet-portrait) {
+    .privacyPolicy {
+        padding: 50px 150px 75px 150px;
+
+        &__title {
+            padding: 0;
+        }
+    }
+}

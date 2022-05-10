@@ -45,3 +45,19 @@
         }
     }
 }
+
+/* TABLET PORTRAIT */
+@media only screen and (min-width: $tablet-portrait) {
+    .error404 {
+        height: calc(100vh - 80px);
+    
+        &__content {
+            padding: 0px 150px;
+    
+            &__logo {
+                width: 406px;
+                height: 60px;
+            }
+        }
+    }
+}

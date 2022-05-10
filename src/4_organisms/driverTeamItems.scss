@@ -35,3 +35,10 @@
         }
     }
 }
+
+/* TABLET PORTRAIT */
+@media only screen and (min-width: $tablet-portrait) {
+    .driver-team__items {
+        margin-top: 75px;
+    }
+}

@@ -15,7 +15,7 @@ html[data-theme="dark"] {
 }
 
 body {
-    background-color: var(--bg); /* background color variable */
+    //background-color: var(--bg); /* background color variable */
 }
 
 .container {
@@ -48,8 +48,11 @@ body {
     margin-top: 2em;
 }
 
-//toggle container WEGGGGGGGG???
+//toggle container???
 .toggle-container {
+    position: fixed;
+    z-index: 999;
+    
     label {
         /* styling for labels */
         cursor: pointer;

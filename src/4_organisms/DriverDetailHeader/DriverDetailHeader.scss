@@ -9,3 +9,17 @@
         }
     }
 }
+
+/* TABLET PORTRAIT */
+@media only screen and (min-width: $tablet-portrait) {
+    .detailHeader {
+        .top {
+            .top-driver {
+                &__img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}

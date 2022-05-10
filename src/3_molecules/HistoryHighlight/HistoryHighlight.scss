@@ -49,3 +49,10 @@
         }
     }
 }
+
+/* TABLET PORTRAIT */
+@media only screen and (min-width: $tablet-portrait) {
+    .historyHighlight {
+        padding: 0px 100px;
+    }
+}

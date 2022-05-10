@@ -37,3 +37,10 @@
         }
     }
 }
+
+/* TABLET PORTRAIT */
+@media only screen and (min-width: $tablet-portrait) {
+    .factNumber {
+        margin: 0px 100px 20px 100px;
+    }
+}

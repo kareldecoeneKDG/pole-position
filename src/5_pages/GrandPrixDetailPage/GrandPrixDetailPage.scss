@@ -67,7 +67,7 @@
     .grandprixDetail {
         .banner {
             background-color: $neutrals-800;
-    
+
             &__info {
                 &__circuit {
                     border: 4px solid $neutrals-800;
@@ -87,5 +87,27 @@
 
 /* TABLET PORTRAIT */
 @media only screen and (min-width: $tablet-portrait) {
-    
+    .grandprixDetail {
+        .banner {
+            height: 364px;
+
+            &__bg {
+                height: 300px;
+            }
+
+            &__info {
+                &__circuit {
+                    left: 50px;
+                }
+
+                .button {
+                    right: 50px;
+                }
+            }
+        }
+
+        &__articles {
+            padding: 50px 150px 75px 150px;
+        }
+    }
 }

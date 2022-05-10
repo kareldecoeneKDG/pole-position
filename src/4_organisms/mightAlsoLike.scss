@@ -1,0 +1,8 @@
+/* TABLET PORTRAIT */
+@media only screen and (min-width: $tablet-portrait) {
+    .mightAlsoLike {
+        &__drivers, &__drivers-teams {
+            padding: 0px 100px;
+        }
+    }
+}

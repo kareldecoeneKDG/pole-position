@@ -58,3 +58,12 @@
         }
     }
 }
+
+/* TABLET PORTRAIT */
+@media only screen and (min-width: $tablet-portrait) {
+    .driver-team {
+        &__img {
+            height: 309px;
+        }
+    }
+}

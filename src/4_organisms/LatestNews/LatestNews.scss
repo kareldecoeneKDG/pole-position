@@ -1,3 +1,4 @@
+/* STANDARD CSS RULES */
 .latestnews {
     background-color: $neutrals-200;
     position: relative;
@@ -35,7 +36,21 @@
     }
 }
 
-/* DARK MODE */
+/* LIGHT THEME COLORS */
+[data-theme="light"] {
+    .latestnews {
+        background-color: $neutrals-200;
+    }
+}
+
+/* DARK THEME COLORS */
+[data-theme="dark"] {
+    .latestnews {
+        background-color: $neutrals-800;
+    }
+}
+
+/* DARK THEME COLORS - VIA OPERATING SYSTEM */
 @media (prefers-color-scheme: dark) {
     .latestnews {
         background-color: $neutrals-800;

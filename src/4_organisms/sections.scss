@@ -1,3 +1,4 @@
+/* STANDARD CSS RULES */
 .section {
     padding: 75px 20px;
 
@@ -15,7 +16,33 @@
     }
 }
 
-/* DARK MODE */
+/* LIGHT THEME COLORS */
+[data-theme="light"] {
+    .section {
+        &__title {
+            color: $neutrals-900;
+        }
+
+        .cta__p {
+            color: $neutrals-900;
+        }
+    }
+}
+
+/* DARK THEME COLORS */
+[data-theme="dark"] {
+    .section {
+        &__title {
+            color: $neutrals-100;
+        }
+
+        .cta__p {
+            color: $neutrals-100;
+        }
+    }
+}
+
+/* DARK THEME COLORS - VIA OPERATING SYSTEM */
 @media (prefers-color-scheme: dark) {
     .section {
         &__title {
@@ -32,5 +59,14 @@
 @media only screen and (min-width: $tablet-portrait) {
     .section {
         padding: 75px 50px;
+
+        &__title {
+            padding: 0px 100px;
+        }
+
+        .cta__p {
+            margin-bottom: 10px;
+            padding: 0px 100px;
+        }
     }
 }

@@ -1,9 +1,9 @@
+/* STANDARD CSS RULES */
 .header {
     position: relative;
     height: calc(100vh - 66px);
     padding: 0px 20px;
     text-align: center;
-    background-color: $neutrals-100;
 
     .bg-rect {
         position: absolute;
@@ -40,6 +40,7 @@
     }
 
     &__p {
+        color: $neutrals-900;
         margin-bottom: 20px;
     }
 
@@ -63,13 +64,29 @@
         &__icon {
             font-size: 16px;
             line-height: 24px;
-            color: $neutrals-900;
         }
     }
 }
 
-/* MOBILE DARK MODE */
-@media (prefers-color-scheme: dark) {
+/* LIGHT THEME COLORS */
+[data-theme="light"] {
+    .header {
+        background-color: $neutrals-100;
+
+        &__p {
+            color: $neutrals-900;
+        }
+
+        &__scrolldown {
+            &__icon {
+                color: $neutrals-900;
+            }
+        }
+    }
+}
+
+/* DARK THEME COLORS */
+[data-theme="dark"] {
     .header {
         background-color: $neutrals-900;
 
@@ -77,8 +94,21 @@
             color: $neutrals-100;
         }
 
-        .button {
-            margin-bottom: 50px;
+        &__scrolldown {
+            &__icon {
+                color: $neutrals-100;
+            }
+        }
+    }
+}
+
+/* DARK THEME COLORS - VIA OPERATING SYSTEM */
+@media (prefers-color-scheme: dark) {
+    .header {
+        background-color: $neutrals-900;
+
+        &__p {
+            color: $neutrals-100;
         }
 
         &__scrolldown {
@@ -118,7 +148,7 @@
         }
 
         .button {
-            margin-bottom: 75px;
+            margin-bottom: 75px !important;
         }
 
         &__img-placeholder {
