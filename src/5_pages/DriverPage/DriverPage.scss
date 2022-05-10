@@ -1,3 +1,4 @@
+/* STANDARD CSS RULES */
 .driverPage {
     .moreRecentNews {
         background-color: $neutrals-200;
@@ -14,7 +15,59 @@
     }
 }
 
-/* DARK MODE */
+/* LIGHT THEME COLORS */
+[data-theme="light"] {
+    .driverPage {
+        .moreRecentNews {
+            background-color: $neutrals-200;
+        
+            .article {
+                background-color: $neutrals-100;
+            }
+        }
+    
+        .mightAlsoLike {
+            .driver-team {
+                background-color: $neutrals-100;
+            }
+        }
+    }
+}
+
+/* DARK THEME COLORS */
+[data-theme="dark"] {
+    .driverPage {
+        .moreRecentNews {
+            background-color: $neutrals-800;
+        
+            .article {
+                background-color: $neutrals-900;
+
+                .button {
+                    background-color: $neutrals-800;
+                }
+
+                .icon-bg {
+                    background-color: $neutrals-800;
+                }
+            }
+        }
+    
+        .mightAlsoLike {
+            background-color: $neutrals-800;
+
+            .driver-team {
+                background-color: $neutrals-900;
+
+                .button {
+                    background-color: $neutrals-800;
+                }
+            }
+        }
+    }
+}
+
+/* DARK THEME COLORS - VIA OPERATING SYSTEM */
 @media (prefers-color-scheme: dark) {
     .driverPage {
         .moreRecentNews {

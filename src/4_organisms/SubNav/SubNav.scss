@@ -1,3 +1,4 @@
+/* STANDARD CSS RULES */
 .subnav {
     background-color: $neutrals-300;
     position: relative;
@@ -27,6 +28,7 @@
                 font-size: 16px;
                 font-weight: 400;
                 line-height: 16px;
+                color: $neutrals-900;
             }
         }
     }
@@ -41,7 +43,45 @@
     }
 }
 
-/* DARK MODE */
+/* LIGHT THEME COLORS */
+[data-theme="light"] {
+    .subnav {
+        background-color: $neutrals-300;
+
+        &__list {
+            &__item {
+                &__link {
+                    color: $neutrals-900;
+                }
+            }
+        }
+    
+        &__icon {
+            color: $neutrals-900;
+        }
+    }
+}
+
+/* DARK THEME COLORS */
+[data-theme="dark"] {
+    .subnav {
+        background-color: $neutrals-800;
+
+        &__list {
+            &__item {
+                &__link {
+                    color: $neutrals-100;
+                }
+            }
+        }
+    
+        &__icon {
+            color: $neutrals-100;
+        }
+    }
+}
+
+/* DARK THEME COLORS - VIA OPERATING SYSTEM */
 @media (prefers-color-scheme: dark) {
     .subnav {
         background-color: $neutrals-800;

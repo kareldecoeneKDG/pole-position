@@ -1,3 +1,4 @@
+/* STANDARD CSS RULES */
 .driver-team {
     background-color: $neutrals-200;
     border-radius: 20px;
@@ -33,16 +34,52 @@
         }
 
         &__title {
+            color: $neutrals-900;
             margin-bottom: 10px;
         }
 
         &__paragraph {
             margin-bottom: 20px;
+            color: $neutrals-700;
         }
     }
 }
 
-/* DARK MODE */
+/* LIGHT THEME COLORS */
+[data-theme="light"] {
+    .driver-team {
+        background-color: $neutrals-200;
+
+        &__content {
+            &__title {
+                color: $neutrals-900;
+            }
+
+            &__paragraph {
+                color: $neutrals-700;
+            }
+        }
+    }
+}
+
+/* DARK THEME COLORS */
+[data-theme="dark"] {
+    .driver-team {
+        background-color: $neutrals-900;
+
+        &__content {
+            &__title {
+                color: $neutrals-100;
+            }
+
+            &__paragraph {
+                color: $neutrals-500;
+            }
+        }
+    }
+}
+
+/* DARK THEME COLORS - VIA OPERATING SYSTEM */
 @media (prefers-color-scheme: dark) {
     .driver-team {
         background-color: $neutrals-800;

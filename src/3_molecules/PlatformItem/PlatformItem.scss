@@ -1,3 +1,4 @@
+/* STANDARD CSS RULES */
 .platform-item {
     margin-bottom: 20px;
 
@@ -20,7 +21,33 @@
     }
 }
 
-/* DARK MODE */
+/* LIGHT THEME COLORS */
+[data-theme="light"] {
+    .platform-item {
+        &__title {
+            color: $neutrals-900;
+        }
+    
+        &__p {
+            color: $neutrals-700;
+        }
+    }
+}
+
+/* DARK THEME COLORS */
+[data-theme="dark"] {
+    .platform-item {
+        &__title {
+            color: $neutrals-100;
+        }
+    
+        &__p {
+            color: $neutrals-500;
+        }
+    }
+}
+
+/* DARK THEME COLORS - VIA OPERATING SYSTEM */
 @media (prefers-color-scheme: dark) {
     .platform-item {
         &__title {

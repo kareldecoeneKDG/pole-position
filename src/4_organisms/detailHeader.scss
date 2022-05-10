@@ -1,3 +1,4 @@
+/* STANDARD CSS RULES */
 .detailHeader {
     padding: 50px 20px 75px 20px;
 
@@ -34,7 +35,33 @@
     }
 }
 
-/* DARK MODE */
+/* LIGHT THEME COLORS */
+[data-theme="light"] {
+    .detailHeader {
+        .top {
+            &__info {
+                &__title {
+                    color: $neutrals-900;
+                }
+            }
+        }
+    }
+}
+
+/* DARK THEME COLORS */
+[data-theme="dark"] {
+    .detailHeader {
+        .top {
+            &__info {
+                &__title {
+                    color: $neutrals-100;
+                }
+            }
+        }
+    }
+}
+
+/* DARK THEME COLORS - VIA OPERATING SYSTEM */
 @media (prefers-color-scheme: dark) {
     .detailHeader {
         .top {

@@ -1,3 +1,4 @@
+/* STANDARD CSS RULES */
 .driver-team__items {
     margin-top: 50px;
 
@@ -32,6 +33,54 @@
             font-size: 16px;
             line-height: 16px;
             font-weight: 600;
+            color: $neutrals-900;
+        }
+    }
+}
+
+/* LIGHT THEME COLORS */
+[data-theme="light"] {
+    .driver-team__items {
+        .item {
+            background-color: $neutrals-200;
+    
+            &__title {
+                color: $neutrals-900;
+            }
+        }
+    }
+}
+
+/* DARK THEME COLORS */
+[data-theme="dark"] {
+    .driver-team__items {
+        .item {
+            background-color: $neutrals-800;
+    
+            &__title {
+                color: $neutrals-100;
+            }
+
+            &__number {
+                color: $neutrals-100;
+            }
+        }
+    }
+}
+
+/* DARK THEME COLORS - VIA OPERATING SYSTEM */
+@media (prefers-color-scheme: dark) {
+    .driver-team__items {
+        .item {
+            background-color: $neutrals-800;
+    
+            &__title {
+                color: $neutrals-100;
+            }
+
+            &__number {
+                color: $neutrals-100;
+            }
         }
     }
 }
