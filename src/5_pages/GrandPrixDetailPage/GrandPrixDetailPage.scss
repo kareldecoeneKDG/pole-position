@@ -60,6 +60,12 @@
                 margin-bottom: 50px;
             }
         }
+
+        .center {
+            .button {
+                background-color: $neutrals-900;
+            }
+        }
     }
 }
 
@@ -68,11 +74,19 @@
     .grandprixDetail {
         .banner {
             background-color: $neutrals-200;
-    
+
             &__info {
                 &__circuit {
                     background-color: $neutrals-500;
                     border: 4px solid $neutrals-200;
+                }
+            }
+        }
+
+        &__articles {
+            .center {
+                .button {
+                    background-color: $neutrals-900;
                 }
             }
         }

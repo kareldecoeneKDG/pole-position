@@ -22,6 +22,10 @@
             justify-content: space-between;
             align-items: center;
             margin-bottom: 10px;
+
+            .detail {
+                color: $neutrals-900;
+            }
         }
 
         &__title {
@@ -35,6 +39,10 @@
         &__bottom {
             justify-content: space-between;
             align-items: center;
+
+            .button {
+                background-color: $neutrals-900;
+            }
 
             .icon-bg {
                 background-color: $neutrals-900;
@@ -56,9 +64,21 @@
             &__title {
                 color: $neutrals-900;
             }
+
+            &__top {
+                .detail {
+                    color: $neutrals-900;
+                }
+            }
     
             &__paragraph {
                 color: $neutrals-700;
+            }
+
+            &__bottom {
+                .button {
+                    background-color: $neutrals-900;
+                }
             }
         }
     }

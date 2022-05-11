@@ -26,7 +26,7 @@ function LoginPage() {
                     <div className="form-control-forms">
                         <div className="form-group">
                             <input id="password" className="form__input input" type="password" name="password" placeholder=" " required />
-                            <label htmlFor="password" className="form__label">Full Name</label>
+                            <label htmlFor="password" className="form__label">Password</label>
                             {/*
                             <i className="fa fa-check-circle" aria-hidden="true"></i>
                             <i className="fa fa-exclamation-triangle" aria-hidden="true"></i>

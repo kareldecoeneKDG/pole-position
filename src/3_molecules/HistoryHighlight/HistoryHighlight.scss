@@ -1,3 +1,4 @@
+/* STANDARD CSS RULES */
 .historyHighlight {
     margin-bottom: 50px;
 
@@ -29,23 +30,45 @@
     }
 
     &__date {
-        color: $neutrals-600;
+        color: $neutrals-700;
     }
 }
 
-/* DARK MODE */
+/* LIGHT THEME COLORS */
+[data-theme="light"] {
+    .historyHighlight {
+        &__title {
+            color: $neutrals-900;
+        }
+    
+        &__p, &__date {
+            color: $neutrals-700;
+        }
+    }
+}
+
+/* DARK THEME COLORS */
+[data-theme="dark"] {
+    .historyHighlight {
+        &__title {
+            color: $neutrals-100;
+        }
+    
+        &__p, &__date {
+            color: $neutrals-500;
+        }
+    }
+}
+
+/* DARK THEME COLORS - VIA OPERATING SYSTEM */
 @media (prefers-color-scheme: dark) {
     .historyHighlight {
         &__title {
             color: $neutrals-100;
         }
 
-        &__p {
+        &__p, &__date {
             color: $neutrals-500;
-        }
-
-        &__date {
-            color: $neutrals-600;
         }
     }
 }

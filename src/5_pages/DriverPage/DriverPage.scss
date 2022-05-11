@@ -5,12 +5,26 @@
     
         .article {
             background-color: $neutrals-100;
+
+            .button {
+                background-color: $neutrals-900;
+            }
+
+            .icon-bg {
+                background-color: $neutrals-900;
+            }
         }
     }
 
     .mightAlsoLike {
+        background-color: $neutrals-200;
+
         .driver-team {
             background-color: $neutrals-100;
+
+            .button {
+                background-color: $neutrals-900;
+            }
         }
     }
 }
@@ -23,12 +37,26 @@
         
             .article {
                 background-color: $neutrals-100;
+
+                .button {
+                    background-color: $neutrals-900;
+                }
+
+                .icon-bg {
+                    background-color: $neutrals-900;
+                }
             }
         }
     
         .mightAlsoLike {
+            background-color: $neutrals-200;
+
             .driver-team {
                 background-color: $neutrals-100;
+
+                .button {
+                    background-color: $neutrals-900;
+                }
             }
         }
     }

@@ -1,3 +1,4 @@
+/* STANDARD CSS RULES */
 .blogDetail {
     &__content {
         padding-top: 50px;
@@ -5,7 +6,7 @@
         text-align: center;
 
         &__date {
-            color: $neutrals-600;
+            color: $neutrals-700;
         }
 
         &__title {
@@ -41,7 +42,7 @@
 
             &__title {
                 text-transform: uppercase;
-                color: $neutrals-700;
+                color: $neutrals-900;
                 margin-bottom: 10px;
                 line-height: 16px;
                 font-weight: 600;
@@ -50,6 +51,7 @@
             &__p {
                 margin-bottom: 30px;
                 line-height: 16px;
+                color: $neutrals-700;
 
                 span {
                     margin-right: 7px;
@@ -72,6 +74,58 @@
 
         .article {
             background-color: $neutrals-100;
+
+            .button, .icon-bg {
+                background-color: $neutrals-900;
+            }
+        }
+    }
+}
+
+/* LIGHT THEME COLORS */
+[data-theme="light"] {
+    .blogDetail {
+        &__content {
+            background-color: $neutrals-100;
+
+            &__date {
+                color: $neutrals-700;
+            }
+
+            &__intro {
+                color: $neutrals-700;
+            }
+
+            &__subtitle {
+                color: $neutrals-900;
+            }
+
+            &__p {
+                color: $neutrals-700;
+            }
+
+            &__blogpostInfo {
+                &__title {
+                    color: $neutrals-900;
+                }
+
+                &__p {
+                    color: $neutrals-700;
+                }
+            }
+        }
+
+        .moreRecentNews {
+            background-color: $neutrals-200;
+
+            .article {
+                background-color: $neutrals-100;
+
+                .button,
+                .icon-bg {
+                    background-color: $neutrals-900;
+                }
+            }
         }
     }
 }

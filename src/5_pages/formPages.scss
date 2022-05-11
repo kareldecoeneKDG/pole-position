@@ -1,8 +1,10 @@
+/* STANDARD CSS RULES */
 .formPage {
     padding-top: 50px;
 
     .title {
         margin-bottom: 3px;
+        color: $neutrals-900;
     }
 
     .p {
@@ -11,13 +13,39 @@
     }
 }
 
-/* DARK MODE */
+/* LIGHT THEME COLORS */
+[data-theme="light"] {
+    .formPage {
+        .title {
+            color: $neutrals-900;
+        }
+
+        .p {
+            color: $neutrals-700;
+        }
+    }
+}
+
+/* DARK THEME COLORS */
+[data-theme="dark"] {
+    .formPage {
+        .title {
+            color: $neutrals-100;
+        }
+
+        .p {
+            color: $neutrals-500;
+        }
+    }
+}
+
+/* DARK THEME COLORS - VIA OPERATING SYSTEM */
 @media (prefers-color-scheme: dark) {
     .formPage {
         .title {
             color: $neutrals-100;
         }
-    
+
         .p {
             color: $neutrals-500;
         }

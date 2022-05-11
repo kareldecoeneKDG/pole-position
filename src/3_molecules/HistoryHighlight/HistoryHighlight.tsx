@@ -13,7 +13,7 @@ function HistoryHighlight() {
                 Het is al geruime tijd een bekend gegeven dat een lezer, tijdens het bekijken van de layout van een.
             </p>
 
-            <p className="historyHighlight__date">
+            <p className="historyHighlight__date tag detail">
                 20th may 1997
             </p>
         </div>

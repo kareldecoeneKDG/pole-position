@@ -9,7 +9,7 @@ function BlogDetailPage() {
     return (
         <section className="blogDetail">
             <div className="blogDetail__content section">
-                <p className="blogDetail__content__date">Januari 13 2022 - 10:15</p>
+                <p className="blogDetail__content__date tag detail">Januari 13 2022 - 10:15</p>
 
                 <h2 className="blogDetail__content__title section__title">
                     Mogelijk voordeel voor Red Bull in tweede helft van seizoen

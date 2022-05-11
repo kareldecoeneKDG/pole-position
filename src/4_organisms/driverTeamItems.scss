@@ -35,6 +35,10 @@
             font-weight: 600;
             color: $neutrals-900;
         }
+
+        &__number {
+            color: $neutrals-900;
+        }
     }
 }
 
@@ -45,6 +49,10 @@
             background-color: $neutrals-200;
     
             &__title {
+                color: $neutrals-900;
+            }
+
+            &__number {
                 color: $neutrals-900;
             }
         }

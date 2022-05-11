@@ -1,20 +1,83 @@
-.team {
+/* STANDARD CSS RULES */
+.teamPage {
+    .moreRecentNews {
+        .center {
+            .button {
+                background-color: $neutrals-900;
+            }
+        }
+    }
+    
     .recentShots {
         background-color: $neutrals-200;
     }
 
     .mightAlsoLike {
         background-color: $neutrals-100;
+
+        .driver-team {
+            background-color: $neutrals-200;
+        }
     }
 }
 
-/* DARK MODE */
+/* LIGHT THEME COLORS */
+[data-theme="light"] {
+    .teamPage {
+        .moreRecentNews {
+            .center {
+                .button {
+                    background-color: $neutrals-900;
+                }
+            }
+        }
+
+        .recentShots {
+            background-color: $neutrals-200;
+        }
+    
+        .mightAlsoLike {
+            background-color: $neutrals-100;
+
+            .driver-team {
+                background-color: $neutrals-200;
+            }
+        }
+    }
+}
+
+/* DARK THEME COLORS */
+[data-theme="dark"] {
+    .teamPage {
+        .recentShots {
+            background-color: $neutrals-800;
+        }
+    
+        .mightAlsoLike {
+            background-color: $neutrals-900;
+
+            .driver-team {
+                background-color: $neutrals-800;
+            }
+        }
+
+        .moreRecentNews {
+            .center {
+                .button {
+                    background-color: $neutrals-800;
+                }
+            }
+        }
+    }
+}
+
+/* DARK THEME COLORS - VIA OPERATING SYSTEM */
 @media (prefers-color-scheme: dark) {
     .teamPage {
         .moreRecentNews {
             .center {
                 .button {
-                    background-color: $neutrals-800 !important;
+                    background-color: $neutrals-800;
                 }
             }
         }
@@ -25,6 +88,10 @@
 
         .mightAlsoLike {
             background-color: $neutrals-900;
+
+            .driver-team {
+                background-color: $neutrals-800;
+            }
         }
     }
 }
