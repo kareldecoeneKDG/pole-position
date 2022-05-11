@@ -1,5 +1,7 @@
 import React from 'react';
 
+import SignUpStep from '../../3_molecules/SignUpStep/SignUpStep';
+
 function HowSignUp() {
     return (
         <section className="howsignup section">
@@ -10,33 +12,10 @@ function HowSignUp() {
             </p>
 
             <div className="howsignup__steps">
-                <div className="step">
-                    <h3 className="step__title">Fill in email</h3>
-                    <p className="step__p">Het is al geruime tijd een bekend gegeven dat een lezer, tijdens het bekijken van de layout van een.</p>
-
-                    <div className="step__number">1</div>
-                </div>
-
-                <div className="step">
-                    <h3 className="step__title">Make account</h3>
-                    <p className="step__p">Het is al geruime tijd een bekend gegeven dat een lezer, tijdens het bekijken van de layout van een.</p>
-
-                    <div className="step__number">2</div>
-                </div>
-
-                <div className="step">
-                    <h3 className="step__title">Login</h3>
-                    <p className="step__p">Het is al geruime tijd een bekend gegeven dat een lezer, tijdens het bekijken van de layout van een.</p>
-
-                    <div className="step__number">3</div>
-                </div>
-
-                <div className="step">
-                    <h3 className="step__title">Fulfill payment</h3>
-                    <p className="step__p">Het is al geruime tijd een bekend gegeven dat een lezer, tijdens het bekijken van de layout van een.</p>
-
-                    <div className="step__number">4</div>
-                </div>
+                <SignUpStep />
+                <SignUpStep />
+                <SignUpStep />
+                <SignUpStep />
             </div>
 
             <div className="center">

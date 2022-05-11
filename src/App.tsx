@@ -65,44 +65,38 @@ function App() {
 
 
     // Light/dark theme
-    console.log(localStorage.getItem('data-theme'));
-
-    //als local storage leeg -> geef theme ''
-    //als theme '' doe dan van os
-
-    //let theme = '';
     let theme = localStorage.getItem('data-theme');
 
-    /* START NEW */
+
+
+    const changeThemeToDark = () => {
+        document.documentElement.setAttribute("data-theme", "dark") // set theme to dark
+        localStorage.setItem("data-theme", "dark") // save theme to local storage
+        theme = "dark";
+    }
+
+    const changeThemeToLight = () => {
+        document.documentElement.setAttribute("data-theme", "light") // set theme light
+        localStorage.setItem("data-theme", 'light') // save theme to local storage
+        theme = "light";
+    }
+
+
 
     if (localStorage.getItem('data-theme') == '') {
         let darkThemeMq = window.matchMedia("(prefers-color-scheme: dark)");
 
         if (darkThemeMq.matches == true) {
-            document.documentElement.setAttribute("data-theme", "dark") // set theme to dark
-            localStorage.setItem("data-theme", "dark") // save theme to local storage
-            theme = "dark";
+            changeThemeToDark()
         } else {
-            document.documentElement.setAttribute("data-theme", "light") // set theme light
-            localStorage.setItem("data-theme", 'light') // save theme to local storage
-            theme = "light";
+            changeThemeToLight()
         }
     }
     else {
         document.documentElement.setAttribute("data-theme", localStorage.getItem('data-theme')!);
     }
 
-    /* END NEW */
 
-    const changeThemeToDark = () => {
-        document.documentElement.setAttribute("data-theme", "dark") // set theme to dark
-        localStorage.setItem("data-theme", "dark") // save theme to local storage
-    }
-
-    const changeThemeToLight = () => {
-        document.documentElement.setAttribute("data-theme", "light") // set theme light
-        localStorage.setItem("data-theme", 'light') // save theme to local storage
-    }
 
     // Get the element based on ID
     const checkbox = document.getElementById("switch");
@@ -114,6 +108,7 @@ function App() {
         if (theme === 'dark') {
             theme = 'light';
             changeThemeToLight()
+            //checkbox.checked = true;
         } else {
             theme = 'dark';
             changeThemeToDark()
@@ -121,6 +116,14 @@ function App() {
     });
 
 
+
+    //toggle checkbox
+    const [checked, setChecked] = useState(false);
+    console.log(checked);
+
+
+
+    //const [checked, setChecked] = useState(false);
 
     return (
         <Router>
@@ -133,8 +136,17 @@ function App() {
                 <Nav />
 
                 <div className="toggle-container">
-                    <input type="checkbox" id="switch" name="theme" /><label htmlFor="switch">Toggle</label>
+                    <input type="checkbox" id="switch" name="theme" checked={checked} onChange={(e) => setChecked(e.target.checked)} /><label htmlFor="switch" onClick={() => setChecked((c) => !c)}>Toggle</label>
                 </div>
+
+                {/*<div className="test">
+                    <button onClick={() => setChecked((c) => !c)}>toggle</button>
+                    <input
+                        type="checkbox"
+                        checked={checked}
+                        onChange={(e) => setChecked(e.target.checked)}
+                    />
+                </div>*/}
 
                 <Routes>
                     <Route path="/" element={<HomePage />} />
