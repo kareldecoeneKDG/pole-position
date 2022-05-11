@@ -130,12 +130,46 @@
         }
 
         .button {
-            margin-bottom: 75px !important;
+            margin-bottom: 75px;
         }
 
         &__img-placeholder {
             width: 100%;
             height: 441px;
+        }
+    }
+}
+
+/* TABLET LANDSCAPE */
+@media only screen and (min-width: $tablet-landscape) {
+    .header {
+        height: calc(100vh - 80px);
+
+        .bg-rect {
+            &.bg-rect1 {
+                top: -40%;
+                right: -30%;
+            }
+    
+            &.bg-rect2 {
+                bottom: -50%;
+                left: -50%;
+            }
+        }
+
+        &__p {
+            padding: 0px 250px 20px 250px;
+        }
+
+        .button {
+            margin-bottom: 50px;
+        }
+
+        &__img-placeholder {
+            //width: 589px;
+            width: 424px;
+            //height: 344px;
+            height: 248px;
         }
     }
 }

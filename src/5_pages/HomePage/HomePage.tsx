@@ -10,7 +10,7 @@ import Newsletter from '../../4_organisms/Newsletter/Newsletter';
 
 function HomePage() {
     return (
-        <div>
+        <div className="homePage">
             <Header />
             <LatestNews />
             <Benefits />

@@ -19,3 +19,21 @@
         }
     }
 }
+
+/* TABLET LANDSCAPE */
+@media only screen and (min-width: $tablet-landscape) {
+    .grandprixs {
+        .grandprixs-section {
+            &__items {
+                padding: 0px 0px;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+
+                .grandprix {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}

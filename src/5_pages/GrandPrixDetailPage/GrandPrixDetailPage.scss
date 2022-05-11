@@ -133,3 +133,55 @@
         }
     }
 }
+
+/* TABLET LANDSCAPE */
+@media only screen and (min-width: $tablet-landscape) {
+    .grandprixDetail {
+        .banner {
+            &__info {
+                &__circuit {
+                    width: 200px;
+                    height: 200px;
+                    top: -150px;
+
+                    &__img {
+                        transform: translate(-65%, -50%);
+                        width: 150px;
+                    }
+
+                    /*position: absolute;
+                    top: -50px;
+                    left: 20px;
+                    width: 100px;
+                    height: 100px;
+
+                    border-radius: 50%;
+                    text-align: center;
+                    background-color: $neutrals-500;*/
+                }
+            }
+        }
+
+        &__articles {
+            padding: 50px 50px 75px 50px;
+
+            &__articles {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 20px;
+
+                .article {
+                    margin-bottom: 0;
+
+                    &:last-of-type {
+                        margin-bottom: 0;
+                    }
+
+                    &__img {
+                        height: 200px;
+                    }
+                }
+            }
+        }
+    }
+}

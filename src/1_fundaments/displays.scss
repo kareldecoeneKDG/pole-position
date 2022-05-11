@@ -1,5 +1,9 @@
 @import './spacers';
 
+.tablet-landscape {
+    display: none;
+}
+
 .desktop {
     display: none !important;
 }
@@ -39,6 +43,13 @@
     }
 
     .dark {
+        display: block;
+    }
+}
+
+/* TABLET LANDSCAPE */
+@media only screen and (min-width: $tablet-landscape) {
+    .tablet-landscape {
         display: block;
     }
 }

@@ -1,18 +1,27 @@
 import React from 'react';
-//import './LatestNews.scss';
+
+import LatestNewsArticle from '../../3_molecules/LatestNewsArticle/LatestNewsArticle';
+
+
 
 function LatestNews() {
     return (
         <section className="latestnews section">
             <h2 className="latestnews__title section__title">Latest news</h2>
 
-            <div className="latestnews__articles flex-column">
-                <div className="latestnews__articles__article">
-                    <h4>Mogelijk voordeel vor Red Bull in tweede helft van seizoen</h4>
-                </div>
+            {/* MOBILE ARTICLES */}
+            <div className="latestnews__articles flex-column mobile">
+                <LatestNewsArticle />
+                <LatestNewsArticle />
+            </div>
 
-                <div className="latestnews__articles__article">
-                    <h4>Mogelijk voordeel vor Red Bull in tweede helft van seizoen</h4>
+            {/* TABLET LANDSCAPE ARTICLES */}
+            <div className="latestnews__articles tablet-landscape flex">
+                <LatestNewsArticle />
+
+                <div className="latestnews__articles__smallones flex-column">
+                    <LatestNewsArticle />
+                    <LatestNewsArticle />
                 </div>
             </div>
 

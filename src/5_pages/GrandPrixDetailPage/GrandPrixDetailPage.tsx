@@ -22,10 +22,14 @@ function GrandPrixDetailPage() {
             <section className="grandprixDetail__articles section">
                 <h2 className="section__title">2022 Barcelona GP</h2>
 
-                <Article />
-                <Article />
-                <Article />
-                <Article />
+                <div className="grandprixDetail__articles__articles">
+                    <Article />
+                    <Article />
+                    <Article />
+                    <Article />
+                    <Article />
+                    <Article />
+                </div>
 
                 <div className="center">
                     <a className="button button-tertiary">More articles <i className="fa fa-chevron-down first-chevron" aria-hidden="true"></i></a>

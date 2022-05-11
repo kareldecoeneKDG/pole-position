@@ -136,7 +136,7 @@ function App() {
                 <Nav />
 
                 <div className="toggle-container">
-                    <input type="checkbox" id="switch" name="theme" checked={checked} onChange={(e) => setChecked(e.target.checked)} /><label htmlFor="switch" onClick={() => setChecked((c) => !c)}>Toggle</label>
+                    <input type="checkbox" id="switch" name="theme" checked={checked} onChange={(e) => setChecked(e.target.checked)} /><label htmlFor="switch" onClick={() => setChecked((c) => c)}>Toggle</label>
                 </div>
 
                 {/*<div className="test">
