@@ -1,7 +1,6 @@
 /* STANDARD CSS RULES */
 .benefits {
     text-align: center;
-    background-color: $neutrals-100;
 
     &__title {
         margin-bottom: 10px;
@@ -9,7 +8,6 @@
 
     &__p {
         margin-bottom: 50px;
-        color: $neutrals-700;
     }
 
     &__items {
@@ -33,21 +31,6 @@
     .benefits {
         background-color: $neutrals-900;
     
-        &__p {
-            color: $neutrals-500;
-        }
-    }
-}
-
-/* DARK THEME COLORS - VIA OPERATING SYSTEM */
-@media (prefers-color-scheme: dark) {
-    .benefits {
-        background-color: $neutrals-900;
-
-        &__title {
-            color: $neutrals-100;
-        }
-
         &__p {
             color: $neutrals-500;
         }

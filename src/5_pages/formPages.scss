@@ -4,12 +4,10 @@
 
     .title {
         margin-bottom: 3px;
-        color: $neutrals-900;
     }
 
     .p {
         margin-bottom: 30px;
-        color: $neutrals-700;
     }
 }
 
@@ -28,19 +26,6 @@
 
 /* DARK THEME COLORS */
 [data-theme="dark"] {
-    .formPage {
-        .title {
-            color: $neutrals-100;
-        }
-
-        .p {
-            color: $neutrals-500;
-        }
-    }
-}
-
-/* DARK THEME COLORS - VIA OPERATING SYSTEM */
-@media (prefers-color-scheme: dark) {
     .formPage {
         .title {
             color: $neutrals-100;

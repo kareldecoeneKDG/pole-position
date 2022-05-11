@@ -3,7 +3,6 @@
     position: absolute;
     top: 0;
     left: 0;
-    background-color: $neutrals-100;
     width: 100vw;
     height: 100vh;
 
@@ -27,8 +26,15 @@
     }
 }
 
-/* DARK MODE */
-@media (prefers-color-scheme: dark) {
+/* LIGHT THEME COLORS */
+[data-theme="light"] {
+    .loading {
+        background-color: $neutrals-100;
+    }
+}
+
+/* DARK THEME COLORS */
+[data-theme="dark"] {
     .loading {
         background-color: $neutrals-900;
     }

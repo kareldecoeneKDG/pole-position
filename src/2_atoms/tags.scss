@@ -21,12 +21,3 @@
         color: $neutrals-900;
     }
 }
-
-/* DARK MODE */
-@media (prefers-color-scheme: dark) {
-    .tag {
-        &.detail {
-            color: $neutrals-100;
-        }
-    }
-}

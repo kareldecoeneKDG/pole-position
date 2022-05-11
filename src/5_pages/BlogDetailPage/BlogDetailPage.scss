@@ -2,19 +2,13 @@
 .blogDetail {
     &__content {
         padding-top: 50px;
-        background-color: $neutrals-100;
         text-align: center;
-
-        &__date {
-            color: $neutrals-700;
-        }
 
         &__title {
             margin-bottom: 10px;
         }
 
         &__intro {
-            color: $neutrals-700;
             font-weight: 500;
             margin-bottom: 50px;
         }
@@ -29,11 +23,9 @@
 
         &__subtitle {
             margin-bottom: 10px;
-            color: $neutrals-900;
         }
 
         &__p {
-            color: $neutrals-700;
             margin-bottom: 50px;
         }
 
@@ -42,7 +34,6 @@
 
             &__title {
                 text-transform: uppercase;
-                color: $neutrals-900;
                 margin-bottom: 10px;
                 line-height: 16px;
                 font-weight: 600;
@@ -51,7 +42,6 @@
             &__p {
                 margin-bottom: 30px;
                 line-height: 16px;
-                color: $neutrals-700;
 
                 span {
                     margin-right: 7px;
@@ -65,18 +55,6 @@
             .socials {
                 justify-content: center;
                 padding-bottom: 0;
-            }
-        }
-    }
-
-    .moreRecentNews {
-        background-color: $neutrals-200;
-
-        .article {
-            background-color: $neutrals-100;
-
-            .button, .icon-bg {
-                background-color: $neutrals-900;
             }
         }
     }
@@ -130,8 +108,8 @@
     }
 }
 
-/* DARK MODE */
-@media (prefers-color-scheme: dark) {
+/* DARK THEME COLORS */
+[data-theme="dark"] {
     .blogDetail {
         &__content {
             background-color: $neutrals-900;

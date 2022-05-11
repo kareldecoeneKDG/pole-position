@@ -1,7 +1,5 @@
 /* STANDARD CSS RULES */
 .platform {
-    background-color: $neutrals-200;
-
     &__title {
         margin-bottom: 50px;
     }
@@ -34,13 +32,6 @@
 
 /* DARK THEME COLORS */
 [data-theme="dark"] {
-    .platform {
-        background-color: $neutrals-800;
-    }
-}
-
-/* DARK THEME COLORS - VIA OPERATING SYSTEM */
-@media (prefers-color-scheme: dark) {
     .platform {
         background-color: $neutrals-800;
     }

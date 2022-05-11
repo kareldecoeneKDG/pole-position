@@ -65,7 +65,34 @@ function App() {
 
 
     // Light/dark theme
+    console.log(localStorage.getItem('data-theme'));
+
+    //als local storage leeg -> geef theme ''
+    //als theme '' doe dan van os
+
+    //let theme = '';
     let theme = localStorage.getItem('data-theme');
+
+    /* START NEW */
+
+    if (localStorage.getItem('data-theme') == '') {
+        let darkThemeMq = window.matchMedia("(prefers-color-scheme: dark)");
+
+        if (darkThemeMq.matches == true) {
+            document.documentElement.setAttribute("data-theme", "dark") // set theme to dark
+            localStorage.setItem("data-theme", "dark") // save theme to local storage
+            theme = "dark";
+        } else {
+            document.documentElement.setAttribute("data-theme", "light") // set theme light
+            localStorage.setItem("data-theme", 'light') // save theme to local storage
+            theme = "light";
+        }
+    }
+    else {
+        document.documentElement.setAttribute("data-theme", localStorage.getItem('data-theme')!);
+    }
+
+    /* END NEW */
 
     const changeThemeToDark = () => {
         document.documentElement.setAttribute("data-theme", "dark") // set theme to dark
@@ -87,11 +114,9 @@ function App() {
         if (theme === 'dark') {
             theme = 'light';
             changeThemeToLight()
-            console.log('test');
         } else {
             theme = 'dark';
             changeThemeToDark()
-            console.log('test2');
         }
     });
 

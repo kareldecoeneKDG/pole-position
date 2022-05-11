@@ -1,12 +1,6 @@
 /* STANDARD CSS RULES */
 .savedBlogposts {
     padding-top: 50px;
-
-    .center {
-        .button {
-            background-color: $neutrals-900;
-        }
-    }
 }
 
 /* LIGHT THEME COLORS */
@@ -22,17 +16,6 @@
 
 /* DARK THEME COLORS */
 [data-theme="dark"] {
-    .savedBlogposts {
-        .center {
-            .button {
-                background-color: $neutrals-800;
-            }
-        }
-    }
-}
-
-/* DARK THEME COLORS - VIA OPERATING SYSTEM */
-@media (prefers-color-scheme: dark) {
     .savedBlogposts {
         .center {
             .button {

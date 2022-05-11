@@ -12,14 +12,14 @@ function DashboardPage() {
 
             
             
-            {/* 
+            {/*
             <SavedBlogposts />
             <LatestGP />
             */}
             
             
 
-            <Settings />
+            <Settings /> 
         </div>
     );
 }

@@ -17,7 +17,6 @@
                 font-size: 16px;
                 font-weight: 400;
                 line-height: 20px;
-                color: $neutrals-900;
                 margin-left: 8px;
                 padding-top: 16px;
             }
@@ -29,8 +28,21 @@
     }
 }
 
-/* DARK MODE */
-@media (prefers-color-scheme: dark) {
+/* LIGHT THEME COLORS */
+[data-theme="light"] {
+    .register {
+        &__form {
+            &__checkbox {
+                .checkbox-label {
+                    color: $neutrals-900;
+                }
+            }
+        }
+    }
+}
+
+/* DARK THEME COLORS */
+[data-theme="dark"] {
     .register {
         &__form {
             &__checkbox {

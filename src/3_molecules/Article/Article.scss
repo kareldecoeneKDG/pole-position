@@ -1,6 +1,5 @@
 /* STANDARD CSS RULES */
 .article {
-    background-color: $neutrals-200;
     border-radius: 20px;
     margin-bottom: 20px;
 
@@ -22,10 +21,6 @@
             justify-content: space-between;
             align-items: center;
             margin-bottom: 10px;
-
-            .detail {
-                color: $neutrals-900;
-            }
         }
 
         &__title {
@@ -74,12 +69,6 @@
             &__paragraph {
                 color: $neutrals-700;
             }
-
-            &__bottom {
-                .button {
-                    background-color: $neutrals-900;
-                }
-            }
         }
     }
 }
@@ -100,23 +89,6 @@
                 color: $neutrals-100;
             }
     
-            &__paragraph {
-                color: $neutrals-500;
-            }
-        }
-    }
-}
-
-/* DARK THEME COLORS - VIA OPERATING SYSTEM */
-@media (prefers-color-scheme: dark) {
-    .article {
-        background-color: $neutrals-800;
-
-        &__content {
-            &__title {
-                color: $neutrals-100;
-            }
-
             &__paragraph {
                 color: $neutrals-500;
             }

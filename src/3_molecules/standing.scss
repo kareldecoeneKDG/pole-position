@@ -48,12 +48,7 @@
 
         &__points {
             font-weight: 600;
-            color: $neutrals-900;
         }
-    }
-
-    .detail {
-        color: $neutrals-900;
     }
 
     &__driver-img {
@@ -66,18 +61,10 @@
 /* LIGHT THEME COLORS */
 [data-theme="light"] {
     .standing {
-        &__top {
-            &__driver {
-                border-left: 1px solid $neutrals-900;
-            }
-        }
-    
         &__bottom {
             &__place {
                 &__div  {
-                    &:last-of-type {
-                        border-left: 1px solid $neutrals-900;
-                    }
+                    color: $neutrals-900;
                 }
             }
     
@@ -87,14 +74,14 @@
         }
 
         .detail {
-            color: $neutrals-900;
+            color: $neutrals-900 !important;
         }
     }
 }
 
 /* DARK THEME COLORS */
-[data-theme="dark"] {
-    /*.standing {
+/*[data-theme="dark"] {
+    .standing {
         background-color: $neutrals-800;
 
         &__top {
@@ -128,40 +115,5 @@
         .detail {
             color: $neutrals-100;
         }
-    }*/
-}
-
-/* DARK THEME COLORS - VIA OPERATING SYSTEM */
-@media (prefers-color-scheme: dark) {
-    /*.standing {
-        background-color: $neutrals-800;
-    
-        &__top {
-            &__driver {
-                border-left: 1px solid $neutrals-100;
-
-                &__lastname {
-                    color: $neutrals-100;
-                }
-
-                &__teamname {
-                    color: $neutrals-100;
-                }
-            }
-        }
-    
-        &__bottom {
-            &__place {
-                &__div  {
-                    &:last-of-type {
-                        border-left: 1px solid $neutrals-100;
-                    }
-                }
-            }
-    
-            &__points {
-                color: $neutrals-100;
-            }
-        }
-    }*/
-}
+    }
+}*/

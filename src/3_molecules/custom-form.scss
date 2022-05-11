@@ -16,7 +16,6 @@
 
     &__disclaimer {
         margin-bottom: 50px;
-        color: $neutrals-700;
     }
 
     .flex {
@@ -52,19 +51,6 @@
 
 /* DARK THEME COLORS */
 [data-theme="dark"] {
-    .custom-form {
-        &__disclaimer {
-            color: $neutrals-500;
-        }
-    
-        &__forgot-pw {
-            color: $neutrals-500;
-        }
-    }
-}
-
-/* DARK THEME COLORS - VIA OPERATING SYSTEM */
-@media (prefers-color-scheme: dark) {
     .custom-form {
         &__disclaimer {
             color: $neutrals-500;

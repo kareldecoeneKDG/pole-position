@@ -1,34 +1,3 @@
-/* STANDARD CSS RULES */
-.driverPage {
-    .moreRecentNews {
-        background-color: $neutrals-200;
-    
-        .article {
-            background-color: $neutrals-100;
-
-            .button {
-                background-color: $neutrals-900;
-            }
-
-            .icon-bg {
-                background-color: $neutrals-900;
-            }
-        }
-    }
-
-    .mightAlsoLike {
-        background-color: $neutrals-200;
-
-        .driver-team {
-            background-color: $neutrals-100;
-
-            .button {
-                background-color: $neutrals-900;
-            }
-        }
-    }
-}
-
 /* LIGHT THEME COLORS */
 [data-theme="light"] {
     .driverPage {
@@ -84,39 +53,6 @@
         .mightAlsoLike {
             background-color: $neutrals-800;
 
-            .driver-team {
-                background-color: $neutrals-900;
-
-                .button {
-                    background-color: $neutrals-800;
-                }
-            }
-        }
-    }
-}
-
-/* DARK THEME COLORS - VIA OPERATING SYSTEM */
-@media (prefers-color-scheme: dark) {
-    .driverPage {
-        .moreRecentNews {
-            background-color: $neutrals-800;
-
-            .article {
-                background-color: $neutrals-900;
-
-                .button {
-                    background-color: $neutrals-800;
-                }
-
-                .icon-bg {
-                    background-color: $neutrals-800;
-                }
-            }
-        }
-
-        .mightAlsoLike {
-            background-color: $neutrals-800;
-            
             .driver-team {
                 background-color: $neutrals-900;
 

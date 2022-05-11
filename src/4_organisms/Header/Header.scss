@@ -40,7 +40,6 @@
     }
 
     &__p {
-        color: $neutrals-900;
         margin-bottom: 20px;
     }
 
@@ -87,23 +86,6 @@
 
 /* DARK THEME COLORS */
 [data-theme="dark"] {
-    .header {
-        background-color: $neutrals-900;
-
-        &__p {
-            color: $neutrals-100;
-        }
-
-        &__scrolldown {
-            &__icon {
-                color: $neutrals-100;
-            }
-        }
-    }
-}
-
-/* DARK THEME COLORS - VIA OPERATING SYSTEM */
-@media (prefers-color-scheme: dark) {
     .header {
         background-color: $neutrals-900;
 

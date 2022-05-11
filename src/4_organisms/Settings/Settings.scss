@@ -23,15 +23,10 @@
     }
 
     &__item {
-        background-color: $neutrals-100;
         padding: 20px;
 
         &:last-of-type {
             border-radius: 0px 0px 20px 20px;
-        }
-
-        &.item-grey {
-            background-color: $neutrals-200;
         }
 
         .flex {
@@ -53,12 +48,7 @@
                 font-family: $primary-font;
                 font-weight: 600;
                 line-height: 16px;
-                color: $neutrals-900;
                 margin-bottom: 3px;
-            }
-
-            &__value {
-                color: $neutrals-900;
             }
         }
     }
@@ -104,29 +94,6 @@
 
                 &__value {
                     color: $neutrals-500;
-                }
-            }
-        }
-    }
-}
-
-/* DARK THEME COLORS - VIA OPERATING SYSTEM */
-@media (prefers-color-scheme: dark) {
-    .settings {
-        &__item {
-            background-color: $neutrals-800;
-
-            &.item-grey {
-                background-color: $neutrals-900;
-            }
-
-            &__content {
-                &__title {
-                    color: $neutrals-100;
-                }
-
-                &__value {
-                    color: $neutrals-100;
                 }
             }
         }

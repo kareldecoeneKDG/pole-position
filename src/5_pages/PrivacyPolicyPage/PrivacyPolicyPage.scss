@@ -1,7 +1,6 @@
 /* STANDARD CSS RULES */
 .privacyPolicy {
     padding-top: 50px;
-    background-color: $neutrals-100;
     
     &__title {
         text-align: left;
@@ -9,7 +8,6 @@
     }
 
     &__p {
-        color: $neutrals-700;
         margin-bottom: 50px;
 
         &:last-of-type {
@@ -19,7 +17,6 @@
 
     &__subtitle {
         margin-bottom: 10px;
-        color: $neutrals-900;
     }
 }
 
@@ -42,25 +39,6 @@
 [data-theme="dark"] {
     .privacyPolicy {
         background-color: $neutrals-900;
-    
-        &__p {
-            color: $neutrals-500;
-        }
-    
-        &__subtitle {
-            color: $neutrals-100;
-        }
-    }
-}
-
-/* DARK MODE */
-@media (prefers-color-scheme: dark) {
-    .privacyPolicy {
-        background-color: $neutrals-900;
-        
-        &__title {
-            color: $neutrals-100;
-        }
     
         &__p {
             color: $neutrals-500;

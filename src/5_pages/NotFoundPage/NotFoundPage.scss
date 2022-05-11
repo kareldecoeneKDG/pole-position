@@ -1,7 +1,6 @@
 /* STANDARD CSS RULES */
 .error404 {
     height: calc(100vh - 66px);
-    background-color: $neutrals-100;
     position: relative;
 
     &__content {
@@ -21,13 +20,11 @@
         }
 
         &__title {
-            color: $neutrals-900;
             margin-bottom: 10px;
         }
 
         &__p {
             margin-bottom: 30px;
-            color: $neutrals-700;
         }
     }
 }
@@ -59,23 +56,6 @@
                 color: $neutrals-100;
             }
 
-            &__p {
-                color: $neutrals-500;
-            }
-        }
-    }
-}
-
-/* DARK THEME COLORS - VIA OPERATING SYSTEM */
-@media (prefers-color-scheme: dark) {
-    .error404 {
-        background-color: $neutrals-900;
-    
-        &__content {
-            &__title {
-                color: $neutrals-100;
-            }
-    
             &__p {
                 color: $neutrals-500;
             }

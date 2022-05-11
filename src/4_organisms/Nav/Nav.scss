@@ -20,7 +20,6 @@
 
             .line {
                 width: 20px;
-                background-color: $neutrals-900;
                 height: 2px;
                 margin-top: 3px;
                 transition: all 0.3s ease;
@@ -35,14 +34,6 @@
                     width: 15px;
                     margin-right: auto;
                 }
-            }
-        }
-
-        .profile {
-            background-color: $neutrals-900;
-
-            &__icon {
-                color: $neutrals-100;
             }
         }
     }
@@ -71,27 +62,6 @@
 
 /* DARK THEME COLORS */
 [data-theme="dark"] {
-    .nav {
-        .mobile {
-            .burger {
-                .line {
-                    background-color: $neutrals-100;
-                }
-            }
-
-            .profile {
-                background-color: $neutrals-100;
-
-                &__icon {
-                    color: $neutrals-900;
-                }
-            }
-        }
-    }
-}
-
-/* DARK THEME COLORS - VIA OPERATING SYSTEM */
-@media (prefers-color-scheme: dark) {
     .nav {
         .mobile {
             .burger {
