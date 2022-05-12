@@ -9,49 +9,40 @@ function StandingsPage() {
         <div className="standings">
             <SubNav />
 
+            {/* <section className="standings__drivers">
+                <StandingDriver />
+                <StandingDriver />
+                <StandingDriver />
+
+                {/* <hr className="standings__drivers__line line" /> 
+
+                <StandingDriver />
+                <StandingDriver />
+                <StandingDriver />
+                <StandingDriver />
+                <StandingDriver />
+                <StandingDriver />
+                <StandingDriver />
+                <StandingDriver />
+                <StandingDriver />
+                <StandingDriver />
+                <StandingDriver />
+                <StandingDriver />
+                <StandingDriver />
+                <StandingDriver />
+                <StandingDriver />
+                <StandingDriver />
+                <StandingDriver />
+            </section> */}
+
             <section className="standings__drivers">
-                <StandingDriver />
-                <StandingDriver />
-                <StandingDriver />
-
-                <hr className="standings__drivers__line line" />
-
-                <StandingDriver />
-                <StandingDriver />
-                <StandingDriver />
-                <StandingDriver />
-                <StandingDriver />
-                <StandingDriver />
-                <StandingDriver />
-                <StandingDriver />
-                <StandingDriver />
-                <StandingDriver />
-                <StandingDriver />
-                <StandingDriver />
-                <StandingDriver />
-                <StandingDriver />
-                <StandingDriver />
-                <StandingDriver />
-                <StandingDriver />
-            </section>
-
-            <section className="standings__drivers">
                 <StandingTeam />
                 <StandingTeam />
                 <StandingTeam />
 
-                <hr className="standings__drivers__line line" />
+                {/* <hr className="standings__drivers__line line" /> */}
 
-                <StandingTeam />
-                <StandingTeam />
-                <StandingTeam />
-                <StandingTeam />
-                <StandingTeam />
-                <StandingTeam />
-                <StandingTeam />
-                <StandingTeam />
-                <StandingTeam />
-                <StandingTeam />
+
                 <StandingTeam />
                 <StandingTeam />
                 <StandingTeam />

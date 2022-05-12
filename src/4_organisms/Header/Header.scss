@@ -150,7 +150,7 @@
                 top: -40%;
                 right: -30%;
             }
-    
+
             &.bg-rect2 {
                 bottom: -50%;
                 left: -50%;
@@ -166,10 +166,48 @@
         }
 
         &__img-placeholder {
-            //width: 589px;
             width: 424px;
-            //height: 344px;
             height: 248px;
+        }
+    }
+}
+
+/* DESKTOP 1280PX */
+@media only screen and (min-width: $desktop-1) {
+    .header {
+        .bg-rect {
+            &.bg-rect1 {
+                top: -30%;
+                right: -20%;
+            }
+
+            &.bg-rect2 {
+                bottom: -40%;
+                left: -40%;
+            }
+        }
+
+        &__p {
+            padding: 0px 350px 20px 350px;
+        }
+    }
+}
+
+/* DESKTOP 1280PX x 900PX */
+@media only screen and (min-width: $desktop-1) and (min-height: 900px) {
+    .header {
+        &__logo {
+            width: 576px;
+            height: 89px;
+        }
+
+        .button {
+            margin-bottom: 50px;
+        }
+
+        &__img-placeholder {
+            width: 589px;
+            height: 389px;
         }
     }
 }

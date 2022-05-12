@@ -19,7 +19,11 @@ function StandingDriver() {
 
             <div className="standing__bottom">
                 <div className="standing__bottom__place flex">
-                    <div className="tag detail standing__bottom__place__div">
+                    <div className="tag detail standing__bottom__place__div desktop">
+                        3 poles
+                    </div>
+
+                    <div className="tag detail standing__bottom__place__div mobile">
                         1st place
                     </div>
 
@@ -30,6 +34,8 @@ function StandingDriver() {
 
                 <h3 className="standing__bottom__points">333 points</h3>
             </div>
+
+            <div className="standing__number redBull desktop">1</div>
 
             <img className="standing__driver-img" src={Max} alt="picture of driver" />
         </div>

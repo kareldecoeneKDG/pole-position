@@ -27,6 +27,12 @@
 [data-theme="light"] {
     .platform {
         background-color: $neutrals-200;
+
+        &__heading {
+            p {
+                color: $neutrals-700;
+            }
+        }
     }
 }
 
@@ -34,6 +40,12 @@
 [data-theme="dark"] {
     .platform {
         background-color: $neutrals-800;
+
+        &__heading {
+            p {
+                color: $neutrals-500;
+            }
+        }
     }
 }
 
@@ -67,6 +79,45 @@
     
         .signup {
             margin: 0px 250px;
+        }
+    }
+}
+
+/* DESKTOP 1280PX */
+@media only screen and (min-width: $desktop-1) {
+    .platform {
+        padding: 125px 120px;
+
+        .flex-desktop {
+            gap: 20px;
+            margin-bottom: 75px;
+        }
+
+        &__heading {
+            width: calc(33% - 10px);
+
+            h2 {
+                text-align: left;
+                padding: 0;
+                margin: 0px 0px 10px 0px;
+            }
+        }
+
+        &__items {
+            padding: 0;
+            width: calc(67% - 10px);
+            margin-bottom: 0;
+        }
+
+        .signup {
+            justify-content: space-between;
+            align-items: center;
+            padding: 40px;
+            margin-bottom: 0;
+
+            &__content {
+                margin-bottom: 0;
+            }
         }
     }
 }

@@ -45,3 +45,25 @@
         }
     }
 }
+
+/* TABLET LANDSCAPE */
+@media only screen and (min-width: $tablet-landscape) {
+    .recentShots {
+        .carousel {
+            width: calc(100% - 200px);
+            height: 478px;
+        }
+    }
+}
+
+/* DESKTOP 1280PX */
+@media only screen and (min-width: $desktop-1) {
+    .recentShots {
+        .carousel {
+            //width: calc(100% - 200px);
+            width: 100%;
+            height: 686px;
+            margin: 0;
+        }
+    }
+}

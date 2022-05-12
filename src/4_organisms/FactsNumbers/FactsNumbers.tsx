@@ -7,7 +7,7 @@ function FactsNumbers() {
         <div className="factsNumbers section">
             <h2 className="section__title">Facts & numbers</h2>
 
-            <div className="facts-numbers__items">
+            <div className="factsNumbers__items">
                 <FactNumber />
                 <FactNumber />
                 <FactNumber />

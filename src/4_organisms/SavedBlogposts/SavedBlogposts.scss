@@ -1,11 +1,36 @@
 /* STANDARD CSS RULES */
 .savedBlogposts {
     padding-top: 50px;
+
+    .welcome {
+        position: relative;
+
+        &__content {
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 50%;
+        }
+    }
 }
 
 /* LIGHT THEME COLORS */
 [data-theme="light"] {
     .savedBlogposts {
+        .welcome {
+            background-color: $neutrals-200;
+
+            &__content {
+                &__title {
+                    color: $neutrals-900;
+                }
+
+                &__p {
+                    color: $neutrals-700;
+                }
+            }
+        }
+
         .center {
             .button {
                 background-color: $neutrals-900;
@@ -17,6 +42,20 @@
 /* DARK THEME COLORS */
 [data-theme="dark"] {
     .savedBlogposts {
+        .welcome {
+            background-color: $neutrals-900;
+
+            &__content {
+                &__title {
+                    color: $neutrals-100;
+                }
+
+                &__p {
+                    color: $neutrals-500;
+                }
+            }
+        }
+
         .center {
             .button {
                 background-color: $neutrals-800;
@@ -48,6 +87,46 @@
                 &__img {
                     height: 200px;
                 }
+            }
+        }
+    }
+}
+
+/* DESKTOP 1280PX */
+@media only screen and (min-width: $desktop-1) {
+    .savedBlogposts {
+        padding: 0;
+
+        .welcome {
+            width: 100%;
+            height: 240px;
+            text-align: center;
+        }
+
+        &__articles {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 25px 120px 0px 120px;
+
+            .article {
+                margin-bottom: 0;
+
+                &__img {
+                    height: 200px;
+                }
+            }
+        }
+
+        .center {
+            margin-bottom: 75px;
+        }
+    }
+
+    /* LIGHT THEME COLORS */
+    [data-theme="light"] {
+        .savedBlogposts {
+            &__articles {
+                padding-top: 75px;
             }
         }
     }

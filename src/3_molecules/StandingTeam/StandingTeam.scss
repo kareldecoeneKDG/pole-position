@@ -15,3 +15,12 @@
         }
     }
 }
+
+/* DESKTOP 1280PX */
+@media only screen and (min-width: $desktop-1) {
+    .standing-team {
+        .standing__number {
+            right: 195px;
+        }
+    }
+}

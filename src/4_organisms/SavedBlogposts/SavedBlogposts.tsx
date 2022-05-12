@@ -7,8 +7,10 @@ function SavedBlogposts() {
     return (
         <section className="savedBlogposts section">
             <div className="welcome desktop">
-                <h2 className="welcome__title">Hi Karel, how are you?</h2>
-                <p className="welcome__p">Find your saved blogposts below</p>
+                <div className="welcome__content">
+                    <h2 className="welcome__content__title">Hi Karel, how are you?</h2>
+                    <p className="welcome__content__p">Find your saved blogposts below</p>
+                </div>
             </div>
 
             <div className="savedBlogposts__articles">

@@ -43,3 +43,10 @@
         padding: 50px 150px 75px 150px;
     }
 }
+
+/* TABLET LANDSCAPE */
+@media only screen and (min-width: $tablet-landscape) {
+    .formPage {
+        padding: 50px 300px 75px 300px;
+    }
+}

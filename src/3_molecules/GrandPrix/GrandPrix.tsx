@@ -1,10 +1,13 @@
 import React from 'react';
 import circuit from './gp-1.png';
 import flag from './flag-italy.png';
+import circuitBackground from './circuit-background.png';
 
 function GrandPrix() {
     return (
         <div className="grandprix">
+            <img className="grandprix__bg" src={circuitBackground} alt="circuit bg image" />
+
             <div className="grandprix__header">
                 <div className="grandprix__header__title flex">
                     <img className="flag" src={flag} alt="Flag of country GP" />

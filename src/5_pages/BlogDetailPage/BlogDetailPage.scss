@@ -176,3 +176,12 @@
         }
     }
 }
+
+/* TABLET LANDSCAPE */
+@media only screen and (min-width: $tablet-landscape) {
+    .blogDetail {
+        &__content {
+            padding: 50px 300px 75px 300px;
+        }
+    }
+}

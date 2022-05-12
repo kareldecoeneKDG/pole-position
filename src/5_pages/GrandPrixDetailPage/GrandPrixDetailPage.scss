@@ -37,6 +37,10 @@
                 }
             }
 
+            &__title {
+                display: none;
+            }
+
             .button {
                 position: absolute;
                 transform: translate(0, -50%);
@@ -71,6 +75,10 @@
                 &__circuit {
                     border: 4px solid $neutrals-200;
                 }
+
+                &__title {
+                    color: $neutrals-900;
+                }
             }
         }
 
@@ -93,6 +101,10 @@
             &__info {
                 &__circuit {
                     border: 4px solid $neutrals-800;
+                }
+
+                &__title {
+                    color: $neutrals-100;
                 }
             }
         }
@@ -138,37 +150,104 @@
 @media only screen and (min-width: $tablet-landscape) {
     .grandprixDetail {
         .banner {
+            &__bg {
+                height: 264px;
+                background-position: center 90%;
+            }
+
             &__info {
+                height: 100px;
+
                 &__circuit {
                     width: 200px;
                     height: 200px;
-                    top: -150px;
+                    top: -125px;
 
                     &__img {
                         transform: translate(-65%, -50%);
                         width: 150px;
                     }
+                }
 
-                    /*position: absolute;
-                    top: -50px;
-                    left: 20px;
-                    width: 100px;
-                    height: 100px;
-
-                    border-radius: 50%;
+                &__title {
+                    display: block;
                     text-align: center;
-                    background-color: $neutrals-500;*/
+                    padding-top: 33px;
+
+                    i {
+                        margin-left: 10px;
+                    }
                 }
             }
         }
 
         &__articles {
-            padding: 50px 50px 75px 50px;
+            padding: 75px 50px; 
+
+            .section__title {
+                display: none;
+            }
 
             &__articles {
                 display: grid;
                 grid-template-columns: repeat(3, 1fr);
                 gap: 20px;
+
+                .article {
+                    margin-bottom: 0;
+
+                    &:last-of-type {
+                        margin-bottom: 0;
+                    }
+
+                    &__img {
+                        height: 200px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* DESKTOP 1280PX */
+@media only screen and (min-width: $desktop-1) {
+    .grandprixDetail {
+        .banner {
+            height: 500px;
+
+            &__bg {
+                height: 350px;
+                background-position: center 90%;
+            }
+
+            &__info {
+                height: 150px;
+
+                &__circuit {
+                    top: -100px;
+                    left: 120px;
+                    border-width: 6px !important;
+                }
+
+                &__title {
+                    padding-top: 58px;
+                }
+
+                .button {
+                    right: 120px;
+                }
+            }
+        }
+
+        &__articles {
+            padding: 125px 120px; 
+
+            .section__title {
+                display: none;
+            }
+
+            &__articles {
+                grid-template-columns: repeat(3, 1fr);
 
                 .article {
                     margin-bottom: 0;

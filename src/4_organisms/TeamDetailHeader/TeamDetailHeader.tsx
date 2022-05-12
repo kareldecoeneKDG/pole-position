@@ -8,7 +8,7 @@ import RedBullLogo from './redbull.png';
 
 function TeamDetailHeader() {
     return (
-        <div className="detailHeader">
+        <div className="detailHeader detailHeader-team">
             <div className="top flex">
                 <div className="top__drivers top-team">
                     <img className="top-team__img" src={Max} alt="Picture of driver" />
@@ -20,11 +20,36 @@ function TeamDetailHeader() {
 
                     <h2 className="top__info__title">Red Bull</h2>
 
-                    <Socials />
+                    <div className="top__info__middle flex-desktop">
+                        <div className="top__info__driver-stats flex-desktop">
+                            <div className="top__info__driver-stats__item">
+                                <h5 className="top__info__driver-stats__item__title">Nationality</h5>
+                                <p className="top__info__driver-stats__item__p">Dutch</p>
+                            </div>
+
+                            <div className="top__info__driver-stats__item">
+                                <h5 className="top__info__driver-stats__item__title">Age</h5>
+                                <p className="top__info__driver-stats__item__p">24</p>
+                            </div>
+
+                            <div className="top__info__driver-stats__item">
+                                <h5 className="top__info__driver-stats__item__title">Experience</h5>
+                                <p className="top__info__driver-stats__item__p">7 years</p>
+                            </div>
+                        </div>
+
+                        <Socials />
+                    </div>
+
+                    <div className="driver-team__items desktop">
+                        <DriverTeamDetailItem />
+                        <DriverTeamDetailItem />
+                        <DriverTeamDetailItem />
+                    </div>
                 </div>
             </div>
 
-            <div className="driver-team__items">
+            <div className="driver-team__items mobile">
                 <DriverTeamDetailItem />
                 <DriverTeamDetailItem />
                 <DriverTeamDetailItem />

@@ -78,3 +78,12 @@
         }
     }
 }
+
+/* TABLET LANDSCAPE */
+@media only screen and (min-width: $tablet-landscape) {
+    .error404 {
+        &__content {
+            padding: 0px 300px;
+        }
+    }
+}

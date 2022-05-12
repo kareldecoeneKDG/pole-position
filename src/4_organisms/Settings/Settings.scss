@@ -119,3 +119,14 @@
         }
     }
 }
+
+/* DESKTOP 1280PX */
+@media only screen and (min-width: $desktop-1) {
+    .settings {
+        padding-top: 75px;
+
+        &__group {
+            margin-bottom: 75px;
+        }
+    }
+}

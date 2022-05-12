@@ -106,3 +106,31 @@
         padding: 50px 150px 50px 150px;
     }
 }
+
+/* TABLET LANDSCAPE */
+@media only screen and (min-width: $tablet-landscape) {
+    .blogSearch {
+        padding: 50px 300px 50px 300px;
+    }
+}
+
+/* DESKTOP 1280PX */
+@media only screen and (min-width: $desktop-1) {
+    .blogSearch {
+        padding: 50px 345px 50px 345px;
+
+        &__form {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+
+            &__input {
+                width: 203px;
+                margin-bottom: 0;
+                text-align: left;
+            }
+        }
+    }
+}

@@ -32,7 +32,7 @@
             align-items: center;
             margin-bottom: 7px;
 
-            &__div  {
+            &__div {
                 border-radius: 0;
 
                 &:first-of-type {
@@ -51,6 +51,17 @@
         }
     }
 
+    &__number {
+        font-family: $primary-font;
+        font-size: 75px;
+        font-weight: 500;
+        line-height: 59px;
+
+        position: absolute;
+        bottom: 20px;
+        right: 170px;
+    }
+
     &__driver-img {
         position: absolute;
         right: 20px;
@@ -63,11 +74,11 @@
     .standing {
         &__bottom {
             &__place {
-                &__div  {
+                &__div {
                     color: $neutrals-900;
                 }
             }
-    
+
             &__points {
                 color: $neutrals-900;
             }

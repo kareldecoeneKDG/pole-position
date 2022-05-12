@@ -79,3 +79,15 @@
         padding: 0px 100px;
     }
 }
+
+/* TABLET LANDSCAPE */
+@media only screen and (min-width: $tablet-landscape) {
+    .historyHighlight {
+        padding: 0px 250px;
+
+        &__thumbnail {
+            width: 244px;
+            height: 244px;
+        }
+    }
+}

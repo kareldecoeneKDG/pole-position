@@ -141,7 +141,18 @@
                 width: calc(100% - 50% - 100px);
                 left: 50px;
                 top: 50%;
+
+                .socials {
+                    padding-bottom: 0;
+                }
             }
         }
+    }
+}
+
+/* DESKTOP 1280PX */
+@media only screen and (min-width: $desktop-1) {
+    .newsletter {
+        padding: 125px 120px;
     }
 }

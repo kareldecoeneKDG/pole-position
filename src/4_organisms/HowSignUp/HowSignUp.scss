@@ -72,3 +72,20 @@
         }
     }
 }
+
+/* DESKTOP 1280PX */
+@media only screen and (min-width: $desktop-1) {
+    .howsignup {
+        &__p {
+            padding: 0px 250px;
+            margin-bottom: 75px;
+        }
+
+        &__steps {
+            padding: 0px 0px;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 75px;
+        }
+    }
+}

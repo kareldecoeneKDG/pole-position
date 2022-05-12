@@ -25,3 +25,36 @@
         }
     }
 }
+
+/* TABLET LANDSCAPE */
+@media only screen and (min-width: $tablet-landscape) {
+    .standings {
+        &__drivers {
+            padding: 50px 50px 75px 50px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0px 30px;
+
+            .standing {
+                margin-bottom: 0;
+
+                &:nth-child(even) {
+                    margin-top: 30px;
+                }
+            }
+
+            &__line {
+                display: none;
+            }
+        }
+    }
+}
+
+/* DESKTOP 1280PX */
+@media only screen and (min-width: $desktop-1) {
+    .standings {
+        &__drivers {
+            padding: 75px 120px 125px 120px;
+        }
+    }
+}

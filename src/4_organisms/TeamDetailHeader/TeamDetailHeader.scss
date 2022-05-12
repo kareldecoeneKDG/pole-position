@@ -42,3 +42,22 @@
         }
     }
 }
+
+/* DESKTOP 1280PX */
+@media only screen and (min-width: $desktop-1) {
+    .detailHeader.detailHeader-team {
+        .top {
+            align-items: center;
+
+            &__info {
+                &__logos {
+                    &__team-logo {
+                        border: none;
+                        margin-bottom: 50px;
+
+                    }
+                }
+            }
+        }
+    }
+}

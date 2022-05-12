@@ -11,7 +11,7 @@ function MightAlsoLikeTeams() {
                 <Team />
                 <Team />
                 <Team />
-                <Team />
+                {/* <Team /> */}
             </div>
         </section>
     );

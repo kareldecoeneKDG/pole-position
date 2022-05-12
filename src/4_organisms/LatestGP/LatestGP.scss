@@ -11,6 +11,7 @@
 
     &__paragraph {
         margin-bottom: 30px;
+        color: $neutrals-900;
     }
 }
 
@@ -18,6 +19,17 @@
 @media only screen and (min-width: $tablet-portrait) {
     .latestGP {
         padding: 50px 50px;
-        margin: 0px 150px 75px 150px; //problem?
+        margin: 0px 120px 75px 120px; //problem?
+    }
+}
+
+/* DESKTOP 1280PX */
+@media only screen and (min-width: $desktop-1) {
+    .latestGP {
+        &__paragraph {
+            max-width: 591px;
+            margin-left: auto;
+            margin-right: auto;
+        }
     }
 }
