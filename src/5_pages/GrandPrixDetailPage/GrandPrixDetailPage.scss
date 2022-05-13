@@ -199,10 +199,6 @@
                     &:last-of-type {
                         margin-bottom: 0;
                     }
-
-                    &__img {
-                        height: 200px;
-                    }
                 }
             }
         }
@@ -255,10 +251,19 @@
                     &:last-of-type {
                         margin-bottom: 0;
                     }
+                }
+            }
+        }
+    }
+}
 
-                    &__img {
-                        height: 200px;
-                    }
+/* DESKTOP 1440PX */
+@media only screen and (min-width: $desktop-3) {
+    .grandprixDetail {
+        .banner {
+            &__info {
+                &__title {
+                    padding-top: 48px;
                 }
             }
         }

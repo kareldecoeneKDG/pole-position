@@ -26,6 +26,10 @@
             margin-bottom: 10px;
         }
     }
+
+    &__img {
+        display: none;
+    }
 }
 
 /* LIGHT THEME COLORS */
@@ -59,18 +63,18 @@
     .register {
         .form__inputs-container {
             margin-bottom: 15px;
-    
+
             .form__line {
                 background-color: $neutrals-500;
                 margin: 50px 0px;
             }
         }
-    
+
         &__form {
             &__checkbox {
                 margin-bottom: 50px !important;
                 padding-top: 16px;
-    
+
                 .checkbox-label {
                     font-family: $secondary-font;
                     font-size: 16px;
@@ -80,10 +84,34 @@
                     padding-top: 0px;
                 }
             }
-    
+
             .custom-form__no-acc {
                 margin-bottom: 10px;
             }
+        }
+    }
+}
+
+/* DESKTOP 1440PX */
+@media only screen and (min-width: $desktop-3) {
+    .register {
+        padding: 125px 222px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 122px;
+
+        &__content {
+            width: calc(100% - 488px - 122px);
+        }
+
+        &__img {
+            display: block;
+            width: 488px;
+            height: 498px;
+            object-fit: cover;
+            border-radius: 30px;
+            object-position: 0 center;
         }
     }
 }

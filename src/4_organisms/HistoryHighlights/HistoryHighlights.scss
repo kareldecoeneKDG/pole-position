@@ -58,3 +58,18 @@
         }
     }
 }
+
+/* DESKTOP 1440PX */
+@media only screen and (min-width: $desktop-3) {
+    .historyHighlights {
+        &__title, &__p {
+            padding: 0px 0px;
+        }
+
+        &__p {
+            width: 590px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}

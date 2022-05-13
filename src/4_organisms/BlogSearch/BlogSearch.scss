@@ -119,6 +119,12 @@
     .blogSearch {
         padding: 50px 345px 50px 345px;
 
+        &__p {
+            width: 590px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
         &__form {
             display: flex;
             flex-direction: row;
@@ -132,5 +138,12 @@
                 text-align: left;
             }
         }
+    }
+}
+
+/* DESKTOP 1440PX */
+@media only screen and (min-width: $desktop-3) {
+    .blogSearch {
+        padding: 75px 426px;
     }
 }

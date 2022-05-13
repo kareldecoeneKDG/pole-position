@@ -18,8 +18,8 @@ body {
     //background-color: var(--bg); /* background color variable */
 }
 
-.container {
-    background-color: var(--bg-panel); /* background panel color variable */
+/*.container {
+    background-color: var(--bg-panel); /* background panel color variable 
     margin: 5em;
     padding: 5em;
     border-radius: 15px;
@@ -36,17 +36,17 @@ body {
 
 .container h1 {
     margin: 0;
-    color: var(--color-heading); /* heading 1 background color variable */
+    color: var(--color-heading); /* heading 1 background color variable 
 }
 
 .container p {
-    color: var(--color-text); /* text-color variable */
+    color: var(--color-text); /* text-color variable
     -ms-grid-column-span: 2;
     grid-area: content;
     font-size: 1.1em;
     line-height: 1.8em;
     margin-top: 2em;
-}
+}*/
 
 //toggle container???
 .toggle-container {

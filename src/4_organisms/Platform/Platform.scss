@@ -121,3 +121,26 @@
         }
     }
 }
+
+/* DESKTOP 1440PX */
+@media only screen and (min-width: $desktop-3) {
+    .platform {
+        &__title {
+            font-size: 36px;
+            line-height: 40px;
+        }
+
+        &__heading {
+            p {
+                padding-right: 104px;
+            }
+        }
+
+        .signup {
+            margin: 0;
+            width: 590px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}

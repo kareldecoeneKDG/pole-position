@@ -42,7 +42,6 @@ function StandingsPage() {
 
                 {/* <hr className="standings__drivers__line line" /> */}
 
-
                 <StandingTeam />
                 <StandingTeam />
                 <StandingTeam />
@@ -50,7 +49,7 @@ function StandingsPage() {
                 <StandingTeam />
                 <StandingTeam />
                 <StandingTeam />
-            </section>
+            </section> 
         </div>
     );
 }

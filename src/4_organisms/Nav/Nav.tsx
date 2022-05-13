@@ -67,7 +67,7 @@ function Nav() {
 
             {/* DESKTOP NAV */}
             <div className="desktop">
-
+                NAV
             </div>
         </nav>
     );

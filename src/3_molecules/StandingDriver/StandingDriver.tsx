@@ -19,11 +19,11 @@ function StandingDriver() {
 
             <div className="standing__bottom">
                 <div className="standing__bottom__place flex">
-                    <div className="tag detail standing__bottom__place__div desktop">
+                    <div className="tag detail standing__bottom__place__div standing-div-border desktop">
                         3 poles
                     </div>
 
-                    <div className="tag detail standing__bottom__place__div mobile">
+                    <div className="tag detail standing__bottom__place__div standing-div-border mobile">
                         1st place
                     </div>
 

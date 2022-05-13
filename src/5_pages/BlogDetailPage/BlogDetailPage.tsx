@@ -19,23 +19,48 @@ function BlogDetailPage() {
                     Het is al geruime tijd een bekend gegeven dat een lezer, tijdens het bekijken van de layout van een. Er zijn vele variaties van passages van Lorem Ipsum beschikbaar maar het merendeel heeft te lijden gehad van wijzigingen in een of andere vorm.
                 </p>
 
+                <img className="blogDetail__content__img header-img" src={articleImg} alt="detail picture blogpost" />
+
+                <div className="flex-desktop">
+                    <div className="first-block">
+                        <h4 className="blogDetail__content__subtitle">Not enough time spent selling</h4>
+
+                        <p className="blogDetail__content__p">
+                            In tegenstelling tot wat algemeen aangenomen wordt is Lorem Ipsum niet zomaar willekeurige tekst. het heeft zijn wortels in een stuk klassieke latijnse literatuur uit 45 v.Chr. en is dus meer dan 2000 jaar oud. Richard McClintock, een professor latijn aan de Hampden-Sydney College in.
+                            In tegenstelling tot wat algemeen aangenomen wordt is Lorem Ipsum niet zomaar willekeurige tekst. het heeft zijn wortels in een stuk klassieke latijnse literatuur uit 45 v.Chr. en is dus meer dan 2000 jaar oud. Richard McClintock, een professor latijn aan de Hampden-Sydney College in.<br /><br />
+
+                            In tegenstelling tot wat algemeen aangenomen wordt is Lorem Ipsum niet zomaar willekeurige tekst. het heeft zijn wortels in een stuk klassieke latijnse literatuur uit 45 v.Chr. en is dus meer dan 2000 jaar oud. Richard McClintock, een professor latijn aan de Hampden-Sydney College in.
+                            In tegenstelling tot wat algemeen aangenomen wordt is Lorem Ipsum niet zomaar willekeurige tekst. het heeft zijn wortels in een stuk klassieke latijnse literatuur uit 45 v.Chr. en is dus meer dan 2000 jaar oud. Richard McClintock, een professor latijn aan de Hampden-Sydney College in.
+                        </p>
+                    </div>
+
+                    <div className="blogDetail__content__blogpostInfo desktop">
+                        <p className="blogDetail__content__blogpostInfo__title">PUBLISHER</p>
+                        <p className="blogDetail__content__blogpostInfo__p">Karel Decoene</p>
+
+                        <p className="blogDetail__content__blogpostInfo__title">TAGS</p>
+                        <p className="blogDetail__content__blogpostInfo__p"><span className="tag mercedes mercedes-bg">Mercedes</span><span className="tag redBull redBull-bg">Red Bull</span></p>
+
+                        <p className="blogDetail__content__blogpostInfo__title">SHARE</p>
+                        <Socials />
+                    </div>
+                </div>
+
                 <img className="blogDetail__content__img" src={articleImg} alt="detail picture blogpost" />
 
-                <h4 className="blogDetail__content__subtitle">Not enough time spent selling</h4>
+                <div className="regular-block">
+                    <h4 className="blogDetail__content__subtitle">Not enough time spent selling</h4>
 
-                <p className="blogDetail__content__p">
-                    In tegenstelling tot wat algemeen aangenomen wordt is Lorem Ipsum niet zomaar willekeurige tekst. het heeft zijn wortels in een stuk klassieke latijnse literatuur uit 45 v.Chr. en is dus meer dan 2000 jaar oud. Richard McClintock, een professor latijn aan de Hampden-Sydney College in.
-                </p>
+                    <p className="blogDetail__content__p">
+                        In tegenstelling tot wat algemeen aangenomen wordt is Lorem Ipsum niet zomaar willekeurige tekst. het heeft zijn wortels in een stuk klassieke latijnse literatuur uit 45 v.Chr. en is dus meer dan 2000 jaar oud. Richard McClintock, een professor latijn aan de Hampden-Sydney College in.
+                        In tegenstelling tot wat algemeen aangenomen wordt is Lorem Ipsum niet zomaar willekeurige tekst. het heeft zijn wortels in een stuk klassieke latijnse literatuur uit 45 v.Chr. en is dus meer dan 2000 jaar oud. Richard McClintock, een professor latijn aan de Hampden-Sydney College in.<br /><br />
 
-                <img className="blogDetail__content__img" src={articleImg} alt="detail picture blogpost" />
+                        In tegenstelling tot wat algemeen aangenomen wordt is Lorem Ipsum niet zomaar willekeurige tekst. het heeft zijn wortels in een stuk klassieke latijnse literatuur uit 45 v.Chr. en is dus meer dan 2000 jaar oud. Richard McClintock, een professor latijn aan de Hampden-Sydney College in.
+                        In tegenstelling tot wat algemeen aangenomen wordt is Lorem Ipsum niet zomaar willekeurige tekst. het heeft zijn wortels in een stuk klassieke latijnse literatuur uit 45 v.Chr. en is dus meer dan 2000 jaar oud. Richard McClintock, een professor latijn aan de Hampden-Sydney College in.
+                    </p>
+                </div>
 
-                <h4 className="blogDetail__content__subtitle">Not enough time spent selling</h4>
-
-                <p className="blogDetail__content__p">
-                    In tegenstelling tot wat algemeen aangenomen wordt is Lorem Ipsum niet zomaar willekeurige tekst. het heeft zijn wortels in een stuk klassieke latijnse literatuur uit 45 v.Chr. en is dus meer dan 2000 jaar oud. Richard McClintock, een professor latijn aan de Hampden-Sydney College in.
-                </p>
-
-                <div className="blogDetail__content__blogpostInfo">
+                <div className="blogDetail__content__blogpostInfo mobile">
                     <p className="blogDetail__content__blogpostInfo__title">PUBLISHER</p>
                     <p className="blogDetail__content__blogpostInfo__p">Karel Decoene</p>
 

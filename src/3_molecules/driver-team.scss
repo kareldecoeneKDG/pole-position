@@ -84,3 +84,15 @@
         }
     }
 }
+
+/* DESKTOP 1440PX */
+@media only screen and (min-width: $desktop-3) {
+    .driver-team {
+        &__content {
+            &__title {
+                font-size: 24px;
+                line-height: 28px;
+            }
+        }
+    }
+}

@@ -9,6 +9,10 @@
         margin-bottom: 0;
     }
 
+    &__bg {
+        display: none;
+    }
+
     &__header {
         margin-bottom: 30px;
 
@@ -94,6 +98,7 @@
         border-radius: 30px;
 
         &__bg {
+            display: block;
             position: absolute;
             top: 0;
             left: 0;
@@ -132,16 +137,39 @@
                 &__title {
                     color: $neutrals-900;
                 }
-    
+
                 .detail {
                     color: $neutrals-700;
                 }
             }
-    
+
             &__datetime {
                 &__date {
                     color: $neutrals-900;
                 }
+            }
+        }
+    }
+}
+
+/* DESKTOP 1440PX */
+@media only screen and (min-width: $desktop-3) {
+    .grandprix {
+        &__header {
+            &__title {
+                h3 {
+                    font-size: 24px;
+                    line-height: 28px;
+                }
+            }
+        }
+
+        &__datetime {
+            margin-bottom: 50px;
+            
+            &__date {
+                font-size: 24px;
+                line-height: 28px;
             }
         }
     }

@@ -4,7 +4,7 @@
 
     .top {
         width: 100%;
-        justify-content: space-between;
+        justify-content: flex-start;
         gap: 20px;
 
         &__drivers {
@@ -12,13 +12,14 @@
         }
 
         &__info {
-            max-width: calc(100% - 122px);
+            max-width: calc(100% - 122px - 20px);
 
             &__logos {
                 justify-content: space-between;
                 align-items: center;
                 height: 30px;
                 margin-bottom: 20px;
+                width: 100%;
 
                 &__team-logo,
                 &__driver-logo {
@@ -174,6 +175,7 @@
                 }
 
                 &__middle {
+                    display: flex !important;
                     justify-content: space-between;
                     align-items: center;
 
@@ -194,6 +196,17 @@
                     }
                 }
             }
+        }
+    }
+}
+
+/* DESKTOP 1440PX */
+@media only screen and (min-width: $desktop-3) {
+    .detailHeader {
+        padding: 125px 120px 125px 222px;
+
+        .top {
+            gap: 121px;
         }
     }
 }

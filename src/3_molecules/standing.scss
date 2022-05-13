@@ -32,6 +32,10 @@
             align-items: center;
             margin-bottom: 7px;
 
+            .standing-div-border {
+                padding-right: 10px;
+            }
+
             &__div {
                 border-radius: 0;
 
@@ -48,6 +52,7 @@
 
         &__points {
             font-weight: 600;
+            color: $neutrals-900;
         }
     }
 

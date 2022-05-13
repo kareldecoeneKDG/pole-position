@@ -132,7 +132,7 @@ function App() {
                 <StyledApp>*/}
             {/* <div className="container"> */}
 
-            <div>
+            <div className="container">
                 <Nav />
 
                 <div className="toggle-container">

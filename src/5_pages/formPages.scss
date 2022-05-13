@@ -50,3 +50,10 @@
         padding: 50px 300px 75px 300px;
     }
 }
+
+/* DESKTOP 1280PX */
+@media only screen and (min-width: $desktop-1) {
+    .formPage {
+        padding: 75px 428px 125px 424px;
+    }
+}

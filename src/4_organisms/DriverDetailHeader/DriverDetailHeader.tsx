@@ -23,7 +23,7 @@ function DriverDetailHeader() {
 
                     <h2 className="top__info__title">Max<br /> Verstappen</h2>
 
-                    <div className="top__info__middle flex-desktop">
+                    <div className="top__info__middle flex-desktop desktop">
                         <div className="top__info__driver-stats flex-desktop">
                             <div className="top__info__driver-stats__item">
                                 <h5 className="top__info__driver-stats__item__title">Nationality</h5>

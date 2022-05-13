@@ -87,3 +87,34 @@
         }
     }
 }
+
+/* DESKTOP 1280PX */
+@media only screen and (min-width: $desktop-1) {
+    .error404 {
+        &__content {
+            padding: 0px 400px;
+
+            &__logo {
+                width: 449px;
+                height: 89px;
+            }
+        }
+    }
+}
+
+/* DESKTOP 1440PX */
+@media only screen and (min-width: $desktop-3) {
+    .error404 {
+        height: calc(100vh - 100px);
+        
+        &__content {
+            padding: 0px 322px;
+
+            &__p {
+                width: 590px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    }
+}

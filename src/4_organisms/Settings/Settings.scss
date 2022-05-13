@@ -130,3 +130,16 @@
         }
     }
 }
+
+/* DESKTOP 1440PX */
+@media only screen and (min-width: $desktop-3) {
+    .settings {
+        &__header {
+            padding: 30px;
+        }
+
+        &__item {
+            padding: 20px 30px;
+        }
+    }
+}
