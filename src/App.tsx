@@ -26,6 +26,7 @@ import RegisterPage from './5_pages/RegisterPage/RegisterPage';
 import PaymentPage from './5_pages/PaymentPage/PaymentPage';
 import NotFoundPage from './5_pages/NotFoundPage/NotFoundPage';
 import TestPage from './5_pages/TestPage/TestPage';
+import Navbar from './4_organisms/NavBar/NavBar';
 
 // Global styles
 import './style.scss';
@@ -133,11 +134,11 @@ function App() {
             {/* <div className="container"> */}
 
             <div className="container">
-                <Nav />
+                {/* <Nav /> */}
 
-                <div className="toggle-container">
+                {/* <div className="toggle-container">
                     <input type="checkbox" id="switch" name="theme" checked={checked} onChange={(e) => setChecked(e.target.checked)} /><label htmlFor="switch" onClick={() => setChecked((c) => c)}>Toggle</label>
-                </div>
+                </div> */}
 
                 {/*<div className="test">
                     <button onClick={() => setChecked((c) => !c)}>toggle</button>
@@ -163,6 +164,7 @@ function App() {
                     <Route path="/register" element={<RegisterPage />} />
                     <Route path="/payment" element={<PaymentPage />} />
                     <Route path="*" element={<NotFoundPage />} />
+                    <Route path="/navbar" element={<Navbar />} />
 
 
                     <Route path="/test" element={<TestPage />} />
@@ -172,7 +174,7 @@ function App() {
                     <Route path="/404" element={<NotFoundPage />} />
                 </Routes>
 
-                <Footer />
+                {/* <Footer /> */}
 
                 {/*<div className="dropdown">
                         <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">

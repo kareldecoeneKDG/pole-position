@@ -48,13 +48,13 @@
                     background-color: $neutrals-900;
                 }
             }
+        }
 
-            .profile {
-                background-color: $neutrals-900;
+        .profile {
+            background-color: $neutrals-900;
 
-                &__icon {
-                    color: $neutrals-100;
-                }
+            &__icon {
+                color: $neutrals-100;
             }
         }
     }
