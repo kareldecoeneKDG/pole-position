@@ -50,10 +50,16 @@
     &__img-placeholder {
         display: block;
         width: 100%;
-        height: 200px;
+        height: auto;
+        aspect-ratio: 7/5;
         object-fit: cover;
         margin-left: auto;
         margin-right: auto;
+        border-radius: 30px;
+
+        &.tablet {
+            display: none;
+        }
     }
 
     &__scrolldown {
@@ -81,6 +87,12 @@
                 color: $neutrals-900;
             }
         }
+
+        &__img-placeholder {
+            &.dark {
+                display: none !important;
+            }
+        }
     }
 }
 
@@ -96,6 +108,12 @@
         &__scrolldown {
             &__icon {
                 color: $neutrals-100;
+            }
+        }
+
+        &__img-placeholder {
+            &.light {
+                display: none !important;
             }
         }
     }
@@ -134,8 +152,13 @@
         }
 
         &__img-placeholder {
-            width: 100%;
-            height: 441px;
+            &.mobile {
+                display: none;
+            }
+    
+            &.tablet {
+                display: block;
+            }
         }
     }
 }
@@ -167,7 +190,6 @@
 
         &__img-placeholder {
             width: 424px;
-            height: 248px;
         }
     }
 }
@@ -187,8 +209,18 @@
             }
         }
 
+        &__img-placeholder {
+            width: 335px;
+        }
+
         &__p {
             padding: 0px 350px 20px 350px;
+        }
+
+        &__img-placeholder {
+            &.tablet {
+                display: none;
+            }
         }
     }
 }
@@ -206,8 +238,7 @@
         }
 
         &__img-placeholder {
-            width: 589px;
-            height: 389px;
+            width: 500px;
         }
     }
 }
@@ -234,6 +265,28 @@
             width: 590px;
             margin-left: auto;
             margin-right: auto;
+        }
+
+        &__img-placeholder {
+            width: 589px;
+        }
+    }
+}
+
+/* DESKTOP 2560PX */
+@media only screen and (min-width: $desktop-qhd) {
+    .header {
+        &__img-placeholder {
+            width: 794px;
+        }
+    }
+}
+
+/* DESKTOP 3840PX */
+@media only screen and (min-width: $desktop-4k) {
+    .header {
+        &__img-placeholder {
+            width: 1200px;
         }
     }
 }

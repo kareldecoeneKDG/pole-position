@@ -6,13 +6,19 @@ import placeholder from './placeholder.png';
 import backgroundRectangles from './bg-rectangles.png';
 import backgroundRectanglesDark from './bg-rectangles-dark.png';
 
+import mobilePreview from './mobile.webp';
+import tabletDarkPreview from './tablet-dark.webp';
+import tabletLightkPreview from './tablet-light.webp';
+import desktopDarkPreview from './desktop-dark.webp';
+import desktopLightPreview from './desktop-light.webp';
+
 function Header() {
     return (
         <header className="header">
 
             {/* BG RECTANGLES 1 */}
-            <img className="bg-rect bg-rect1 light" src={backgroundRectangles} alt="Background rectangles"/>
-            <img className="bg-rect bg-rect1 dark" src={backgroundRectanglesDark} alt="Background rectangles dark"/>
+            <img className="bg-rect bg-rect1 light" src={backgroundRectangles} alt="Background rectangles" />
+            <img className="bg-rect bg-rect1 dark" src={backgroundRectanglesDark} alt="Background rectangles dark" />
 
             {/* HEADER CONTENT */}
             <div className="header__container">
@@ -25,7 +31,14 @@ function Header() {
 
                 <a className="button button-primary" href="#">Join the community <i className="fa fa-chevron-right first-chevron" aria-hidden="true"></i><i className="fa fa-chevron-right" aria-hidden="true"></i></a>
 
-                <img className="header__img-placeholder" src={placeholder} alt="Full logo Pole Position" />
+                {/* <img className="header__img-placeholder" src={placeholder} alt="Full logo Pole Position" /> */}
+
+                {/* PREVIEWS */}
+                <img className="header__img-placeholder mobile" src={mobilePreview} alt="Preview mobile Pole Position" />
+                <img className="header__img-placeholder tablet light" src={tabletLightkPreview} alt="Preview tablet Pole Position" />
+                <img className="header__img-placeholder tablet dark" src={tabletDarkPreview} alt="Preview tablet Pole Position" />
+                <img className="header__img-placeholder desktop light" src={desktopLightPreview} alt="Preview tablet Pole Position" />
+                <img className="header__img-placeholder desktop dark" src={desktopDarkPreview} alt="Preview tablet Pole Position" />
             </div>
 
             {/* SCROLL DOWN ICON */}
@@ -34,8 +47,8 @@ function Header() {
             </a>
 
             {/* BG RECTANGLES 2 */}
-            <img className="bg-rect bg-rect2 light" src={backgroundRectangles} alt="Background rectangles"/>
-            <img className="bg-rect bg-rect2 dark" src={backgroundRectanglesDark} alt="Background rectangles dark"/>
+            <img className="bg-rect bg-rect2 light" src={backgroundRectangles} alt="Background rectangles" />
+            <img className="bg-rect bg-rect2 dark" src={backgroundRectanglesDark} alt="Background rectangles dark" />
         </header>
     );
 }
