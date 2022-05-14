@@ -46,3 +46,38 @@
         }
     }
 }
+
+/* DESKTOP 1600PX */
+@media only screen and (min-width: $desktop-5) {
+    .latestGP {
+        margin: 0px 200px 125px 200px;
+    }
+}
+
+/* DESKTOP 1920PX */
+@media only screen and (min-width: $desktop-hd) {
+    .latestGP {
+        margin: 0px 360px 125px 360px;
+    }
+}
+
+/* DESKTOP 2560PX */
+@media only screen and (min-width: $desktop-qhd) {
+    .latestGP {
+        margin: 0px 680px 125px 680px;
+    }
+}
+
+/* DESKTOP 3440PX */
+@media only screen and (min-width: $desktop-wqhd) {
+    .latestGP {
+        margin: 0px 1120px 125px 1120px;
+    }
+}
+
+/* DESKTOP 3840PX */
+@media only screen and (min-width: $desktop-4k) {
+    .latestGP {
+        margin: 0px 1320px 125px 1320px;
+    }
+}

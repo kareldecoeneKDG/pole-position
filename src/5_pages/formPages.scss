@@ -57,3 +57,45 @@
         padding: 75px 428px 125px 424px;
     }
 }
+
+/* DESKTOP 1440PX */
+@media only screen and (min-width: $desktop-3) {
+    .formPage {
+        padding: 125px 222px;
+    }
+}
+
+/* DESKTOP 1600PX */
+@media only screen and (min-width: $desktop-5) {
+    .formPage {
+        padding: 125px 302px;
+    }
+}
+
+/* DESKTOP 1920PX */
+@media only screen and (min-width: $desktop-hd) {
+    .formPage {
+        padding: 125px 462px;
+    }
+}
+
+/* DESKTOP 2560PX */
+@media only screen and (min-width: $desktop-qhd) {
+    .formPage {
+        padding: 125px 782px;
+    }
+}
+
+/* DESKTOP 3440PX */
+@media only screen and (min-width: $desktop-wqhd) {
+    .formPage {
+        padding: 125px 1222px;
+    }
+}
+
+/* DESKTOP 3840PX */
+@media only screen and (min-width: $desktop-4k) {
+    .formPage {
+        padding: 125px 1422px;
+    }
+}

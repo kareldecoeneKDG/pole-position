@@ -77,3 +77,14 @@
         margin-right: auto;
     }
 }
+
+/* DESKTOP 1600PX */
+@media only screen and (min-width: $desktop-5) {
+    .privacyPolicy {
+        width: 794px;
+
+        &__title {
+            width: 794px;
+        }
+    }
+}

@@ -269,3 +269,108 @@
         }
     }
 }
+
+/* DESKTOP 1600PX */
+@media only screen and (min-width: $desktop-5) {
+    .grandprixDetail {
+        .banner {
+            &__info {
+                &__circuit {
+                    left: 200px;
+                }
+
+                .button {
+                    right: 200px;
+                }
+            }
+        }
+
+        &__articles {
+            padding: 125px 200px;
+        }
+    }
+}
+
+/* DESKTOP 1920PX */
+@media only screen and (min-width: $desktop-hd) {
+    .grandprixDetail {
+        .banner {
+            &__info {
+                &__circuit {
+                    left: 360px;
+                }
+
+                .button {
+                    right: 360px;
+                }
+            }
+        }
+
+        &__articles {
+            padding: 125px 360px;
+        }
+    }
+}
+
+/* DESKTOP 2560PX */
+@media only screen and (min-width: $desktop-qhd) {
+    .grandprixDetail {
+        .banner {
+            &__info {
+                &__circuit {
+                    left: 680px;
+                }
+
+                .button {
+                    right: 680px;
+                }
+            }
+        }
+
+        &__articles {
+            padding: 125px 680px;
+        }
+    }
+}
+
+/* DESKTOP 3440PX */
+@media only screen and (min-width: $desktop-wqhd) {
+    .grandprixDetail {
+        .banner {
+            &__info {
+                &__circuit {
+                    left: 1120px;
+                }
+
+                .button {
+                    right: 1120px;
+                }
+            }
+        }
+
+        &__articles {
+            padding: 125px 1120px;
+        }
+    }
+}
+
+/* DESKTOP 3840PX */
+@media only screen and (min-width: $desktop-4k) {
+    .grandprixDetail {
+        .banner {
+            &__info {
+                &__circuit {
+                    left: 1320px;
+                }
+
+                .button {
+                    right: 1320px;
+                }
+            }
+        }
+
+        &__articles {
+            padding: 125px 1320px;
+        }
+    }
+}

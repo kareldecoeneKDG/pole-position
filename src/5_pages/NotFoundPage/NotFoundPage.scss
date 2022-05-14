@@ -92,7 +92,18 @@
 @media only screen and (min-width: $desktop-1) {
     .error404 {
         &__content {
-            padding: 0px 400px;
+            //padding: 0px 400px;
+            padding: 0;
+            width: 795px;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 50%;
+
+            &__p {
+                width: 590px;
+                margin-left: auto;
+                margin-right: auto;
+            }
 
             &__logo {
                 width: 449px;
@@ -106,15 +117,5 @@
 @media only screen and (min-width: $desktop-3) {
     .error404 {
         height: calc(100vh - 100px);
-        
-        &__content {
-            padding: 0px 322px;
-
-            &__p {
-                width: 590px;
-                margin-left: auto;
-                margin-right: auto;
-            }
-        }
     }
 }
