@@ -1,4 +1,6 @@
 .payment {
+    flex: 1;
+
     .form__inputs-container {
         margin-bottom: 30px;
     }
@@ -9,7 +11,7 @@
     .payment {
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        align-items: flex-start;
         gap: 122px;
     }
 }
