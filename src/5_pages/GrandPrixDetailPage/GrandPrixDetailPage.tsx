@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import Article from '../../3_molecules/Article/Article';
 import circuit from './gp-1.png';
@@ -24,12 +25,29 @@ function GrandPrixDetailPage() {
                 <h2 className="section__title">2022 Barcelona GP</h2>
 
                 <div className="grandprixDetail__articles__articles">
-                    <Article />
-                    <Article />
-                    <Article />
-                    <Article />
-                    <Article />
-                    <Article />
+                    <Link to="/blog-detail">
+                        <Article />
+                    </Link>
+
+                    <Link to="/blog-detail">
+                        <Article />
+                    </Link>
+
+                    <Link to="/blog-detail">
+                        <Article />
+                    </Link>
+
+                    <Link to="/blog-detail">
+                        <Article />
+                    </Link>
+
+                    <Link to="/blog-detail">
+                        <Article />
+                    </Link>
+
+                    <Link to="/blog-detail">
+                        <Article />
+                    </Link>
                 </div>
 
                 <div className="center">

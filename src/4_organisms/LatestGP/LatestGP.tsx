@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function LatestGP() {
     return (
@@ -9,7 +10,9 @@ function LatestGP() {
                 Het is al geruime tijd een bekend gegeven dat een lezer, tijdens het bekijken van de layout van een.
             </p>
 
-            <a className="button button-primary">Australian GP <i className="fa fa-chevron-right first-chevron" aria-hidden="true"></i><i className="fa fa-chevron-right" aria-hidden="true"></i></a>
+            <Link className="button button-primary" to="/grandprix-detail">
+                Australian GP <i className="fa fa-chevron-right first-chevron" aria-hidden="true"></i><i className="fa fa-chevron-right" aria-hidden="true"></i>
+            </Link>
         </div>
     );
 }

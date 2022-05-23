@@ -110,6 +110,7 @@ function App() {
 
             <div className="container">
                 {/* <Nav /> */}
+                <Navbar />
 
                 {/* <div className="toggle-container">
                     <input type="checkbox" id="switch" name="theme" checked={checked} onChange={(e) => setChecked(e.target.checked)} /><label htmlFor="switch" onClick={() => setChecked((c) => c)}>Toggle</label>
@@ -139,7 +140,6 @@ function App() {
                     <Route path="/register" element={<RegisterPage />} />
                     <Route path="/payment" element={<PaymentPage />} />
                     <Route path="*" element={<NotFoundPage />} />
-                    <Route path="/navbar" element={<Navbar />} />
 
 
                     <Route path="/test" element={<TestPage />} />
@@ -149,7 +149,7 @@ function App() {
                     <Route path="/404" element={<NotFoundPage />} />
                 </Routes>
 
-                {/* <Footer /> */}
+                <Footer />
 
                 {/*<div className="dropdown">
                         <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">

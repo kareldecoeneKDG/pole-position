@@ -1,7 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 import circuit from './gp-1.png';
 import flag from './flag-italy.png';
 import circuitBackground from './circuit-background.png';
+
 
 function GrandPrix() {
     return (

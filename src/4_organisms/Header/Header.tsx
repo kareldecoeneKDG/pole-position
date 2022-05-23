@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import headerLogoLight from './Logo-big-light.png';
 import headerLogoDark from './Logo-big-dark.png';
@@ -29,7 +30,9 @@ function Header() {
                     Het is al geruime tijd een bekend gegeven dat een lezer, tijdens het bekijken van de layout van een.
                 </p>
 
-                <a className="button button-primary" href="#">Join the community <i className="fa fa-chevron-right first-chevron" aria-hidden="true"></i><i className="fa fa-chevron-right" aria-hidden="true"></i></a>
+                <Link className="button button-primary" to="/register">
+                    Join the community <i className="fa fa-chevron-right first-chevron" aria-hidden="true"></i><i className="fa fa-chevron-right" aria-hidden="true"></i>
+                </Link>
 
                 {/* <img className="header__img-placeholder" src={placeholder} alt="Full logo Pole Position" /> */}
 
@@ -42,9 +45,9 @@ function Header() {
             </div>
 
             {/* SCROLL DOWN ICON */}
-            <a className="header__scrolldown" href="#">
+            <Link className="header__scrolldown" to="latestnews">
                 <i className="header__scrolldown__icon fa fa-chevron-down" aria-hidden="true"></i>
-            </a>
+            </Link>
 
             {/* BG RECTANGLES 2 */}
             <img className="bg-rect bg-rect2 light" src={backgroundRectangles} alt="Background rectangles" />

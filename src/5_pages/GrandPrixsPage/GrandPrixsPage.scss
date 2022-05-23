@@ -8,6 +8,17 @@
 
     .grandprixs-section {
         text-align: center;
+
+        &__items {
+            a {
+                margin-bottom: 20px;
+                display: block;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
     }
 }
 

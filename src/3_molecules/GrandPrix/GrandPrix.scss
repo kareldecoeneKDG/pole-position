@@ -41,6 +41,10 @@
             margin-bottom: 10px;
         }
     }
+
+    .button {
+        display: inline-block !important;
+    }
 }
 
 /* LIGHT THEME COLORS */
@@ -115,8 +119,8 @@
             width: 183px;
         }
 
-        > a {
-            display: block;
+        .button {
+            display: block !important;
             width: 183px;
         }
 
@@ -166,7 +170,7 @@
 
         &__datetime {
             margin-bottom: 50px;
-            
+
             &__date {
                 font-size: 24px;
                 line-height: 28px;

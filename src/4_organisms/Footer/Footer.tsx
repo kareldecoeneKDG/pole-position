@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import Socials from '../../3_molecules/Socials/Socials';
 
@@ -10,7 +11,9 @@ function Footer() {
             <div className="mobile">
                 {/* LOGO + SCROLLUP */}
                 <div className="top flex">
-                    <img className="logoFooter" src={logoFooter} alt="logo Pole Position footer" />
+                    <Link to="/">
+                        <img className="logoFooter" src={logoFooter} alt="logo Pole Position footer" />
+                    </Link>
 
                     <div className="scrollup icon-bg">
                         <i className="scrollup__icon fa fa-chevron-up" aria-hidden="true"></i>
@@ -21,17 +24,19 @@ function Footer() {
                 <div className="footer__section">
                     <h3>Contact</h3>
 
-                    <a className="footer__section__p" href="#">+32 478 69 25 36</a>
-                    <a className="footer__section__p" href="#">info@poleposition.be</a>
+                    <a className="footer__section__p" href="tel:+32478692536">+32 478 69 25 36</a>
+                    <a className="footer__section__p" href="mailto:info@poleposition.be">info@poleposition.be</a>
                 </div>
 
                 {/* HEADOFFICE */}
                 <div className="footer__section">
                     <h3>Headoffice</h3>
 
-                    <p className="footer__section__p">Bredestraat 155</p>
-                    <p className="footer__section__p">2650 Hemiksem</p>
-                    <p className="footer__section__p">Antwerp, Belgium</p>
+                    <a href="https://goo.gl/maps/AReNJ66swuL1HsJY6">
+                        <p className="footer__section__p">Bredestraat 1550</p>
+                        <p className="footer__section__p">2650 Hemiksem</p>
+                        <p className="footer__section__p">Antwerp, Belgium</p>
+                    </a>
                 </div>
 
                 {/* SOCIALS */}
@@ -45,20 +50,18 @@ function Footer() {
                 <div className="footer__section">
                     <h3>Sitemap</h3>
 
-                    <a className="footer__section__p" href="#">Dashboard</a>
-                    <a className="footer__section__p" href="#">Teams</a>
-                    <a className="footer__section__p" href="#">Drivers</a>
-                    <a className="footer__section__p" href="#">Standings</a>
-                    <a className="footer__section__p" href="#">Grand Prixs</a>
-                    <a className="footer__section__p" href="#">Account</a>
+                    <Link className="footer__section__p" to="/dashboard">Dashboard</Link>
+                    <Link className="footer__section__p" to="/blog">Blog</Link>
+                    <Link className="footer__section__p" to="/standings">Standings</Link>
+                    <Link className="footer__section__p" to="/grandprixs">Grand Prixs</Link>
                 </div>
 
                 {/* CONDITIONS & TERMS */}
                 <div className="footer__section">
                     <h3>Terms</h3>
 
-                    <a className="footer__section__p" href="#">Terms & conditions</a>
-                    <a className="footer__section__p" href="#">Privacy Policy</a>
+                    <Link className="footer__section__p" to="/privacy-policy">Terms & conditions</Link>
+                    <Link className="footer__section__p" to="/privacy-policy">Privacy Policy</Link>
                 </div>
 
                 <hr className="footer__line line" />
@@ -81,37 +84,37 @@ function Footer() {
                     <div className="footer__section">
                         <h3>Sitemap</h3>
 
-                        <a className="footer__section__p" href="#">Dashboard</a>
-                        <a className="footer__section__p" href="#">Teams</a>
-                        <a className="footer__section__p" href="#">Drivers</a>
-                        <a className="footer__section__p" href="#">Standings</a>
-                        <a className="footer__section__p" href="#">Grand Prixs</a>
-                        <a className="footer__section__p" href="#">Account</a>
+                        <Link className="footer__section__p" to="/dashboard">Dashboard</Link>
+                        <Link className="footer__section__p" to="/blog">Blog</Link>
+                        <Link className="footer__section__p" to="/standings">Standings</Link>
+                        <Link className="footer__section__p" to="/grandprixs">Grand Prixs</Link>
                     </div>
 
                     {/* HEADOFFICE */}
                     <div className="footer__section">
                         <h3>Headoffice</h3>
 
-                        <p className="footer__section__p">Bredestraat 155</p>
-                        <p className="footer__section__p">2650 Hemiksem</p>
-                        <p className="footer__section__p">Antwerp, Belgium</p>
+                        <a href="https://goo.gl/maps/AReNJ66swuL1HsJY6">
+                            <p className="footer__section__p">Bredestraat 1550</p>
+                            <p className="footer__section__p">2650 Hemiksem</p>
+                            <p className="footer__section__p">Antwerp, Belgium</p>
+                        </a>
                     </div>
 
                     {/* CONTACT */}
                     <div className="footer__section">
                         <h3>Contact</h3>
 
-                        <a className="footer__section__p" href="#">+32 478 69 25 36</a>
-                        <a className="footer__section__p" href="#">info@poleposition.be</a>
+                        <a className="footer__section__p" href="tel:+32478692536">+32 478 69 25 36</a>
+                        <a className="footer__section__p" href="mailto:info@poleposition.be">info@poleposition.be</a>
                     </div>
 
                     {/* CONDITIONS & TERMS */}
                     <div className="footer__section">
                         <h3>Terms</h3>
 
-                        <a className="footer__section__p" href="#">Terms & conditions</a>
-                        <a className="footer__section__p" href="#">Privacy Policy</a>
+                        <Link className="footer__section__p" to="/privacy-policy">Terms & conditions</Link>
+                        <Link className="footer__section__p" to="/privacy-policy">Privacy Policy</Link>
                     </div>
                 </div>
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, NavLink } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, NavLink, Link } from "react-router-dom";
 
 import Article from '../../3_molecules/Article/Article';
 
@@ -14,12 +14,29 @@ function SavedBlogposts() {
             </div>
 
             <div className="savedBlogposts__articles">
-                <Article />
-                <Article />
-                <Article />
-                <Article />
-                <Article />
-                <Article />
+                <Link to="/blog-detail">
+                    <Article />
+                </Link>
+
+                <Link to="/blog-detail">
+                    <Article />
+                </Link>
+
+                <Link to="/blog-detail">
+                    <Article />
+                </Link>
+
+                <Link to="/blog-detail">
+                    <Article />
+                </Link>
+
+                <Link to="/blog-detail">
+                    <Article />
+                </Link>
+
+                <Link to="/blog-detail">
+                    <Article />
+                </Link>
             </div>
 
             <div className="center">

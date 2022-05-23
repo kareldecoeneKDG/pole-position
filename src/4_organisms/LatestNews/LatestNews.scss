@@ -57,6 +57,17 @@
             display: flex;
             justify-content: space-between;
             gap: 30px;
+
+            .big-article {
+                width: 64%;
+                height: auto;
+                aspect-ratio: 3/2;
+
+                .latestnews__articles__article {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
         }
 
         &__articles {

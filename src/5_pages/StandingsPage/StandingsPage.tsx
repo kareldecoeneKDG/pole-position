@@ -3,53 +3,140 @@ import React from 'react';
 import SubNav from '../../4_organisms/SubNav/SubNav';
 import StandingDriver from '../../3_molecules/StandingDriver/StandingDriver';
 import StandingTeam from '../../3_molecules/StandingTeam/StandingTeam';
+import { Link } from 'react-router-dom';
 
 function StandingsPage() {
     return (
         <div className="standings">
             <SubNav />
 
-             {/* <section className="standings__drivers">
-                <StandingDriver />
-                <StandingDriver />
-                <StandingDriver />
+            {/*<section className="standings__drivers">
+                <Link to="/driver">
+                    <StandingDriver />
+                </Link>
 
-                {/* <hr className="standings__drivers__line line" /> 
+                <Link to="/driver">
+                    <StandingDriver />
+                </Link>
 
-                <StandingDriver />
-                <StandingDriver />
-                <StandingDriver />
-                <StandingDriver />
-                <StandingDriver />
-                <StandingDriver />
-                <StandingDriver />
-                <StandingDriver />
-                <StandingDriver />
-                <StandingDriver />
-                <StandingDriver />
-                <StandingDriver />
-                <StandingDriver />
-                <StandingDriver />
-                <StandingDriver />
-                <StandingDriver />
-                <StandingDriver />
+                <Link to="/driver">
+                    <StandingDriver />
+                </Link>
+
+                {/* <hr className="standings__drivers__line line" />
+
+                <Link to="/driver">
+                    <StandingDriver />
+                </Link>
+
+                <Link to="/driver">
+                    <StandingDriver />
+                </Link>
+
+                <Link to="/driver">
+                    <StandingDriver />
+                </Link>
+
+                <Link to="/driver">
+                    <StandingDriver />
+                </Link>
+
+                <Link to="/driver">
+                    <StandingDriver />
+                </Link>
+
+                <Link to="/driver">
+                    <StandingDriver />
+                </Link>
+
+                <Link to="/driver">
+                    <StandingDriver />
+                </Link>
+
+                <Link to="/driver">
+                    <StandingDriver />
+                </Link>
+
+                <Link to="/driver">
+                    <StandingDriver />
+                </Link>
+
+                <Link to="/driver">
+                    <StandingDriver />
+                </Link>
+
+                <Link to="/driver">
+                    <StandingDriver />
+                </Link>
+
+                <Link to="/driver">
+                    <StandingDriver />
+                </Link>
+
+                <Link to="/driver">
+                    <StandingDriver />
+                </Link>
+
+                <Link to="/driver">
+                    <StandingDriver />
+                </Link>
+
+                <Link to="/driver">
+                    <StandingDriver />
+                </Link>
+
+                <Link to="/driver">
+                    <StandingDriver />
+                </Link>
+
+                <Link to="/driver">
+                    <StandingDriver />
+                </Link>
             </section> */}
 
             <section className="standings__drivers">
-                <StandingTeam />
-                <StandingTeam />
-                <StandingTeam />
+                <Link to="/team">
+                    <StandingTeam />
+                </Link>
+
+                <Link to="/team">
+                    <StandingTeam />
+                </Link>
+
+                <Link to="/team">
+                    <StandingTeam />
+                </Link>
 
                 {/* <hr className="standings__drivers__line line" /> */}
 
-                <StandingTeam />
-                <StandingTeam />
-                <StandingTeam />
-                <StandingTeam />
-                <StandingTeam />
-                <StandingTeam />
-                <StandingTeam /> 
-            </section>
+                <Link to="/team">
+                    <StandingTeam />
+                </Link>
+
+                <Link to="/team">
+                    <StandingTeam />
+                </Link>
+
+                <Link to="/team">
+                    <StandingTeam />
+                </Link>
+
+                <Link to="/team">
+                    <StandingTeam />
+                </Link>
+
+                <Link to="/team">
+                    <StandingTeam />
+                </Link>
+
+                <Link to="/team">
+                    <StandingTeam />
+                </Link>
+                
+                <Link to="/team">
+                    <StandingTeam />
+                </Link>
+            </section> 
         </div>
     );
 }

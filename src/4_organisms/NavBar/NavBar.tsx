@@ -1,14 +1,22 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 import logo from './logo-hollow.png';
 
 const Navbar = () => {
+    // Mobile menu switcher
     const [isOpen, setIsOpen] = useState(false);
+
+    // Prevent scrolling when menu is open
+    if (isOpen == true) {
+        document.body.style.overflowY = 'hidden';
+    }
+    else {
+        document.body.style.overflowY = 'visible';
+    }
 
     // Light/dark theme
     let theme = localStorage.getItem('data-theme');
-
-
 
     const changeThemeToDark = () => {
         document.documentElement.setAttribute("data-theme", "dark") // set theme to dark
@@ -22,8 +30,6 @@ const Navbar = () => {
         theme = "light";
     }
 
-
-
     if (localStorage.getItem('data-theme') == '') {
         let darkThemeMq = window.matchMedia("(prefers-color-scheme: dark)");
 
@@ -36,8 +42,6 @@ const Navbar = () => {
     else {
         document.documentElement.setAttribute("data-theme", localStorage.getItem('data-theme')!);
     }
-
-
 
     // Get the element based on ID
     const checkbox = document.getElementById("switch");
@@ -56,11 +60,10 @@ const Navbar = () => {
         }
     });
 
-
-
     //toggle checkbox
     const [checked, setChecked] = useState(false);
-    console.log(checked);
+
+
 
     return (
         <div className="Navbar">
@@ -71,17 +74,40 @@ const Navbar = () => {
                 <div className="bar"></div>
             </div>
 
-            <a href="#">
+            {/* Pole Position logo */}
+            <Link to="/">
                 <img className="logo" src={logo} alt="Pole Position logo mobile"></img>
-            </a>
+            </Link>
 
-            <div className="profile icon-bg">
-                <i className="profile__icon fa fa-user" aria-hidden="true"></i>
+            {/* Desktop nav items */}
+            <div className="links-desktop desktop">
+                <Link className="links-desktop__link" to="/dashboard">Dashboard</Link>
+                <Link className="links-desktop__link" to="/blog">Blog</Link>
+                <Link className="links-desktop__link" to="/standings">Standings</Link>
+                <Link className="links-desktop__link" to="/grandprixs">Grand Prixs</Link>
             </div>
 
+            {/* Desktop light/dark theme switch */}
+            <div className="toggle-container desktop">
+                <input type="checkbox" id="switch" name="theme" checked={checked} onChange={(e) => setChecked(e.target.checked)} /><label htmlFor="switch" onClick={() => setChecked((c) => c)}>Toggle</label>
+            </div>
+
+            {/* Desktop account button */}
+            <Link className="button button-primary desktop" to="/dashboard">
+                <i className="chevron-first fa fa-user" aria-hidden="true"></i> Karel Decoene
+            </Link>
+
+            {/* Mobile account button */}
+            <Link className="profile icon-bg mobile" to="/dashboard">
+                <i className="profile__icon fa fa-user" aria-hidden="true"></i>
+            </Link>
+
+            {/* Mobile sliding nav */}
             <div className={`nav-items ${isOpen && "open"}`}>
                 <div className="top">
-                    <img className="logo logo-menu" src={logo} alt="Logo of Pole Position, F1 blog" />
+                    <Link to="/">
+                        <img className="logo logo-menu" src={logo} alt="Pole Position logo mobile"></img>
+                    </Link>
 
                     <div className="toggle-container">
                         <input type="checkbox" id="switch" name="theme" checked={checked} onChange={(e) => setChecked(e.target.checked)} /><label htmlFor="switch" onClick={() => setChecked((c) => c)}>Toggle</label>
@@ -89,15 +115,16 @@ const Navbar = () => {
                 </div>
 
                 <div className="links">
-                    <a href="/home">Dashboard</a>
-                    <a href="/about">Blog</a>
-                    <a href="/service">Teams</a>
-                    <a href="/contact">Drivers</a>
-                    <a href="/contact">Grand Prixs</a>
+                    <Link to="/dashboard">Dashboard</Link>
+                    <Link to="/blog">Blog</Link>
+                    <Link to="/standings">Standings</Link>
+                    <Link to="/grandprixs">Grand Prixs</Link>
                 </div>
 
                 <div className="bottom">
-                    <a className="button button-primary" href="/"><i className="chevron-first fa fa-user" aria-hidden="true"></i> Karel Decoene</a>
+                    <Link className="button button-primary" to="/dashboard">
+                        <i className="chevron-first fa fa-user" aria-hidden="true"></i> Karel Decoene
+                    </Link>
                     <a className="button button-secondary" href="/"><i className="chevron-first fa fa-sign-out" aria-hidden="true"></i> Sign out</a>
                 </div>
             </div>

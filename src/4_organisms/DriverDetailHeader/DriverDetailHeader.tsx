@@ -6,6 +6,7 @@ import Socials from '../../3_molecules/Socials/Socials';
 import Max from './max.png';
 import MaxLogo from './Max-logo.png';
 import RedBullLogo from './redbull.png';
+import { Link } from 'react-router-dom';
 
 function DriverDetailHeader() {
     return (
@@ -17,8 +18,13 @@ function DriverDetailHeader() {
 
                 <div className="top__info">
                     <div className="top__info__logos flex">
-                        <img className="top__info__logos__team-logo" src={RedBullLogo} alt="F1 team logo" />
-                        <img className="top__info__logos__driver-logo" src={MaxLogo} alt="F1 driver personal logo" />
+                        <Link to="/team">
+                            <img className="top__info__logos__team-logo" src={RedBullLogo} alt="F1 team logo" />
+                        </Link>
+
+                        <a href="https://nl.verstappen.com/" target="_blank">
+                            <img className="top__info__logos__driver-logo" src={MaxLogo} alt="F1 driver personal logo" />
+                        </a>
                     </div>
 
                     <h2 className="top__info__title">Max<br /> Verstappen</h2>

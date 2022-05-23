@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import SignUpStep from '../../3_molecules/SignUpStep/SignUpStep';
 
@@ -19,7 +20,9 @@ function HowSignUp() {
             </div>
 
             <div className="center">
-                <a className="button button-primary" href="#">Sign me up <i className="fa fa-chevron-right first-chevron" aria-hidden="true"></i><i className="fa fa-chevron-right" aria-hidden="true"></i></a>
+                <Link className="button button-primary" to="/register">
+                    Sign me up <i className="fa fa-chevron-right first-chevron" aria-hidden="true"></i><i className="fa fa-chevron-right" aria-hidden="true"></i>
+                </Link>
             </div>
         </section>
     );

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import Benefit from '../../3_molecules/Benefit/Benefit';
 
@@ -20,7 +21,9 @@ function Benefits() {
 
             <p className="cta__p">You've heard enough?</p>
 
-            <a className="button button-primary">Sign me up <i className="fa fa-chevron-right first-chevron" aria-hidden="true"></i><i className="fa fa-chevron-right" aria-hidden="true"></i></a>
+            <Link className="button button-primary" to="/register">
+                Sign me up <i className="fa fa-chevron-right first-chevron" aria-hidden="true"></i><i className="fa fa-chevron-right" aria-hidden="true"></i>
+            </Link>
         </section>
     );
 }

@@ -4,6 +4,7 @@
     height: calc(100vh - 66px);
     padding: 0px 20px;
     text-align: center;
+    z-index: 0;
 
     .bg-rect {
         position: absolute;
@@ -122,7 +123,7 @@
 /* TABLET PORTRAIT */
 @media only screen and (min-width: $tablet-portrait) {
     .header {
-        height: calc(100vh - 80px);
+        height: calc(100vh - 66px);
 
         .bg-rect {
             &.bg-rect2 {
@@ -155,7 +156,7 @@
             &.mobile {
                 display: none;
             }
-    
+
             &.tablet {
                 display: block;
             }
@@ -166,8 +167,6 @@
 /* TABLET LANDSCAPE */
 @media only screen and (min-width: $tablet-landscape) {
     .header {
-        height: calc(100vh - 80px);
-
         .bg-rect {
             &.bg-rect1 {
                 top: -40%;
@@ -197,6 +196,8 @@
 /* DESKTOP 1280PX */
 @media only screen and (min-width: $desktop-1) {
     .header {
+        height: calc(100vh - 100px);
+
         .bg-rect {
             &.bg-rect1 {
                 top: -30%;
@@ -267,6 +268,33 @@
             margin-right: auto;
         }
 
+        &__img-placeholder {
+            width: 589px;
+        }
+    }
+}
+
+/* DESKTOP 1536PX */
+@media only screen and (min-width: $desktop-4) {
+    .header {
+        &__img-placeholder {
+            width: 335px;
+        }
+    }
+}
+
+/* DESKTOP 1536PX and MIN-HEIGHT 900PX */
+@media only screen and (min-width: $desktop-4) and (min-height: 900px) {
+    .header {
+        &__img-placeholder {
+            width: 500px;
+        }
+    }
+}
+
+/* DESKTOP 1536PX and MIN-HEIGHT 1024PX */
+@media only screen and (min-width: $desktop-4) and (min-height: 900px) {
+    .header {
         &__img-placeholder {
             width: 589px;
         }

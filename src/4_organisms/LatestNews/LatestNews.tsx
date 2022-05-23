@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import LatestNewsArticle from '../../3_molecules/LatestNewsArticle/LatestNewsArticle';
 
@@ -6,28 +7,40 @@ import LatestNewsArticle from '../../3_molecules/LatestNewsArticle/LatestNewsArt
 
 function LatestNews() {
     return (
-        <section className="latestnews section">
+        <section id="latestnews" className="latestnews section">
             <h2 className="latestnews__title section__title">Latest news</h2>
 
             {/* MOBILE ARTICLES */}
             <div className="latestnews__articles flex-column mobile">
-                <LatestNewsArticle />
-                <LatestNewsArticle />
+                <Link to="/blog-detail">
+                    <LatestNewsArticle />
+                </Link>
+                <Link to="/blog-detail">
+                    <LatestNewsArticle />
+                </Link>
             </div>
 
             {/* TABLET LANDSCAPE ARTICLES */}
             <div className="latestnews__articles tablet-landscape flex">
-                <LatestNewsArticle />
+                <Link className="big-article" to="/blog-detail">
+                    <LatestNewsArticle />
+                </Link>
 
                 <div className="latestnews__articles__smallones flex-column">
-                    <LatestNewsArticle />
-                    <LatestNewsArticle />
+                    <Link to="/blog-detail">
+                        <LatestNewsArticle />
+                    </Link>
+                    <Link to="/blog-detail">
+                        <LatestNewsArticle />
+                    </Link>
                 </div>
             </div>
 
             <p className="cta__p">You wan't to know F1 latest news?</p>
 
-            <a className="button button-primary">Sign me up <i className="fa fa-chevron-right first-chevron" aria-hidden="true"></i><i className="fa fa-chevron-right" aria-hidden="true"></i></a>
+            <Link className="button button-primary" to="/register">
+                Sign me up <i className="fa fa-chevron-right first-chevron" aria-hidden="true"></i><i className="fa fa-chevron-right" aria-hidden="true"></i>
+            </Link>
         </section>
     );
 }
