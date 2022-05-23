@@ -99,31 +99,6 @@ function App() {
 
 
 
-    // Get the element based on ID
-    const checkbox = document.getElementById("switch");
-
-    // Apply retrived them to the website
-    checkbox?.addEventListener('change', () => {
-        //let theme = localStorage.getItem('data-theme'); // Retrieve saved them from local storage
-
-        if (theme === 'dark') {
-            theme = 'light';
-            changeThemeToLight()
-            //checkbox.checked = true;
-        } else {
-            theme = 'dark';
-            changeThemeToDark()
-        }
-    });
-
-
-
-    //toggle checkbox
-    const [checked, setChecked] = useState(false);
-    console.log(checked);
-
-
-
     //const [checked, setChecked] = useState(false);
 
     return (

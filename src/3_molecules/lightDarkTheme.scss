@@ -52,17 +52,18 @@ body {
 .toggle-container {
     position: fixed;
     z-index: 999;
-    
+
     label {
         /* styling for labels */
         cursor: pointer;
         text-indent: -9999px;
         width: 52px;
         height: 27px;
-        background: #1ba80e;
+        //background: #1ba80e;
         float: right;
         border-radius: 100px;
         position: relative;
+        background: $neutrals-800;
     }
 
     label:after {
@@ -81,13 +82,13 @@ body {
 
     input:checked + label {
         /* conditional check while toggling */
-        background: var(--color-heading);
+        //background: var(--color-heading);
     }
 
     input:checked + label:after {
-        left: calc(100% - 5px);
-        -webkit-transform: translateX(-100%);
-        transform: translateX(-100%);
+        // left: calc(100% - 5px);
+        // -webkit-transform: translateX(-100%);
+        // transform: translateX(-100%);
     }
 
     // Input
@@ -100,5 +101,31 @@ body {
 
     label:active:after {
         width: 45px;
+    }
+}
+
+/* LIGHT THEME COLORS */
+[data-theme="light"] {
+    .toggle-container {
+        label {
+            &:after {
+                right: calc(100% - 5px);
+                -webkit-transform: translateX(0%);
+                transform: translateX(0%);
+            }
+        }
+    }
+}
+
+/* DARK THEME COLORS */
+[data-theme="dark"] {
+    .toggle-container {
+        label {
+            &:after {
+                left: calc(100% - 5px);
+                -webkit-transform: translateX(-100%);
+                transform: translateX(-100%);
+            }
+        }
     }
 }

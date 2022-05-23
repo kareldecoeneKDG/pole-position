@@ -8,6 +8,10 @@
         margin-left: $icon-margin-button;
     }
 
+    .chevron-first {
+        margin-right: $icon-margin-button;
+    }
+
     &.button-primary, &.button-secondary {
         &:hover {
             .first-chevron {
