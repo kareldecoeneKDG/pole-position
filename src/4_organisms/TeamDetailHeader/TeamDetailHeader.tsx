@@ -11,12 +11,16 @@ function TeamDetailHeader() {
         <div className="detailHeader detailHeader-team">
             <div className="top flex">
                 <div className="top__drivers top-team">
+
+                    {/* INSERT DRIVER LINKS */}
                     <img className="top-team__img" src={Max} alt="Picture of driver" />
                     <img className="top-team__img" src={Max} alt="Picture of driver" />
                 </div>
 
                 <div className="top__info">
-                    <img className="top__info__logos__team-logo" src={RedBullLogo} alt="F1 team logo" />
+                    <a href="https://www.redbullracing.com/int-en" target="_blank">
+                        <img className="top__info__logos__team-logo" src={RedBullLogo} alt="F1 team logo" />
+                    </a>
 
                     <h2 className="top__info__title">Red Bull</h2>
 

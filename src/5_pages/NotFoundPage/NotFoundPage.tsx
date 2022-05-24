@@ -2,6 +2,7 @@ import React from 'react';
 
 import ErrorLogo from './error-logo.png';
 import ErrorLogoDark from './error-logo-dark.png';
+import { Link } from 'react-router-dom';
 
 function NotFoundPage() {
     return (
@@ -17,7 +18,9 @@ function NotFoundPage() {
                 </p>
 
                 <div className="center">
-                    <a className="button button-primary" href="#">Home <i className="fa fa-chevron-right first-chevron" aria-hidden="true"></i><i className="fa fa-chevron-right" aria-hidden="true"></i></a>
+                    <Link className="button button-primary" to="/">
+                        Home <i className="fa fa-chevron-right first-chevron" aria-hidden="true"></i><i className="fa fa-chevron-right" aria-hidden="true"></i>
+                    </Link>
                 </div>
             </div>
         </section>

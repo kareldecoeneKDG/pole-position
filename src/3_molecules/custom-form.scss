@@ -46,6 +46,12 @@
         &__forgot-pw {
             color: $neutrals-700;
         }
+
+        &__no-acc {
+            &__link {
+                color: $neutrals-900;
+            }
+        }
     }
 }
 
@@ -58,6 +64,12 @@
     
         &__forgot-pw {
             color: $neutrals-500;
+        }
+
+        &__no-acc {
+            &__link {
+                color: $neutrals-500;
+            }
         }
     }
 }

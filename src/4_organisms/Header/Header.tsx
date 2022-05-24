@@ -44,10 +44,13 @@ function Header() {
                 <img className="header__img-placeholder desktop dark" src={desktopDarkPreview} alt="Preview tablet Pole Position" />
             </div>
 
-            {/* SCROLL DOWN ICON */}
+            {/* SCROLL DOWN ICON 
             <Link className="header__scrolldown" to="latestnews">
                 <i className="header__scrolldown__icon fa fa-chevron-down" aria-hidden="true"></i>
-            </Link>
+            </Link> */}
+            <a className="header__scrolldown" href="#latestnews">
+                <i className="header__scrolldown__icon fa fa-chevron-down" aria-hidden="true"></i>
+            </a>
 
             {/* BG RECTANGLES 2 */}
             <img className="bg-rect bg-rect2 light" src={backgroundRectangles} alt="Background rectangles" />

@@ -10,104 +10,104 @@ function StandingsPage() {
         <div className="standings">
             <SubNav />
 
-            {/*<section className="standings__drivers">
-                <Link to="/driver">
-                    <StandingDriver />
-                </Link>
-
-                <Link to="/driver">
-                    <StandingDriver />
-                </Link>
-
-                <Link to="/driver">
-                    <StandingDriver />
-                </Link>
-
-                {/* <hr className="standings__drivers__line line" />
-
-                <Link to="/driver">
-                    <StandingDriver />
-                </Link>
-
-                <Link to="/driver">
-                    <StandingDriver />
-                </Link>
-
-                <Link to="/driver">
-                    <StandingDriver />
-                </Link>
-
-                <Link to="/driver">
-                    <StandingDriver />
-                </Link>
-
-                <Link to="/driver">
-                    <StandingDriver />
-                </Link>
-
-                <Link to="/driver">
-                    <StandingDriver />
-                </Link>
-
-                <Link to="/driver">
-                    <StandingDriver />
-                </Link>
-
-                <Link to="/driver">
-                    <StandingDriver />
-                </Link>
-
-                <Link to="/driver">
-                    <StandingDriver />
-                </Link>
-
-                <Link to="/driver">
-                    <StandingDriver />
-                </Link>
-
-                <Link to="/driver">
-                    <StandingDriver />
-                </Link>
-
-                <Link to="/driver">
-                    <StandingDriver />
-                </Link>
-
-                <Link to="/driver">
-                    <StandingDriver />
-                </Link>
-
-                <Link to="/driver">
-                    <StandingDriver />
-                </Link>
-
-                <Link to="/driver">
-                    <StandingDriver />
-                </Link>
-
-                <Link to="/driver">
-                    <StandingDriver />
-                </Link>
-
-                <Link to="/driver">
-                    <StandingDriver />
-                </Link>
-            </section> */}
-
             <section className="standings__drivers">
-                <Link to="/team">
-                    <StandingTeam />
+                <Link to="/driver">
+                    <StandingDriver />
                 </Link>
 
-                <Link to="/team">
-                    <StandingTeam />
+                <Link to="/driver">
+                    <StandingDriver />
                 </Link>
 
-                <Link to="/team">
-                    <StandingTeam />
+                <Link to="/driver">
+                    <StandingDriver />
                 </Link>
 
                 {/* <hr className="standings__drivers__line line" /> */}
+
+                <Link to="/driver">
+                    <StandingDriver />
+                </Link>
+
+                <Link to="/driver">
+                    <StandingDriver />
+                </Link>
+
+                <Link to="/driver">
+                    <StandingDriver />
+                </Link>
+
+                <Link to="/driver">
+                    <StandingDriver />
+                </Link>
+
+                <Link to="/driver">
+                    <StandingDriver />
+                </Link>
+
+                <Link to="/driver">
+                    <StandingDriver />
+                </Link>
+
+                <Link to="/driver">
+                    <StandingDriver />
+                </Link>
+
+                <Link to="/driver">
+                    <StandingDriver />
+                </Link>
+
+                <Link to="/driver">
+                    <StandingDriver />
+                </Link>
+
+                <Link to="/driver">
+                    <StandingDriver />
+                </Link>
+
+                <Link to="/driver">
+                    <StandingDriver />
+                </Link>
+
+                <Link to="/driver">
+                    <StandingDriver />
+                </Link>
+
+                <Link to="/driver">
+                    <StandingDriver />
+                </Link>
+
+                <Link to="/driver">
+                    <StandingDriver />
+                </Link>
+
+                <Link to="/driver">
+                    <StandingDriver />
+                </Link>
+
+                <Link to="/driver">
+                    <StandingDriver />
+                </Link>
+
+                <Link to="/driver">
+                    <StandingDriver />
+                </Link>
+            </section>
+
+            {/* <section className="standings__drivers">
+                <Link to="/team">
+                    <StandingTeam />
+                </Link>
+
+                <Link to="/team">
+                    <StandingTeam />
+                </Link>
+
+                <Link to="/team">
+                    <StandingTeam />
+                </Link>
+
+                {/* <hr className="standings__drivers__line line" /> 
 
                 <Link to="/team">
                     <StandingTeam />
@@ -136,7 +136,7 @@ function StandingsPage() {
                 <Link to="/team">
                     <StandingTeam />
                 </Link>
-            </section> 
+            </section> */}
         </div>
     );
 }

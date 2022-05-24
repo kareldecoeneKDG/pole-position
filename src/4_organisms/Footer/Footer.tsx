@@ -15,9 +15,13 @@ function Footer() {
                         <img className="logoFooter" src={logoFooter} alt="logo Pole Position footer" />
                     </Link>
 
-                    <div className="scrollup icon-bg">
+                    <a className="scrollup icon-bg" href="#container">
                         <i className="scrollup__icon fa fa-chevron-up" aria-hidden="true"></i>
-                    </div>
+                    </a>
+
+                    {/*<div className="scrollup icon-bg">
+                        <i className="scrollup__icon fa fa-chevron-up" aria-hidden="true"></i>
+                    </div>*/}
                 </div>
 
                 {/* CONTACT */}
@@ -74,7 +78,7 @@ function Footer() {
                 <div className="top flex">
                     <img className="logoFooter" src={logoFooter} alt="logo Pole Position footer" />
 
-                    <a className="button button-primary">
+                    <a className="button button-primary" href="#container">
                         Back to top <i className="scrollup__icon fa fa-chevron-up first-chevron" aria-hidden="true"></i>
                     </a>
                 </div>

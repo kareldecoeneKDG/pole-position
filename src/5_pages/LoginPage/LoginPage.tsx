@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import bannerImg from './article1.jpeg';
 
@@ -50,7 +51,10 @@ function LoginPage() {
 
                     <p className="custom-form__no-acc p">
                         Don't have an account yet?<br />
-                        <span className="custom-form__no-acc__link">Create account</span>
+                        
+                        <Link className="custom-form__no-acc__link" to="/register">
+                            Create account
+                        </Link>
                     </p>
                 </form>
             </div>

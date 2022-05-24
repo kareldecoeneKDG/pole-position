@@ -108,7 +108,7 @@ function App() {
                 <StyledApp>*/}
             {/* <div className="container"> */}
 
-            <div className="container">
+            <div id="container" className="container">
                 {/* <Nav /> */}
                 <Navbar />
 

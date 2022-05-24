@@ -1,7 +1,21 @@
+.mightAlsoLike {
+    &__drivers,
+    &__drivers-teams {
+        a {
+            margin-bottom: 20px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
 /* TABLET PORTRAIT */
 @media only screen and (min-width: $tablet-portrait) {
     .mightAlsoLike {
-        &__drivers, &__drivers-teams {
+        &__drivers,
+        &__drivers-teams {
             padding: 0px 100px;
         }
     }
@@ -10,7 +24,8 @@
 /* TABLET LANDSCAPE */
 @media only screen and (min-width: $tablet-landscape) {
     .mightAlsoLike {
-        &__drivers, &__drivers-teams {
+        &__drivers,
+        &__drivers-teams {
             padding: 0px 0px;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -18,7 +33,7 @@
 
             .driver-team {
                 margin-bottom: 0;
-                
+
                 &__img {
                     height: 200px;
                 }

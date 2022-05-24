@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import bannerImg from './article1.jpeg';
 
@@ -123,7 +124,7 @@ function RegisterPage() {
                     </div>
 
                     <p className="custom-form__no-acc p">
-                        By clicking on register you agree to the <span className="custom-form__no-acc__link">terms, conditions & privacy policy</span>
+                        By clicking on register you agree to the <Link className="custom-form__no-acc__link" to="/privacy-policy">terms, conditions & privacy policy</Link>
                     </p>
 
                     <button className="button button-primary">Payment <i className="fa fa-chevron-right first-chevron" aria-hidden="true"></i><i className="fa fa-chevron-right" aria-hidden="true"></i></button>
