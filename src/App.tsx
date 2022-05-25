@@ -6,6 +6,9 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import i18n from "i18next";
 
+// Scroll to top on path change
+import ScrollToTop from './ScrollToTop';
+
 // Components
 import Nav from './4_organisms/Nav/Nav';
 import Footer from './4_organisms/Footer/Footer';
@@ -109,8 +112,14 @@ function App() {
             {/* <div className="container"> */}
 
             <div id="container" className="container">
-                {/* <Nav /> */}
+
+                {/* Not working */}
+                <ScrollToTop />
                 <Navbar />
+
+                
+                {/* <Nav /> */}
+
 
                 {/* <div className="toggle-container">
                     <input type="checkbox" id="switch" name="theme" checked={checked} onChange={(e) => setChecked(e.target.checked)} /><label htmlFor="switch" onClick={() => setChecked((c) => c)}>Toggle</label>
@@ -124,6 +133,7 @@ function App() {
                         onChange={(e) => setChecked(e.target.checked)}
                     />
                 </div>*/}
+
 
                 <Routes>
                     <Route path="/" element={<HomePage />} />
