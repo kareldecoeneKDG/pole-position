@@ -35,21 +35,6 @@
     }
 }
 
-/* DARK THEME COLORS - VIA OPERATING SYSTEM */
-@media (prefers-color-scheme: dark) {
-    .historyHighlights {
-        background-color: $neutrals-800;
-
-        &__title {
-            color: $neutrals-100;
-        }
-
-        &__p {
-            color: $neutrals-500;
-        }
-    }
-}
-
 /* TABLET PORTRAIT */
 @media only screen and (min-width: $tablet-portrait) {
     .historyHighlights {
@@ -63,7 +48,7 @@
 @media only screen and (min-width: $desktop-3) {
     .historyHighlights {
         &__title, &__p {
-            padding: 0px 0px;
+            padding: 0px;
         }
 
         &__p {

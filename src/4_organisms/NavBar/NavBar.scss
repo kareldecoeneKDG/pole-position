@@ -5,7 +5,7 @@
     align-items: center;
     padding: 0px 20px;
 
-    // Burger + close
+    /* BURGER + CLOSE */
     .nav-toggle {
         display: flex;
         width: 20px;
@@ -16,7 +16,7 @@
         position: relative;
         z-index: 100;
 
-        // When menu is open
+        /* WHEN MENU IS OPEN */
         &.open {
             width: 36px;
             height: 36px;
@@ -28,7 +28,7 @@
             border-radius: 50%;
             text-align: center;
 
-            // Close button
+            /* CLOSE BUTTON */
             .bar {
                 transform: translateX(-40px);
                 background: transparent;
@@ -56,7 +56,7 @@
             height: 2px;
             transition: all 0.45s ease-in-out;
 
-            // Top + bottom bar
+            /* TOP + BOTTOM BAR */
             &::after,
             &::before {
                 content: "";
@@ -77,7 +77,7 @@
         }
     }
 
-    // Sliding nav
+    /* SLIDING NAV */
     .nav-items {
         position: absolute;
         top: 0;
@@ -93,7 +93,7 @@
             transform: translateX(0);
         }
 
-        // Logo + light/dark switch
+        /* LOGO + LIGHT/DARK SWITCH */
         .top {
             display: flex;
             justify-content: space-between;
@@ -109,7 +109,7 @@
             }
         }
 
-        // Sitemap
+        /* SITEMAP */
         .links {
             display: flex;
             flex-direction: column;
@@ -133,7 +133,7 @@
             }
         }
 
-        // Profile + signout button
+        /* PROFILE + SIGNOUT BUTTON */
         .bottom {
             position: absolute;
             bottom: 50px;
@@ -310,19 +310,19 @@
             }
         }
 
-        // Light/dark switch
+        /* LIGHT/DARK SWITCH */
         .toggle-container {
             right: 293px;
             position: absolute;
         }
 
-        // Mobile sliding nav
+        /* MOBILE SLIDING NAV */
         .nav-items {
             display: none;
         }
     }
 
-    // Mobile burger + close
+    /* MOBILE BURGER + CLOSE */
     .Navbar > .nav-toggle {
         display: none;
     }
@@ -341,7 +341,7 @@
             left: 339px;
         }
 
-        // Light/dark switch
+        /* LIGHT/DARK SWITCH */
         .toggle-container {
             right: 373px;
         }

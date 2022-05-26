@@ -1,5 +1,3 @@
-@import "./colors";
-
 * {
     margin: 0;
     padding: 0;
@@ -44,13 +42,6 @@ a {
 
 /* DARK THEME COLORS */
 [data-theme="dark"] {
-    body {
-        background-color: $neutrals-900;
-    }
-}
-
-/* MOBILE DARK MODE */
-@media (prefers-color-scheme: dark) {
     body {
         background-color: $neutrals-900;
     }

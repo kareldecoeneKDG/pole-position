@@ -43,19 +43,6 @@
     }
 }
 
-/* DARK THEME COLORS - VIA OPERATING SYSTEM */
-@media (prefers-color-scheme: dark) {
-    .section {
-        &__title {
-            color: $neutrals-100;
-        }
-
-        .cta__p {
-            color: $neutrals-100;
-        }
-    }
-}
-
 /* TABLET PORTRAIT */
 @media only screen and (min-width: $tablet-portrait) {
     .section {

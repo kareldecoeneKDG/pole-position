@@ -46,16 +46,3 @@
         }
     }
 }
-
-/* DARK THEME COLORS - VIA OPERATING SYSTEM */
-@media (prefers-color-scheme: dark) {
-    .platform-item {
-        &__title {
-            color: $neutrals-100;
-        }
-    
-        &__p {
-            color: $neutrals-500;
-        }
-    }
-}

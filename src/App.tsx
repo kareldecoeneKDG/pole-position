@@ -10,7 +10,7 @@ import i18n from "i18next";
 import ScrollToTop from './ScrollToTop';
 
 // Components
-import Nav from './4_organisms/Nav/Nav';
+import Navbar from './4_organisms/NavBar/NavBar';
 import Footer from './4_organisms/Footer/Footer';
 
 // Pages
@@ -29,7 +29,6 @@ import RegisterPage from './5_pages/RegisterPage/RegisterPage';
 import PaymentPage from './5_pages/PaymentPage/PaymentPage';
 import NotFoundPage from './5_pages/NotFoundPage/NotFoundPage';
 import TestPage from './5_pages/TestPage/TestPage';
-import Navbar from './4_organisms/NavBar/NavBar';
 
 // Global styles
 import './style.scss';

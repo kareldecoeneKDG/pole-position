@@ -1,5 +1,3 @@
-@import './spacers';
-
 .tablet-landscape {
     display: none;
 }
@@ -16,6 +14,7 @@
     display: none;
 }
 
+/* LIGHT THEME COLORS */
 [data-theme="light"] {
     .light {
         display: block;
@@ -26,22 +25,12 @@
     }
 }
 
+/* DARK THEME COLORS */
 [data-theme="dark"] {
     .light {
         display: none;
     }
     
-    .dark {
-        display: block;
-    }
-}
-
-/* DARK MODE */
-@media (prefers-color-scheme: dark) {
-    .light {
-        display: none;
-    }
-
     .dark {
         display: block;
     }
@@ -54,7 +43,7 @@
     }
 }
 
-/* DESKTOP */
+/* DESKTOP - 1280PX */
 @media only screen and (min-width: $desktop-1) {
     .mobile {
         display: none !important;

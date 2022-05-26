@@ -117,10 +117,10 @@ function RegisterPage() {
                     {/* PIZZA CHECKBOX */}
                     <div className="register__form__checkbox flex">
                         <label className="input-container">
-                            <input id="pizzaCheckbox" className="pizzaCheckbox input" type="checkbox" name="pizzaCheckbox" value="pizzaCheckbox" required />
+                            <input id="newsletterCheckbox" className="newsletterCheckbox input" type="checkbox" name="newsletterCheckbox" value="newsletterCheckbox" required />
                             <span className="checkmark"></span>
                         </label>
-                        <label className="pizza-label checkbox-label" htmlFor="pizzaCheckbox">Sign up for the Pole Position newsletter</label>
+                        <label className="pizza-label checkbox-label" htmlFor="newsletterCheckbox">Sign up for the Pole Position newsletter</label>
                     </div>
 
                     <p className="custom-form__no-acc p">

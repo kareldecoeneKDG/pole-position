@@ -10,7 +10,7 @@
     user-select: none;
     bottom: 10px;
 
-    .pizzaCheckbox {
+    .newsletterCheckbox {
         position: absolute;
         opacity: 0;
         cursor: pointer;
@@ -62,7 +62,7 @@
 /* LIGHT THEME COLORS */
 [data-theme="light"] {
     .input-container {
-        .pizzaCheckbox {
+        .newsletterCheckbox {
             &:checked ~ .checkmark {
                 background-color: $primary-600;
             }
@@ -94,7 +94,7 @@
 /* DARK THEME COLORS */
 [data-theme="dark"] {
     .input-container {
-        .pizzaCheckbox {
+        .newsletterCheckbox {
             &:checked ~ .checkmark {
                 background-color: $primary-600;
             }
@@ -119,7 +119,6 @@
 
         &:hover input ~ .checkmark {
             background-color: $neutrals-900;
-            //border: 1px solid $neutrals-500;
         }
     }
 }

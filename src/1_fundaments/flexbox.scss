@@ -1,5 +1,3 @@
-@import './spacers';
-
 .flex {
     display: flex;
 }
@@ -30,6 +28,7 @@
     }
 }
 
+/* DESKTOP - 1280PX */
 @media only screen and (min-width: $desktop-1) {
     .flex-desktop {
         display: flex;

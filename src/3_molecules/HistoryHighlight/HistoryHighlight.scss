@@ -1,4 +1,3 @@
-/* STANDARD CSS RULES */
 .historyHighlight {
     margin-bottom: 50px;
 
@@ -54,19 +53,6 @@
             color: $neutrals-100;
         }
     
-        &__p, &__date {
-            color: $neutrals-500;
-        }
-    }
-}
-
-/* DARK THEME COLORS - VIA OPERATING SYSTEM */
-@media (prefers-color-scheme: dark) {
-    .historyHighlight {
-        &__title {
-            color: $neutrals-100;
-        }
-
         &__p, &__date {
             color: $neutrals-500;
         }
