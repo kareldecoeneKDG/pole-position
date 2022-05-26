@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 import logo from './logo-hollow.png';
 
@@ -63,6 +63,8 @@ const Navbar = () => {
     //toggle checkbox
     const [checked, setChecked] = useState(false);
 
+    const classes = useStyles();
+
 
 
     return (
@@ -82,9 +84,50 @@ const Navbar = () => {
             {/* Desktop nav items */}
             <div className="links-desktop desktop">
                 <Link className="links-desktop__link" to="/dashboard">Dashboard</Link>
-                <Link className="links-desktop__link" to="/blog">Blog</Link>
+                {/* <Link className="links-desktop__link" to="/blog">Blog</Link>
                 <Link className="links-desktop__link" to="/standings">Standings</Link>
-                <Link className="links-desktop__link" to="/grandprixs">Grand Prixs</Link>
+                <Link className="links-desktop__link" to="/grandprixs">Grand Prixs</Link> */}
+
+                {/* <NavLink
+                    className={({ isActive }) => {
+                        const linkClasses = [classes.registerButton];
+                        if (isActive) linkClasses.push(classes.active);
+
+                        return linkClasses.join(" "); // returns "registerButton" or "registerButton active"
+                    }}
+                    to="/auth/SignUp"
+                >
+                    cart
+                </NavLink> */}
+
+                {/* <NavLink to="/dashboard" style={isActive => ({ color: isActive ? "#495057" : "#C00000" })}>Dashboard</NavLink> */}
+
+                {/* <NavLink
+                    to="/login"
+                    className={isActive =>
+                        "links-desktop__link" + (!isActive ? " active" : "test")
+                    }
+                >
+                    Login
+                </NavLink> */}
+
+                <NavLink
+                    to="login"
+                    className={isActive =>
+                        "links-desktop__link" + (isActive ? " active" : " not-active")
+                    }
+                >
+                    Login
+                </NavLink>
+                <NavLink
+                    className={({ isActive }) => //(isActive) --> ({isActive})
+                        cx(isActive ? classes.linkActive : classes.link)
+                    }
+                    to="/register"
+                    end
+                >
+                    Register
+                </NavLink>
             </div>
 
             {/* Desktop light/dark theme switch */}
@@ -133,3 +176,11 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+function cx(arg0: any): string | undefined {
+    throw new Error("Function not implemented.");
+}
+function useStyles() {
+    throw new Error("Function not implemented.");
+}
+

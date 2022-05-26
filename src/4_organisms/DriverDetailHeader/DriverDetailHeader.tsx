@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom';
 
 function DriverDetailHeader() {
     return (
-        <div className="detailHeader">
+        <div className="detailHeader section">
             <div className="top flex">
                 <div className="top__drivers top-driver">
                     <img className="top-driver__img" src={Max} alt="Picture of driver" />

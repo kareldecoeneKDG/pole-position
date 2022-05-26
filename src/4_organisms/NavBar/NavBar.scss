@@ -302,11 +302,15 @@
             position: absolute;
             left: 259px;
 
-            a {
+            &__link {
                 font-family: $primary-font;
                 font-size: 16px;
                 line-height: 16px;
                 font-weight: 500;
+
+                &.active {
+                    color: $primary-600 !important;
+                }
             }
         }
 

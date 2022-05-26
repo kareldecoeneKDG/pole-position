@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './HomePage.scss';
 
 import Header from '../../4_organisms/Header/Header';
@@ -9,6 +9,8 @@ import HowSignUp from '../../4_organisms/HowSignUp/HowSignUp';
 import Newsletter from '../../4_organisms/Newsletter/Newsletter';
 
 function HomePage() {
+    useEffect(() => { document.documentElement.scrollTo(0,0); }, []);
+    
     return (
         <div className="homePage">
             <Header />

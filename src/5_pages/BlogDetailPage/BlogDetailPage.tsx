@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 import Socials from '../../3_molecules/Socials/Socials';
 import MoreRecentNews from '../../4_organisms/MoreRecentNews/MoreRecentNews';
@@ -7,17 +7,11 @@ import MoreRecentNews from '../../4_organisms/MoreRecentNews/MoreRecentNews';
 import articleImg from './article1.jpeg';
 
 function BlogDetailPage() {
-    //Scroll to top of component on loading
-    const { pathname } = useLocation();
-
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, [pathname]);
-
-    
+    useEffect(() => { document.documentElement.scrollTo(0,0); }, []);
 
     return (
         <section className="blogDetail">
+
             <div className="blogDetail__content section">
                 <p className="blogDetail__content__date tag detail">Januari 13 2022 - 10:15</p>
 

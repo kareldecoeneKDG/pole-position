@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import bannerImg from './article1.jpeg';
 
 function PaymentPage() {
+    useEffect(() => { document.documentElement.scrollTo(0,0); }, []);
+    
     return (
         <section className="payment section formPage">
             <div className="login__content">

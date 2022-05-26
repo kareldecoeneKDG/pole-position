@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 function PrivacyPolicyPage() {
+    useEffect(() => { document.documentElement.scrollTo(0,0); }, []);
+    
     return (
         <section className="privacyPolicy section">
             <h2 className="privacyPolicy__title section__title">Privacy Policy</h2>

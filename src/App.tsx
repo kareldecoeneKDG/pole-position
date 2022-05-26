@@ -6,9 +6,6 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import i18n from "i18next";
 
-// Scroll to top on path change
-import ScrollToTop from './ScrollToTop';
-
 // Components
 import Navbar from './4_organisms/NavBar/NavBar';
 import Footer from './4_organisms/Footer/Footer';
@@ -111,12 +108,9 @@ function App() {
             {/* <div className="container"> */}
 
             <div id="container" className="container">
-
-                {/* Not working */}
-                <ScrollToTop />
                 <Navbar />
 
-                
+
                 {/* <Nav /> */}
 
 

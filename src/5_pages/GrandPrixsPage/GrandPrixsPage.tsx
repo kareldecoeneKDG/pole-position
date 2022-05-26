@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 import LatestGP from '../../4_organisms/LatestGP/LatestGP';
 import GrandPrix from '../../3_molecules/GrandPrix/GrandPrix';
 
 function GrandPrixsPage() {
+    useEffect(() => { document.documentElement.scrollTo(0,0); }, []);
+    
     return (
         <div className="grandprixs">
             <LatestGP />

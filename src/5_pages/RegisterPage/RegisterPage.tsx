@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 import bannerImg from './article1.jpeg';
 
 function RegisterPage() {
+    useEffect(() => { document.documentElement.scrollTo(0,0); }, []);
+    
     return (
         <section className="register section formPage">
             <div className="register__content">

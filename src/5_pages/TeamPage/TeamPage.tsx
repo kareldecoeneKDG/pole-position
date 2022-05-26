@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import TeamDetailHeader from '../../4_organisms/TeamDetailHeader/TeamDetailHeader';
 import LatestNews from '../../4_organisms/LatestNews/LatestNews';
@@ -9,6 +9,8 @@ import RecentShots from '../../4_organisms/RecentShots/RecentShots';
 import MightAlsoLikeTeams from '../../4_organisms/MightAlsoLikeTeams/MightAlsoLikeTeams';
 
 function TeamPage() {
+    useEffect(() => { document.documentElement.scrollTo(0,0); }, []);
+    
     return (
         <section className="teamPage">
             <TeamDetailHeader />

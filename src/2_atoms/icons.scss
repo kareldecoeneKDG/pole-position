@@ -2,6 +2,7 @@
 .button {
     i {
         font-size: 12px;
+        transition: 0.3s;
     }
 
     .first-chevron {
@@ -12,7 +13,7 @@
         margin-right: $icon-margin-button;
     }
 
-    &.button-primary, &.button-secondary {
+    &.button-primary, &.button-secondary, &.button-tertiary {
         &:hover {
             .first-chevron {
                 margin-left: $icon-margin-button-hover;

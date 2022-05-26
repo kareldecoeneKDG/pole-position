@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import SubNav from '../../4_organisms/SubNav/SubNav';
 import StandingDriver from '../../3_molecules/StandingDriver/StandingDriver';
@@ -6,6 +6,8 @@ import StandingTeam from '../../3_molecules/StandingTeam/StandingTeam';
 import { Link } from 'react-router-dom';
 
 function StandingsPage() {
+    useEffect(() => { document.documentElement.scrollTo(0,0); }, []);
+    
     return (
         <div className="standings">
             <SubNav />

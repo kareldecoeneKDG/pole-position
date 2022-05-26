@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import Article from '../../3_molecules/Article/Article';
 
@@ -10,6 +10,8 @@ import RecentShots from '../../4_organisms/RecentShots/RecentShots';
 import MightAlsoLikeDriver from '../../4_organisms/MightAlsoLikeDriver/MightAlsoLikeDriver';
 
 function DriverPage() {
+    useEffect(() => { document.documentElement.scrollTo(0,0); }, []);
+    
     return (
         <div className="driverPage">
             <DriverDetailHeader />

@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 import Article from '../../3_molecules/Article/Article';
 import circuit from './gp-1.png';
 
 function GrandPrixDetailPage() {
+    useEffect(() => { document.documentElement.scrollTo(0,0); }, []);
+    
     return (
         <div className="grandprixDetail">
             <div className="banner">

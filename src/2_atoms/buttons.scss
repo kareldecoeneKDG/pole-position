@@ -17,6 +17,10 @@
     -moz-appearance: none;
     appearance: none;
 
+    &:hover {
+        cursor: pointer;
+    }
+
     &.button-primary {
         background-color: $primary-600;
     }
