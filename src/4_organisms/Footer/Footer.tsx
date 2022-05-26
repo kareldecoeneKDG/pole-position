@@ -36,7 +36,7 @@ function Footer() {
                 <div className="footer__section">
                     <h3>Headoffice</h3>
 
-                    <a href="https://goo.gl/maps/AReNJ66swuL1HsJY6">
+                    <a href="https://goo.gl/maps/AReNJ66swuL1HsJY6" target="_blank">
                         <p className="footer__section__p">Bredestraat 1550</p>
                         <p className="footer__section__p">2650 Hemiksem</p>
                         <p className="footer__section__p">Antwerp, Belgium</p>
@@ -98,7 +98,7 @@ function Footer() {
                     <div className="footer__section">
                         <h3>Headoffice</h3>
 
-                        <a href="https://goo.gl/maps/AReNJ66swuL1HsJY6">
+                        <a href="https://goo.gl/maps/AReNJ66swuL1HsJY6" target="_blank">
                             <p className="footer__section__p">Bredestraat 1550</p>
                             <p className="footer__section__p">2650 Hemiksem</p>
                             <p className="footer__section__p">Antwerp, Belgium</p>

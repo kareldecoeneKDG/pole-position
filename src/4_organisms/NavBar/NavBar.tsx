@@ -4,17 +4,32 @@ import { Link, NavLink } from "react-router-dom";
 import logo from './logo-hollow.png';
 
 const Navbar = () => {
+
+    /* --- MOBILE MENU --- */
     // Mobile menu switcher
     const [isOpen, setIsOpen] = useState(false);
+
+    /* Close menu after clicking menu item */
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+    mobileLinks.forEach(link => {
+        link.addEventListener("click", () => {
+            setIsOpen(!isOpen);
+        })
+    })
 
     // Prevent scrolling when menu is open
     if (isOpen == true) {
         document.body.style.overflowY = 'hidden';
+        document.body.style.height = '100%';
     }
     else {
         document.body.style.overflowY = 'visible';
+        document.body.style.height = 'initial';
     }
 
+
+
+    /* --- LIGHT/DARK THEME --- */
     // Light/dark theme
     let theme = localStorage.getItem('data-theme');
 
@@ -63,8 +78,6 @@ const Navbar = () => {
     //toggle checkbox
     const [checked, setChecked] = useState(false);
 
-    const classes = useStyles();
-
 
 
     return (
@@ -83,51 +96,10 @@ const Navbar = () => {
 
             {/* Desktop nav items */}
             <div className="links-desktop desktop">
-                <Link className="links-desktop__link" to="/dashboard">Dashboard</Link>
-                {/* <Link className="links-desktop__link" to="/blog">Blog</Link>
-                <Link className="links-desktop__link" to="/standings">Standings</Link>
-                <Link className="links-desktop__link" to="/grandprixs">Grand Prixs</Link> */}
-
-                {/* <NavLink
-                    className={({ isActive }) => {
-                        const linkClasses = [classes.registerButton];
-                        if (isActive) linkClasses.push(classes.active);
-
-                        return linkClasses.join(" "); // returns "registerButton" or "registerButton active"
-                    }}
-                    to="/auth/SignUp"
-                >
-                    cart
-                </NavLink> */}
-
-                {/* <NavLink to="/dashboard" style={isActive => ({ color: isActive ? "#495057" : "#C00000" })}>Dashboard</NavLink> */}
-
-                {/* <NavLink
-                    to="/login"
-                    className={isActive =>
-                        "links-desktop__link" + (!isActive ? " active" : "test")
-                    }
-                >
-                    Login
-                </NavLink> */}
-
-                <NavLink
-                    to="login"
-                    className={isActive =>
-                        "links-desktop__link" + (isActive ? " active" : " not-active")
-                    }
-                >
-                    Login
-                </NavLink>
-                <NavLink
-                    className={({ isActive }) => //(isActive) --> ({isActive})
-                        cx(isActive ? classes.linkActive : classes.link)
-                    }
-                    to="/register"
-                    end
-                >
-                    Register
-                </NavLink>
+                <NavLink to="dashboard" className="links-desktop__link">Dashboard</NavLink>
+                <NavLink to="blog" className="links-desktop__link">Blog</NavLink>
+                <NavLink to="standings" className="links-desktop__link">Standings</NavLink>
+                <NavLink to="grandprixs" className="links-desktop__link">Grand Prixs</NavLink>
             </div>
 
             {/* Desktop light/dark theme switch */}
@@ -158,10 +130,10 @@ const Navbar = () => {
                 </div>
 
                 <div className="links">
-                    <Link to="/dashboard">Dashboard</Link>
-                    <Link to="/blog">Blog</Link>
-                    <Link to="/standings">Standings</Link>
-                    <Link to="/grandprixs">Grand Prixs</Link>
+                    <NavLink to="dashboard" className="mobile-link">Dashboard</NavLink>
+                    <NavLink to="blog" className="mobile-link">Blog</NavLink>
+                    <NavLink to="standings" className="mobile-link">Standings</NavLink>
+                    <NavLink to="grandprixs" className="mobile-link">Grand Prixs</NavLink>
                 </div>
 
                 <div className="bottom">
@@ -176,11 +148,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-function cx(arg0: any): string | undefined {
-    throw new Error("Function not implemented.");
-}
-function useStyles() {
-    throw new Error("Function not implemented.");
-}
-
