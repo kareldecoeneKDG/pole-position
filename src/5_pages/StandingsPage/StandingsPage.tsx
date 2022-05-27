@@ -1,16 +1,19 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 
-import SubNav from '../../4_organisms/SubNav/SubNav';
+import Subnav from '../../4_organisms/Subnav/Subnav';
 import StandingDriver from '../../3_molecules/StandingDriver/StandingDriver';
 import StandingTeam from '../../3_molecules/StandingTeam/StandingTeam';
 import { Link } from 'react-router-dom';
 
 function StandingsPage() {
-    useEffect(() => { document.documentElement.scrollTo(0,0); }, []);
-    
+    useEffect(() => { document.documentElement.scrollTo(0, 0); }, []);
+
+    const [selected, setSelected] = useState("");
+
     return (
         <div className="standings">
-            <SubNav />
+            {/* Subnavigation */}
+            <Subnav selected={selected} setSelected={setSelected} />
 
             <section className="standings__drivers">
                 <Link to="/driver">

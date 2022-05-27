@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from 'react';
 
 import Settings from '../../4_organisms/Settings/Settings';
-import Dropdown from '../../Dropdown';
+import Subnav from '../../4_organisms/Subnav/Subnav';
 
 function AccountPage() {
     useEffect(() => { document.documentElement.scrollTo(0,0); }, []);
 
     const [selected, setSelected] = useState("");
-    //console.log(selected);
 
     if(selected == "") {
         setSelected("Account");
@@ -15,7 +14,7 @@ function AccountPage() {
     
     return (
         <div className="dashboard">
-            <Dropdown selected={selected} setSelected={setSelected} />
+            <Subnav selected={selected} setSelected={setSelected} />
             <Settings />
         </div>
     );

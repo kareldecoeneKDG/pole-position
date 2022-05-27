@@ -1,46 +1,92 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route, NavLink } from "react-router-dom";
+import React, { useState } from 'react';
+import { NavLink, useParams } from 'react-router-dom';
 
-const subNav = document.querySelector(".subnav");
-const items = document.querySelectorAll(".subnav__list__item");
+interface SubnavProps {
+    setSelected: Function,
+    selected: string
+}
 
-// Show menu when clicking first item
-subNav?.addEventListener("click", () => {
-    console.log("testttt");
+function Subnav({ selected, setSelected }: SubnavProps) {
+    const [isActive, setIsActive] = useState(false);
+    const options = ['Saved blogposts', 'Favorite driver', 'Favorite team', 'Account'];
 
-    items.forEach((item) => {
-        item.classList.toggle("active");
-    });
-});
+    {/* Tried to put placeholder "Select page" when dropdown is active */ }
+    {/*const subNavButton = document.querySelector('.dropdown-btn');
+    let backUpSelected = "";
 
-function SubNav() {
+    subNavButton?.addEventListener("click", () => {
+
+        //Menu opens
+        if (selected == "Select page") {
+
+            //first take backup
+            backUpSelected = selected;
+            console.log("backup taken");
+        }
+
+        //Menu is open
+        if(isActive == true) {
+            setSelected("Select page")
+            console.log("placeholder shown");
+        }
+        //Menu gets closed
+        else {
+            setSelected(backUpSelected)
+            console.log("backup inserted");
+        }
+    })*/}
+
     return (
-        <nav className="subnav">
-            <ul className="subnav__list">
-                <li className="subnav__list__item">
-                    <p className="subnav__list__item__link selected-item">{window.location.pathname}</p>
-                </li>
+        <div className="dropdown">
+            <div className="dropdown-btn" onClick={e => setIsActive(!isActive)}>{selected} <i className="fa fa-chevron-down" aria-hidden="true"></i></div>
 
-                <li className="subnav__list__item">
-                    <NavLink className="subnav__list__item__link" style={({ isActive }) => (isActive ? { backgroundColor: '#222222', color: '#FFFFFF' } : {})} to="/dashboard">Saved Blogposts</NavLink>
-                </li>
+            {isActive && (
+                <div className="dropdown-content mobile">
+                    <NavLink to="/dashboard" onClick={(e) => {
+                        setSelected(options[0])
+                        setIsActive(false)
+                    }} className="dropdown-item">Saved Blogposts</NavLink>
 
-                <li className="subnav__list__item">
-                    <a className="subnav__list__item__link" href="#">Favorite driver</a>
-                </li>
+                    <NavLink to="/driver" onClick={(e) => {
+                        setSelected(options[1])
+                        setIsActive(false)
+                    }} className="dropdown-item">Favorite driver</NavLink>
 
-                <li className="subnav__list__item">
-                    <a className="subnav__list__item__link" href="#">Favorite team</a>
-                </li>
+                    <NavLink to="/team" onClick={(e) => {
+                        setSelected(options[2])
+                        setIsActive(false)
+                    }} className="dropdown-item">Favorite team</NavLink>
 
-                <li className="subnav__list__item">
-                    <a className="subnav__list__item__link" href="#">Settings</a>
-                </li>
-            </ul>
+                    <NavLink to="/account" onClick={(e) => {
+                        setSelected(options[3])
+                        setIsActive(false)
+                    }} className="dropdown-item">Account</NavLink>
+                </div>
+            )}
 
-            <i className="subnav__icon fa fa-chevron-down" aria-hidden="true"></i>
-        </nav>
+            <div className="dropdown-content-desktop desktop">
+                <NavLink to="/dashboard" onClick={(e) => {
+                    setSelected(options[0])
+                    setIsActive(false)
+                }} className="dropdown-item">Saved Blogposts</NavLink>
+
+                <NavLink to="/driver" onClick={(e) => {
+                    setSelected(options[1])
+                    setIsActive(false)
+                }} className="dropdown-item">Favorite driver</NavLink>
+
+                <NavLink to="/team" onClick={(e) => {
+                    setSelected(options[2])
+                    setIsActive(false)
+                }} className="dropdown-item">Favorite team</NavLink>
+
+                <NavLink to="/account" onClick={(e) => {
+                    setSelected(options[3])
+                    setIsActive(false)
+                }} className="dropdown-item">Account</NavLink>
+            </div>
+        </div>
     );
 }
 
-export default SubNav;
+export default Subnav;

@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react';
 
-import SubNav from '../../4_organisms/SubNav/SubNav';
 import SavedBlogposts from '../../4_organisms/SavedBlogposts/SavedBlogposts';
 import LatestGP from '../../4_organisms/LatestGP/LatestGP';
 import Settings from '../../4_organisms/Settings/Settings';
-import Dropdown from '../../Dropdown';
+import Subnav from '../../4_organisms/Subnav/Subnav';
 
 function DashboardPage() {
     useEffect(() => { document.documentElement.scrollTo(0,0); }, []);
@@ -19,10 +18,8 @@ function DashboardPage() {
     return (
         <div className="dashboard">
             {/* Subnavigation */}
-            <Dropdown selected={selected} setSelected={setSelected} />
+            <Subnav selected={selected} setSelected={setSelected} />
 
-            
-            
             {/* Saved blogposts content */}
             <SavedBlogposts />
             <LatestGP />
