@@ -4,8 +4,132 @@ import { Link } from 'react-router-dom';
 import bannerImg from './article1.jpeg';
 
 function RegisterPage() {
-    useEffect(() => { document.documentElement.scrollTo(0,0); }, []);
-    
+    useEffect(() => { document.documentElement.scrollTo(0, 0); }, []);
+
+    /* --- FORM FEEDBACK --- */
+    //form
+    const form = document.querySelector('.register__form');
+
+    //inputs
+    const firstName = document.querySelector('.firstName') as HTMLInputElement;
+    const lastName = document.querySelector('.lastName') as HTMLInputElement;
+    const salutation = document.querySelector('.salutation') as HTMLInputElement;
+    const birthDate = document.querySelector('.birthDate') as HTMLInputElement;
+    const country = document.querySelector('.country') as HTMLInputElement;
+
+    const email = document.querySelector('.email') as HTMLInputElement;
+    const password = document.querySelector('.password') as HTMLInputElement;
+
+    if (form != null) {
+
+        console.log("testtt");
+
+        //If you really want to make the form work, change structure...
+        form!.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            checkInputs();
+        });
+    }
+
+    function checkInputs() {
+        console.log("function");
+
+        const firstNameValue = firstName.value.trim();
+        const lastNameValue = lastName.value.trim();
+        const salutationValue = salutation.value.trim();
+        const birthDateValue = birthDate.value.trim();
+        const countryValue = country.value.trim();
+
+        const emailValue = email.value.trim();
+        const passwordValue = password.value.trim();
+
+        //firstname input
+        if (firstNameValue === "") {
+            setErrorFor(firstName, 'First name can\'t be blank');
+        } else {
+            setSuccessFor(firstName);
+        }
+
+        //lastname input
+        if (lastNameValue === "") {
+            setErrorFor(lastName, 'Last name can\'t be blank');
+        } else {
+            setSuccessFor(lastName);
+        }
+
+        //salutation input
+        if (salutationValue === "") {
+            setErrorFor(salutation, 'Salutation can\'t be blank');
+        } else {
+            setSuccessFor(salutation);
+        }
+
+        //birthdate input
+        if (birthDateValue === "") {
+            setErrorFor(birthDate, 'Birthdate can\'t be blank');
+        } else {
+            setSuccessFor(birthDate);
+        }
+
+        //country
+        if (countryValue === "") {
+            setErrorFor(country, 'Country can\'t be blank');
+        } else {
+            setSuccessFor(country);
+        }
+
+        //email input
+        if (emailValue === "") {
+            setErrorFor(email, 'Email can\'t be blank');
+        } else if (!isEmail(emailValue)) {
+            setErrorFor(email, 'Email is not valid');
+        } else {
+            setSuccessFor(email);
+        }
+
+        //password input
+        if (passwordValue === "") {
+            setErrorFor(password, 'Password can\'t be blank')
+        } else if (passwordValue.length < 8) {
+            setErrorFor(password, 'Password should be at min 8 characters');
+        } else {
+            setSuccessFor(password);
+        }
+
+        firstName.addEventListener('input', checkInputs);
+        lastName.addEventListener('input', checkInputs);
+        salutation.addEventListener('input', checkInputs);
+        birthDate.addEventListener('input', checkInputs);
+        country.addEventListener('input', checkInputs);
+
+        email.addEventListener('input', checkInputs);
+        password.addEventListener('input', checkInputs);
+    }
+
+    //Function sets error for certain input
+    function setErrorFor(input: { parentElement: any; }, message: any) {
+        const formGroup = input.parentElement; //form-group
+        const small = formGroup.querySelector('small');
+
+        if (small != null) {
+            small.innerText = message;
+        }
+
+        formGroup.className = 'form-group error';
+    }
+
+    //Function sets success for certain input
+    function setSuccessFor(input: { parentElement: any; }) {
+        const formGroup = input.parentElement;
+        formGroup.className = 'form-group success';
+    }
+
+    //Function to check if value is mail
+    function isEmail(email: string) {
+        return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
+    }
+
     return (
         <section className="register section formPage">
             <div className="register__content">
@@ -16,107 +140,102 @@ function RegisterPage() {
 
                     {/* TEXT INPUTS */}
                     <div className="form__inputs-container">
+
+                        {/* FIRST NAME INPUT */}
                         <div className="form-control-forms">
                             <div className="form-group">
-                                <input type="text" id="firstName" className="form__input input" name="firstName" placeholder=" " required />
+                                <input type="text" id="firstName" className="form__input input firstName" name="firstName" placeholder=" " />
                                 <label htmlFor="firstName" className="form__label">First name</label>
 
-                                {/*
-                            <i className="fa fa-check-circle" aria-hidden="true"></i>
-                            <i className="fa fa-exclamation-triangle" aria-hidden="true"></i>
-                            <small>Error message</small>
-                            */}
+                                {/* form feedback */}
+                                <i className="fa fa-check-circle" aria-hidden="true"></i>
+                                <i className="fa fa-exclamation-triangle" aria-hidden="true"></i>
+                                <small>Error message</small>
                             </div>
                         </div>
 
+                        {/* LAST NAME INPUT */}
                         <div className="form-control-forms">
                             <div className="form-group">
-                                <input type="text" id="lastName" className="form__input input" name="lastName" placeholder=" " required />
+                                <input type="text" id="lastName" className="form__input input" name="lastName" placeholder=" " />
                                 <label htmlFor="lastName" className="form__label">Last name</label>
 
-                                {/*
-                            <i className="fa fa-check-circle" aria-hidden="true"></i>
-                            <i className="fa fa-exclamation-triangle" aria-hidden="true"></i>
-                            <small>Error message</small>
-                            */}
+                                {/* form feedback */}
+                                <i className="fa fa-check-circle" aria-hidden="true"></i>
+                                <i className="fa fa-exclamation-triangle" aria-hidden="true"></i>
+                                <small>Error message</small>
                             </div>
                         </div>
 
+                        {/* SALUTATION INPUT */}
                         <div className="form-control-forms">
                             <div className="form-group">
-                                <input type="text" id="salutation" className="form__input input" name="salutation" placeholder=" " required />
+                                <input type="text" id="salutation" className="form__input input salutation" name="salutation" placeholder=" " />
                                 <label htmlFor="salutation" className="form__label">Salutation</label>
 
-                                {/*
-                            <i className="fa fa-check-circle" aria-hidden="true"></i>
-                            <i className="fa fa-exclamation-triangle" aria-hidden="true"></i>
-                            <small>Error message</small>
-                            */}
+                                {/* form feedback */}
+                                <i className="fa fa-check-circle" aria-hidden="true"></i>
+                                <i className="fa fa-exclamation-triangle" aria-hidden="true"></i>
+                                <small>Error message</small>
                             </div>
                         </div>
 
+                        {/* BIRTHDATE INPUT */}
                         <div className="form-control-forms">
                             <div className="form-group">
-                                <input type="text" id="birthDate" className="form__input input" name="birthDate" placeholder=" " required />
+                                <input type="date" id="birthDate" className="form__input input birthDate" name="birthDate" placeholder=" " />
                                 <label htmlFor="birthDate" className="form__label">Birthdate</label>
 
-                                {/*
-                            <i className="fa fa-check-circle" aria-hidden="true"></i>
-                            <i className="fa fa-exclamation-triangle" aria-hidden="true"></i>
-                            <small>Error message</small>
-                            */}
+                                {/* form feedback */}
+                                <i className="fa fa-check-circle" aria-hidden="true"></i>
+                                <i className="fa fa-exclamation-triangle" aria-hidden="true"></i>
+                                <small>Error message</small>
                             </div>
                         </div>
 
+                        {/* COUNTRY INPUT */}
                         <div className="form-control-forms">
                             <div className="form-group">
-                                <input type="text" id="country" className="form__input input" name="country" placeholder=" " required />
+                                <input type="text" id="country" className="form__input input country" name="country" placeholder=" " />
                                 <label htmlFor="country" className="form__label">Country</label>
 
-                                {/*
-                            <i className="fa fa-check-circle" aria-hidden="true"></i>
-                            <i className="fa fa-exclamation-triangle" aria-hidden="true"></i>
-                            <small>Error message</small>
-                            */}
+                                {/* form feedback */}
+                                <i className="fa fa-check-circle" aria-hidden="true"></i>
+                                <i className="fa fa-exclamation-triangle" aria-hidden="true"></i>
+                                <small>Error message</small>
                             </div>
                         </div>
 
                         <hr className="form__line line" />
 
+                        {/* EMAIL INPUT */}
                         <div className="form-control-forms">
                             <div className="form-group">
-                                <input type="text" id="email" className="form__input input" name="email" placeholder=" " required />
+                                <input type="text" id="email" className="form__input input email" name="email" placeholder=" " />
                                 <label htmlFor="email" className="form__label">Email</label>
 
-                                {/*
-                            <i className="fa fa-check-circle" aria-hidden="true"></i>
-                            <i className="fa fa-exclamation-triangle" aria-hidden="true"></i>
-                            <small>Error message</small>
-                            */}
+                                {/* form feedback */}
+                                <i className="fa fa-check-circle" aria-hidden="true"></i>
+                                <i className="fa fa-exclamation-triangle" aria-hidden="true"></i>
+                                <small>Error message</small>
                             </div>
                         </div>
 
+                        {/* PASSWORD INPUT */}
                         <div className="form-control-forms">
                             <div className="form-group">
-                                <input id="password" className="form__input input" type="password" name="password" placeholder=" " required />
+                                <input id="password" className="form__input input password" type="password" name="password" placeholder=" " />
                                 <label htmlFor="password" className="form__label">Password</label>
-                                {/*
-                            <i className="fa fa-check-circle" aria-hidden="true"></i>
-                            <i className="fa fa-exclamation-triangle" aria-hidden="true"></i>
-                            <small>Error message</small>
-                            */}
+
+                                {/* form feedback */}
+                                <i className="fa fa-check-circle" aria-hidden="true"></i>
+                                <i className="fa fa-exclamation-triangle" aria-hidden="true"></i>
+                                <small>Error message</small>
                             </div>
                         </div>
                     </div>
 
-                    {/*
-                <div className="register__form__checkbox flex">
-                    <input id="newsletter" className="register__form__checkbox__box" type="checkbox" checked />
-                    <label className="checkbox-label" htmlFor="newsletter">Sign up for the Pole Position newsletter</label>
-                </div>
-                */}
-
-                    {/* PIZZA CHECKBOX */}
+                    {/* NEWSLETTER CHECKBOX */}
                     <div className="register__form__checkbox flex">
                         <label className="input-container">
                             <input id="newsletterCheckbox" className="newsletterCheckbox input" type="checkbox" name="newsletterCheckbox" value="newsletterCheckbox" required />
@@ -125,11 +244,13 @@ function RegisterPage() {
                         <label className="pizza-label checkbox-label" htmlFor="newsletterCheckbox">Sign up for the Pole Position newsletter</label>
                     </div>
 
+                    {/* PRIVACY + TERMS & CONDITIONS */}
                     <p className="custom-form__no-acc p">
                         By clicking on register you agree to the <Link className="custom-form__no-acc__link" to="/privacy-policy">terms, conditions & privacy policy</Link>
                     </p>
 
-                    <button className="button button-primary">Payment <i className="fa fa-chevron-right first-chevron" aria-hidden="true"></i><i className="fa fa-chevron-right" aria-hidden="true"></i></button>
+                    {/* SUBMIT BUTTON */}
+                    <button className="button button-primary skew" type="submit" name="submit"><span>Payment <i className="fa fa-chevron-right first-chevron" aria-hidden="true"></i><i className="fa fa-chevron-right" aria-hidden="true"></i></span></button>
                 </form>
             </div>
 

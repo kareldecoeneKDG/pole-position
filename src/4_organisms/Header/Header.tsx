@@ -30,8 +30,8 @@ function Header() {
                     Het is al geruime tijd een bekend gegeven dat een lezer, tijdens het bekijken van de layout van een.
                 </p>
 
-                <Link className="button button-primary" to="/register">
-                    Join the community <i className="fa fa-chevron-right first-chevron" aria-hidden="true"></i><i className="fa fa-chevron-right" aria-hidden="true"></i>
+                <Link className="button button-primary skew" to="/register">
+                    <span>Join the community <i className="fa fa-chevron-right first-chevron" aria-hidden="true"></i><i className="fa fa-chevron-right" aria-hidden="true"></i></span>
                 </Link>
 
                 {/* <img className="header__img-placeholder" src={placeholder} alt="Full logo Pole Position" /> */}

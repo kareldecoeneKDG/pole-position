@@ -14,7 +14,7 @@ function Team() {
 
                 <p className="driver-team__content__paragraph">Het is al geruime tijd een bekend gegeven dat een lezer, tijdens het bekijken van de layout van een.</p>
 
-                <a className="button button-secondary" href="#">Discover team <i className="fa fa-chevron-right first-chevron" aria-hidden="true"></i><i className="fa fa-chevron-right" aria-hidden="true"></i></a>
+                <a className="button button-secondary skew" href="#"><span>Discover team <i className="fa fa-chevron-right first-chevron" aria-hidden="true"></i><i className="fa fa-chevron-right" aria-hidden="true"></i></span></a>
             </div>
         </div>
     );

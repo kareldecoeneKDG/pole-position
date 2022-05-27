@@ -19,7 +19,7 @@ function Newsletter() {
 
                     <form className="form">
                         <input className="form__input" type="text" placeholder="Your email here..." required/>
-                        <button className="button button-primary">Sign me up <i className="fa fa-chevron-right first-chevron" aria-hidden="true"></i><i className="fa fa-chevron-right" aria-hidden="true"></i></button>
+                        <button className="button button-primary skew"><span>Sign me up <i className="fa fa-chevron-right first-chevron" aria-hidden="true"></i><i className="fa fa-chevron-right" aria-hidden="true"></i></span></button>
                     </form>
 
                     <Socials />

@@ -40,7 +40,7 @@ function SavedBlogposts() {
             </div>
 
             <div className="center">
-                <a className="button button-tertiary">More articles <i className="fa fa-chevron-down first-chevron" aria-hidden="true"></i></a>
+                <a className="button button-tertiary skew"><span>More articles <i className="fa fa-chevron-down first-chevron" aria-hidden="true"></i></span></a>
             </div>
         </section>
     );

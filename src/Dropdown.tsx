@@ -10,43 +10,38 @@ function Dropdown({ selected, setSelected }: DropdownProps) {
     const [isActive, setIsActive] = useState(false);
     const options = ['Saved blogposts', 'Favorite driver', 'Favorite team', 'Account'];
 
-    const subNavButton = document.querySelector('.dropdown-btn');
+    {/* Tried to put placeholder "Select page" when dropdown is active */ }
+    {/*const subNavButton = document.querySelector('.dropdown-btn');
     let backUpSelected = "";
 
     subNavButton?.addEventListener("click", () => {
-        if (selected != "Select page") {
+
+        //Menu opens
+        if (selected == "Select page") {
+
+            //first take backup
             backUpSelected = selected;
+            console.log("backup taken");
         }
 
-    {/* MAKE BETTER */}
-        if (isActive != true) {
+        //Menu is open
+        if(isActive == true) {
             setSelected("Select page")
-            console.log("test2");
+            console.log("placeholder shown");
         }
-        else if (selected == "Select page") {
-            console.log('test');
+        //Menu gets closed
+        else {
             setSelected(backUpSelected)
+            console.log("backup inserted");
         }
-    })
+    })*/}
 
     return (
         <div className="dropdown">
             <div className="dropdown-btn" onClick={e => setIsActive(!isActive)}>{selected} <i className="fa fa-chevron-down" aria-hidden="true"></i></div>
 
             {isActive && (
-                <div className="dropdown-content">
-                    {/*{options.map((option) => (
-                        <div
-                            onClick={(e) => {
-                                setSelected(option)
-                                setIsActive(false)
-                            }}
-                            className="dropdown-item"
-                        >
-                            {option}
-                        </div>
-                        ))}*/}
-
+                <div className="dropdown-content mobile">
                     <NavLink to="/dashboard" onClick={(e) => {
                         setSelected(options[0])
                         setIsActive(false)
@@ -68,6 +63,28 @@ function Dropdown({ selected, setSelected }: DropdownProps) {
                     }} className="dropdown-item">Account</NavLink>
                 </div>
             )}
+
+            <div className="dropdown-content-desktop desktop">
+                <NavLink to="/dashboard" onClick={(e) => {
+                    setSelected(options[0])
+                    setIsActive(false)
+                }} className="dropdown-item">Saved Blogposts</NavLink>
+
+                <NavLink to="/driver" onClick={(e) => {
+                    setSelected(options[1])
+                    setIsActive(false)
+                }} className="dropdown-item">Favorite driver</NavLink>
+
+                <NavLink to="/team" onClick={(e) => {
+                    setSelected(options[2])
+                    setIsActive(false)
+                }} className="dropdown-item">Favorite team</NavLink>
+
+                <NavLink to="/account" onClick={(e) => {
+                    setSelected(options[3])
+                    setIsActive(false)
+                }} className="dropdown-item">Account</NavLink>
+            </div>
         </div>
     );
 }

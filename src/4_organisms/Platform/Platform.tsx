@@ -26,8 +26,8 @@ function Platform() {
                     <p className="signup__content__p">It's cheap as well</p>
                 </div>
 
-                <Link className="button button-primary" to="/register">
-                    Sign me up <i className="fa fa-chevron-right first-chevron" aria-hidden="true"></i><i className="fa fa-chevron-right" aria-hidden="true"></i>
+                <Link className="button button-primary skew" to="/register">
+                    <span>Sign me up <i className="fa fa-chevron-right first-chevron" aria-hidden="true"></i><i className="fa fa-chevron-right" aria-hidden="true"></i></span>
                 </Link>
             </div>
         </section>

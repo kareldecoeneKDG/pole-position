@@ -28,7 +28,7 @@ function GrandPrix() {
                 <p className="tag circuit"><i className="fa fa-clock-o" aria-hidden="true"></i> 2 days, 8 hours</p>
             </div>
 
-            <a className="button button-secondary" href="#">Italian GP <i className="fa fa-chevron-right first-chevron" aria-hidden="true"></i><i className="fa fa-chevron-right" aria-hidden="true"></i></a>
+            <a className="button button-secondary skew" href="#"><span>Italian GP <i className="fa fa-chevron-right first-chevron" aria-hidden="true"></i><i className="fa fa-chevron-right" aria-hidden="true"></i></span></a>
         </div>
     );
 }

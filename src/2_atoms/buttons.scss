@@ -4,6 +4,7 @@
     padding: 10px 20px;
 
     border-radius: 50px;
+
     border: none;
     color: $neutrals-100;
 
@@ -25,11 +26,26 @@
         background-color: $primary-600;
     }
 
-    &.button-tertiary, &.button-secondary  {
+    &.button-tertiary,
+    &.button-secondary {
         background-color: $neutrals-900;
     }
 
     &.edit {
         border-radius: 50%;
+    }
+
+    /* SKEWED BUTTONS */
+    &.skew {
+        border-radius: 0;
+        transform: skew(-11deg);
+        text-align: center;
+        outline: 0;
+
+        /* Un-skew the text */
+        & > span {
+            display: inline-block;
+            transform: skew(11deg);
+        }
     }
 }

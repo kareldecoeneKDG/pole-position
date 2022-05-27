@@ -73,13 +73,14 @@ function Footer() {
                 <p className="footer__section__p copyright">© 2022 Pole Position - F1 collaborator</p>
             </div>
 
+            {/* FOOTER DESKTOP */}
             <div className="desktop">
                 {/* LOGO + SCROLLUP */}
                 <div className="top flex">
                     <img className="logoFooter" src={logoFooter} alt="logo Pole Position footer" />
 
-                    <a className="button button-primary" href="#container">
-                        Back to top <i className="scrollup__icon fa fa-chevron-up first-chevron" aria-hidden="true"></i>
+                    <a className="button button-primary skew" href="#container">
+                        <span>Back to top <i className="scrollup__icon fa fa-chevron-up first-chevron" aria-hidden="true"></i></span>
                     </a>
                 </div>
 

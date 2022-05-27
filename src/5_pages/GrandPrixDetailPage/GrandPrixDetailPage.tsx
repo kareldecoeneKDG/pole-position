@@ -19,7 +19,7 @@ function GrandPrixDetailPage() {
 
                     <h2 className="banner__info__title">2022 Barcelona GP <i className="fa fa-chevron-down" aria-hidden="true"></i></h2>
 
-                    <p className="button button-secondary"><i className="fa fa-calendar" aria-hidden="true"></i> 27 - 29 may</p>
+                    <p className="button button-secondary skew"><span><i className="fa fa-calendar" aria-hidden="true"></i> 27 - 29 may</span></p>
                 </div>
             </div>
 
@@ -53,7 +53,7 @@ function GrandPrixDetailPage() {
                 </div>
 
                 <div className="center">
-                    <a className="button button-tertiary">More articles <i className="fa fa-chevron-down first-chevron" aria-hidden="true"></i></a>
+                    <a className="button button-tertiary skew"><span>More articles <i className="fa fa-chevron-down first-chevron" aria-hidden="true"></i></span></a>
                 </div>
             </section>
         </div>

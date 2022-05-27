@@ -21,8 +21,8 @@ function Benefits() {
 
             <p className="cta__p">You've heard enough?</p>
 
-            <Link className="button button-primary" to="/register">
-                Sign me up <i className="fa fa-chevron-right first-chevron" aria-hidden="true"></i><i className="fa fa-chevron-right" aria-hidden="true"></i>
+            <Link className="button button-primary skew" to="/register">
+                <span>Sign me up <i className="fa fa-chevron-right first-chevron" aria-hidden="true"></i><i className="fa fa-chevron-right" aria-hidden="true"></i></span>
             </Link>
         </section>
     );

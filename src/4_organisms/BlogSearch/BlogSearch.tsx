@@ -11,7 +11,7 @@ function BlogSearch() {
 
             <form className="blogSearch__form">
                 <input className="blogSearch__form__input" type="text" placeholder="Search on title" />
-                <button className="button button-primary">Search <i className="fa fa-chevron-right first-chevron" aria-hidden="true"></i><i className="fa fa-chevron-right" aria-hidden="true"></i></button>
+                <button className="button button-primary skew"><span>Search <i className="fa fa-chevron-right first-chevron" aria-hidden="true"></i><i className="fa fa-chevron-right" aria-hidden="true"></i></span></button>
             </form>
         </div>
     );
