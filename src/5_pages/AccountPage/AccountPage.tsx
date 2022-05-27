@@ -1,33 +1,24 @@
 import React, { useEffect, useState } from 'react';
 
-import SubNav from '../../4_organisms/SubNav/SubNav';
-import SavedBlogposts from '../../4_organisms/SavedBlogposts/SavedBlogposts';
-import LatestGP from '../../4_organisms/LatestGP/LatestGP';
 import Settings from '../../4_organisms/Settings/Settings';
 import Dropdown from '../../Dropdown';
 
-function DashboardPage() {
+function AccountPage() {
     useEffect(() => { document.documentElement.scrollTo(0,0); }, []);
 
     const [selected, setSelected] = useState("");
     //console.log(selected);
 
     if(selected == "") {
-        setSelected("Saved Blogposts");
+        setSelected("Account");
     }
     
     return (
         <div className="dashboard">
-            {/* Subnavigation */}
             <Dropdown selected={selected} setSelected={setSelected} />
-
-            
-            
-            {/* Saved blogposts content */}
-            <SavedBlogposts />
-            <LatestGP />
+            <Settings />
         </div>
     );
 }
 
-export default DashboardPage;
+export default AccountPage;

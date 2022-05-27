@@ -26,6 +26,7 @@ import RegisterPage from './5_pages/RegisterPage/RegisterPage';
 import PaymentPage from './5_pages/PaymentPage/PaymentPage';
 import NotFoundPage from './5_pages/NotFoundPage/NotFoundPage';
 import TestPage from './5_pages/TestPage/TestPage';
+import AccountPage from './5_pages/AccountPage/AccountPage';
 
 // Global styles
 import './style.scss';
@@ -131,6 +132,7 @@ function App() {
                 <Routes>
                     <Route path="/" element={<HomePage />} />
                     <Route path="/dashboard" element={<DashboardPage />} />
+                    <Route path="/account" element={<AccountPage />} />
                     <Route path="/grandprixs" element={<GrandPrixsPage />} />
                     <Route path="/grandprix-detail" element={<GrandPrixDetailPage />} />
                     <Route path="/standings" element={<StandingsPage />} />
