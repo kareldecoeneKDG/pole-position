@@ -3,7 +3,13 @@ import React, { useEffect } from 'react';
 import bannerImg from './article1.jpeg';
 
 function PaymentPage() {
-    useEffect(() => { document.documentElement.scrollTo(0, 0); }, []);
+    useEffect(() => {
+        //scroll to top on opening
+        document.documentElement.scrollTo(0, 0);
+
+        //change title of tab
+        document.title = "Payment | Pole Positon - F1 Blog";
+    }, []);
 
     /* --- FORM FEEDBACK --- */
     //form

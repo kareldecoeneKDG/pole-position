@@ -5,8 +5,14 @@ import LatestGP from '../../4_organisms/LatestGP/LatestGP';
 import GrandPrix from '../../3_molecules/GrandPrix/GrandPrix';
 
 function GrandPrixsPage() {
-    useEffect(() => { document.documentElement.scrollTo(0,0); }, []);
-    
+    useEffect(() => {
+        //scroll to top on opening
+        document.documentElement.scrollTo(0, 0);
+
+        //change title of tab
+        document.title = "Grand Prixs | Pole Positon - F1 Blog";
+    }, []);
+
     return (
         <div className="grandprixs">
             <LatestGP />

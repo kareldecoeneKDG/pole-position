@@ -6,10 +6,15 @@ import Settings from '../../4_organisms/Settings/Settings';
 import Subnav from '../../4_organisms/Subnav/Subnav';
 
 function DashboardPage() {
-    useEffect(() => { document.documentElement.scrollTo(0,0); }, []);
+    useEffect(() => {
+        //scroll to top on opening
+        document.documentElement.scrollTo(0,0);
+
+        //change title of tab
+        document.title = "Dashboard | Pole Positon - F1 Blog";
+    }, []);
 
     const [selected, setSelected] = useState("");
-    //console.log(selected);
 
     if(selected == "") {
         setSelected("Saved Blogposts");

@@ -4,7 +4,13 @@ import { Link } from 'react-router-dom';
 import bannerImg from './article1.jpeg';
 
 function LoginPage() {
-    useEffect(() => { document.documentElement.scrollTo(0, 0); }, []);
+    useEffect(() => {
+        //scroll to top on opening
+        document.documentElement.scrollTo(0, 0);
+
+        //change title of tab
+        document.title = "Login | Pole Positon - F1 Blog";
+    }, []);
 
     /* --- FORM FEEDBACK --- */
     //form
@@ -38,9 +44,9 @@ function LoginPage() {
         }
 
         //password input
-        if(passwordValue === "") {
+        if (passwordValue === "") {
             setErrorFor(password, 'Password can\'t be blank')
-        } else if(passwordValue.length < 8) {
+        } else if (passwordValue.length < 8) {
             setErrorFor(password, 'Password is incorrect (min 8 characters)');
         } else {
             setSuccessFor(password);

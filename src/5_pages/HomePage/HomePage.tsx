@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import './HomePage.scss';
 
 import Header from '../../4_organisms/Header/Header';
 import LatestNews from '../../4_organisms/LatestNews/LatestNews';
@@ -9,8 +8,14 @@ import HowSignUp from '../../4_organisms/HowSignUp/HowSignUp';
 import Newsletter from '../../4_organisms/Newsletter/Newsletter';
 
 function HomePage() {
-    useEffect(() => { document.documentElement.scrollTo(0,0); }, []);
-    
+    useEffect(() => {
+        //scroll to top on opening
+        document.documentElement.scrollTo(0, 0);
+
+        //change title of tab
+        document.title = "Home | Pole Positon - F1 Blog";
+    }, []);
+
     return (
         <div className="homePage">
             <Header />

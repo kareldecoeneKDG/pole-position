@@ -49,6 +49,14 @@ const languages = [
 ]
 
 function App() {
+    useEffect(() => {
+        //scroll to top on opening
+        document.documentElement.scrollTo(0, 0);
+
+        //change title of tab
+        document.title = "Pole Positon - F1 Blog";
+    }, []);
+
     const currentLanguageCode = cookies.get('i18next') || 'en'
     const currentLanguage = languages.find(element => element.code === currentLanguageCode)
 

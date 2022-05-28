@@ -6,7 +6,13 @@ import StandingTeam from '../../3_molecules/StandingTeam/StandingTeam';
 import { Link } from 'react-router-dom';
 
 function StandingsPage() {
-    useEffect(() => { document.documentElement.scrollTo(0, 0); }, []);
+    useEffect(() => {
+        //scroll to top on opening
+        document.documentElement.scrollTo(0, 0);
+
+        //change title of tab
+        document.title = "Standings | Pole Positon - F1 Blog";
+    }, []);
 
     const [selected, setSelected] = useState("");
 

@@ -7,7 +7,13 @@ import MoreRecentNews from '../../4_organisms/MoreRecentNews/MoreRecentNews';
 import articleImg from './article1.jpeg';
 
 function BlogDetailPage() {
-    useEffect(() => { document.documentElement.scrollTo(0,0); }, []);
+    useEffect(() => {
+        //scroll to top on opening
+        document.documentElement.scrollTo(0, 0);
+
+        //change title of tab
+        document.title = "Blog detail | Pole Positon - F1 Blog";
+    }, []);
 
     return (
         <section className="blogDetail">

@@ -7,10 +7,17 @@ import HistoryHighlights from '../../4_organisms/HistoryHighlights/HistoryHighli
 import MoreRecentNews from '../../4_organisms/MoreRecentNews/MoreRecentNews';
 import RecentShots from '../../4_organisms/RecentShots/RecentShots';
 import MightAlsoLikeTeams from '../../4_organisms/MightAlsoLikeTeams/MightAlsoLikeTeams';
+import Slideshow from '../../4_organisms/Slideshow/Slideshow';
 
 function TeamPage() {
-    useEffect(() => { document.documentElement.scrollTo(0,0); }, []);
-    
+    useEffect(() => {
+        //scroll to top on opening
+        document.documentElement.scrollTo(0, 0);
+
+        //change title of tab
+        document.title = "Team | Pole Positon - F1 Blog";
+    }, []);
+
     return (
         <section className="teamPage">
             <TeamDetailHeader />
@@ -18,7 +25,7 @@ function TeamPage() {
             <FactsNumbers />
             <HistoryHighlights />
             <MoreRecentNews />
-            <RecentShots />
+            <Slideshow />
             <MightAlsoLikeTeams />
         </section>
     );

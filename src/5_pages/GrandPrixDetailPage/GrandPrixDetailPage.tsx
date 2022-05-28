@@ -5,8 +5,14 @@ import Article from '../../3_molecules/Article/Article';
 import circuit from './gp-1.png';
 
 function GrandPrixDetailPage() {
-    useEffect(() => { document.documentElement.scrollTo(0,0); }, []);
-    
+    useEffect(() => {
+        //scroll to top on opening
+        document.documentElement.scrollTo(0, 0);
+
+        //change title of tab
+        document.title = "Barcelona GP | Pole Positon - F1 Blog";
+    }, []);
+
     return (
         <div className="grandprixDetail">
             <div className="banner">
