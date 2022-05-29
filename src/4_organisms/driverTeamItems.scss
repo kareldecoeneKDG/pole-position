@@ -79,6 +79,32 @@
 @media only screen and (min-width: $tablet-portrait) {
     .driver-team__items {
         margin-top: 75px;
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+
+        .item {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            gap: 20px;
+            margin-bottom: 0;
+        }
+    }
+}
+
+/* TABLET LANDSCAPE */
+@media only screen and (min-width: $tablet-landscape) {
+    .driver-team__items {
+        justify-content: flex-start;
+
+        .item {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            gap: 20px;
+            margin-bottom: 0;
+        }
     }
 }
 
