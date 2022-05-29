@@ -40,6 +40,7 @@ function Subnav({ selected, setSelected }: SubnavProps) {
         <div className="dropdown">
             <div className="dropdown-btn" onClick={e => setIsActive(!isActive)}>{selected} <i className="fa fa-chevron-down" aria-hidden="true"></i></div>
 
+            {/* SUBNAV DASHBOARD */}
             {isActive && (
                 <div className="dropdown-content mobile">
                     <NavLink to="/dashboard" onClick={(e) => {
@@ -84,6 +85,33 @@ function Subnav({ selected, setSelected }: SubnavProps) {
                     setSelected(options[3])
                     setIsActive(false)
                 }} className="dropdown-item">Account</NavLink>
+            </div>
+
+            {/* SUBNAV STANDINGS */}
+            {isActive && (
+                <div className="dropdown-content mobile standings-subnav">
+                    <NavLink to="/driverStandings" onClick={(e) => {
+                        setSelected(options[0])
+                        setIsActive(false)
+                    }} className="dropdown-item">Drivers</NavLink>
+
+                    <NavLink to="/teamStandings" onClick={(e) => {
+                        setSelected(options[1])
+                        setIsActive(false)
+                    }} className="dropdown-item">Teams</NavLink>
+                </div>
+            )}
+
+            <div className="dropdown-content-desktop desktop standings-subnav">
+                <NavLink to="/driverStandings" onClick={(e) => {
+                    setSelected(options[0])
+                    setIsActive(false)
+                }} className="dropdown-item">Drivers</NavLink>
+
+                <NavLink to="/teamStandings" onClick={(e) => {
+                    setSelected(options[1])
+                    setIsActive(false)
+                }} className="dropdown-item">Teams</NavLink>
             </div>
         </div>
     );

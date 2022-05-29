@@ -15,7 +15,6 @@ import HomePage from './5_pages/HomePage/HomePage';
 import DashboardPage from './5_pages/DashboardPage/DashboardPage';
 import GrandPrixsPage from './5_pages/GrandPrixsPage/GrandPrixsPage';
 import GrandPrixDetailPage from './5_pages/GrandPrixDetailPage/GrandPrixDetailPage';
-import StandingsPage from './5_pages/StandingsPage/StandingsPage';
 import DriverPage from './5_pages/DriverPage/DriverPage';
 import TeamPage from './5_pages/TeamPage/TeamPage';
 import BlogPage from './5_pages/BlogPage/BlogPage';
@@ -27,6 +26,8 @@ import PaymentPage from './5_pages/PaymentPage/PaymentPage';
 import NotFoundPage from './5_pages/NotFoundPage/NotFoundPage';
 import TestPage from './5_pages/TestPage/TestPage';
 import AccountPage from './5_pages/AccountPage/AccountPage';
+import DriverStandingsPage from './5_pages/DriverStandingsPage/DriverStandingsPage';
+import TeamStandingsPage from './5_pages/TeamStandingsPage/TeamStandingsPage';
 
 // Global styles
 import './style.scss';
@@ -143,7 +144,8 @@ function App() {
                     <Route path="/account" element={<AccountPage />} />
                     <Route path="/grandprixs" element={<GrandPrixsPage />} />
                     <Route path="/grandprix-detail" element={<GrandPrixDetailPage />} />
-                    <Route path="/standings" element={<StandingsPage />} />
+                    <Route path="/driverStandings" element={<DriverStandingsPage />} />
+                    <Route path="/teamStandings" element={<TeamStandingsPage />} />
                     <Route path="/driver" element={<DriverPage />} />
                     <Route path="/team" element={<TeamPage />} />
                     <Route path="/blog" element={<BlogPage />} />

@@ -98,7 +98,7 @@ const Navbar = () => {
             <div className="links-desktop desktop">
                 <NavLink to="dashboard" className="links-desktop__link">Dashboard</NavLink>
                 <NavLink to="blog" className="links-desktop__link">Blog</NavLink>
-                <NavLink to="standings" className="links-desktop__link">Standings</NavLink>
+                <NavLink to="driverStandings" className="links-desktop__link">Standings</NavLink>
                 <NavLink to="grandprixs" className="links-desktop__link">Grand Prixs</NavLink>
             </div>
 
@@ -132,7 +132,7 @@ const Navbar = () => {
                 <div className="links">
                     <NavLink to="dashboard" className="mobile-link">Dashboard</NavLink>
                     <NavLink to="blog" className="mobile-link">Blog</NavLink>
-                    <NavLink to="standings" className="mobile-link">Standings</NavLink>
+                    <NavLink to="driverStandings" className="mobile-link">Standings</NavLink>
                     <NavLink to="grandprixs" className="mobile-link">Grand Prixs</NavLink>
                 </div>
 

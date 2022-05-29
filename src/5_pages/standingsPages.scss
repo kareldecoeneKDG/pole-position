@@ -30,6 +30,18 @@
             margin-bottom: 0;
         }
     }
+
+    .dropdown-content {
+        display: none !important;
+
+        &-desktop {
+            display: none !important;
+        }
+
+        &.standings-subnav {
+            display: block !important;
+        }
+    }
 }
 
 /* TABLET PORTRAIT */
@@ -78,6 +90,14 @@
     .standings {
         &__drivers {
             padding: 75px 120px 125px 120px;
+        }
+
+        .dropdown-content {
+            &-desktop {
+                &.standings-subnav {
+                    display: flex !important;
+                }
+            }
         }
     }
 }

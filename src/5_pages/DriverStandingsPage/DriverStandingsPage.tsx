@@ -1,20 +1,23 @@
 import React, { useEffect, useState } from 'react';
-
-import Subnav from '../../4_organisms/Subnav/Subnav';
-import StandingDriver from '../../3_molecules/StandingDriver/StandingDriver';
-import StandingTeam from '../../3_molecules/StandingTeam/StandingTeam';
 import { Link } from 'react-router-dom';
 
-function StandingsPage() {
+import StandingDriver from '../../3_molecules/StandingDriver/StandingDriver';
+import Subnav from '../../4_organisms/Subnav/Subnav';
+
+function DriverStandingsPage() {
     useEffect(() => {
         //scroll to top on opening
         document.documentElement.scrollTo(0, 0);
 
         //change title of tab
-        document.title = "Standings | Pole Positon - F1 Blog";
+        document.title = "Driver Standings | Pole Positon - F1 Blog";
     }, []);
 
     const [selected, setSelected] = useState("");
+
+    if(selected == "") {
+        setSelected("Drivers");
+    }
 
     return (
         <div className="standings">
@@ -104,52 +107,8 @@ function StandingsPage() {
                     <StandingDriver />
                 </Link>
             </section>
-
-            {/* <section className="standings__drivers">
-                <Link to="/team">
-                    <StandingTeam />
-                </Link>
-
-                <Link to="/team">
-                    <StandingTeam />
-                </Link>
-
-                <Link to="/team">
-                    <StandingTeam />
-                </Link>
-
-                {/* <hr className="standings__drivers__line line" /> 
-
-                <Link to="/team">
-                    <StandingTeam />
-                </Link>
-
-                <Link to="/team">
-                    <StandingTeam />
-                </Link>
-
-                <Link to="/team">
-                    <StandingTeam />
-                </Link>
-
-                <Link to="/team">
-                    <StandingTeam />
-                </Link>
-
-                <Link to="/team">
-                    <StandingTeam />
-                </Link>
-
-                <Link to="/team">
-                    <StandingTeam />
-                </Link>
-                
-                <Link to="/team">
-                    <StandingTeam />
-                </Link>
-            </section> */}
         </div>
     );
 }
 
-export default StandingsPage;
+export default DriverStandingsPage;

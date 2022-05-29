@@ -100,13 +100,13 @@
 
 // global
 @import './5_pages/formPages';
+@import './5_pages/standingsPages';
 
 // components
 @import './5_pages/HomePage/HomePage';
 @import './5_pages/DashboardPage/DashboardPage';
 @import './5_pages/GrandPrixsPage/GrandPrixsPage';
 @import './5_pages/GrandPrixDetailPage/GrandPrixDetailPage';
-@import './5_pages/StandingsPage/StandingsPage';
 @import './5_pages/DriverPage/DriverPage';
 @import './5_pages/TeamPage/TeamPage';
 @import './5_pages/BlogDetailPage/BlogDetailPage';
@@ -117,3 +117,5 @@
 @import './5_pages/PaymentPage/PaymentPage';
 @import './5_pages/BlogPage/BlogPage';
 @import './5_pages/TestPage/TestPage';
+@import './5_pages/DriverStandingsPage/DriverStandingsPage';
+@import './5_pages/TeamStandingsPage/TeamStandingsPage';

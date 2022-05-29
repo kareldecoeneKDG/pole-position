@@ -56,7 +56,7 @@ function Footer() {
 
                     <Link className="footer__section__p" to="/dashboard">Dashboard</Link>
                     <Link className="footer__section__p" to="/blog">Blog</Link>
-                    <Link className="footer__section__p" to="/standings">Standings</Link>
+                    <Link className="footer__section__p" to="/driverStandings">Standings</Link>
                     <Link className="footer__section__p" to="/grandprixs">Grand Prixs</Link>
                 </div>
 
@@ -91,7 +91,7 @@ function Footer() {
 
                         <Link className="footer__section__p" to="/dashboard">Dashboard</Link>
                         <Link className="footer__section__p" to="/blog">Blog</Link>
-                        <Link className="footer__section__p" to="/standings">Standings</Link>
+                        <Link className="footer__section__p" to="/driverStandings">Standings</Link>
                         <Link className="footer__section__p" to="/grandprixs">Grand Prixs</Link>
                     </div>
 
