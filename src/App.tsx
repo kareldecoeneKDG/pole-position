@@ -93,7 +93,7 @@ function App() {
 
 
 
-    if (localStorage.getItem('data-theme') == '') {
+    if (localStorage.getItem('data-theme') == '' || localStorage.getItem('data-theme') == null) {
         let darkThemeMq = window.matchMedia("(prefers-color-scheme: dark)");
 
         if (darkThemeMq.matches == true) {

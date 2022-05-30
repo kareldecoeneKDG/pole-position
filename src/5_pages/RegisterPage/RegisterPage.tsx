@@ -27,12 +27,11 @@ function RegisterPage() {
     const password = document.querySelector('.password') as HTMLInputElement;
 
     if (form != null) {
-
-        console.log("testtt");
-
         //If you really want to make the form work, change structure...
         form!.addEventListener('submit', (e) => {
             e.preventDefault();
+
+            console.log("submitted");
 
             checkInputs();
         });
@@ -256,7 +255,7 @@ function RegisterPage() {
                     </p>
 
                     {/* SUBMIT BUTTON */}
-                    <button className="button button-primary skew" type="submit" name="submit"><span>Payment <i className="fa fa-chevron-right first-chevron" aria-hidden="true"></i><i className="fa fa-chevron-right" aria-hidden="true"></i></span></button>
+                    <button className="button button-primary skew" type="submit"><span>Payment <i className="fa fa-chevron-right first-chevron" aria-hidden="true"></i><i className="fa fa-chevron-right" aria-hidden="true"></i></span></button>
                 </form>
             </div>
 
