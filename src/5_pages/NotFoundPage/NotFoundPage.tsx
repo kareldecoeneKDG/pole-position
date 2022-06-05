@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react';
 
+import Navbar from '../../4_organisms/NavBar/NavBar';
+
 import ErrorLogo from './error-logo.png';
 import ErrorLogoDark from './error-logo-dark.png';
 import { Link } from 'react-router-dom';
@@ -16,6 +18,8 @@ function NotFoundPage() {
             <Helmet>
                 <title>Error | Pole Positon - F1 Blog</title>
             </Helmet>
+
+            <Navbar />
 
             <div className="error404__content">
                 <img className="error404__content__logo light" src={ErrorLogo} alt="Error 404 logo" />

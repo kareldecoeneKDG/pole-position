@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 
+import Navbar from '../../4_organisms/NavBar/NavBar';
+
 function PrivacyPolicyPage() {
     useEffect(() => { document.documentElement.scrollTo(0,0); }, []);
     
@@ -9,6 +11,8 @@ function PrivacyPolicyPage() {
             <Helmet>
                 <title>Privacy policy | Pole Positon - F1 Blog</title>
             </Helmet>
+
+            <Navbar />
             
             <h2 className="privacyPolicy__title section__title">Privacy Policy</h2>
 

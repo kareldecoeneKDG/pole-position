@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 
+import Navbar from '../../4_organisms/NavBar/NavBar';
 import StandingTeam from '../../3_molecules/StandingTeam/StandingTeam';
 import Subnav from '../../4_organisms/Subnav/Subnav';
 
@@ -22,6 +23,8 @@ function TeamStandingsPage() {
             <Helmet>
                 <title>Team standings | Pole Positon - F1 Blog</title>
             </Helmet>
+
+            <Navbar />
 
             {/* Subnavigation */}
             <Subnav selected={selected} setSelected={setSelected} />

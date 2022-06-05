@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 
+import Navbar from '../../4_organisms/NavBar/NavBar';
 import TeamDetailHeader from '../../4_organisms/TeamDetailHeader/TeamDetailHeader';
 import LatestNews from '../../4_organisms/LatestNews/LatestNews';
 import FactsNumbers from '../../4_organisms/FactsNumbers/FactsNumbers';
@@ -22,6 +23,7 @@ function TeamPage() {
                 <title>Red Bull | Pole Positon - F1 Blog</title>
             </Helmet>
 
+            <Navbar />
             <TeamDetailHeader />
             <MoreRecentNews />
             <FactsNumbers />

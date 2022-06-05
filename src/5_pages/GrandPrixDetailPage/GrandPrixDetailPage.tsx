@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet';
 import { NavLink } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
+import Navbar from '../../4_organisms/NavBar/NavBar';
 import Article from '../../3_molecules/Article/Article';
 import circuit from './gp-1.png';
 
@@ -17,6 +18,8 @@ function GrandPrixDetailPage() {
             <Helmet>
                 <title>Barcelona GP | Pole Positon - F1 Blog</title>
             </Helmet>
+
+            <Navbar />
 
             <div className="banner">
                 <div className="banner__bg"></div>

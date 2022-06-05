@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 
+import Navbar from '../../4_organisms/NavBar/NavBar';
 import StandingDriver from '../../3_molecules/StandingDriver/StandingDriver';
 import Subnav from '../../4_organisms/Subnav/Subnav';
 
@@ -22,6 +23,8 @@ function DriverStandingsPage() {
             <Helmet>
                 <title>Driver Standings | Pole Positon - F1 Blog</title>
             </Helmet>
+
+            <Navbar />
             
             {/* Subnavigation */}
             <Subnav selected={selected} setSelected={setSelected} />

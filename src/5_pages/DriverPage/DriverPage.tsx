@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 
+import Navbar from '../../4_organisms/NavBar/NavBar';
 import DriverDetailHeader from '../../4_organisms/DriverDetailHeader/DriverDetailHeader';
 import LatestNews from '../../4_organisms/LatestNews/LatestNews';
 import FactsNumbers from '../../4_organisms/FactsNumbers/FactsNumbers';
@@ -21,6 +22,7 @@ function DriverPage() {
                 <title>Driver | Pole Positon - F1 Blog</title>
             </Helmet>
 
+            <Navbar />
             <DriverDetailHeader />
             <MoreRecentNews />
             <FactsNumbers />

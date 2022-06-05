@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 
+import Navbar from '../../4_organisms/NavBar/NavBar';
 import bannerImg from './article1.jpeg';
 
 function PaymentPage() {
@@ -105,6 +106,8 @@ function PaymentPage() {
                 <title>Payment | Pole Positon - F1 Blog</title>
             </Helmet>
             
+            <Navbar />
+
             <div className="login__content">
                 <h2 className="title">Payment</h2>
                 <p className="p">Small cost, big value.</p>

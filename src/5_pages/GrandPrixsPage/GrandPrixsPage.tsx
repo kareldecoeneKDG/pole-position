@@ -1,9 +1,10 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 
+import Navbar from '../../4_organisms/NavBar/NavBar';
 import LatestGP from '../../4_organisms/LatestGP/LatestGP';
 import GrandPrix from '../../3_molecules/GrandPrix/GrandPrix';
-import { Helmet } from 'react-helmet';
 
 function GrandPrixsPage() {
     useEffect(() => {
@@ -17,6 +18,7 @@ function GrandPrixsPage() {
                 <title>Grand Prixs | Pole Positon - F1 Blog</title>
             </Helmet>
             
+            <Navbar />
             <LatestGP />
 
             <div className="grandprixs-section section">

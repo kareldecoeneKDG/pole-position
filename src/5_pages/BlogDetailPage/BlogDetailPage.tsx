@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { Helmet } from "react-helmet";
 import { Link, useLocation } from "react-router-dom";
 
+import Navbar from "../../4_organisms/NavBar/NavBar";
 import Socials from '../../3_molecules/Socials/Socials';
 import MoreRecentNews from '../../4_organisms/MoreRecentNews/MoreRecentNews';
 
@@ -18,6 +19,8 @@ function BlogDetailPage() {
             <Helmet>
                 <title>Blog detail | Pole Positon - F1 Blog</title>
             </Helmet>
+
+            <Navbar />
 
             <div className="blogDetail__content section">
                 <p className="blogDetail__content__date tag detail">Januari 13 2022 - 10:15</p>

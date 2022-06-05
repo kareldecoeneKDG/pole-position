@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 
+import Navbar from '../../4_organisms/NavBar/NavBar';
 import bannerImg from './article1.jpeg';
 
 function LoginPage() {
@@ -82,6 +83,8 @@ function LoginPage() {
             <Helmet>
                 <title>Login | Pole Positon - F1 Blog</title>
             </Helmet>
+
+            <Navbar />
             
             <div className="login__content">
                 <h2 className="title">Login</h2>
