@@ -1,8 +1,32 @@
 .login {
     flex: 1;
+    padding: 0px;
+
+    &__content {
+        padding: 50px 20px 75px 20px;
+    }
 
     &__img {
         display: none;
+    }
+}
+
+/* TABLET PORTRAIT */
+@media only screen and (min-width: $tablet-portrait) {
+    .login {
+        &__content {
+            padding: 50px 50px 75px 50px;
+        }
+    }
+}
+
+/* DESKTOP 1280PX */
+@media only screen and (min-width: $desktop-1) {
+    .login {
+        &__content {
+            padding: 75px 120px 125px 120px;
+            width: 50%;
+        }
     }
 }
 

@@ -102,9 +102,9 @@ function Navbar() {
 
             {/* Desktop nav items */}
             <div className="links-desktop nav-webapp desktop">
-                <NavLink to="/dashboard" className="links-desktop__link">Dashboard <i className="fa fa-chevron-down" aria-hidden="true"></i></NavLink>
+                <NavLink to="/dashboard" className="links-desktop__link dashboard-menu-item">Dashboard <i className="fa fa-chevron-down" aria-hidden="true"></i></NavLink>
                 <NavLink to="/blog" className="links-desktop__link">Blog</NavLink>
-                <NavLink to="/driverStandings" className="links-desktop__link">Standings <i className="fa fa-chevron-down" aria-hidden="true"></i></NavLink>
+                <NavLink to="/driverStandings" className="links-desktop__link standings-menu-item">Standings <i className="fa fa-chevron-down" aria-hidden="true"></i></NavLink>
                 <NavLink to="/grandprixs" className="links-desktop__link">Grand Prixs</NavLink>
             </div>
 
@@ -147,9 +147,9 @@ function Navbar() {
                 </div>
 
                 <div className="links nav-webapp">
-                    <NavLink to="/dashboard" className="mobile-link">Dashboard</NavLink>
+                    <NavLink to="/dashboard" className="mobile-link dashboard-menu-item">Dashboard</NavLink>
                     <NavLink to="/blog" className="mobile-link">Blog</NavLink>
-                    <NavLink to="/driverStandings" className="mobile-link">Standings</NavLink>
+                    <NavLink to="/driverStandings" className="mobile-link standings-menu-item">Standings</NavLink>
                     <NavLink to="/grandprixs" className="mobile-link">Grand Prixs</NavLink>
                 </div>
 

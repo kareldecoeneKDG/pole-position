@@ -1,6 +1,11 @@
 .register {
     flex: 1;
-    
+    padding: 0px;
+
+    &__flexbox {
+        padding: 50px 20px 75px 20px;
+    }
+
     .form__inputs-container {
         margin-bottom: 15px;
 
@@ -63,6 +68,10 @@
 /* TABLET PORTRAIT */
 @media only screen and (min-width: $tablet-portrait) {
     .register {
+        &__flexbox {
+            padding: 50px 50px 75px 50px;
+        }
+
         .form__inputs-container {
             margin-bottom: 15px;
 
@@ -94,13 +103,27 @@
     }
 }
 
+/* DESKTOP 1280PX */
+@media only screen and (min-width: $desktop-1) {
+    .register {
+        &__flexbox {
+            padding: 75px 120px 125px 120px;
+            width: 50%;
+        }
+    }
+}
+
 /* DESKTOP 1440PX */
 @media only screen and (min-width: $desktop-3) {
     .register {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        gap: 122px;
+        &__flexbox {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 122px;
+            width: 100%;
+            //padding: section padding;
+        }
 
         &__content {
             width: calc(100% - 488px - 122px);

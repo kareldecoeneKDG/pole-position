@@ -105,77 +105,79 @@ function PaymentPage() {
             <Helmet>
                 <title>Payment | Pole Positon - F1 Blog</title>
             </Helmet>
-            
+
             <Navbar />
 
-            <div className="login__content">
-                <h2 className="title">Payment</h2>
-                <p className="p">Small cost, big value.</p>
+            <div className="payment__flex">
+                <div className="login__content">
+                    <h2 className="title">Payment</h2>
+                    <p className="p">Small cost, big value.</p>
 
-                <form className="payment__form custom-form">
+                    <form className="payment__form custom-form">
 
-                    {/* TEXT INPUTS */}
-                    <div className="form__inputs-container">
+                        {/* TEXT INPUTS */}
+                        <div className="form__inputs-container">
 
-                        {/* NAME INPUT */}
-                        <div className="form-control-forms">
-                            <div className="form-group">
-                                <input type="text" id="nameCardHolder" className="form__input input nameCardHolder" name="nameCardHolder" placeholder=" " />
-                                <label htmlFor="nameCardHolder" className="form__label">Name card holder</label>
+                            {/* NAME INPUT */}
+                            <div className="form-control-forms">
+                                <div className="form-group">
+                                    <input type="text" id="nameCardHolder" className="form__input input nameCardHolder" name="nameCardHolder" placeholder=" " />
+                                    <label htmlFor="nameCardHolder" className="form__label">Name card holder</label>
 
-                                {/* form feedback */}
-                                <i className="fa fa-check-circle" aria-hidden="true"></i>
-                                <i className="fa fa-exclamation-triangle" aria-hidden="true"></i>
-                                <small>Error message</small>
+                                    {/* form feedback */}
+                                    <i className="fa fa-check-circle" aria-hidden="true"></i>
+                                    <i className="fa fa-exclamation-triangle" aria-hidden="true"></i>
+                                    <small>Error message</small>
+                                </div>
+                            </div>
+
+                            {/* CARDNUMBER INPUT */}
+                            <div className="form-control-forms">
+                                <div className="form-group">
+                                    <input type="text" id="creditCardNumber" className="form__input input creditCardNumber" name="creditCardNumber" placeholder=" " />
+                                    <label htmlFor="creditCardNumber" className="form__label">Credit card number</label>
+
+                                    {/* form feedback */}
+                                    <i className="fa fa-check-circle" aria-hidden="true"></i>
+                                    <i className="fa fa-exclamation-triangle" aria-hidden="true"></i>
+                                    <small>Error message</small>
+                                </div>
+                            </div>
+
+                            {/* EXPIRATION INPUT */}
+                            <div className="form-control-forms">
+                                <div className="form-group">
+                                    <input type="text" id="expiration" className="form__input input expiration" name="expiration" placeholder=" " />
+                                    <label htmlFor="expiration" className="form__label">Expiration</label>
+
+                                    {/* form feedback */}
+                                    <i className="fa fa-check-circle" aria-hidden="true"></i>
+                                    <i className="fa fa-exclamation-triangle" aria-hidden="true"></i>
+                                    <small>Error message</small>
+                                </div>
+                            </div>
+
+                            {/* CVV INPUT */}
+                            <div className="form-control-forms">
+                                <div className="form-group">
+                                    <input type="text" id="cvv" className="form__input input cvv" name="cvv" placeholder=" " />
+                                    <label htmlFor="cvv" className="form__label">CVV</label>
+
+                                    {/* form feedback */}
+                                    <i className="fa fa-check-circle" aria-hidden="true"></i>
+                                    <i className="fa fa-exclamation-triangle" aria-hidden="true"></i>
+                                    <small>Error message</small>
+                                </div>
                             </div>
                         </div>
 
-                        {/* CARDNUMBER INPUT */}
-                        <div className="form-control-forms">
-                            <div className="form-group">
-                                <input type="text" id="creditCardNumber" className="form__input input creditCardNumber" name="creditCardNumber" placeholder=" " />
-                                <label htmlFor="creditCardNumber" className="form__label">Credit card number</label>
+                        {/* SUBMIT BUTTON */}
+                        <button className="button button-primary skew" type="submit"><span>Continue <i className="fa fa-chevron-right first-chevron" aria-hidden="true"></i><i className="fa fa-chevron-right" aria-hidden="true"></i></span></button>
+                    </form>
+                </div>
 
-                                {/* form feedback */}
-                                <i className="fa fa-check-circle" aria-hidden="true"></i>
-                                <i className="fa fa-exclamation-triangle" aria-hidden="true"></i>
-                                <small>Error message</small>
-                            </div>
-                        </div>
-
-                        {/* EXPIRATION INPUT */}
-                        <div className="form-control-forms">
-                            <div className="form-group">
-                                <input type="text" id="expiration" className="form__input input expiration" name="expiration" placeholder=" " />
-                                <label htmlFor="expiration" className="form__label">Expiration</label>
-
-                                {/* form feedback */}
-                                <i className="fa fa-check-circle" aria-hidden="true"></i>
-                                <i className="fa fa-exclamation-triangle" aria-hidden="true"></i>
-                                <small>Error message</small>
-                            </div>
-                        </div>
-
-                        {/* CVV INPUT */}
-                        <div className="form-control-forms">
-                            <div className="form-group">
-                                <input type="text" id="cvv" className="form__input input cvv" name="cvv" placeholder=" " />
-                                <label htmlFor="cvv" className="form__label">CVV</label>
-
-                                {/* form feedback */}
-                                <i className="fa fa-check-circle" aria-hidden="true"></i>
-                                <i className="fa fa-exclamation-triangle" aria-hidden="true"></i>
-                                <small>Error message</small>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* SUBMIT BUTTON */}
-                    <button className="button button-primary skew" type="submit"><span>Continue <i className="fa fa-chevron-right first-chevron" aria-hidden="true"></i><i className="fa fa-chevron-right" aria-hidden="true"></i></span></button>
-                </form>
+                <img className="login__img" src={bannerImg} alt="Banner img login page" />
             </div>
-
-            <img className="login__img" src={bannerImg} alt="Banner img login page" />
         </section>
     );
 }

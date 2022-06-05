@@ -85,63 +85,65 @@ function LoginPage() {
             </Helmet>
 
             <Navbar />
-            
-            <div className="login__content">
-                <h2 className="title">Login</h2>
-                <p className="p">Please enter your email and password.</p>
 
-                <form className="login__form custom-form">
+            <div className="login__flexbox">
+                <div className="login__content section">
+                    <h2 className="title">Login</h2>
+                    <p className="p">Please enter your email and password.</p>
 
-                    {/* TEXT INPUTS */}
-                    <div className="form__inputs-container">
+                    <form className="login__form custom-form">
 
-                        {/* EMAIL INPUT */}
-                        <div className="form-control-forms">
-                            <div className="form-group">
-                                <input type="text" id="email" className="form__input input email" name="email" placeholder=" " />
-                                <label htmlFor="email" className="form__label">Email</label>
+                        {/* TEXT INPUTS */}
+                        <div className="form__inputs-container">
 
-                                {/* form feedback */}
-                                <i className="fa fa-check-circle" aria-hidden="true"></i>
-                                <i className="fa fa-exclamation-triangle" aria-hidden="true"></i>
-                                <small>Error message</small>
+                            {/* EMAIL INPUT */}
+                            <div className="form-control-forms">
+                                <div className="form-group">
+                                    <input type="text" id="email" className="form__input input email" name="email" placeholder=" " />
+                                    <label htmlFor="email" className="form__label">Email</label>
+
+                                    {/* form feedback */}
+                                    <i className="fa fa-check-circle" aria-hidden="true"></i>
+                                    <i className="fa fa-exclamation-triangle" aria-hidden="true"></i>
+                                    <small>Error message</small>
+                                </div>
+                            </div>
+
+                            {/* PASSWORD INPUT */}
+                            <div className="form-control-forms">
+                                <div className="form-group">
+                                    <input id="password" className="form__input input password" type="password" name="password" placeholder=" " />
+                                    <label htmlFor="password" className="form__label">Password</label>
+
+                                    {/* form feedback */}
+                                    <i className="fa fa-check-circle" aria-hidden="true"></i>
+                                    <i className="fa fa-exclamation-triangle" aria-hidden="true"></i>
+                                    <small>Error message</small>
+                                </div>
                             </div>
                         </div>
 
-                        {/* PASSWORD INPUT */}
-                        <div className="form-control-forms">
-                            <div className="form-group">
-                                <input id="password" className="form__input input password" type="password" name="password" placeholder=" " />
-                                <label htmlFor="password" className="form__label">Password</label>
+                        <p className="custom-form__disclaimer">
+                            By login you agree to <span className="custom-form__disclaimer__link">terms & conditions</span>
+                        </p>
 
-                                {/* form feedback */}
-                                <i className="fa fa-check-circle" aria-hidden="true"></i>
-                                <i className="fa fa-exclamation-triangle" aria-hidden="true"></i>
-                                <small>Error message</small>
-                            </div>
+                        <div className="flex">
+                            <button className="button button-primary skew" type="submit"><span>Login <i className="fa fa-chevron-right first-chevron" aria-hidden="true"></i><i className="fa fa-chevron-right" aria-hidden="true"></i></span></button>
+                            <a className="custom-form__forgot-pw p" href="#">Forgot password?</a>
                         </div>
-                    </div>
 
-                    <p className="custom-form__disclaimer">
-                        By login you agree to <span className="custom-form__disclaimer__link">terms & conditions</span>
-                    </p>
+                        <p className="custom-form__no-acc p">
+                            Don't have an account yet?<br />
 
-                    <div className="flex">
-                        <button className="button button-primary skew" type="submit"><span>Login <i className="fa fa-chevron-right first-chevron" aria-hidden="true"></i><i className="fa fa-chevron-right" aria-hidden="true"></i></span></button>
-                        <a className="custom-form__forgot-pw p" href="#">Forgot password?</a>
-                    </div>
+                            <Link className="custom-form__no-acc__link" to="/register">
+                                Create account
+                            </Link>
+                        </p>
+                    </form>
+                </div>
 
-                    <p className="custom-form__no-acc p">
-                        Don't have an account yet?<br />
-
-                        <Link className="custom-form__no-acc__link" to="/register">
-                            Create account
-                        </Link>
-                    </p>
-                </form>
+                <img className="login__img" src={bannerImg} alt="Banner img login page" />
             </div>
-
-            <img className="login__img" src={bannerImg} alt="Banner img login page" />
         </section>
     );
 }

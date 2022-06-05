@@ -141,130 +141,132 @@ function RegisterPage() {
             </Helmet>
 
             <Navbar />
-            
-            <div className="register__content">
-                <h2 className="title">Register</h2>
-                <p className="p">To make a Pole Position account.</p>
 
-                <form className="register__form custom-form">
+            <div className="register__flexbox">
+                <div className="register__content">
+                    <h2 className="title">Register</h2>
+                    <p className="p">To make a Pole Position account.</p>
 
-                    {/* TEXT INPUTS */}
-                    <div className="form__inputs-container">
+                    <form className="register__form custom-form">
 
-                        {/* FIRST NAME INPUT */}
-                        <div className="form-control-forms">
-                            <div className="form-group">
-                                <input type="text" id="firstName" className="form__input input firstName" name="firstName" placeholder=" " />
-                                <label htmlFor="firstName" className="form__label">First name</label>
+                        {/* TEXT INPUTS */}
+                        <div className="form__inputs-container">
 
-                                {/* form feedback */}
-                                <i className="fa fa-check-circle" aria-hidden="true"></i>
-                                <i className="fa fa-exclamation-triangle" aria-hidden="true"></i>
-                                <small>Error message</small>
+                            {/* FIRST NAME INPUT */}
+                            <div className="form-control-forms">
+                                <div className="form-group">
+                                    <input type="text" id="firstName" className="form__input input firstName" name="firstName" placeholder=" " />
+                                    <label htmlFor="firstName" className="form__label">First name</label>
+
+                                    {/* form feedback */}
+                                    <i className="fa fa-check-circle" aria-hidden="true"></i>
+                                    <i className="fa fa-exclamation-triangle" aria-hidden="true"></i>
+                                    <small>Error message</small>
+                                </div>
+                            </div>
+
+                            {/* LAST NAME INPUT */}
+                            <div className="form-control-forms">
+                                <div className="form-group">
+                                    <input type="text" id="lastName" className="form__input input" name="lastName" placeholder=" " />
+                                    <label htmlFor="lastName" className="form__label">Last name</label>
+
+                                    {/* form feedback */}
+                                    <i className="fa fa-check-circle" aria-hidden="true"></i>
+                                    <i className="fa fa-exclamation-triangle" aria-hidden="true"></i>
+                                    <small>Error message</small>
+                                </div>
+                            </div>
+
+                            {/* SALUTATION INPUT */}
+                            <div className="form-control-forms">
+                                <div className="form-group">
+                                    <input type="text" id="salutation" className="form__input input salutation" name="salutation" placeholder=" " />
+                                    <label htmlFor="salutation" className="form__label">Salutation</label>
+
+                                    {/* form feedback */}
+                                    <i className="fa fa-check-circle" aria-hidden="true"></i>
+                                    <i className="fa fa-exclamation-triangle" aria-hidden="true"></i>
+                                    <small>Error message</small>
+                                </div>
+                            </div>
+
+                            {/* BIRTHDATE INPUT */}
+                            <div className="form-control-forms">
+                                <div className="form-group">
+                                    <input type="date" id="birthDate" className="form__input input birthDate" name="birthDate" placeholder=" " />
+                                    <label htmlFor="birthDate" className="form__label">Birthdate</label>
+
+                                    {/* form feedback */}
+                                    <i className="fa fa-check-circle" aria-hidden="true"></i>
+                                    <i className="fa fa-exclamation-triangle" aria-hidden="true"></i>
+                                    <small>Error message</small>
+                                </div>
+                            </div>
+
+                            {/* COUNTRY INPUT */}
+                            <div className="form-control-forms">
+                                <div className="form-group">
+                                    <input type="text" id="country" className="form__input input country" name="country" placeholder=" " />
+                                    <label htmlFor="country" className="form__label">Country</label>
+
+                                    {/* form feedback */}
+                                    <i className="fa fa-check-circle" aria-hidden="true"></i>
+                                    <i className="fa fa-exclamation-triangle" aria-hidden="true"></i>
+                                    <small>Error message</small>
+                                </div>
+                            </div>
+
+                            <hr className="form__line line" />
+
+                            {/* EMAIL INPUT */}
+                            <div className="form-control-forms">
+                                <div className="form-group">
+                                    <input type="text" id="email" className="form__input input email" name="email" placeholder=" " />
+                                    <label htmlFor="email" className="form__label">Email</label>
+
+                                    {/* form feedback */}
+                                    <i className="fa fa-check-circle" aria-hidden="true"></i>
+                                    <i className="fa fa-exclamation-triangle" aria-hidden="true"></i>
+                                    <small>Error message</small>
+                                </div>
+                            </div>
+
+                            {/* PASSWORD INPUT */}
+                            <div className="form-control-forms">
+                                <div className="form-group">
+                                    <input id="password" className="form__input input password" type="password" name="password" placeholder=" " />
+                                    <label htmlFor="password" className="form__label">Password</label>
+
+                                    {/* form feedback */}
+                                    <i className="fa fa-check-circle" aria-hidden="true"></i>
+                                    <i className="fa fa-exclamation-triangle" aria-hidden="true"></i>
+                                    <small>Error message</small>
+                                </div>
                             </div>
                         </div>
 
-                        {/* LAST NAME INPUT */}
-                        <div className="form-control-forms">
-                            <div className="form-group">
-                                <input type="text" id="lastName" className="form__input input" name="lastName" placeholder=" " />
-                                <label htmlFor="lastName" className="form__label">Last name</label>
-
-                                {/* form feedback */}
-                                <i className="fa fa-check-circle" aria-hidden="true"></i>
-                                <i className="fa fa-exclamation-triangle" aria-hidden="true"></i>
-                                <small>Error message</small>
-                            </div>
+                        {/* NEWSLETTER CHECKBOX */}
+                        <div className="register__form__checkbox flex">
+                            <label className="input-container">
+                                <input id="newsletterCheckbox" className="newsletterCheckbox input" type="checkbox" name="newsletterCheckbox" value="newsletterCheckbox" required />
+                                <span className="checkmark"></span>
+                            </label>
+                            <label className="pizza-label checkbox-label" htmlFor="newsletterCheckbox">Sign up for the Pole Position newsletter</label>
                         </div>
 
-                        {/* SALUTATION INPUT */}
-                        <div className="form-control-forms">
-                            <div className="form-group">
-                                <input type="text" id="salutation" className="form__input input salutation" name="salutation" placeholder=" " />
-                                <label htmlFor="salutation" className="form__label">Salutation</label>
+                        {/* PRIVACY + TERMS & CONDITIONS */}
+                        <p className="custom-form__no-acc p">
+                            By clicking on register you agree to the <Link className="custom-form__no-acc__link" to="/privacy-policy">terms, conditions & privacy policy</Link>
+                        </p>
 
-                                {/* form feedback */}
-                                <i className="fa fa-check-circle" aria-hidden="true"></i>
-                                <i className="fa fa-exclamation-triangle" aria-hidden="true"></i>
-                                <small>Error message</small>
-                            </div>
-                        </div>
+                        {/* SUBMIT BUTTON */}
+                        <button className="button button-primary skew" type="submit"><span>Payment <i className="fa fa-chevron-right first-chevron" aria-hidden="true"></i><i className="fa fa-chevron-right" aria-hidden="true"></i></span></button>
+                    </form>
+                </div>
 
-                        {/* BIRTHDATE INPUT */}
-                        <div className="form-control-forms">
-                            <div className="form-group">
-                                <input type="date" id="birthDate" className="form__input input birthDate" name="birthDate" placeholder=" " />
-                                <label htmlFor="birthDate" className="form__label">Birthdate</label>
-
-                                {/* form feedback */}
-                                <i className="fa fa-check-circle" aria-hidden="true"></i>
-                                <i className="fa fa-exclamation-triangle" aria-hidden="true"></i>
-                                <small>Error message</small>
-                            </div>
-                        </div>
-
-                        {/* COUNTRY INPUT */}
-                        <div className="form-control-forms">
-                            <div className="form-group">
-                                <input type="text" id="country" className="form__input input country" name="country" placeholder=" " />
-                                <label htmlFor="country" className="form__label">Country</label>
-
-                                {/* form feedback */}
-                                <i className="fa fa-check-circle" aria-hidden="true"></i>
-                                <i className="fa fa-exclamation-triangle" aria-hidden="true"></i>
-                                <small>Error message</small>
-                            </div>
-                        </div>
-
-                        <hr className="form__line line" />
-
-                        {/* EMAIL INPUT */}
-                        <div className="form-control-forms">
-                            <div className="form-group">
-                                <input type="text" id="email" className="form__input input email" name="email" placeholder=" " />
-                                <label htmlFor="email" className="form__label">Email</label>
-
-                                {/* form feedback */}
-                                <i className="fa fa-check-circle" aria-hidden="true"></i>
-                                <i className="fa fa-exclamation-triangle" aria-hidden="true"></i>
-                                <small>Error message</small>
-                            </div>
-                        </div>
-
-                        {/* PASSWORD INPUT */}
-                        <div className="form-control-forms">
-                            <div className="form-group">
-                                <input id="password" className="form__input input password" type="password" name="password" placeholder=" " />
-                                <label htmlFor="password" className="form__label">Password</label>
-
-                                {/* form feedback */}
-                                <i className="fa fa-check-circle" aria-hidden="true"></i>
-                                <i className="fa fa-exclamation-triangle" aria-hidden="true"></i>
-                                <small>Error message</small>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* NEWSLETTER CHECKBOX */}
-                    <div className="register__form__checkbox flex">
-                        <label className="input-container">
-                            <input id="newsletterCheckbox" className="newsletterCheckbox input" type="checkbox" name="newsletterCheckbox" value="newsletterCheckbox" required />
-                            <span className="checkmark"></span>
-                        </label>
-                        <label className="pizza-label checkbox-label" htmlFor="newsletterCheckbox">Sign up for the Pole Position newsletter</label>
-                    </div>
-
-                    {/* PRIVACY + TERMS & CONDITIONS */}
-                    <p className="custom-form__no-acc p">
-                        By clicking on register you agree to the <Link className="custom-form__no-acc__link" to="/privacy-policy">terms, conditions & privacy policy</Link>
-                    </p>
-
-                    {/* SUBMIT BUTTON */}
-                    <button className="button button-primary skew" type="submit"><span>Payment <i className="fa fa-chevron-right first-chevron" aria-hidden="true"></i><i className="fa fa-chevron-right" aria-hidden="true"></i></span></button>
-                </form>
+                <img className="register__img" src={bannerImg} alt="Banner img login page" />
             </div>
-
-            <img className="register__img" src={bannerImg} alt="Banner img login page" />
         </section >
     );
 }
