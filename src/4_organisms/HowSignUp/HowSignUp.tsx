@@ -9,7 +9,7 @@ function HowSignUp() {
             <h2 className="howsignup__title section__title">How to sign up for this awesome blog?</h2>
 
             <p className="howsignup__p">
-                Het is al geruime tijd een bekend gegeven dat een lezer, tijdens het bekijken van de layout van een.
+                Follow these steps to give yourself quick and easy access to everything F1! You will thank yourself later...
             </p>
 
             <div className="howsignup__steps">

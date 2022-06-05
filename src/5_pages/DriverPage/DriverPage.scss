@@ -16,12 +16,16 @@
                 }
             }
         }
+
+        .recentShots {
+            background-color: $neutrals-200;
+        }
     
         .mightAlsoLike {
-            background-color: $neutrals-200;
+            background-color: $neutrals-100;
 
             .driver-team {
-                background-color: $neutrals-100;
+                background-color: $neutrals-200;
 
                 .button {
                     background-color: $neutrals-900;
@@ -49,15 +53,19 @@
                 }
             }
         }
+
+        .recentShots {
+            background-color: $neutrals-800;
+        }
     
         .mightAlsoLike {
-            background-color: $neutrals-800;
+            background-color: $neutrals-900;
 
             .driver-team {
-                background-color: $neutrals-900;
+                background-color: $neutrals-800;
 
                 .button {
-                    background-color: $neutrals-800;
+                    background-color: $neutrals-900;
                 }
             }
         }

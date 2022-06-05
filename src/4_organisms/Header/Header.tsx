@@ -27,7 +27,7 @@ function Header() {
                 <img className="header__logo dark" src={headerLogoDark} alt="Full logo Pole Position" />
 
                 <p className="header__p p">
-                    Het is al geruime tijd een bekend gegeven dat een lezer, tijdens het bekijken van de layout van een.
+                    Pole Position is the place where you find all latest F1 News.<br className="desktop" /> Are you a true passionate F1 fan?
                 </p>
 
                 <Link className="button button-primary skew" to="/register">

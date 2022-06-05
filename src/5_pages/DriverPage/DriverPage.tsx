@@ -22,9 +22,8 @@ function DriverPage() {
             </Helmet>
 
             <DriverDetailHeader />
-            <LatestNews />
-            <FactsNumbers />
             <MoreRecentNews />
+            <FactsNumbers />
             <Slideshow />
             <MightAlsoLikeDriver />
         </div>

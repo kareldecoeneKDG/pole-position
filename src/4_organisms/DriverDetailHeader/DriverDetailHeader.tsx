@@ -6,11 +6,18 @@ import Socials from '../../3_molecules/Socials/Socials';
 import Max from './max.png';
 import MaxLogo from './Max-logo.png';
 import RedBullLogo from './redbull.png';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 function DriverDetailHeader() {
     return (
         <div className="detailHeader section">
+            {/* Breadcrumbs */}
+            <div className="breadcrumbs mobile">
+                <Link to="/driverStandings" className="breadcrumbs__item">Drivers</Link>
+                <i className="fa fa-chevron-right" aria-hidden="true"></i>
+                <NavLink to="/driver" className="breadcrumbs__item">Max Verstappen</NavLink>
+            </div>
+
             <div className="top flex">
                 <div className="top__drivers top-driver">
                     <img className="top-driver__img" src={Max} alt="Picture of driver" />
@@ -47,6 +54,10 @@ function DriverDetailHeader() {
                             </div>
                         </div>
 
+                        <Socials />
+                    </div>
+
+                    <div className="socials-mobile mobile">
                         <Socials />
                     </div>
 

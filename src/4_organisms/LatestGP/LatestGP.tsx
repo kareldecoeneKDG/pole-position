@@ -7,7 +7,7 @@ function LatestGP() {
             <h2 className="latestGP__title">See the latest news for the next GP!</h2>
 
             <p className="latestGP__paragraph">
-                Het is al geruime tijd een bekend gegeven dat een lezer, tijdens het bekijken van de layout van een.
+                Find the latest articles, timetable and other info about the Spanisch Grand Prix. You don't want to miss out, do you?
             </p>
 
             <Link className="button button-primary skew" to="/grandprix-detail">

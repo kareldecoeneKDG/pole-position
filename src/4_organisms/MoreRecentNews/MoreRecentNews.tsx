@@ -20,10 +20,6 @@ function MoreRecentNews() {
                 <Link to="/blog-detail">
                     <Article />
                 </Link>
-
-                <Link to="/blog-detail">
-                    <Article />
-                </Link>
             </div>
 
             <div className="center">

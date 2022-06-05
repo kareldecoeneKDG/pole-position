@@ -9,7 +9,9 @@ function Platform() {
             <div className="flex-desktop">
                 <div className="platform__heading">
                     <h2 className="platform__title section__title">All-in-one platform</h2>
-                    <p className="desktop">Het is al geruime tijd een bekend gegeven dat een lezer, tijdens het bekijken van de layout van een.</p>
+                    <p className="desktop">
+                        This is your number one access to F1 articles, driver & team socials, view their history and more.
+                    </p>
                 </div>
 
                 <div className="platform__items ">

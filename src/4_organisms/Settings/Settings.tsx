@@ -8,7 +8,7 @@ function Settings() {
             {/* SETTINGS */}
             <div className="settings__group settings-account">
                 <div className="settings__header">
-                    <h2 className="settings__header__title">Settings</h2>
+                    <h2 className="settings__header__title">Account</h2>
                     <p className="settings__header__subtitle">Account details</p>
                 </div>
 

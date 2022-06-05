@@ -14,7 +14,7 @@ function Newsletter() {
                     <h3 className="newsletter__content__title">Make sure you don't miss anything!</h3>
 
                     <p className="newsletter__content__p">
-                        Het is al geruime tijd een bekend gegeven dat een lezer, tijdens het bekijken van de layout van een.
+                        Sign up for our newsletter to be up to date with all new features & other important stuff. No spam, we promise.
                     </p>
 
                     <form className="form">

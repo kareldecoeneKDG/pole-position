@@ -13,7 +13,7 @@ function Driver() {
 
                 <h3 className="driver-team__content__title">Charles Leclercq</h3>
 
-                <p className="driver-team__content__paragraph">Het is al geruime tijd een bekend gegeven dat een lezer, tijdens het bekijken van de layout van een.</p>
+                <p className="driver-team__content__paragraph">Leclerq entered the F1 grid in 2018 and was born in Monaco. He drove for the Alfo Romeo & Ferrari team.</p>
 
                 <a className="button button-secondary skew" href="#"><span>Discover driver <i className="fa fa-chevron-right first-chevron" aria-hidden="true"></i><i className="fa fa-chevron-right" aria-hidden="true"></i></span></a>
             </div>

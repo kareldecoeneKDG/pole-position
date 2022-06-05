@@ -6,7 +6,7 @@ function BlogSearch() {
             <h2 className="blogSearch__title">Blog</h2>
 
             <p className="blogSearch__p">
-                Het is al geruime tijd een bekend gegeven dat een lezer, tijdens het bekijken.
+                Search on title, driver or team to find your specific article. Or go through the list and read them all.
             </p>
 
             <form className="blogSearch__form">

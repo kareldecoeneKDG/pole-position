@@ -1,7 +1,7 @@
 .footer {
     padding: 50px 20px 30px 20px;
     background-color: $neutrals-900;
-    box-shadow: inset 0 6px 5px -9px $neutrals-100;
+    box-shadow: $footer-shadow;
     position: relative;
     bottom: 0;
 

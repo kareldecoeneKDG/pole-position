@@ -5,6 +5,7 @@ import SavedBlogposts from '../../4_organisms/SavedBlogposts/SavedBlogposts';
 import LatestGP from '../../4_organisms/LatestGP/LatestGP';
 import Settings from '../../4_organisms/Settings/Settings';
 import Subnav from '../../4_organisms/Subnav/Subnav';
+import { Link, NavLink } from 'react-router-dom';
 
 function DashboardPage() {
     useEffect(() => {
@@ -23,9 +24,16 @@ function DashboardPage() {
             <Helmet>
                 <title>Dashboard | Pole Positon - F1 Blog</title>
             </Helmet>
-            
+
             {/* Subnavigation */}
             <Subnav selected={selected} setSelected={setSelected} />
+
+            {/* Breadcrumbs */}
+            <div className="breadcrumbs mobile">
+                <Link to="/dashboard" className="breadcrumbs__item">Dashboard</Link>
+                <i className="fa fa-chevron-right" aria-hidden="true"></i>
+                <NavLink to="/dashboard" className="breadcrumbs__item">Saved blogposts</NavLink>
+            </div>
 
             {/* Saved blogposts content */}
             <SavedBlogposts />

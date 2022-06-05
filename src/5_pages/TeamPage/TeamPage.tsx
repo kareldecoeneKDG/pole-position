@@ -21,12 +21,11 @@ function TeamPage() {
             <Helmet>
                 <title>Red Bull | Pole Positon - F1 Blog</title>
             </Helmet>
-            
+
             <TeamDetailHeader />
-            <LatestNews />
+            <MoreRecentNews />
             <FactsNumbers />
             <HistoryHighlights />
-            <MoreRecentNews />
             <Slideshow />
             <MightAlsoLikeTeams />
         </section>

@@ -9,7 +9,7 @@ function Benefits() {
             <h2 className="benefits__title section__title">Discuss the next F1 GP live with others</h2>
 
             <p className="benefits__p">
-                Het is al geruime tijd een bekend gegeven dat een lezer, tijdens het bekijken van de layout van een.
+                Are you in search of a true F1 community where you can find <br className="desktop" />all latest info related to F1?
             </p>
 
             <div className="benefits__items flex-desktop">

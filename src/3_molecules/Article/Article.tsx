@@ -13,10 +13,10 @@ function Article() {
                     <p className="tag detail">8 min read</p>
                 </div>
 
-                <h4 className="article__content__title">Mogelijk voordeel voor Red Bull in tweede helft van seizoen</h4>
+                <h4 className="article__content__title">Possible advantage for Red Bull in the second half of the season</h4>
 
                 <p className="article__content__paragraph">
-                    Het is al geruime tijd een bekend gegeven dat een lezer, tijdens het bekijken van de layout van een.
+                    Helmut Marko has confirmed that Red Bull Racing's RB18 is roughly ten kilos of 'overweight'...
                 </p>
 
                 <div className="article__content__bottom flex">
