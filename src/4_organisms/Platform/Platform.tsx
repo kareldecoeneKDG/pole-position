@@ -5,7 +5,7 @@ import PlatformItem from '../../3_molecules/PlatformItem/PlatformItem';
 
 function Platform() {
     return (
-        <section className="platform section">
+        <section id="platform" className="platform section">
             <div className="flex-desktop">
                 <div className="platform__heading">
                     <h2 className="platform__title section__title">All-in-one platform</h2>

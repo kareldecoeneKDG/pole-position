@@ -120,6 +120,10 @@
             transform: translate(0%, -50%);
             top: 45%;
 
+            &.nav-website {
+                display: none !important;
+            }
+
             a {
                 font-family: $primary-font;
                 font-size: 30px;
@@ -306,6 +310,10 @@
             gap: 54px;
             position: absolute;
             left: 259px;
+
+            &.nav-website {
+                display: none !important;
+            }
 
             &__link {
                 font-family: $primary-font;

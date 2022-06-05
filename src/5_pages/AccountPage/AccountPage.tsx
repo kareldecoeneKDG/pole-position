@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { Link, NavLink } from 'react-router-dom';
+import Navbar from '../../4_organisms/NavBar/NavBar';
 
 import Settings from '../../4_organisms/Settings/Settings';
 import Subnav from '../../4_organisms/Subnav/Subnav';
@@ -22,6 +23,8 @@ function AccountPage() {
             <Helmet>
                 <title>Account | Pole Positon - F1 Blog</title>
             </Helmet>
+            
+            <Navbar />
 
             {/* Subnavigation */}
             <Subnav selected={selected} setSelected={setSelected} />

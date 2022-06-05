@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet';
 
+import Navbar from '../../4_organisms/NavBar/NavBar';
 import SavedBlogposts from '../../4_organisms/SavedBlogposts/SavedBlogposts';
 import LatestGP from '../../4_organisms/LatestGP/LatestGP';
 import Settings from '../../4_organisms/Settings/Settings';
@@ -24,6 +25,8 @@ function DashboardPage() {
             <Helmet>
                 <title>Dashboard | Pole Positon - F1 Blog</title>
             </Helmet>
+
+            <Navbar />
 
             {/* Subnavigation */}
             <Subnav selected={selected} setSelected={setSelected} />

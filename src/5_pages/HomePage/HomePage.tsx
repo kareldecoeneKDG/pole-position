@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 
+import Navbar from '../../4_organisms/NavBar/NavBar';
 import Header from '../../4_organisms/Header/Header';
 import LatestNews from '../../4_organisms/LatestNews/LatestNews';
 import Benefits from '../../4_organisms/Benefits/Benefits';
@@ -20,6 +21,7 @@ function HomePage() {
                 <title>Home | Pole Positon - F1 Blog</title>
             </Helmet>
 
+            <Navbar />
             <Header />
             <LatestNews />
             <Benefits />

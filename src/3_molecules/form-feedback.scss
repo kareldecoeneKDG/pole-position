@@ -7,6 +7,10 @@
         font-size: 16px;
         width: 16px;
         height: 16px;
+        visibility: hidden;
+        position: absolute;
+        top: 24px;
+        right: 20px;
 
         &.fa-check-circle {
             font-size: 18px;
@@ -15,7 +19,7 @@
 
     &.success {
         .input {
-            border-color: $success-500;
+            border-color: $success-500 !important;
         }
 
         i.fa-check-circle {
@@ -29,7 +33,7 @@
         padding-bottom: 20px;
 
         .input {
-            border-color: $primary-600;
+            border-color: $primary-600 !important;
         }
 
         i.fa-exclamation-triangle {
@@ -50,13 +54,6 @@
 
     input {
         margin-bottom: 3px !important;
-    }
-
-    i {
-        visibility: hidden;
-        position: absolute;
-        top: 24px;
-        right: 20px;
     }
 
     small {

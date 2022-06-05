@@ -101,11 +101,18 @@ function Navbar() {
             </Link>
 
             {/* Desktop nav items */}
-            <div className="links-desktop desktop">
-                <NavLink to="dashboard" className="links-desktop__link">Dashboard <i className="fa fa-chevron-down" aria-hidden="true"></i></NavLink>
-                <NavLink to="blog" className="links-desktop__link">Blog</NavLink>
-                <NavLink to="driverStandings" className="links-desktop__link">Standings <i className="fa fa-chevron-down" aria-hidden="true"></i></NavLink>
-                <NavLink to="grandprixs" className="links-desktop__link">Grand Prixs</NavLink>
+            <div className="links-desktop nav-webapp desktop">
+                <NavLink to="/dashboard" className="links-desktop__link">Dashboard <i className="fa fa-chevron-down" aria-hidden="true"></i></NavLink>
+                <NavLink to="/blog" className="links-desktop__link">Blog</NavLink>
+                <NavLink to="/driverStandings" className="links-desktop__link">Standings <i className="fa fa-chevron-down" aria-hidden="true"></i></NavLink>
+                <NavLink to="/grandprixs" className="links-desktop__link">Grand Prixs</NavLink>
+            </div>
+
+            {/* Desktop nav items */}
+            <div className="links-desktop nav-website desktop">
+                <a href="#benefits" className="links-desktop__link">Benefits</a>
+                <a href="#platform" className="links-desktop__link">Pricing</a>
+                <a href="#newsletter" className="links-desktop__link">Newsletter</a>
             </div>
 
             {/* Desktop light/dark theme switch */}
@@ -139,11 +146,17 @@ function Navbar() {
                     </div>
                 </div>
 
-                <div className="links">
-                    <NavLink to="dashboard" className="mobile-link">Dashboard</NavLink>
-                    <NavLink to="blog" className="mobile-link">Blog</NavLink>
-                    <NavLink to="driverStandings" className="mobile-link">Standings</NavLink>
-                    <NavLink to="grandprixs" className="mobile-link">Grand Prixs</NavLink>
+                <div className="links nav-webapp">
+                    <NavLink to="/dashboard" className="mobile-link">Dashboard</NavLink>
+                    <NavLink to="/blog" className="mobile-link">Blog</NavLink>
+                    <NavLink to="/driverStandings" className="mobile-link">Standings</NavLink>
+                    <NavLink to="/grandprixs" className="mobile-link">Grand Prixs</NavLink>
+                </div>
+
+                <div className="links nav-website">
+                    <Link to="#benefits" className="mobile-link">Benefits</Link>
+                    <Link to="#platform" className="mobile-link">Pricing</Link>
+                    <Link to="#newsletter" className="mobile-link">Newsletter</Link>
                 </div>
 
                 <div className="bottom">

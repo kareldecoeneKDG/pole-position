@@ -38,6 +38,14 @@
                 padding: 14px 20px;
                 margin-bottom: 10px;
             }
+
+            .form-control-forms {
+                .form-group {
+                    i {
+                        top: 20px;
+                    }
+                }
+            }
         }
     }
 }
@@ -60,9 +68,17 @@
     
             .form {
                 &__input {
-                    background-color: $neutrals-200;
+                    background-color: $neutrals-100;
                     border: 1px solid $neutrals-600;
                     color: $neutrals-900;
+                }
+
+                .form-control-forms {
+                    .form-group {
+                        label {
+                            background-color: $neutrals-100;
+                        }
+                    }
                 }
             }
         }
@@ -90,9 +106,13 @@
                 margin-bottom: 50px;
 
                 &__input {
-                    background-color: $neutrals-800;
+                    background-color: $neutrals-900;
                     border: 1px solid $neutrals-700;
                     color: $neutrals-100;
+                }
+
+                label {
+                    background-color: $neutrals-900;
                 }
             }
         }

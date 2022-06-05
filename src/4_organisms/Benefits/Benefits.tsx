@@ -5,7 +5,7 @@ import Benefit from '../../3_molecules/Benefit/Benefit';
 
 function Benefits() {
     return (
-        <section className="benefits section">
+        <section id="benefits" className="benefits section">
             <h2 className="benefits__title section__title">Discuss the next F1 GP live with others</h2>
 
             <p className="benefits__p">

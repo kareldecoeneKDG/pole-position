@@ -74,7 +74,7 @@ function App() {
 
 
 
-    // Light/dark theme
+    // Light/dark theme - KEEP THIS CODE
     let theme = localStorage.getItem('data-theme');
 
 
@@ -108,7 +108,66 @@ function App() {
 
 
 
-    //const [checked, setChecked] = useState(false);
+    //const [checked, setChecked] = useState(false); */
+
+
+
+    /* Right menus -> geprobeerd
+    //console.log(window.location.href);
+    //hou rekening met #container en url van productie site
+    //let op met 2 menus (mobile + desktop) met zelfde class...
+    const navWebsite = document.querySelectorAll('.nav-website');
+    const navApp = document.querySelectorAll('.nav-webapp');
+
+    console.log(navWebsite);
+    console.log(navApp);
+
+    function checkWhichMenu() {
+        const fullUrl = window.location.href;
+        const path = fullUrl.replace('localhost:3000', '');
+
+        //en andere #ids
+        if (path == 'http:///' || path == 'http:///#container') {
+            navWebsite.forEach(nav => {
+                nav.classList.add('active');
+            });
+            navApp.forEach(nav => {
+                nav.classList.remove('active');
+            });
+        }
+        else {
+            navWebsite.forEach(nav => {
+                nav.classList.remove('active');
+            });
+            navApp.forEach(nav => {
+                nav.classList.add('active');
+            });
+        }
+    }
+
+    checkWhichMenu();
+
+    //bij elke click op menu item checken
+    const mobileMenuItems = document.querySelectorAll('.mobile-link');
+    const desktopMenuItems = document.querySelectorAll('.links-desktop__link');
+
+    mobileMenuItems.forEach(menuItem => {
+        menuItem.addEventListener('click', checkWhichMenu);
+    });
+    desktopMenuItems.forEach(menuItem => {
+        menuItem.addEventListener('click', checkWhichMenu);
+    });
+
+    //beter bij change in url
+    (function (history) {
+        var pushState = history.pushState;
+        history.pushState = function (state) {
+            // YOUR CUSTOM HOOK / FUNCTION
+            console.log('I am called from pushStateHook');
+            return pushState.apply(history, ['test', 'test2']);
+        };
+    })(window.history); */
+
 
     return (
         <Router>
@@ -118,7 +177,6 @@ function App() {
             {/* <div className="container"> */}
 
             <div id="container" className="container">
-                <Navbar />
 
 
                 {/* <Nav /> */}
