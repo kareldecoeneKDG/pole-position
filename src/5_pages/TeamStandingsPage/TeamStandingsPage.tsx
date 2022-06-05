@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 
 import StandingTeam from '../../3_molecules/StandingTeam/StandingTeam';
@@ -8,9 +9,6 @@ function TeamStandingsPage() {
     useEffect(() => {
         //scroll to top on opening
         document.documentElement.scrollTo(0, 0);
-
-        //change title of tab
-        document.title = "Team Standings | Pole Positon - F1 Blog";
     }, []);
 
     const [selected, setSelected] = useState("");
@@ -21,6 +19,10 @@ function TeamStandingsPage() {
 
     return (
         <div className="standings">
+            <Helmet>
+                <title>Team standings | Pole Positon - F1 Blog</title>
+            </Helmet>
+
             {/* Subnavigation */}
             <Subnav selected={selected} setSelected={setSelected} />
 

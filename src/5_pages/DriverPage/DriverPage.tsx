@@ -7,18 +7,20 @@ import MoreRecentNews from '../../4_organisms/MoreRecentNews/MoreRecentNews';
 import RecentShots from '../../4_organisms/RecentShots/RecentShots';
 import MightAlsoLikeDriver from '../../4_organisms/MightAlsoLikeDriver/MightAlsoLikeDriver';
 import Slideshow from '../../4_organisms/Slideshow/Slideshow';
+import { Helmet } from 'react-helmet';
 
 function DriverPage() {
     useEffect(() => {
         //scroll to top on opening
         document.documentElement.scrollTo(0, 0);
-
-        //change title of tab
-        document.title = "Driver | Pole Positon - F1 Blog";
     }, []);
 
     return (
         <div className="driverPage">
+            <Helmet>
+                <title>Driver | Pole Positon - F1 Blog</title>
+            </Helmet>
+
             <DriverDetailHeader />
             <LatestNews />
             <FactsNumbers />

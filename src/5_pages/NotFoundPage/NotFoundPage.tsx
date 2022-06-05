@@ -3,18 +3,20 @@ import React, { useEffect } from 'react';
 import ErrorLogo from './error-logo.png';
 import ErrorLogoDark from './error-logo-dark.png';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 
 function NotFoundPage() {
     useEffect(() => {
         //scroll to top on opening
         document.documentElement.scrollTo(0, 0);
-
-        //change title of tab
-        document.title = "Error | Pole Positon - F1 Blog";
     }, []);
     
     return (
         <section className="error404">
+            <Helmet>
+                <title>Error | Pole Positon - F1 Blog</title>
+            </Helmet>
+
             <div className="error404__content">
                 <img className="error404__content__logo light" src={ErrorLogo} alt="Error 404 logo" />
                 <img className="error404__content__logo dark" src={ErrorLogoDark} alt="Error Dark logo" />

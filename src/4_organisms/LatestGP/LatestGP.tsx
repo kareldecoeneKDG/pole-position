@@ -11,7 +11,7 @@ function LatestGP() {
             </p>
 
             <Link className="button button-primary skew" to="/grandprix-detail">
-                <span>Australian GP <i className="fa fa-chevron-right first-chevron" aria-hidden="true"></i><i className="fa fa-chevron-right" aria-hidden="true"></i></span>
+                <span>Spanisch GP <i className="fa fa-chevron-right first-chevron" aria-hidden="true"></i><i className="fa fa-chevron-right" aria-hidden="true"></i></span>
             </Link>
         </div>
     );

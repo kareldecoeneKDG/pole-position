@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 
 import logo from './logo-hollow.png';
+import sun from './sun.png';
+import moon from './moon.png';
 
-const Navbar = () => {
+function Navbar() {
 
     /* --- MOBILE MENU --- */
     // Mobile menu switcher
@@ -45,6 +47,7 @@ const Navbar = () => {
         theme = "light";
     }
 
+    //if device prefers dark mode, start blog in darkmode
     if (localStorage.getItem('data-theme') == '') {
         let darkThemeMq = window.matchMedia("(prefers-color-scheme: dark)");
 
@@ -58,22 +61,25 @@ const Navbar = () => {
         document.documentElement.setAttribute("data-theme", localStorage.getItem('data-theme')!);
     }
 
-    // Get the element based on ID
+    // Get the element based on ID + icons
     const checkbox = document.getElementById("switch");
+    const sunIcon = document.querySelector('.sun');
+    const moonIcon = document.querySelector('.moon');
 
-    // Apply retrived them to the website
-    checkbox?.addEventListener('change', () => {
-        //let theme = localStorage.getItem('data-theme'); // Retrieve saved them from local storage
-
+    const changeTheme = () => {
         if (theme === 'dark') {
             theme = 'light';
             changeThemeToLight()
-            //checkbox.checked = true;
         } else {
             theme = 'dark';
             changeThemeToDark()
         }
-    });
+    }
+
+    // Apply retrived theme to the website
+    checkbox?.addEventListener('change', changeTheme);
+    sunIcon?.addEventListener('click', changeTheme);
+    moonIcon?.addEventListener('click', changeTheme);
 
     //toggle checkbox
     const [checked, setChecked] = useState(false);
@@ -96,20 +102,22 @@ const Navbar = () => {
 
             {/* Desktop nav items */}
             <div className="links-desktop desktop">
-                <NavLink to="dashboard" className="links-desktop__link">Dashboard</NavLink>
+                <NavLink to="dashboard" className="links-desktop__link">Dashboard <i className="fa fa-chevron-down" aria-hidden="true"></i></NavLink>
                 <NavLink to="blog" className="links-desktop__link">Blog</NavLink>
-                <NavLink to="driverStandings" className="links-desktop__link">Standings</NavLink>
+                <NavLink to="driverStandings" className="links-desktop__link">Standings <i className="fa fa-chevron-down" aria-hidden="true"></i></NavLink>
                 <NavLink to="grandprixs" className="links-desktop__link">Grand Prixs</NavLink>
             </div>
 
             {/* Desktop light/dark theme switch */}
             <div className="toggle-container desktop">
+                <img className="toggle-container__icon sun" src={sun} alt="sun icon theme switch" />
+                <img className="toggle-container__icon moon" src={moon} alt="moon icon theme switch" />
                 <input type="checkbox" id="switch" name="theme" checked={checked} onChange={(e) => setChecked(e.target.checked)} /><label htmlFor="switch" onClick={() => setChecked((c) => c)}>Toggle</label>
             </div>
 
             {/* Desktop account button */}
-            <Link className="button button-primary desktop" to="/dashboard">
-                <i className="chevron-first fa fa-user" aria-hidden="true"></i> Karel Decoene
+            <Link className="button button-primary desktop skew" to="/dashboard">
+                <span><i className="chevron-first fa fa-user" aria-hidden="true"></i> Karel Decoene</span>
             </Link>
 
             {/* Mobile account button */}
@@ -125,6 +133,8 @@ const Navbar = () => {
                     </Link>
 
                     <div className="toggle-container">
+                        <img className="toggle-container__icon sun" src={sun} alt="sun icon theme switch" />
+                        <img className="toggle-container__icon moon" src={moon} alt="moon icon theme switch" />
                         <input type="checkbox" id="switch" name="theme" checked={checked} onChange={(e) => setChecked(e.target.checked)} /><label htmlFor="switch" onClick={() => setChecked((c) => c)}>Toggle</label>
                     </div>
                 </div>
@@ -137,10 +147,10 @@ const Navbar = () => {
                 </div>
 
                 <div className="bottom">
-                    <Link className="button button-primary" to="/dashboard">
-                        <i className="chevron-first fa fa-user" aria-hidden="true"></i> Karel Decoene
+                    <Link className="button button-primary skew" to="/dashboard">
+                        <span><i className="chevron-first fa fa-user" aria-hidden="true"></i> Karel Decoene</span>
                     </Link>
-                    <a className="button button-secondary" href="/"><i className="chevron-first fa fa-sign-out" aria-hidden="true"></i> Sign out</a>
+                    <a className="button button-secondary skew" href="/"><span><i className="chevron-first fa fa-sign-out" aria-hidden="true"></i> Sign out</span></a>
                 </div>
             </div>
         </div>

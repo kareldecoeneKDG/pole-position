@@ -1,10 +1,15 @@
 import React, { useEffect } from 'react';
+import { Helmet } from 'react-helmet';
 
 function PrivacyPolicyPage() {
     useEffect(() => { document.documentElement.scrollTo(0,0); }, []);
     
     return (
         <section className="privacyPolicy section">
+            <Helmet>
+                <title>Privacy policy | Pole Positon - F1 Blog</title>
+            </Helmet>
+            
             <h2 className="privacyPolicy__title section__title">Privacy Policy</h2>
 
             <p className="privacyPolicy__p">

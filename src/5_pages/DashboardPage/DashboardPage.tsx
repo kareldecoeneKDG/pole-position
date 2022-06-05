@@ -10,9 +10,6 @@ function DashboardPage() {
     useEffect(() => {
         //scroll to top on opening
         document.documentElement.scrollTo(0, 0);
-
-        //change title of tab
-        document.title = "Dashboard | Pole Positon - F1 Blog";
     }, []);
 
     const [selected, setSelected] = useState("");

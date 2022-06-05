@@ -106,10 +106,25 @@
         &-content-desktop {
             display: flex !important;
             height: 70px;
-            justify-content: flex-start;
-            align-items: center;
-            gap: 10px;
             padding: 0px 120px;
+            justify-content: space-between;
+
+            &__links {
+                justify-content: flex-start;
+                align-items: center;
+                gap: 10px;
+            }
+
+            .signout-button {
+                background-color: $neutrals-900;
+                color: $neutrals-100;
+            }
+
+            &.standings-subnav {
+                justify-content: flex-start;
+                align-items: center;
+                gap: 10px;
+            }
         }
 
         &-item {

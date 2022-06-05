@@ -314,12 +314,22 @@
                 font-weight: 500;
                 transition: 0.3s;
 
+                i {
+                    display: none;
+                    font-size: 12px;
+                    margin-left: 4px;
+                }
+
                 &:hover {
                     color: $primary-600 !important;
                 }
 
                 &.active {
                     color: $primary-600 !important;
+
+                    i {
+                        display: inline-block;
+                    }
                 }
             }
         }

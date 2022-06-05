@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Helmet } from 'react-helmet';
 
 import bannerImg from './article1.jpeg';
 
@@ -6,9 +7,6 @@ function PaymentPage() {
     useEffect(() => {
         //scroll to top on opening
         document.documentElement.scrollTo(0, 0);
-
-        //change title of tab
-        document.title = "Payment | Pole Positon - F1 Blog";
     }, []);
 
     /* --- FORM FEEDBACK --- */
@@ -103,6 +101,10 @@ function PaymentPage() {
 
     return (
         <section className="payment section formPage">
+            <Helmet>
+                <title>Payment | Pole Positon - F1 Blog</title>
+            </Helmet>
+            
             <div className="login__content">
                 <h2 className="title">Payment</h2>
                 <p className="p">Small cost, big value.</p>

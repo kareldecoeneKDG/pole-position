@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { Helmet } from "react-helmet";
 import { Link, useLocation } from "react-router-dom";
 
 import Socials from '../../3_molecules/Socials/Socials';
@@ -10,13 +11,13 @@ function BlogDetailPage() {
     useEffect(() => {
         //scroll to top on opening
         document.documentElement.scrollTo(0, 0);
-
-        //change title of tab
-        document.title = "Blog detail | Pole Positon - F1 Blog";
     }, []);
 
     return (
         <section className="blogDetail">
+            <Helmet>
+                <title>Blog detail | Pole Positon - F1 Blog</title>
+            </Helmet>
 
             <div className="blogDetail__content section">
                 <p className="blogDetail__content__date tag detail">Januari 13 2022 - 10:15</p>
@@ -49,7 +50,7 @@ function BlogDetailPage() {
                         <p className="blogDetail__content__blogpostInfo__p">Karel Decoene</p>
 
                         <p className="blogDetail__content__blogpostInfo__title">TAGS</p>
-                        <p className="blogDetail__content__blogpostInfo__p"><span className="tag mercedes mercedes-bg">Mercedes</span><span className="tag redBull redBull-bg">Red Bull</span></p>
+                        <p className="blogDetail__content__blogpostInfo__p"><button className="button mercedes mercedes-bg skew"><span>Mercedes</span></button><button className="button redBull redBull-bg skew"><span>Red Bull</span></button></p>
 
                         <p className="blogDetail__content__blogpostInfo__title">SHARE</p>
                         <Socials />
@@ -75,7 +76,7 @@ function BlogDetailPage() {
                     <p className="blogDetail__content__blogpostInfo__p">Karel Decoene</p>
 
                     <p className="blogDetail__content__blogpostInfo__title">TAGS</p>
-                    <p className="blogDetail__content__blogpostInfo__p"><span className="tag mercedes mercedes-bg">Mercedes</span><span className="tag redBull redBull-bg">Red Bull</span></p>
+                    <p className="blogDetail__content__blogpostInfo__p"><button className="button mercedes mercedes-bg skew"><span>Mercedes</span></button><button className="button redBull redBull-bg skew"><span>Red Bull</span></button></p>
 
                     <p className="blogDetail__content__blogpostInfo__title">SHARE</p>
                     <Socials />

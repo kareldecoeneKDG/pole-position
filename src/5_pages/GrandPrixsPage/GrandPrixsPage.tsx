@@ -3,18 +3,20 @@ import { Link } from 'react-router-dom';
 
 import LatestGP from '../../4_organisms/LatestGP/LatestGP';
 import GrandPrix from '../../3_molecules/GrandPrix/GrandPrix';
+import { Helmet } from 'react-helmet';
 
 function GrandPrixsPage() {
     useEffect(() => {
         //scroll to top on opening
         document.documentElement.scrollTo(0, 0);
-
-        //change title of tab
-        document.title = "Grand Prixs | Pole Positon - F1 Blog";
     }, []);
 
     return (
         <div className="grandprixs">
+            <Helmet>
+                <title>Grand Prixs | Pole Positon - F1 Blog</title>
+            </Helmet>
+            
             <LatestGP />
 
             <div className="grandprixs-section section">

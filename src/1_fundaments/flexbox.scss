@@ -21,6 +21,10 @@
     gap: 5px;
 }
 
+.center {
+    text-align: center;
+}
+
 /* TABLET PORTRAIT - 1024PX */
 @media only screen and (min-width: $tablet-landscape) {
     .flex-tablet-landscape {

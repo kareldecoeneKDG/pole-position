@@ -54,7 +54,11 @@
     }
 
     &__articles {
-        padding-top: 50px;
+        padding-top: 20px;
+
+        .breadcrumbs {
+            margin-bottom: 50px;
+        }
 
         a {
             margin-bottom: 20px;
@@ -257,7 +261,11 @@
         }
 
         &__articles {
-            padding: 125px 120px; 
+            padding: 75px 120px 125px 120px;
+
+            .breadcrumbs {
+                margin-bottom: 75px;
+            }
 
             .section__title {
                 display: none;

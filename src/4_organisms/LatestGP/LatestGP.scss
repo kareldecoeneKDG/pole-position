@@ -1,9 +1,9 @@
 .latestGP {
     padding: 50px 20px;
-    margin: 0px 20px 75px 20px; //problem?
-    background-color: $primary-100;
+    margin: 0px 20px 75px 20px;
     border-radius: 30px;
     text-align: center;
+    filter: drop-shadow(0px 16px 30px rgba(34, 34, 34, 0.07));
 
     &__title {
         margin-bottom: 10px;
@@ -15,11 +15,44 @@
     }
 }
 
+/* LIGHT THEME COLORS */
+[data-theme="light"] {
+    .latestGP {
+        background-color: $primary-100;
+
+        &__title {
+            color: $neutrals-900;
+        }
+
+        &__paragraph {
+            color: $neutrals-900;
+        }
+    }
+}
+
+/* DARK THEME COLORS */
+[data-theme="dark"] {
+    .latestGP {
+        background: linear-gradient(0deg, rgba(34, 34, 34, 0.85), rgba(34, 34, 34, 0.85)), url("./latest-gp-bg.webp");
+        background-position: center; /* Center the image */
+        background-repeat: no-repeat; /* Do not repeat the image */
+        background-size: cover; /* Resize the background image to cover the entire container */
+
+        &__title {
+            color: $neutrals-100;
+        }
+
+        &__paragraph {
+            color: $neutrals-100;
+        }
+    }
+}
+
 /* TABLET PORTRAIT */
 @media only screen and (min-width: $tablet-portrait) {
     .latestGP {
         padding: 50px 50px;
-        margin: 0px 150px 75px 150px; //problem?
+        margin: 0px 150px 75px 150px;
     }
 }
 
@@ -38,7 +71,7 @@
 @media only screen and (min-width: $desktop-3) {
     .latestGP {
         margin-bottom: 125px;
-        
+
         &__title {
             max-width: 590px;
             margin-left: auto;

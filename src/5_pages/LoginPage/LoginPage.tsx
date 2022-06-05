@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 
 import bannerImg from './article1.jpeg';
@@ -7,9 +8,6 @@ function LoginPage() {
     useEffect(() => {
         //scroll to top on opening
         document.documentElement.scrollTo(0, 0);
-
-        //change title of tab
-        document.title = "Login | Pole Positon - F1 Blog";
     }, []);
 
     /* --- FORM FEEDBACK --- */
@@ -81,6 +79,10 @@ function LoginPage() {
 
     return (
         <section className="login section formPage">
+            <Helmet>
+                <title>Login | Pole Positon - F1 Blog</title>
+            </Helmet>
+            
             <div className="login__content">
                 <h2 className="title">Login</h2>
                 <p className="p">Please enter your email and password.</p>

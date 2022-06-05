@@ -41,6 +41,7 @@
         transform: skew(-11deg);
         text-align: center;
         outline: 0;
+        border-radius: $border-radius-x-small;
 
         /* Un-skew the text */
         & > span {

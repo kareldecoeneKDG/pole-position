@@ -5,6 +5,7 @@
     &__group {
         border-radius: 20px 20px 0px 0px;
         margin-bottom: 50px;
+        filter: drop-shadow(0px 16px 30px rgba(34, 34, 34, 0.07));
 
         &:last-of-type {
             margin-bottom: 0;
@@ -58,7 +59,7 @@
 [data-theme="light"] {
     .settings {
         &__item {
-            background-color: $neutrals-100;
+            background-color: $neutrals-500;
 
             &.item-grey {
                 background-color: $neutrals-200;
@@ -84,7 +85,7 @@
             background-color: $neutrals-800;
 
             &.item-grey {
-                background-color: $neutrals-900;
+                background-color: #343A40;
             }
 
             &__content {
@@ -104,6 +105,10 @@
 @media only screen and (min-width: $tablet-landscape) {
     .settings {
         &__item {
+            .flex {
+                height: 40px;
+            }
+
             &__content {
                 display: flex;
 
