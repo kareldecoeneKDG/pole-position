@@ -58,6 +58,8 @@ function Footer() {
                     <Link className="footer__section__p" to="/blog">Blog</Link>
                     <Link className="footer__section__p" to="/driverStandings">Standings</Link>
                     <Link className="footer__section__p" to="/grandprixs">Grand Prixs</Link>
+                    <Link className="footer__section__p" to="/login">Login</Link>
+                    <Link className="footer__section__p" to="/register">Register</Link>
                 </div>
 
                 {/* CONDITIONS & TERMS */}
@@ -93,6 +95,8 @@ function Footer() {
                         <Link className="footer__section__p" to="/blog">Blog</Link>
                         <Link className="footer__section__p" to="/driverStandings">Standings</Link>
                         <Link className="footer__section__p" to="/grandprixs">Grand Prixs</Link>
+                        <Link className="footer__section__p" to="/login">Login</Link>
+                        <Link className="footer__section__p" to="/register">Register</Link>
                     </div>
 
                     {/* HEADOFFICE */}

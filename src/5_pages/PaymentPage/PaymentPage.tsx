@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet';
+import { Link } from 'react-router-dom';
 
 import Navbar from '../../4_organisms/NavBar/NavBar';
 import bannerImg from './article1.jpeg';
@@ -101,19 +102,19 @@ function PaymentPage() {
     }
 
     return (
-        <section className="payment section formPage">
+        <section className="payment formPage">
             <Helmet>
                 <title>Payment | Pole Positon - F1 Blog</title>
             </Helmet>
 
             <Navbar />
 
-            <div className="payment__flex">
-                <div className="login__content">
+            <div className="formPage__flexbox">
+                <div className="formPage__flexbox__content section">
                     <h2 className="title">Payment</h2>
                     <p className="p">Small cost, big value.</p>
 
-                    <form className="payment__form custom-form">
+                    <form className="payment__form custom-form" noValidate>
 
                         {/* TEXT INPUTS */}
                         <div className="form__inputs-container">
@@ -172,11 +173,14 @@ function PaymentPage() {
                         </div>
 
                         {/* SUBMIT BUTTON */}
-                        <button className="button button-primary skew" type="submit"><span>Continue <i className="fa fa-chevron-right first-chevron" aria-hidden="true"></i><i className="fa fa-chevron-right" aria-hidden="true"></i></span></button>
+                        <div className="flex">
+                            <Link to="/register" className="button button-secondary skew"><span><i className="fa fa-chevron-left" aria-hidden="true"></i><i className="fa fa-chevron-left chevron-first" aria-hidden="true"></i> Personal info</span></Link>
+                            <button className="button button-primary skew" type="submit"><span>Continue <i className="fa fa-chevron-right first-chevron" aria-hidden="true"></i><i className="fa fa-chevron-right" aria-hidden="true"></i></span></button>
+                        </div>
                     </form>
                 </div>
 
-                <img className="login__img" src={bannerImg} alt="Banner img login page" />
+                <img className="formPage__flexbox__img" src={bannerImg} alt="Banner img login page" />
             </div>
         </section>
     );

@@ -10,6 +10,29 @@
         margin-bottom: 0;
     } */
 
+    &:hover {
+        .article__content {
+            &__bottom {
+                .icon-bg {
+                    animation: rollIn 0.3s linear;
+                    opacity: 1;
+                    transition: opacity 0.3s;
+                }
+
+                @keyframes rollIn {
+                    0% {
+                        opacity: 0;
+                        transform: translateX(-100%) rotate(-120deg);
+                    }
+                    100% {
+                        opacity: 1;
+                        transform: translateX(0px) rotate(0deg);
+                    }
+                }
+            }
+        }
+    }
+
     &__img {
         width: 100%;
         height: auto !important;
@@ -49,6 +72,7 @@
 
             .icon-bg {
                 background-color: $neutrals-900;
+                opacity: 0;
 
                 i {
                     color: $neutrals-100;

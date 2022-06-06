@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { NavLink, useParams } from 'react-router-dom';
+import { Link, NavLink, useParams } from 'react-router-dom';
 
 interface SubnavProps {
     setSelected: Function,
@@ -63,7 +63,7 @@ function Subnav({ selected, setSelected }: SubnavProps) {
                     }} className="dropdown-item button skew"><span>Account</span></NavLink>
                 </div>
 
-                <button className="signout-button button skew"><span><i className="chevron-first fa fa-sign-out" aria-hidden="true"></i> Sign out</span></button>
+                <Link to="/" className="signout-button button skew"><span><i className="chevron-first fa fa-sign-out" aria-hidden="true"></i> Sign out</span></Link>
             </div>
 
             {/* SUBNAV STANDINGS - MOBILE */}

@@ -135,19 +135,19 @@ function RegisterPage() {
     }
 
     return (
-        <section className="register section formPage">
+        <section className="register formPage">
             <Helmet>
                 <title>Register | Pole Positon - F1 Blog</title>
             </Helmet>
 
             <Navbar />
 
-            <div className="register__flexbox">
-                <div className="register__content">
+            <div className="formPage__flexbox">
+                <div className="formPage__flexbox__content section">
                     <h2 className="title">Register</h2>
                     <p className="p">To make a Pole Position account.</p>
 
-                    <form className="register__form custom-form">
+                    <form className="register__form custom-form" noValidate>
 
                         {/* TEXT INPUTS */}
                         <div className="form__inputs-container">
@@ -256,16 +256,23 @@ function RegisterPage() {
                         </div>
 
                         {/* PRIVACY + TERMS & CONDITIONS */}
-                        <p className="custom-form__no-acc p">
+                        <p className="privacy-policy-agree p">
                             By clicking on register you agree to the <Link className="custom-form__no-acc__link" to="/privacy-policy">terms, conditions & privacy policy</Link>
                         </p>
 
                         {/* SUBMIT BUTTON */}
-                        <button className="button button-primary skew" type="submit"><span>Payment <i className="fa fa-chevron-right first-chevron" aria-hidden="true"></i><i className="fa fa-chevron-right" aria-hidden="true"></i></span></button>
+                        <Link to="/payment" className="button button-primary skew"><span>Payment <i className="fa fa-chevron-right first-chevron" aria-hidden="true"></i><i className="fa fa-chevron-right" aria-hidden="true"></i></span></Link>
+
+                        <hr className="line" />
+
+                        <div className="to-register flex">
+                            <p className="to-register__p p">You have an account?</p>
+                            <Link to="/login" className="button button-primary skew" type="submit"><span>Login <i className="fa fa-chevron-right first-chevron" aria-hidden="true"></i><i className="fa fa-chevron-right" aria-hidden="true"></i></span></Link>
+                        </div>
                     </form>
                 </div>
 
-                <img className="register__img" src={bannerImg} alt="Banner img login page" />
+                <img className="formPage__flexbox__img" src={bannerImg} alt="Banner img login page" />
             </div>
         </section >
     );

@@ -21,7 +21,7 @@ function Article() {
 
                 <div className="article__content__bottom flex">
                     <a className="button button-secondary skew" href="#"><span>Read Article <i className="fa fa-chevron-right first-chevron" aria-hidden="true"></i><i className="fa fa-chevron-right" aria-hidden="true"></i></span></a>
-                    <a className="icon-bg" href="#"><i className="fa fa-times" aria-hidden="true"></i></a>
+                    <a className="icon-bg" href="#"><i className="fa fa-bookmark" aria-hidden="true"></i></a>
                 </div>
             </div>
         </article>

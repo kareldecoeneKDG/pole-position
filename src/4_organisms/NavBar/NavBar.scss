@@ -156,6 +156,10 @@
                 display: block;
                 width: 100%;
                 text-align: center;
+
+                &.nav-website {
+                    display: none !important;
+                }
             }
 
             .button-secondary {
@@ -338,6 +342,24 @@
                     i {
                         display: inline-block;
                     }
+                }
+            }
+        }
+
+        .nav-website {
+            display: none !important;
+
+            &:hover {
+                .chevron-first {
+                    margin-right: $icon-margin-button;
+                }
+            }
+        }
+
+        .nav-webapp {
+            &:hover {
+                .chevron-first {
+                    margin-right: $icon-margin-button;
                 }
             }
         }

@@ -126,13 +126,6 @@
         .toggle-container {
             label {
                 background-color: $neutrals-100;
-
-                &:after {
-                    background-color: $neutrals-900;
-                    left: calc(100% - 5px);
-                    -webkit-transform: translateX(-100%);
-                    transform: translateX(-100%);
-                }
             }
         }
     }

@@ -110,9 +110,9 @@ function Navbar() {
 
             {/* Desktop nav items */}
             <div className="links-desktop nav-website desktop">
-                <a href="#benefits" className="links-desktop__link">Benefits</a>
-                <a href="#platform" className="links-desktop__link">Pricing</a>
-                <a href="#newsletter" className="links-desktop__link">Newsletter</a>
+                <a href="/#benefits" className="links-desktop__link">Benefits</a>
+                <a href="/#platform" className="links-desktop__link">Pricing</a>
+                <a href="/#newsletter" className="links-desktop__link">Newsletter</a>
             </div>
 
             {/* Desktop light/dark theme switch */}
@@ -123,8 +123,13 @@ function Navbar() {
             </div>
 
             {/* Desktop account button */}
-            <Link className="button button-primary desktop skew" to="/dashboard">
+            <Link className="button button-primary desktop skew nav-webapp" to="/dashboard">
                 <span><i className="chevron-first fa fa-user" aria-hidden="true"></i> Karel Decoene</span>
+            </Link>
+
+            {/* Desktop account button */}
+            <Link className="button button-primary desktop skew nav-website" to="/dashboard">
+                <span><i className="chevron-first fa fa-sign-in" aria-hidden="true"></i> Sign in</span>
             </Link>
 
             {/* Mobile account button */}
@@ -154,15 +159,20 @@ function Navbar() {
                 </div>
 
                 <div className="links nav-website">
-                    <Link to="#benefits" className="mobile-link">Benefits</Link>
-                    <Link to="#platform" className="mobile-link">Pricing</Link>
-                    <Link to="#newsletter" className="mobile-link">Newsletter</Link>
+                    <Link to="/#benefits" className="mobile-link">Benefits</Link>
+                    <Link to="/#platform" className="mobile-link">Pricing</Link>
+                    <Link to="/#newsletter" className="mobile-link">Newsletter</Link>
                 </div>
 
                 <div className="bottom">
-                    <Link className="button button-primary skew" to="/dashboard">
+                    <Link className="button button-primary skew nav-webapp" to="/dashboard">
                         <span><i className="chevron-first fa fa-user" aria-hidden="true"></i> Karel Decoene</span>
                     </Link>
+
+                    <Link className="button button-primary skew nav-website" to="/dashboard">
+                        <span><i className="chevron-first fa fa-sign-in" aria-hidden="true"></i> Login</span>
+                    </Link>
+
                     <a className="button button-secondary skew" href="/"><span><i className="chevron-first fa fa-sign-out" aria-hidden="true"></i> Sign out</span></a>
                 </div>
             </div>

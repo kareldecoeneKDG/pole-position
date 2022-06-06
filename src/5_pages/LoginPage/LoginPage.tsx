@@ -79,19 +79,21 @@ function LoginPage() {
     }
 
     return (
-        <section className="login section formPage">
+        <section className="login formPage">
             <Helmet>
                 <title>Login | Pole Positon - F1 Blog</title>
             </Helmet>
 
             <Navbar />
 
-            <div className="login__flexbox">
-                <div className="login__content section">
+            <div className="formPage__flexbox">
+
+                {/* FORMPAGE CONTENT */}
+                <div className="formPage__flexbox__content section">
                     <h2 className="title">Login</h2>
                     <p className="p">Please enter your email and password.</p>
 
-                    <form className="login__form custom-form">
+                    <form className="login__form custom-form" noValidate>
 
                         {/* TEXT INPUTS */}
                         <div className="form__inputs-container">
@@ -132,17 +134,17 @@ function LoginPage() {
                             <a className="custom-form__forgot-pw p" href="#">Forgot password?</a>
                         </div>
 
-                        <p className="custom-form__no-acc p">
-                            Don't have an account yet?<br />
+                        <hr className="login__line line" />
 
-                            <Link className="custom-form__no-acc__link" to="/register">
-                                Create account
-                            </Link>
-                        </p>
+                        <div className="to-register flex">
+                            <p className="to-register__p p">No account yet?</p>
+                            <Link to="/register" className="button button-primary skew" type="submit"><span>Register <i className="fa fa-chevron-right first-chevron" aria-hidden="true"></i><i className="fa fa-chevron-right" aria-hidden="true"></i></span></Link>
+                        </div>
                     </form>
                 </div>
 
-                <img className="login__img" src={bannerImg} alt="Banner img login page" />
+                {/* FORMPAGE IMAGE */}
+                <img className="formPage__flexbox__img" src={bannerImg} alt="Banner img login page" />
             </div>
         </section>
     );
