@@ -5,7 +5,9 @@ import Ferrari from './Ferrari.jpg';
 function Team() {
     return (
         <div className="driver-team">
-            <img className="driver-team__img" src={Ferrari} alt="Charles Leclercq" />
+            <div className="driver-team__img">
+                <img src={Ferrari} alt="Charles Leclercq" />
+            </div>
 
             <div className="driver-team__content">
                 <p className="tag tag-driver driver-team__content__tag"><i className="fa fa-flag" aria-hidden="true"></i> team</p>

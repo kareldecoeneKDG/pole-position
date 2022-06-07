@@ -6,6 +6,18 @@
     &__item {
         background-color: $primary-600;
 
+        &:hover {
+            border-radius: 5px !important;
+            transform: skew(-11deg);
+            background-color: $primary-500;
+            transition: all 0.3s;
+
+            i {
+                transition: all 0.3s;
+                transform: skew(11deg);
+            }
+        }
+
         i {
             font-size: 20px;
             line-height: 20px;

@@ -3,17 +3,35 @@
     border-radius: 20px;
     margin-bottom: 20px;
     filter: $card-shadow;
+    overflow: hidden;
 
     &:last-of-type {
         margin-bottom: 0;
     }
 
+    &:hover {
+        .driver-team__img {
+            img {
+                transform: scale(1.1);
+            }
+        }
+    }
+
     &__img {
         border-radius: 20px 20px 0px 0px;
         width: 100%;
-        height: 200px;
-        object-fit: cover;
-        object-position: top;
+        height: auto;
+        aspect-ratio: 3/2;
+        overflow: hidden;
+
+        img {
+            transition: 0.3s;
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+        }
     }
 
     &__content {
@@ -82,7 +100,7 @@
 @media only screen and (min-width: $tablet-portrait) {
     .driver-team {
         &__img {
-            height: 309px;
+            //height: 309px;
         }
     }
 }

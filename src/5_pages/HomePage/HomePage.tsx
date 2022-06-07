@@ -1,4 +1,6 @@
 import React, { useEffect } from 'react';
+import { Helmet } from 'react-helmet';
+import FadeIn from 'react-fade-in';
 
 import Navbar from '../../4_organisms/NavBar/NavBar';
 import Header from '../../4_organisms/Header/Header';
@@ -7,7 +9,8 @@ import Benefits from '../../4_organisms/Benefits/Benefits';
 import Platform from '../../4_organisms/Platform/Platform';
 import HowSignUp from '../../4_organisms/HowSignUp/HowSignUp';
 import Newsletter from '../../4_organisms/Newsletter/Newsletter';
-import { Helmet } from 'react-helmet';
+
+const Fade = require("react-reveal/Fade");
 
 function HomePage() {
     useEffect(() => {
@@ -16,19 +19,39 @@ function HomePage() {
     }, []);
 
     return (
-        <div className="homePage">
-            <Helmet>
-                <title>Home | Pole Positon - F1 Blog</title>
-            </Helmet>
+        <FadeIn>
+            <div className="homePage">
+                <Helmet>
+                    <title>Home | Pole Positon - F1 Blog</title>
+                </Helmet>
 
-            <Navbar />
-            <Header />
-            <LatestNews />
-            <Benefits />
-            <Platform />
-            <HowSignUp />
-            <Newsletter />
-        </div>
+                <Navbar />
+
+                <Fade>
+                    <Header />
+                </Fade>
+
+                <Fade delay={500}>
+                    <LatestNews />
+                </Fade>
+
+                <Fade delay={500}>
+                    <Benefits />
+                </Fade>
+
+                <Fade delay={500}>
+                    <Platform />
+                </Fade>
+
+                <Fade delay={500}>
+                    <HowSignUp />
+                </Fade>
+
+                <Fade delay={500}>
+                    <Newsletter />
+                </Fade>
+            </div>
+        </FadeIn>
     );
 }
 

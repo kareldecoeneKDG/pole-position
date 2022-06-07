@@ -36,10 +36,11 @@
                 line-height: 16px;
 
                 padding: 14px 20px;
-                margin-bottom: 10px;
             }
 
             .form-control-forms {
+                margin-bottom: 10px;
+                
                 .form-group {
                     i {
                         top: 20px;
@@ -54,18 +55,18 @@
 [data-theme="light"] {
     .newsletter {
         background-color: $neutrals-200;
-    
+
         &__content {
             background-color: $neutrals-100;
 
             &__title {
                 color: $neutrals-900;
             }
-    
+
             &__p {
                 color: $neutrals-700;
             }
-    
+
             .form {
                 &__input {
                     background-color: $neutrals-100;
@@ -136,7 +137,7 @@
 @media only screen and (min-width: $tablet-landscape) {
     .newsletter {
         padding: 75px 50px;
-        
+
         &__content {
             position: relative;
             height: 600px;

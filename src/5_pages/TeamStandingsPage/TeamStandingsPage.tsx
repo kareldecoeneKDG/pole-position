@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
+import FadeIn from 'react-fade-in';
 
 import Navbar from '../../4_organisms/NavBar/NavBar';
 import StandingTeam from '../../3_molecules/StandingTeam/StandingTeam';
-import Subnav from '../../4_organisms/Subnav/Subnav';
+import Subnav from '../../4_organisms/Subnav/SubNav';
 
 function TeamStandingsPage() {
     useEffect(() => {
@@ -14,65 +15,67 @@ function TeamStandingsPage() {
 
     const [selected, setSelected] = useState("");
 
-    if(selected == "") {
+    if (selected == "") {
         setSelected("Teams");
     }
 
     return (
-        <div className="standings">
-            <Helmet>
-                <title>Team standings | Pole Positon - F1 Blog</title>
-            </Helmet>
+        <FadeIn>
+            <div className="standings">
+                <Helmet>
+                    <title>Team standings | Pole Positon - F1 Blog</title>
+                </Helmet>
 
-            <Navbar />
+                <Navbar />
 
-            {/* Subnavigation */}
-            <Subnav selected={selected} setSelected={setSelected} />
+                {/* Subnavigation */}
+                <Subnav selected={selected} setSelected={setSelected} />
 
-            <section className="standings__drivers">
-                <Link to="/team">
-                    <StandingTeam />
-                </Link>
+                <section className="standings__drivers">
+                    <Link to="/team">
+                        <StandingTeam />
+                    </Link>
 
-                <Link to="/team">
-                    <StandingTeam />
-                </Link>
+                    <Link to="/team">
+                        <StandingTeam />
+                    </Link>
 
-                <Link to="/team">
-                    <StandingTeam />
-                </Link>
+                    <Link to="/team">
+                        <StandingTeam />
+                    </Link>
 
-                {/* <hr className="standings__drivers__line line" /> */}
+                    {/* <hr className="standings__drivers__line line" /> */}
 
-                <Link to="/team">
-                    <StandingTeam />
-                </Link>
+                    <Link to="/team">
+                        <StandingTeam />
+                    </Link>
 
-                <Link to="/team">
-                    <StandingTeam />
-                </Link>
+                    <Link to="/team">
+                        <StandingTeam />
+                    </Link>
 
-                <Link to="/team">
-                    <StandingTeam />
-                </Link>
+                    <Link to="/team">
+                        <StandingTeam />
+                    </Link>
 
-                <Link to="/team">
-                    <StandingTeam />
-                </Link>
+                    <Link to="/team">
+                        <StandingTeam />
+                    </Link>
 
-                <Link to="/team">
-                    <StandingTeam />
-                </Link>
+                    <Link to="/team">
+                        <StandingTeam />
+                    </Link>
 
-                <Link to="/team">
-                    <StandingTeam />
-                </Link>
-                
-                <Link to="/team">
-                    <StandingTeam />
-                </Link>
-            </section>
-        </div>
+                    <Link to="/team">
+                        <StandingTeam />
+                    </Link>
+
+                    <Link to="/team">
+                        <StandingTeam />
+                    </Link>
+                </section>
+            </div>
+        </FadeIn>
     );
 }
 

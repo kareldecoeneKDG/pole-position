@@ -1,12 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet';
+import { Link, NavLink } from 'react-router-dom';
+import FadeIn from 'react-fade-in';
 
 import Navbar from '../../4_organisms/NavBar/NavBar';
 import SavedBlogposts from '../../4_organisms/SavedBlogposts/SavedBlogposts';
 import LatestGP from '../../4_organisms/LatestGP/LatestGP';
 import Settings from '../../4_organisms/Settings/Settings';
-import Subnav from '../../4_organisms/Subnav/Subnav';
-import { Link, NavLink } from 'react-router-dom';
+import Subnav from '../../4_organisms/Subnav/SubNav';
+
+const Fade = require("react-reveal/Fade");
 
 function DashboardPage() {
     useEffect(() => {
@@ -21,27 +24,34 @@ function DashboardPage() {
     }
 
     return (
-        <div className="dashboard">
-            <Helmet>
-                <title>Dashboard | Pole Positon - F1 Blog</title>
-            </Helmet>
+        <FadeIn>
+            <div className="dashboard">
+                <Helmet>
+                    <title>Dashboard | Pole Positon - F1 Blog</title>
+                </Helmet>
 
-            <Navbar />
+                <Navbar />
 
-            {/* Subnavigation */}
-            <Subnav selected={selected} setSelected={setSelected} />
+                {/* Subnavigation */}
+                <Subnav selected={selected} setSelected={setSelected} />
 
-            {/* Breadcrumbs */}
-            <div className="breadcrumbs mobile">
-                <Link to="/dashboard" className="breadcrumbs__item">Dashboard</Link>
-                <i className="fa fa-chevron-right" aria-hidden="true"></i>
-                <NavLink to="/dashboard" className="breadcrumbs__item">Saved blogposts</NavLink>
+                {/* Breadcrumbs */}
+                <div className="breadcrumbs mobile">
+                    <Link to="/dashboard" className="breadcrumbs__item">Dashboard</Link>
+                    <i className="fa fa-chevron-right" aria-hidden="true"></i>
+                    <NavLink to="/dashboard" className="breadcrumbs__item">Saved blogposts</NavLink>
+                </div>
+
+                <Fade>
+                    {/* Saved blogposts content */}
+                    <SavedBlogposts />
+                </Fade>
+
+                <Fade delay={500}>
+                    <LatestGP />
+                </Fade>
             </div>
-
-            {/* Saved blogposts content */}
-            <SavedBlogposts />
-            <LatestGP />
-        </div>
+        </FadeIn>
     );
 }
 

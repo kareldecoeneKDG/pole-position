@@ -6,7 +6,9 @@ import Helmet from './helmet-cut.png';
 function Driver() {
     return (
         <div className="driver-team">
-            <img className="driver-team__img" src={Charles} alt="Charles Leclercq" />
+            <div className="driver-team__img">
+                <img src={Charles} alt="Charles Leclercq" />
+            </div>
 
             <div className="driver-team__content">
                 <p className="tag tag-driver driver-team__content__tag"><img className="driver-team__content__tag__helmet-flag" src={Helmet} alt="driver helmet icon" />driver</p>

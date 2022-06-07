@@ -1,9 +1,12 @@
 import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
+import FadeIn from 'react-fade-in';
 
 import Navbar from '../../4_organisms/NavBar/NavBar';
 import bannerImg from './article1.jpeg';
+
+const Fade = require("react-reveal/Fade");
 
 function LoginPage() {
     useEffect(() => {
@@ -79,74 +82,78 @@ function LoginPage() {
     }
 
     return (
-        <section className="login formPage">
-            <Helmet>
-                <title>Login | Pole Positon - F1 Blog</title>
-            </Helmet>
+        <FadeIn>
+            <section className="login formPage">
+                <Helmet>
+                    <title>Login | Pole Positon - F1 Blog</title>
+                </Helmet>
 
-            <Navbar />
+                <Navbar />
 
-            <div className="formPage__flexbox">
+                <Fade>
+                    <div className="formPage__flexbox">
 
-                {/* FORMPAGE CONTENT */}
-                <div className="formPage__flexbox__content section">
-                    <h2 className="title">Login</h2>
-                    <p className="p">Please enter your email and password.</p>
+                        {/* FORMPAGE CONTENT */}
+                        <div className="formPage__flexbox__content section">
+                            <h2 className="title">Login</h2>
+                            <p className="p">Please enter your email and password.</p>
 
-                    <form className="login__form custom-form" noValidate>
+                            <form className="login__form custom-form" noValidate>
 
-                        {/* TEXT INPUTS */}
-                        <div className="form__inputs-container">
+                                {/* TEXT INPUTS */}
+                                <div className="form__inputs-container">
 
-                            {/* EMAIL INPUT */}
-                            <div className="form-control-forms">
-                                <div className="form-group">
-                                    <input type="text" id="email" className="form__input input email" name="email" placeholder=" " />
-                                    <label htmlFor="email" className="form__label">Email</label>
+                                    {/* EMAIL INPUT */}
+                                    <div className="form-control-forms">
+                                        <div className="form-group">
+                                            <input type="text" id="email" className="form__input input email" name="email" placeholder=" " />
+                                            <label htmlFor="email" className="form__label">Email</label>
 
-                                    {/* form feedback */}
-                                    <i className="fa fa-check-circle" aria-hidden="true"></i>
-                                    <i className="fa fa-exclamation-triangle" aria-hidden="true"></i>
-                                    <small>Error message</small>
+                                            {/* form feedback */}
+                                            <i className="fa fa-check-circle" aria-hidden="true"></i>
+                                            <i className="fa fa-exclamation-triangle" aria-hidden="true"></i>
+                                            <small>Error message</small>
+                                        </div>
+                                    </div>
+
+                                    {/* PASSWORD INPUT */}
+                                    <div className="form-control-forms">
+                                        <div className="form-group">
+                                            <input id="password" className="form__input input password" type="password" name="password" placeholder=" " />
+                                            <label htmlFor="password" className="form__label">Password</label>
+
+                                            {/* form feedback */}
+                                            <i className="fa fa-check-circle" aria-hidden="true"></i>
+                                            <i className="fa fa-exclamation-triangle" aria-hidden="true"></i>
+                                            <small>Error message</small>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
 
-                            {/* PASSWORD INPUT */}
-                            <div className="form-control-forms">
-                                <div className="form-group">
-                                    <input id="password" className="form__input input password" type="password" name="password" placeholder=" " />
-                                    <label htmlFor="password" className="form__label">Password</label>
+                                <p className="custom-form__disclaimer">
+                                    By login you agree to <span className="custom-form__disclaimer__link">terms & conditions</span>
+                                </p>
 
-                                    {/* form feedback */}
-                                    <i className="fa fa-check-circle" aria-hidden="true"></i>
-                                    <i className="fa fa-exclamation-triangle" aria-hidden="true"></i>
-                                    <small>Error message</small>
+                                <div className="flex">
+                                    <button className="button button-primary skew" type="submit"><span>Login <i className="fa fa-chevron-right first-chevron" aria-hidden="true"></i><i className="fa fa-chevron-right" aria-hidden="true"></i></span></button>
+                                    <a className="custom-form__forgot-pw p" href="#">Forgot password?</a>
                                 </div>
-                            </div>
+
+                                <hr className="login__line line" />
+
+                                <div className="to-register flex">
+                                    <p className="to-register__p p">No account yet?</p>
+                                    <Link to="/register" className="button button-primary skew" type="submit"><span>Register <i className="fa fa-chevron-right first-chevron" aria-hidden="true"></i><i className="fa fa-chevron-right" aria-hidden="true"></i></span></Link>
+                                </div>
+                            </form>
                         </div>
 
-                        <p className="custom-form__disclaimer">
-                            By login you agree to <span className="custom-form__disclaimer__link">terms & conditions</span>
-                        </p>
-
-                        <div className="flex">
-                            <button className="button button-primary skew" type="submit"><span>Login <i className="fa fa-chevron-right first-chevron" aria-hidden="true"></i><i className="fa fa-chevron-right" aria-hidden="true"></i></span></button>
-                            <a className="custom-form__forgot-pw p" href="#">Forgot password?</a>
-                        </div>
-
-                        <hr className="login__line line" />
-
-                        <div className="to-register flex">
-                            <p className="to-register__p p">No account yet?</p>
-                            <Link to="/register" className="button button-primary skew" type="submit"><span>Register <i className="fa fa-chevron-right first-chevron" aria-hidden="true"></i><i className="fa fa-chevron-right" aria-hidden="true"></i></span></Link>
-                        </div>
-                    </form>
-                </div>
-
-                {/* FORMPAGE IMAGE */}
-                <img className="formPage__flexbox__img" src={bannerImg} alt="Banner img login page" />
-            </div>
-        </section>
+                        {/* FORMPAGE IMAGE */}
+                        <img className="formPage__flexbox__img" src={bannerImg} alt="Banner img login page" />
+                    </div>
+                </Fade>
+            </section>
+        </FadeIn>
     );
 }
 
