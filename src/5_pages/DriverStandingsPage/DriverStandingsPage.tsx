@@ -22,7 +22,7 @@ function DriverStandingsPage() {
     }
 
     return (
-        <FadeIn>
+        <FadeIn className="page-flex">
             <div className="standings">
                 <Helmet>
                     <title>Driver Standings | Pole Positon - F1 Blog</title>

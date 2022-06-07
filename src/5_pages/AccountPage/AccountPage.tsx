@@ -22,7 +22,7 @@ function AccountPage() {
     }
 
     return (
-        <FadeIn>
+        <FadeIn className="page-flex">
             <div className="dashboard">
                 <Helmet>
                     <title>Account | Pole Positon - F1 Blog</title>

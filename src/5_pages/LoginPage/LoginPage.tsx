@@ -82,7 +82,7 @@ function LoginPage() {
     }
 
     return (
-        <FadeIn>
+        <FadeIn className="page-flex">
             <section className="login formPage">
                 <Helmet>
                     <title>Login | Pole Positon - F1 Blog</title>

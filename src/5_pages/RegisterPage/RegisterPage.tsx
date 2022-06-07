@@ -138,7 +138,7 @@ function RegisterPage() {
     }
 
     return (
-        <FadeIn>
+        <FadeIn className="page-flex">
             <section className="register formPage">
                 <Helmet>
                     <title>Register | Pole Positon - F1 Blog</title>

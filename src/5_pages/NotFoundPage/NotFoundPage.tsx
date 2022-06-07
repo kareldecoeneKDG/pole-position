@@ -16,7 +16,7 @@ function NotFoundPage() {
     }, []);
 
     return (
-        <FadeIn>
+        <FadeIn className="page-flex">
             <section className="error404">
                 <Helmet>
                     <title>Error | Pole Positon - F1 Blog</title>

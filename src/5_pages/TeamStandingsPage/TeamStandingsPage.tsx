@@ -20,7 +20,7 @@ function TeamStandingsPage() {
     }
 
     return (
-        <FadeIn>
+        <FadeIn className="page-flex">
             <div className="standings">
                 <Helmet>
                     <title>Team standings | Pole Positon - F1 Blog</title>

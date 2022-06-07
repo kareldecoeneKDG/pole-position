@@ -15,7 +15,7 @@ function GrandPrixDetailPage() {
     }, []);
 
     return (
-        <FadeIn>
+        <FadeIn className="page-flex">
             <div className="grandprixDetail">
                 <Helmet>
                     <title>Barcelona GP | Pole Positon - F1 Blog</title>

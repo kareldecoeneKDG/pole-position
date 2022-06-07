@@ -18,7 +18,7 @@ function BlogDetailPage() {
     }, []);
 
     return (
-        <FadeIn>
+        <FadeIn className="page-flex">
             <section className="blogDetail">
                 <Helmet>
                     <title>Blog detail | Pole Positon - F1 Blog</title>

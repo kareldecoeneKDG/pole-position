@@ -20,7 +20,7 @@ function DriverPage() {
     }, []);
 
     return (
-        <FadeIn>
+        <FadeIn className="page-flex">
             <div className="driverPage">
                 <Helmet>
                     <title>Driver | Pole Positon - F1 Blog</title>

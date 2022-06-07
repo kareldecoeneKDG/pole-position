@@ -8,7 +8,7 @@ function PrivacyPolicyPage() {
     useEffect(() => { document.documentElement.scrollTo(0, 0); }, []);
 
     return (
-        <FadeIn>
+        <FadeIn className="page-flex">
             <section className="privacyPolicy">
                 <Helmet>
                     <title>Privacy policy | Pole Positon - F1 Blog</title>

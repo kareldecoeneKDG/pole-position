@@ -19,7 +19,7 @@ function HomePage() {
     }, []);
 
     return (
-        <FadeIn>
+        <FadeIn className="page-flex">
             <div className="homePage">
                 <Helmet>
                     <title>Home | Pole Positon - F1 Blog</title>

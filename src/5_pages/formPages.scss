@@ -188,6 +188,13 @@
                             color: $neutrals-100;
                         }
                     }
+
+                    .flex {
+                        .to-register-button {
+                            background-color: $neutrals-900;
+                            color: $neutrals-100;
+                        }
+                    }
                 }
             }
         }
@@ -215,6 +222,13 @@
 
                     .to-register {
                         .button {
+                            background-color: $neutrals-100;
+                            color: $neutrals-900;
+                        }
+                    }
+
+                    .flex {
+                        .to-register-button {
                             background-color: $neutrals-100;
                             color: $neutrals-900;
                         }

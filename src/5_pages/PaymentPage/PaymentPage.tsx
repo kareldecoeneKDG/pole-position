@@ -105,7 +105,7 @@ function PaymentPage() {
     }
 
     return (
-        <FadeIn>
+        <FadeIn className="page-flex">
             <section className="payment formPage">
                 <Helmet>
                     <title>Payment | Pole Positon - F1 Blog</title>
@@ -179,7 +179,7 @@ function PaymentPage() {
 
                                 {/* SUBMIT BUTTON */}
                                 <div className="flex">
-                                    <Link to="/register" className="button button-secondary skew"><span><i className="fa fa-chevron-left" aria-hidden="true"></i><i className="fa fa-chevron-left chevron-first" aria-hidden="true"></i> Personal info</span></Link>
+                                    <Link to="/register" className="button button-secondary skew to-register-button"><span><i className="fa fa-chevron-left" aria-hidden="true"></i><i className="fa fa-chevron-left chevron-first" aria-hidden="true"></i> Personal info</span></Link>
                                     <button className="button button-primary skew" type="submit"><span>Continue <i className="fa fa-chevron-right first-chevron" aria-hidden="true"></i><i className="fa fa-chevron-right" aria-hidden="true"></i></span></button>
                                 </div>
                             </form>

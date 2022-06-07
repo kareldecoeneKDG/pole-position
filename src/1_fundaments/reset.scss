@@ -36,6 +36,10 @@ a {
     display: inline-block;
 }
 
+.page-flex {
+    flex: 1;
+}
+
 /* LIGHT THEME COLORS */
 [data-theme="light"] {
     body {

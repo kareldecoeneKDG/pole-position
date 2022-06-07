@@ -21,7 +21,7 @@ function TeamPage() {
     }, []);
 
     return (
-        <FadeIn>
+        <FadeIn className="page-flex">
             <section className="teamPage">
                 <Helmet>
                     <title>Red Bull | Pole Positon - F1 Blog</title>

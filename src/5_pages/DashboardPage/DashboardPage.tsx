@@ -24,7 +24,7 @@ function DashboardPage() {
     }
 
     return (
-        <FadeIn>
+        <FadeIn className="page-flex">
             <div className="dashboard">
                 <Helmet>
                     <title>Dashboard | Pole Positon - F1 Blog</title>
