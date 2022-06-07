@@ -16,7 +16,7 @@
                 .icon-bg {
                     animation: rollIn 0.3s linear;
                     opacity: 1;
-                    transition: opacity 0.3s;
+                    transition: opacity $transition-time-short;
                 }
 
                 @keyframes rollIn {

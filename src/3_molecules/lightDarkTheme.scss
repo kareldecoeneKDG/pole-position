@@ -9,7 +9,7 @@
         position: absolute;
         z-index: 1;
         top: 9px;
-        transition: 0.3s;
+        transition: $transition-time-short;
 
         &:hover {
             cursor: pointer;
@@ -42,8 +42,8 @@
             width: 20px;
             height: 20px;
             border-radius: 90px;
-            -webkit-transition: 0.3s;
-            transition: 0.3s;
+            -webkit-transition: $transition-time-short;
+            transition: $transition-time-short;
             background-color: $neutrals-100;
         }
     }

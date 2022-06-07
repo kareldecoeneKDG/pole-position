@@ -17,8 +17,17 @@
     &__form {
         text-align: center;
 
+        &__label {
+            display: block;
+            border-radius: $border-radius-x-small;
+            transform: skew(-11deg);
+            border: 1px solid $neutrals-600;
+            margin-bottom: 10px;
+        }
+
         &__input {
             display: block;
+            transform: skew(11deg);
             width: 100%;
             font-family: $secondary-font;
             font-size: 16px;
@@ -27,9 +36,13 @@
             color: $neutrals-900;
             padding: 14px 20px;
             text-align: center;
-            border: 1px solid $neutrals-600;
-            border-radius: 10px;
-            margin-bottom: 10px;
+            border: none;
+            border-radius: $border-radius-x-small;
+
+            &:focus-visible {
+                border: none;
+                outline: none;
+            }
         }
     }
 }
@@ -48,9 +61,15 @@
         }
 
         &__form {
+            &__label {
+                border: 1px solid $neutrals-600;
+                background-color: $neutrals-100;
+            }
+
             &__input {
                 color: $neutrals-900;
-                border: 1px solid $neutrals-600;
+                background-color: transparent;
+                //border: 1px solid $neutrals-600;
             }
         }
     }
@@ -70,9 +89,15 @@
         }
 
         &__form {
+            &__label {
+                border: 1px solid $neutrals-500;
+                background-color: $neutrals-200;
+            }
+
             &__input {
                 color: $neutrals-900;
-                border: 1px solid $neutrals-700;
+                background-color: transparent;
+                //border: 1px solid $neutrals-700;
             }
         }
     }
@@ -110,10 +135,18 @@
             align-items: center;
             gap: 10px;
 
+            &__label {
+                margin-bottom: 0;
+            }
+
             &__input {
                 width: 203px;
                 margin-bottom: 0;
                 text-align: left;
+            }
+
+            .button {
+                padding: 14px 20px;
             }
         }
     }

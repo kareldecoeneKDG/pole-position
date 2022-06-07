@@ -2,7 +2,7 @@
 .button {
     i {
         font-size: 12px;
-        transition: 0.3s;
+        transition: $transition-time-short;
     }
 
     .first-chevron {

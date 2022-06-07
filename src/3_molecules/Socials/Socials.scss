@@ -10,10 +10,10 @@
             border-radius: 5px !important;
             transform: skew(-11deg);
             background-color: $primary-500;
-            transition: all 0.3s;
+            transition: all $transition-time-short;
 
             i {
-                transition: all 0.3s;
+                transition: all $transition-time-short;
                 transform: skew(11deg);
             }
         }
