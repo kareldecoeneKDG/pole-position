@@ -3,9 +3,9 @@ import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import FadeIn from 'react-fade-in';
 
-import Navbar from '../../4_organisms/NavBar/NavBar';
 import StandingTeam from '../../3_molecules/StandingTeam/StandingTeam';
-import Subnav from '../../4_organisms/Subnav/SubNav';
+import Subnav from '../../4_organisms/SubNav/SubNav';
+import NavBar from '../../4_organisms/NavBar/NavBar';
 
 function TeamStandingsPage() {
     useEffect(() => {
@@ -26,7 +26,7 @@ function TeamStandingsPage() {
                     <title>Team standings | Pole Positon - F1 Blog</title>
                 </Helmet>
 
-                <Navbar />
+                <NavBar />
 
                 {/* Subnavigation */}
                 <Subnav selected={selected} setSelected={setSelected} />

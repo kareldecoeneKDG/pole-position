@@ -5,7 +5,7 @@ import logo from './logo-hollow.png';
 import sun from './sun.png';
 import moon from './moon.png';
 
-function Navbar() {
+function NavBar() {
 
     /* --- MOBILE MENU --- */
     // Mobile menu switcher
@@ -180,4 +180,4 @@ function Navbar() {
     );
 };
 
-export default Navbar;
+export default NavBar;

@@ -3,13 +3,6 @@
     border-radius: 20px;
     filter: $card-shadow;
 
-    /* This is now set on the link around an article */
-    //margin-bottom: 20px;
-
-    /* &:last-of-type {
-        margin-bottom: 0;
-    } */
-
     &:hover {
         .article__content {
             &__bottom {

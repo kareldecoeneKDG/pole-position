@@ -6,7 +6,7 @@ interface SubnavProps {
     selected: string
 }
 
-function Subnav({ selected, setSelected }: SubnavProps) {
+function SubNav({ selected, setSelected }: SubnavProps) {
     const [isActive, setIsActive] = useState(false);
     const options = ['Saved blogposts', 'Favorite driver', 'Favorite team', 'Account'];
 
@@ -97,4 +97,4 @@ function Subnav({ selected, setSelected }: SubnavProps) {
     );
 }
 
-export default Subnav;
+export default SubNav;

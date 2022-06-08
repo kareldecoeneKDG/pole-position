@@ -28,9 +28,13 @@ import TestPage from './5_pages/TestPage/TestPage';
 import AccountPage from './5_pages/AccountPage/AccountPage';
 import DriverStandingsPage from './5_pages/DriverStandingsPage/DriverStandingsPage';
 import TeamStandingsPage from './5_pages/TeamStandingsPage/TeamStandingsPage';
+import ListPage from './5_pages/ListPage/ListPage';
 
 // Global styles
 import './style.scss';
+
+//types
+import { Game } from './types';
 
 // Multilanguage cookies
 const cookies = require('js-cookie');
@@ -105,68 +109,31 @@ function App() {
     else {
         document.documentElement.setAttribute("data-theme", localStorage.getItem('data-theme')!);
     }
-
-
-
     //const [checked, setChecked] = useState(false); */
 
 
 
-    /* Right menus -> geprobeerd
-    //console.log(window.location.href);
-    //hou rekening met #container en url van productie site
-    //let op met 2 menus (mobile + desktop) met zelfde class...
-    const navWebsite = document.querySelectorAll('.nav-website');
-    const navApp = document.querySelectorAll('.nav-webapp');
-
-    console.log(navWebsite);
-    console.log(navApp);
-
-    function checkWhichMenu() {
-        const fullUrl = window.location.href;
-        const path = fullUrl.replace('localhost:3000', '');
-
-        //en andere #ids
-        if (path == 'http:///' || path == 'http:///#container') {
-            navWebsite.forEach(nav => {
-                nav.classList.add('active');
-            });
-            navApp.forEach(nav => {
-                nav.classList.remove('active');
-            });
+    //test dynamic -> Game type is imported above
+    let games: Game[] = [
+        {
+            id: 0,
+            name: "World of Warcraft",
+            releaseYear: 2004,
+            sales: 0
+        },
+        {
+            id: 1,
+            name: "Valheim",
+            releaseYear: 2004,
+            sales: 0
+        },
+        {
+            id: 2,
+            name: "Minecraft",
+            releaseYear: 2011,
+            sales: 0
         }
-        else {
-            navWebsite.forEach(nav => {
-                nav.classList.remove('active');
-            });
-            navApp.forEach(nav => {
-                nav.classList.add('active');
-            });
-        }
-    }
-
-    checkWhichMenu();
-
-    //bij elke click op menu item checken
-    const mobileMenuItems = document.querySelectorAll('.mobile-link');
-    const desktopMenuItems = document.querySelectorAll('.links-desktop__link');
-
-    mobileMenuItems.forEach(menuItem => {
-        menuItem.addEventListener('click', checkWhichMenu);
-    });
-    desktopMenuItems.forEach(menuItem => {
-        menuItem.addEventListener('click', checkWhichMenu);
-    });
-
-    //beter bij change in url
-    (function (history) {
-        var pushState = history.pushState;
-        history.pushState = function (state) {
-            // YOUR CUSTOM HOOK / FUNCTION
-            console.log('I am called from pushStateHook');
-            return pushState.apply(history, ['test', 'test2']);
-        };
-    })(window.history); */
+    ]
 
 
     return (
@@ -215,7 +182,8 @@ function App() {
                     <Route path="*" element={<NotFoundPage />} />
 
 
-                    <Route path="/test" element={<TestPage />} />
+                    <Route path="/test" element={<ListPage games={games} />} />
+                    <Route path="/detail/:id" element={<ListPage games={games} />} />
 
 
 

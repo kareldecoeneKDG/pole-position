@@ -7,7 +7,7 @@ import Navbar from '../../4_organisms/NavBar/NavBar';
 import SavedBlogposts from '../../4_organisms/SavedBlogposts/SavedBlogposts';
 import LatestGP from '../../4_organisms/LatestGP/LatestGP';
 import Settings from '../../4_organisms/Settings/Settings';
-import Subnav from '../../4_organisms/Subnav/SubNav';
+import SubNav from '../../4_organisms/SubNav/SubNav';
 
 const Fade = require("react-reveal/Fade");
 
@@ -33,7 +33,7 @@ function DashboardPage() {
                 <Navbar />
 
                 {/* Subnavigation */}
-                <Subnav selected={selected} setSelected={setSelected} />
+                <SubNav selected={selected} setSelected={setSelected} />
 
                 {/* Breadcrumbs */}
                 <div className="breadcrumbs mobile">

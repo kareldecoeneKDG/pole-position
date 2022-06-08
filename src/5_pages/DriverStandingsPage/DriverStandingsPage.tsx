@@ -3,9 +3,9 @@ import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import FadeIn from 'react-fade-in';
 
-import Navbar from '../../4_organisms/NavBar/NavBar';
 import StandingDriver from '../../3_molecules/StandingDriver/StandingDriver';
-import Subnav from '../../4_organisms/Subnav/SubNav';
+import Subnav from '../../4_organisms/SubNav/SubNav';
+import NavBar from '../../4_organisms/NavBar/NavBar';
 
 const Fade = require("react-reveal/Fade");
 
@@ -28,7 +28,7 @@ function DriverStandingsPage() {
                     <title>Driver Standings | Pole Positon - F1 Blog</title>
                 </Helmet>
 
-                <Navbar />
+                <NavBar />
 
                 {/* Subnavigation */}
                 <Subnav selected={selected} setSelected={setSelected} />
