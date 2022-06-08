@@ -1,8 +1,19 @@
 interface Game {
-    id?: number
+    id?: number,
     name: string,
     releaseYear: number,
     sales: number
 }
 
-export type { Game }
+interface ArticleItem {
+    id?: number,
+    image: string,
+    mainTag: string,
+    mainTagColor: string,
+    mainTagBackgroundColor: string,
+    minutesRead: number,
+    title: string,
+    intro: string
+}
+
+export type { Game, ArticleItem }

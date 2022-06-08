@@ -29,12 +29,15 @@ import AccountPage from './5_pages/AccountPage/AccountPage';
 import DriverStandingsPage from './5_pages/DriverStandingsPage/DriverStandingsPage';
 import TeamStandingsPage from './5_pages/TeamStandingsPage/TeamStandingsPage';
 import ListPage from './5_pages/ListPage/ListPage';
+import DetailPage from './5_pages/DetailPage/DetailPage';
 
 // Global styles
 import './style.scss';
 
 //types
-import { Game } from './types';
+import { ArticleItem, Game } from './types';
+import ArticleDetailPage from './5_pages/ArticleDetailPage/ArticleDetailPage';
+//import Article from './3_molecules/Article/Article';
 
 // Multilanguage cookies
 const cookies = require('js-cookie');
@@ -136,6 +139,43 @@ function App() {
     ]
 
 
+
+    //test articles
+    let articles: ArticleItem[] = [
+        {
+            id: 0,
+            image: "max-verstappen-red-bull.webp",
+            mainTag: "Red Bull",
+            mainTagColor: "redbull",
+            mainTagBackgroundColor: "redbull-bg",
+            minutesRead: 8,
+            title: "Mogelijk voordeel voor Red Bull in tweede helft van seizoen",
+            intro: "Het is al geruime tijd een bekend gegeven dat een lezer, tijdens het bekijken van de."
+        },
+        {
+            id: 1,
+            image: "charles-leclerq-ferrari.webp",
+            mainTag: "Ferrari",
+            mainTagColor: "ferrari",
+            mainTagBackgroundColor: "ferrari-bg",
+            minutesRead: 7,
+            title: "Ferrari enorm teleurgesteld na afgelopen weekend in Monaco.",
+            intro: "Het is al geruime tijd een bekend gegeven dat een lezer, tijdens het bekijken van de."
+        },
+        {
+            id: 2,
+            image: "lando-norris-mclaren.webp",
+            mainTag: "McLaren",
+            mainTagColor: "mclaren",
+            mainTagBackgroundColor: "mclaren-bg",
+            minutesRead: 9,
+            title: "McLaren neemt mogelijks voor einde seizoen afscheid van Ricciardo",
+            intro: "Het is al geruime tijd een bekend gegeven dat een lezer, tijdens het bekijken van de."
+        },
+    ]
+
+
+
     return (
         <Router>
             {/*<ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
@@ -173,7 +213,10 @@ function App() {
                     <Route path="/teamStandings" element={<TeamStandingsPage />} />
                     <Route path="/driver" element={<DriverPage />} />
                     <Route path="/team" element={<TeamPage />} />
-                    <Route path="/blog" element={<BlogPage />} />
+
+                    <Route path="/blog" element={<BlogPage articles={articles} />} />
+                    <Route path="/article/:id" element={<ArticleDetailPage articles={articles} />} />
+
                     <Route path="/blog-detail" element={<BlogDetailPage />} />
                     <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
                     <Route path="/login" element={<LoginPage />} />
@@ -183,7 +226,7 @@ function App() {
 
 
                     <Route path="/test" element={<ListPage games={games} />} />
-                    <Route path="/detail/:id" element={<ListPage games={games} />} />
+                    <Route path="/detail/:id" element={<DetailPage games={games} />} />
 
 
 

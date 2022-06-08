@@ -2,7 +2,8 @@ import { useParams } from "react-router-dom";
 import { Game } from "../../types";
 
 interface ParamTypes {
-    [id: string]: string
+    //[id: string]: string
+    id: string | undefined
 }
 
 interface DetailPageProps {
@@ -10,7 +11,7 @@ interface DetailPageProps {
 }
 
 function DetailPage({games} : DetailPageProps) {
-    let { id } = useParams<ParamTypes>();
+    let { id } = useParams();
     let game = games.find((game: Game) => game.id === parseInt(id!));
 
     return (
