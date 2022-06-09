@@ -1,17 +1,19 @@
 import React from 'react';
-import { Game } from '../types';
+import { ArticleItem } from '../types';
 import ListItem from "../3_molecules/ListItem";
 
 interface ListProps {
-    games: Game[]
+    articles: ArticleItem[]
 }
 
-function List({games}: {games: Game[]}) {
+function List({ articles }: { articles: ArticleItem[] }) {
     return (
-        <div>
-            <ul>{games.map((game: Game) => {
-                return <ListItem game={game} />
-            })}</ul>
+        <div className="moreRecentNews section">
+            <div className="moreRecentNews__articles">
+                {articles.map((article: ArticleItem) => {
+                    return <ListItem article={article} />
+                })}
+            </div>
         </div>
     );
 }

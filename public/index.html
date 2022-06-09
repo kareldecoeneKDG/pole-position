@@ -30,7 +30,6 @@
     <meta property="og:url" content="https://poleposition.karel.decoene.nxtmediatech.eu">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Pole Position | The F1 blog for the most passionated fans">
-    <meta property="og:description" content="Geef Armoede Geen Kans vzw is een vrijwilligersorganisatie gevestigd in de Rupelstreek. Wij helpen gezinnen die het financieel moeilijk hebben.">
     <meta property="og:description" content="Pole Position is the F1 blog for the most passionated fans. Want so keep up with all the latest F1 news? Sign up now!">
     <meta property="og:image" content="https://poleposition.karel.decoene.nxtmediatech.eu/preview.png">
 
@@ -80,10 +79,15 @@
 
     <!-- LIGHTBOX CUSTOM SETTINGS -->
     <script>
-      lightbox.option({
-        'resizeDuration': 300,
-        'disableScrolling': true
-      })
+      if(typeof lightbox != "undefined") {
+        //console.log("lightbox may not give an error.");
+      }
+      else if(typeof lightbox == "object") {
+        lightbox.option({
+          'resizeDuration': 300,
+          'disableScrolling': true
+        })
+      }
     </script>
   </body>
 </html>

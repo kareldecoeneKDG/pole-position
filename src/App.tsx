@@ -35,7 +35,7 @@ import DetailPage from './5_pages/DetailPage/DetailPage';
 import './style.scss';
 
 //types
-import { ArticleItem, Game } from './types';
+import { ArticleItem } from './types';
 import ArticleDetailPage from './5_pages/ArticleDetailPage/ArticleDetailPage';
 //import Article from './3_molecules/Article/Article';
 
@@ -117,30 +117,63 @@ function App() {
 
 
     //test dynamic -> Game type is imported above
-    let games: Game[] = [
+    let articles: ArticleItem[] = [
         {
             id: 0,
-            name: "World of Warcraft",
-            releaseYear: 2004,
-            sales: 0
+            date: "Januari 13 2022 - 10:15",
+            image: "./max-verstappen-red-bull.jpeg",
+            mainTag: "Red Bull",
+            mainTagColor: "redBull",
+            mainTagBackgroundColor: "redBull-bg",
+            minutesRead: 8,
+            title: "Possible advantage for Red Bull in the second half of the season",
+            intro: "Helmut Marko has confirmed that Red Bull Racing's RB18 is roughly ten kilos of 'overweight', but expects the team to be there within a few weeks",
+            subtitleFirst: "Marko warns Red Bull for second competitor this season",
+            paragraphFirst: "Marko states that at the start of the season he doubted whether Mercedes was actually short of speed. The Red Bull adviser has repeatedly experienced in recent years that the Germans withheld performance, so that he did not immediately take the problems with the team seriously. After two disappointing races, Charles Leclerc also has something to make up for, but according to Klien, Red Bull is in better shape for the next two races. He emphasizes that the Monegask had better pace in Spain and Monaco, but that Red Bull had an edge in terms of strategy and tire degradation. Now there are Baku and Montreal, two high-speed tracks, where I see Red Bull in the lead, he explains.",
+            imageSecond: "./sergio-perez-red-bull.webp",
+            subtitleSecond: "Should Verstappen fear his teammate?",
+            paragraphSecond: "Klien indicates to ServusTV that Verstappen was 'clearly the fastest man' in Baku last year and that he is keen to get revenge. Sergio Perez made up for the damage for his teammate and won the race, but according to the Austrian, Verstappen should have been the actual winner. The Monaco Grand Prix turned out better for Perez than for Verstappen, who was looking for the right balance all weekend. However, Klien does not believe that Perez can actually give his teammate a hard time in the championship. “Max maybe just lacked that little bit of confidence in the car. This is a setup story that will be resolved with the development of the car.",
+            publisher: "Karel Decoene"
         },
         {
             id: 1,
-            name: "Valheim",
-            releaseYear: 2004,
-            sales: 0
+            date: "February 13 2022 - 12:15",
+            image: "./charles-leclerc-ferrari.webp",
+            mainTag: "Ferrari",
+            mainTagColor: "ferrari",
+            mainTagBackgroundColor: "ferrari-bg",
+            minutesRead: 8,
+            title: "Ferrari hugely disappointed after last weekend in Monaco.",
+            intro: "Yes, Charles Leclerc made it to the chequered flag at Monaco for the first time in his Formula 1 career. But that was scant consolation, after the home hero pole-sitter fell to P4 by the chequered flag ",
+            subtitleFirst: "“It was a freaking disaster today”",
+            paragraphFirst: "fumed Leclerc, who had pulled a 5s lead over Sainz in the early stages of the race. “The win was clearly in our hands: we had the performance, we had everything. I just don’t really understand the call that I had and I need explanations for now. “I couldn’t do much, I was called just before the last corner, so I couldn’t react or ask for any information, but that was clearly the wrong choice… We need to get better.”",
+            imageSecond: "./charles-leclerc-ferrari-1.webp",
+            subtitleSecond: "Leclerc finishing behind Verstappen saw the Dutchman increase his title lead ",
+            paragraphSecond: "But with Sainz then brought in for dry hard tyres three laps later, Leclerc was initially called in as well – only to then be told to stay out. But that call came too late, Leclerc’s total time in the pits four seconds longer than his team mate's as Ferrari double-stacked the pair, which saw him fall to P4 behind eventual winner Sergio Perez, Sainz and the second Red Bull of title rival Max Verstappen.",
+            publisher: "Karel Decoene"
         },
         {
             id: 2,
-            name: "Minecraft",
-            releaseYear: 2011,
-            sales: 0
+            date: "February 13 2022 - 12:15",
+            image: "./daniel-ricciardo-mclaren.webp",
+            mainTag: "McLaren",
+            mainTagColor: "mclaren",
+            mainTagBackgroundColor: "mclaren-bg",
+            minutesRead: 9,
+            title: "McLaren may say goodbye to Ricciardo before the end of the season",
+            intro: "Daniel Ricciardo may have won the 2018 Monaco Grand Prix, but the McLaren driver couldn't deliver any Monte Carlo magic on Sunday, finishing 13th…",
+            subtitleFirst: "Obviously, a tough weekend to take, unfortunately I’m experienced with these",
+            paragraphFirst: "A crash in FP2 (below) meant Ricciardo began the weekend on the back foot and he went on to qualify 14th and finish 13th. This season the Australian has struggled in comparison to team mate Lando Norris – now standing 37 points behind the Briton – and is looking to \"reset\" ahead of the Azerbaijan Grand Prix. \"Obviously, a tough weekend to take, unfortunately I’m experienced with these – had a few of them the last 12 months, so I feel like I can handle them a little bit better,\" said Ricciardo.",
+            imageSecond: "./daniel-ricciardo-mclaren-1.webp",
+            subtitleSecond: "I will continue to smile or at least try to smile",
+            paragraphSecond: "After a run of points scores at Monaco from 2014-19, the Honey Badger has finished outside the top 10 for McLaren in 2021 and 2022. He explained why this year's Monaco Grand Prix didn't go quite as well as past iterations. \"It’s tough. I mean, no mistake, Monaco you need confidence. You need to be at one with the car; for sure if you’re not quite there it can show on the stopwatch. So as much as I love this place, at the core, that’s what you need.",
+            publisher: "Karel Decoene"
         }
     ]
 
 
 
-    //test articles
+    /*test articles
     let articles: ArticleItem[] = [
         {
             id: 0,
@@ -172,35 +205,15 @@ function App() {
             title: "McLaren neemt mogelijks voor einde seizoen afscheid van Ricciardo",
             intro: "Het is al geruime tijd een bekend gegeven dat een lezer, tijdens het bekijken van de."
         },
-    ]
+    ]*/
 
 
 
     return (
         <Router>
-            {/*<ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
-                <GlobalStyles />
-                <StyledApp>*/}
-            {/* <div className="container"> */}
-
             <div id="container" className="container">
-
-
                 {/* <Nav /> */}
 
-
-                {/* <div className="toggle-container">
-                    <input type="checkbox" id="switch" name="theme" checked={checked} onChange={(e) => setChecked(e.target.checked)} /><label htmlFor="switch" onClick={() => setChecked((c) => c)}>Toggle</label>
-                </div> */}
-
-                {/*<div className="test">
-                    <button onClick={() => setChecked((c) => !c)}>toggle</button>
-                    <input
-                        type="checkbox"
-                        checked={checked}
-                        onChange={(e) => setChecked(e.target.checked)}
-                    />
-                </div>*/}
 
 
                 <Routes>
@@ -214,8 +227,8 @@ function App() {
                     <Route path="/driver" element={<DriverPage />} />
                     <Route path="/team" element={<TeamPage />} />
 
-                    <Route path="/blog" element={<BlogPage articles={articles} />} />
-                    <Route path="/article/:id" element={<ArticleDetailPage articles={articles} />} />
+                    <Route path="/blog" element={<BlogPage />} />
+                    <Route path="/article/:id" element={<ArticleDetailPage />} />
 
                     <Route path="/blog-detail" element={<BlogDetailPage />} />
                     <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
@@ -225,8 +238,8 @@ function App() {
                     <Route path="*" element={<NotFoundPage />} />
 
 
-                    <Route path="/test" element={<ListPage games={games} />} />
-                    <Route path="/detail/:id" element={<DetailPage games={games} />} />
+                    <Route path="/test" element={<ListPage articles={articles} />} />
+                    <Route path="/detail/:id" element={<DetailPage articles={articles} />} />
 
 
 
@@ -258,8 +271,6 @@ function App() {
                     <button onClick={() => themeToggler()}>Change theme</button>
                     */}
             </div>
-            {/* </StyledApp>
-            </ThemeProvider> */}
         </Router>
     );
 }

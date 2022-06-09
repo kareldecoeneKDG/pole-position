@@ -1,11 +1,22 @@
-interface Game {
+interface ArticleItem {
     id?: number,
-    name: string,
-    releaseYear: number,
-    sales: number
+    date: string,
+    image: string,
+    mainTag: string,
+    mainTagColor: string,
+    mainTagBackgroundColor: string,
+    minutesRead: number,
+    title: string,
+    intro: string,
+    subtitleFirst: string,
+    paragraphFirst: string,
+    imageSecond: string,
+    subtitleSecond: string,
+    paragraphSecond: string,
+    publisher: string
 }
 
-interface ArticleItem {
+/*interface ArticleItem {
     id?: number,
     image: string,
     mainTag: string,
@@ -14,6 +25,6 @@ interface ArticleItem {
     minutesRead: number,
     title: string,
     intro: string
-}
+}*/
 
-export type { Game, ArticleItem }
+export type { ArticleItem }

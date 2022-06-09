@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import FadeIn from 'react-fade-in';
-import { ArticleItem } from '../../types';
 
 import BlogSearch from '../../4_organisms/BlogSearch/BlogSearch';
 import MoreRecentNews from '../../4_organisms/MoreRecentNews/MoreRecentNews';
@@ -9,11 +8,7 @@ import Navbar from '../../4_organisms/NavBar/NavBar';
 
 const Fade = require("react-reveal/Fade");
 
-interface BlogPageProps {
-    articles: ArticleItem[],
-}
-
-function BlogPage({articles} : BlogPageProps) {
+function BlogPage() {
     useEffect(() => {
         //scroll to top on opening
         document.documentElement.scrollTo(0, 0);

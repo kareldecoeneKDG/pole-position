@@ -28,6 +28,10 @@
             grid-template-columns: repeat(3, 1fr);
             gap: 20px;
 
+            a {
+                margin-bottom: 0;
+            }
+
             .article {
                 margin-bottom: 0;
             }
