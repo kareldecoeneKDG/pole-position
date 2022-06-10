@@ -2,34 +2,20 @@ import React from "react";
 import { ArticleItem } from "../types";
 import { Link } from "react-router-dom";
 
-import FerrariImage from './charles-leclerc-ferrari.webp';
-import RedBullImage from './max-verstappen-red-bull.jpeg';
-import McLarenImage from './daniel-ricciardo-mclaren.webp';
-
 interface ListItemProps {
     article: ArticleItem
 }
 
 const ListItem = ({ article }: ListItemProps) => {
-    var imageUrl = "";
-
-    // first image
-    if(article.image == "./max-verstappen-red-bull.jpeg") {
-        imageUrl = RedBullImage;
-    } else if(article.image == "./charles-leclerc-ferrari.webp") {
-        imageUrl = FerrariImage;
-    } else if (article.image == "./daniel-ricciardo-mclaren.webp") {
-        imageUrl = McLarenImage;
-    }
-
     return (
         <Link to={`/detail/${article.id}`}>
             {/* Actual article */}
             <article className="article">
                 <div className="article__content">
                     <div>
-                        {/* <img className="article__img" src={require("" + article.image)} alt="article cover image" /> */}
-                        <img className="article__img" src={imageUrl} alt="article cover image" />
+                        <div className="article__img">
+                            <img src={process.env.PUBLIC_URL+"images"+article.image} alt="article cover image" />
+                        </div>
 
                         <div className="article__content__top flex">
                             <p className={`tag ${article.mainTagColor} ${article.mainTagBackgroundColor}`}>{article.mainTag}</p>

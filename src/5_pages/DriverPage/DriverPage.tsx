@@ -11,9 +11,16 @@ import RecentShots from '../../4_organisms/RecentShots/RecentShots';
 import MightAlsoLikeDriver from '../../4_organisms/MightAlsoLikeDriver/MightAlsoLikeDriver';
 import Slideshow from '../../4_organisms/Slideshow/Slideshow';
 
+//types
+import { ArticleItem } from '../../types';
+
 const Fade = require("react-reveal/Fade");
 
-function DriverPage() {
+interface DriverPageProps {
+    articles: ArticleItem[],
+}
+
+function DriverPage({articles} : DriverPageProps) {
     useEffect(() => {
         //scroll to top on opening
         document.documentElement.scrollTo(0, 0);
@@ -33,7 +40,7 @@ function DriverPage() {
                 </Fade>
 
                 <Fade delay={500}>
-                    <MoreRecentNews />
+                    <MoreRecentNews articles={articles} />
                 </Fade>
 
                 <Fade delay={500}>

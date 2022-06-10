@@ -9,9 +9,16 @@ import LatestGP from '../../4_organisms/LatestGP/LatestGP';
 import Settings from '../../4_organisms/Settings/Settings';
 import SubNav from '../../4_organisms/SubNav/SubNav';
 
+// types
+import { ArticleItem } from '../../types';
+
 const Fade = require("react-reveal/Fade");
 
-function DashboardPage() {
+interface DashboardPageProps {
+    articles: ArticleItem[],
+}
+
+function DashboardPage({articles} : DashboardPageProps) {
     useEffect(() => {
         //scroll to top on opening
         document.documentElement.scrollTo(0, 0);
@@ -44,7 +51,7 @@ function DashboardPage() {
 
                 <Fade>
                     {/* Saved blogposts content */}
-                    <SavedBlogposts />
+                    <SavedBlogposts articles={articles} />
                 </Fade>
 
                 <Fade delay={500}>

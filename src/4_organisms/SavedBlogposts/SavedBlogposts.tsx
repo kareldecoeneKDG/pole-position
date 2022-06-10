@@ -3,7 +3,14 @@ import { BrowserRouter as Router, Routes, Route, NavLink, Link } from "react-rou
 
 import Article from '../../3_molecules/Article/Article';
 
-function SavedBlogposts() {
+//types
+import { ArticleItem } from '../../types';
+
+interface SavedBlogpostsProps {
+    articles: ArticleItem[]
+}
+
+function SavedBlogposts({ articles }: { articles: ArticleItem[] }) {
     return (
         <section className="savedBlogposts section">
             <div className="welcome desktop">
@@ -14,7 +21,7 @@ function SavedBlogposts() {
             </div>
 
             <div className="savedBlogposts__articles">
-                <Link to="/blog-detail">
+                {/*<Link to="/blog-detail">
                     <Article />
                 </Link>
 
@@ -36,7 +43,11 @@ function SavedBlogposts() {
 
                 <Link to="/blog-detail">
                     <Article />
-                </Link>
+                </Link>*/}
+
+                {articles.map((article: ArticleItem) => {
+                    return <Article article={article} />
+                })}
             </div>
 
             <div className="center">

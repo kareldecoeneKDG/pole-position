@@ -9,9 +9,16 @@ import MoreRecentNews from '../../4_organisms/MoreRecentNews/MoreRecentNews';
 
 import articleImg from './article1.jpeg';
 
+//types
+import { ArticleItem } from "../../types";
+
 const Fade = require("react-reveal/Fade");
 
-function BlogDetailPage() {
+interface BlogfDetailPageProps {
+    articles: ArticleItem[],
+}
+
+function BlogDetailPage({articles} : BlogfDetailPageProps) {
     useEffect(() => {
         //scroll to top on opening
         document.documentElement.scrollTo(0, 0);
@@ -91,7 +98,7 @@ function BlogDetailPage() {
                 </div>
 
                 <Fade delay={500}>
-                    <MoreRecentNews />
+                    <MoreRecentNews articles={articles} />
                 </Fade>
             </section>
         </FadeIn>

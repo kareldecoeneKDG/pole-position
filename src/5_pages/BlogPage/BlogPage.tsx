@@ -6,9 +6,16 @@ import BlogSearch from '../../4_organisms/BlogSearch/BlogSearch';
 import MoreRecentNews from '../../4_organisms/MoreRecentNews/MoreRecentNews';
 import Navbar from '../../4_organisms/NavBar/NavBar';
 
+// types
+import { ArticleItem } from '../../types';
+
+interface BlogPageProps {
+    articles: ArticleItem[],
+}
+
 const Fade = require("react-reveal/Fade");
 
-function BlogPage() {
+function BlogPage({articles} : BlogPageProps) {
     useEffect(() => {
         //scroll to top on opening
         document.documentElement.scrollTo(0, 0);
@@ -28,7 +35,7 @@ function BlogPage() {
                 </Fade>
 
                 <Fade delay={500}>
-                    <MoreRecentNews />
+                    <MoreRecentNews articles={articles} />
                 </Fade>
             </section>
         </FadeIn>

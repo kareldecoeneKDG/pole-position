@@ -12,9 +12,16 @@ import RecentShots from '../../4_organisms/RecentShots/RecentShots';
 import MightAlsoLikeTeams from '../../4_organisms/MightAlsoLikeTeams/MightAlsoLikeTeams';
 import Slideshow from '../../4_organisms/Slideshow/Slideshow';
 
+//types
+import { ArticleItem } from '../../types';
+
 const Fade = require("react-reveal/Fade");
 
-function TeamPage() {
+interface TeamPageProps {
+    articles: ArticleItem[],
+}
+
+function TeamPage({articles} : TeamPageProps) {
     useEffect(() => {
         //scroll to top on opening
         document.documentElement.scrollTo(0, 0);
@@ -34,7 +41,7 @@ function TeamPage() {
                 </Fade>
 
                 <Fade delay={500}>
-                    <MoreRecentNews />
+                    <MoreRecentNews articles={articles} />
                 </Fade>
 
                 <Fade delay={500}>

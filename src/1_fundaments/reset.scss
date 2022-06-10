@@ -34,6 +34,10 @@ a {
     text-decoration: none;
     color: $neutrals-1000;
     display: inline-block;
+
+    &:hover {
+        cursor: pointer !important;
+    }
 }
 
 .page-flex {

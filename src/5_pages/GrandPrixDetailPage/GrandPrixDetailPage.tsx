@@ -8,7 +8,14 @@ import Navbar from '../../4_organisms/NavBar/NavBar';
 import Article from '../../3_molecules/Article/Article';
 import circuit from './gp-1.png';
 
-function GrandPrixDetailPage() {
+//types
+import { ArticleItem } from '../../types';
+
+interface GrandPrixDetailPageProps {
+    articles: ArticleItem[],
+}
+
+function GrandPrixDetailPage({ articles }: GrandPrixDetailPageProps) {
     useEffect(() => {
         //scroll to top on opening
         document.documentElement.scrollTo(0, 0);
@@ -47,7 +54,7 @@ function GrandPrixDetailPage() {
                     <h2 className="section__title">2022 Barcelona GP</h2>
 
                     <div className="grandprixDetail__articles__articles">
-                        <Link to="/blog-detail">
+                        {/*<Link to="/blog-detail">
                             <Article />
                         </Link>
 
@@ -69,7 +76,11 @@ function GrandPrixDetailPage() {
 
                         <Link to="/blog-detail">
                             <Article />
-                        </Link>
+                        </Link>*/}
+
+                        {articles.map((article: ArticleItem) => {
+                            return <Article article={article} />
+                        })}
                     </div>
 
                     <div className="center">

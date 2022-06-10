@@ -3,23 +3,36 @@ import { Link } from 'react-router-dom';
 
 import Article from '../../3_molecules/Article/Article';
 
-function MoreRecentNews() {
+// types
+import { ArticleItem } from '../../types';
+
+interface MoreRecentNewsProps {
+    articles: ArticleItem[]
+}
+
+function MoreRecentNews({ articles }: { articles: ArticleItem[] }) {
     return (
         <div className="moreRecentNews section">
             <h2 className="section__title">More recent news</h2>
 
+            {/*<div className="moreRecentNews__articles">
+                <Link to="/blog-detail">
+                    <Article />
+                </Link>
+
+                <Link to="/blog-detail">
+                    <Article />
+                </Link>
+
+                <Link to="/blog-detail">
+                    <Article />
+                </Link>
+            </div>*/}
+
             <div className="moreRecentNews__articles">
-                <Link to="/blog-detail">
-                    <Article />
-                </Link>
-
-                <Link to="/blog-detail">
-                    <Article />
-                </Link>
-
-                <Link to="/blog-detail">
-                    <Article />
-                </Link>
+                {articles.map((article: ArticleItem) => {
+                    return <Article article={article} />
+                })}
             </div>
 
             <div className="center">
