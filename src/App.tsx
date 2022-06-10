@@ -222,9 +222,12 @@ function App() {
     ]
 
     // "dynamic" drivers -> just for showcase
-    let drivers: DriverItem[] = [
-        
-    ]
+    /*let drivers: DriverItem[] = [
+        {
+            id: 0,
+            image:
+        }
+    ]*/
 
 
 
