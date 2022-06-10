@@ -1,17 +1,22 @@
 import React from 'react';
 
-function Benefit() {
+//types
+import { BenefitItem } from '../../types';
+
+interface BenefitProps {
+    benefit: BenefitItem
+}
+
+function Benefit({ benefit }: BenefitProps) {
     return (
         <div className="benefit">
             <div className="icon-bg-lg">
-                <i className="fa fa-clock-o" aria-hidden="true"></i>
+                <i className={`fa ${benefit.icon}`} aria-hidden="true"></i>
             </div>
 
-            <h4 className="benefit__title">Comment on live GP</h4>
+            <h4 className="benefit__title">{benefit.title}</h4>
 
-            <p className="benefit__p">
-                Het is al geruime tijd een bekend gegeven dat een lezer, tijdens het bekijken van de layout van een.
-            </p>
+            <p className="benefit__p">{benefit.paragraph}</p>
         </div>
     );
 }

@@ -62,7 +62,7 @@ function Article({ article }: ArticleProps) {
                         <a className="icon-bg" href="#"><i className="fa fa-bookmark" aria-hidden="true"></i></a>
                     </div>
                 </div>
-            </article >
+            </article>
         </Link >
     );
 }

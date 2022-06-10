@@ -3,7 +3,14 @@ import { Link } from 'react-router-dom';
 
 import Benefit from '../../3_molecules/Benefit/Benefit';
 
-function Benefits() {
+//types
+import { BenefitItem } from '../../types';
+
+interface BenefitsProps {
+    benefits: BenefitItem[]
+}
+
+function Benefits({ benefits }: { benefits: BenefitItem[] }) {
     return (
         <section id="benefits" className="benefits section">
             <h2 className="benefits__title section__title">Discuss the next F1 GP live with others</h2>
@@ -13,10 +20,13 @@ function Benefits() {
             </p>
 
             <div className="benefits__items flex-desktop">
+                {/*<Benefit />
                 <Benefit />
                 <Benefit />
-                <Benefit />
-                <Benefit />
+                <Benefit />*/}
+                {benefits.map((benefit: BenefitItem) => {
+                    return <Benefit benefit={benefit} />
+                })}
             </div>
 
             <p className="cta__p">You've heard enough?</p>

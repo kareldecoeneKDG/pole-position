@@ -16,15 +16,36 @@ interface ArticleItem {
     publisher: string
 }
 
-/*interface ArticleItem {
+interface BenefitItem {
+    id?: number,
+    icon: string,
+    title: string,
+    paragraph: string
+}
+
+interface PlatformItemType {
+    id?: number,
+    title: string,
+    paragraph: string
+}
+
+interface DriverItem {
     id?: number,
     image: string,
-    mainTag: string,
-    mainTagColor: string,
-    mainTagBackgroundColor: string,
-    minutesRead: number,
-    title: string,
-    intro: string
-}*/
+    firstName: string,
+    lastName: string,
+    driverLogo: string | null,
+    driverWebsite: string,
+    age: number,
+    experience: number,
+    worldChampionships: number,
+    fastestLaps: number,
+    polePositions: number,
+    nationality: string,
+    countryFlag: string,
+    twitter: string | null,
+    facebook: string | null,
+    instagram: string | null
+}
 
-export type { ArticleItem }
+export type { ArticleItem, BenefitItem, PlatformItemType, DriverItem }

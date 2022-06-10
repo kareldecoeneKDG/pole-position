@@ -3,7 +3,14 @@ import { Link } from 'react-router-dom';
 
 import PlatformItem from '../../3_molecules/PlatformItem/PlatformItem';
 
-function Platform() {
+//types
+import { PlatformItemType } from '../../types';
+
+interface PlatformProps {
+    platformItems: PlatformItemType[]
+}
+
+function Platform({ platformItems }: { platformItems: PlatformItemType[] }) {
     return (
         <section id="platform" className="platform section">
             <div className="flex-desktop">
@@ -15,10 +22,14 @@ function Platform() {
                 </div>
 
                 <div className="platform__items ">
+                    {/*<PlatformItem />
                     <PlatformItem />
                     <PlatformItem />
-                    <PlatformItem />
-                    <PlatformItem />
+                    <PlatformItem />*/}
+
+                    {platformItems.map((platformItem: PlatformItemType) => {
+                        return <PlatformItem platformItem={platformItem} />
+                    })}
                 </div>
             </div>
 

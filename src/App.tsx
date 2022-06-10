@@ -35,9 +35,7 @@ import DetailPage from './5_pages/DetailPage/DetailPage';
 import './style.scss';
 
 //types
-import { ArticleItem } from './types';
-import ArticleDetailPage from './5_pages/ArticleDetailPage/ArticleDetailPage';
-//import Article from './3_molecules/Article/Article';
+import { ArticleItem, BenefitItem, DriverItem, PlatformItemType } from './types';
 
 // Multilanguage cookies
 const cookies = require('js-cookie');
@@ -116,7 +114,7 @@ function App() {
 
 
 
-    // "dynamic" articles
+    // "dynamic" articles -> just for showcase
     let articles: ArticleItem[] = [
         {
             id: 0,
@@ -171,13 +169,70 @@ function App() {
         }
     ]
 
+    // "dynamic" benefits -> just for showcase
+    let benefits: BenefitItem[] = [
+        {
+            id: 0,
+            icon: "fa-users",
+            title: "Community",
+            paragraph: "Join a community of true F1 enthusiasts. Only they will share your level of passion."
+        },
+        {
+            id: 1,
+            icon: "fa-bell",
+            title: "Real time news",
+            paragraph: "Don't rely on rumors but on true real time info instead. Never miss anything F1 again."
+        },
+        {
+            id: 2,
+            icon: "fa-comment",
+            title: "Discuss recent news",
+            paragraph: "Nothing goes above explaining why a time-penalty was correct to a stranger on the internet."
+        },
+        {
+            id: 3,
+            icon: "fa-clock-o",
+            title: "Comment on live GP",
+            paragraph: "You want to share your exitement during the GP? We see you. You're not the only one, join others now."
+        },
+    ]
+
+    // "dynamic" platformItems -> just for showcase
+    let platformItems: PlatformItemType[] = [
+        {
+            id: 0,
+            title: "test title 1",
+            paragraph: "paragraph 1"
+        },
+        {
+            id: 1,
+            title: "test title 2",
+            paragraph: "paragraph 2"
+        },
+        {
+            id: 2,
+            title: "test title 3",
+            paragraph: "paragraph 3"
+        },
+        {
+            id: 3,
+            title: "test title 4",
+            paragraph: "paragraph 4"
+        }
+    ]
+
+    // "dynamic" drivers -> just for showcase
+    let drivers: DriverItem[] = [
+        
+    ]
+
 
 
     return (
         <Router>
             <div id="container" className="container">
                 <Routes>
-                    <Route path="/" element={<HomePage />} />
+                    <Route path="/" element={<HomePage benefits={benefits} platformItems={platformItems} />} />
                     <Route path="/dashboard" element={<DashboardPage articles={articles} />} />
                     <Route path="/account" element={<AccountPage />} />
                     <Route path="/grandprixs" element={<GrandPrixsPage />} />
