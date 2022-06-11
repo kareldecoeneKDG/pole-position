@@ -7,9 +7,16 @@ import Navbar from '../../4_organisms/NavBar/NavBar';
 import LatestGP from '../../4_organisms/LatestGP/LatestGP';
 import GrandPrix from '../../3_molecules/GrandPrix/GrandPrix';
 
+//types
+import { GrandPrixItem } from '../../types';
+
+interface GrandPrixsPageProps {
+    grandPrixs: GrandPrixItem[],
+}
+
 const Fade = require("react-reveal/Fade");
 
-function GrandPrixsPage() {
+function GrandPrixsPage({ grandPrixs }: GrandPrixsPageProps) {
     useEffect(() => {
         //scroll to top on opening
         document.documentElement.scrollTo(0, 0);
@@ -33,7 +40,7 @@ function GrandPrixsPage() {
                         <h2 className="section__title">All 2022 Grand Prixs</h2>
 
                         <div className="grandprixs-section__items">
-                            <Link to="/grandprix-detail">
+                            {/*<Link to="/grandprix-detail">
                                 <GrandPrix />
                             </Link>
 
@@ -47,7 +54,12 @@ function GrandPrixsPage() {
 
                             <Link to="/grandprix-detail">
                                 <GrandPrix />
-                            </Link>
+                            </Link>*/}
+
+                            {grandPrixs.map((grandPrix: GrandPrixItem) => {
+                                return <GrandPrix grandPrix={grandPrix} />
+                            })}
+
                         </div>
                     </div>
                 </Fade>

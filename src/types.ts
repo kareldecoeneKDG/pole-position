@@ -73,4 +73,17 @@ interface TeamItem {
     instagram: string | null
 }
 
-export type { ArticleItem, BenefitItem, PlatformItemType, DriverItem, TeamItem }
+interface GrandPrixItem {
+    id: number,
+    circuitImage: string,
+    circuitName: string,
+    headerImage: string,
+    country: string,
+    flag: string,
+    gpWeekend: string,
+    gpDate: string,
+    gpHour: string,
+    timeUntilGP: string,
+}
+
+export type { ArticleItem, BenefitItem, PlatformItemType, DriverItem, TeamItem, GrandPrixItem }

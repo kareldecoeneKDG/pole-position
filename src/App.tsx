@@ -35,7 +35,7 @@ import DetailPage from './5_pages/DetailPage/DetailPage';
 import './style.scss';
 
 //types
-import { ArticleItem, BenefitItem, DriverItem, PlatformItemType, TeamItem } from './types';
+import { ArticleItem, BenefitItem, DriverItem, GrandPrixItem, PlatformItemType, TeamItem } from './types';
 
 // Multilanguage cookies
 const cookies = require('js-cookie');
@@ -698,8 +698,8 @@ function App() {
             originCountry: "Germany",
             firstEntry: 1954,
             worldChampionships: 8,
-            fastestLaps: 94,
-            polePositions: 135,
+            fastestLaps: 0,
+            polePositions: 0,
             twitter: "https://twitter.com/mercedesamgf1",
             facebook: "https://www.facebook.com/MercedesAMGF1/",
             instagram: "https://www.instagram.com/mercedesamgf1/"
@@ -718,7 +718,7 @@ function App() {
             firstEntry: 1966,
             worldChampionships: 8,
             fastestLaps: 1,
-            polePositions: 156,
+            polePositions: 0,
             twitter: "https://twitter.com",
             facebook: "https://www.facebook.com",
             instagram: "https://www.instagram.com"
@@ -736,8 +736,8 @@ function App() {
             originCountry: "Switzerland",
             firstEntry: 1950,
             worldChampionships: 0,
-            fastestLaps: 14,
-            polePositions: 12,
+            fastestLaps: 0,
+            polePositions: 0,
             twitter: "https://twitter.com",
             facebook: "https://www.facebook.com",
             instagram: "https://www.instagram.com"
@@ -774,7 +774,7 @@ function App() {
             originCountry: "Italy",
             firstEntry: 2020,
             worldChampionships: 0,
-            fastestLaps: 1,
+            fastestLaps: 0,
             polePositions: 0,
             twitter: "https://twitter.com",
             facebook: "https://www.facebook.com",
@@ -793,7 +793,7 @@ function App() {
             originCountry: "United States",
             firstEntry: 2016,
             worldChampionships: 0,
-            fastestLaps: 3,
+            fastestLaps: 0,
             polePositions: 0,
             twitter: "https://twitter.com",
             facebook: "https://www.facebook.com",
@@ -831,11 +831,111 @@ function App() {
             originCountry: "United Kingdom",
             firstEntry: 1975,
             worldChampionships: 9,
-            fastestLaps: 133,
-            polePositions: 128,
+            fastestLaps: 0,
+            polePositions: 0,
             twitter: "https://twitter.com",
             facebook: "https://www.facebook.com",
             instagram: "https://www.instagram.com"
+        }
+    ]
+
+    // "dynamic" grand prixs -> just for showcase
+    let grandPrixs: GrandPrixItem[] = [
+        {
+            id: 0,
+            circuitImage: "./images/grandPrixs/spain.webp",
+            circuitName: "Circuit de Barcelona-Catalunya",
+            headerImage: "./images/grandPrixs/backgrounds/spain.webp",
+            country: "Spain",
+            flag: "./images/flags/spain.webp",
+            gpWeekend: "20 - 22 MAY",
+            gpDate: "22 may",
+            gpHour: "12:30",
+            timeUntilGP: "2 days, 8 hours"
+        },
+        {
+            id: 1,
+            circuitImage: "./images/grandPrixs/monaco.webp",
+            circuitName: "Circuit de Monaco",
+            headerImage: "./images/grandPrixs/backgrounds/monaco.webp",
+            country: "Monaco",
+            flag: "./images/flags/monaco.webp",
+            gpWeekend: "27 - 29 MAY",
+            gpDate: "29 may",
+            gpHour: "12:30",
+            timeUntilGP: "2 days, 8 hours"
+        },
+        {
+            id: 2,
+            circuitImage: "./images/grandPrixs/great-britain.webp",
+            circuitName: "Silverstone Circuit",
+            headerImage: "./images/grandPrixs/backgrounds/great-britain.webp",
+            country: "Great Britain",
+            flag: "./images/flags/great-britain.webp",
+            gpWeekend: "01 - 03 JUL",
+            gpDate: "03 jul",
+            gpHour: "12:30",
+            timeUntilGP: "2 days, 8 hours"
+        },
+        {
+            id: 3,
+            circuitImage: "./images/grandPrixs/belgium.webp",
+            circuitName: "Circuit de Spa-Francorchamps",
+            headerImage: "./images/grandPrixs/backgrounds/belgium.webp",
+            country: "Belgium",
+            flag: "./images/flags/belgium.webp",
+            gpWeekend: "26 - 28 AUG",
+            gpDate: "28 aug",
+            gpHour: "12:30",
+            timeUntilGP: "2 days, 8 hours"
+        },
+        {
+            id: 4,
+            circuitImage: "./images/grandPrixs/netherlands.webp",
+            circuitName: "Circuit Zandvoort",
+            headerImage: "./images/grandPrixs/backgrounds/netherlands.webp",
+            country: "Netherlands",
+            flag: "./images/flags/netherlands.webp",
+            gpWeekend: "02 - 04 SEP",
+            gpDate: "04 sep",
+            gpHour: "12:30",
+            timeUntilGP: "2 days, 8 hours"
+        },
+        {
+            id: 5,
+            circuitImage: "./images/grandPrixs/italy.webp",
+            circuitName: "Autodromo Nazionale Monza",
+            headerImage: "./images/grandPrixs/backgrounds/italy.webp",
+            country: "Italy",
+            flag: "./images/flags/italy.webp",
+            gpWeekend: "09 - 11 SEP",
+            gpDate: "11 sep",
+            gpHour: "12:30",
+            timeUntilGP: "2 days, 8 hours"
+        },
+        {
+            id: 6,
+            circuitImage: "./images/grandPrixs/japan.webp",
+            circuitName: "Suzuka International Racing Course",
+            headerImage: "./images/grandPrixs/backgrounds/japan.webp",
+            country: "Japan",
+            flag: "./images/flags/japan.webp",
+            gpWeekend: "07 - 09 OCT",
+            gpDate: "09 oct",
+            gpHour: "12:30",
+            timeUntilGP: "2 days, 8 hours"
+        },
+        {
+            id: 7,
+            circuitImage: "./images/grandPrixs/brazil.webp",
+            circuitName: "Autódromo José Carlos Pace",
+            headerImage: "./images/grandPrixs/backgrounds/brazil.webp",
+            country: "Brazil",
+            flag: "./images/flags/brazil.webp",
+            gpWeekend: "11 - 13 NOV",
+            gpDate: "13 nov",
+            gpHour: "12:30",
+            timeUntilGP: "2 days, 8 hours"
         }
     ]
 
@@ -848,12 +948,12 @@ function App() {
                     <Route path="/" element={<HomePage benefits={benefits} platformItems={platformItems} />} />
                     <Route path="/dashboard" element={<DashboardPage articles={articles} />} />
                     <Route path="/account" element={<AccountPage />} />
-                    <Route path="/grandprixs" element={<GrandPrixsPage />} />
-                    <Route path="/grandprix-detail" element={<GrandPrixDetailPage articles={articles} />} />
+                    <Route path="/grandprixs" element={<GrandPrixsPage grandPrixs={grandPrixs} />} />
+                    <Route path="/grandprix-detail/:id" element={<GrandPrixDetailPage articles={articles} grandPrixs={grandPrixs} />} />
                     <Route path="/driverStandings" element={<DriverStandingsPage drivers={drivers} />} />
                     <Route path="/teamStandings" element={<TeamStandingsPage teams={teams} />} />
                     <Route path="/driver/:id" element={<DriverPage articles={articles} drivers={drivers} />} />
-                    <Route path="/team" element={<TeamPage articles={articles} />} />
+                    <Route path="/team/:id" element={<TeamPage articles={articles} teams={teams} />} />
 
                     <Route path="/blog" element={<BlogPage articles={articles} />} />
                     {/* <Route path="/article/:id" element={<ArticleDetailPage />} /> */}

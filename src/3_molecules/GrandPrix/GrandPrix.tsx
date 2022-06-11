@@ -5,31 +5,38 @@ import circuit from './gp-1.png';
 import flag from './flag-italy.png';
 import circuitBackground from './circuit-background.png';
 
+//types
+import { GrandPrixItem } from '../../types';
+import { getPackedSettings } from 'http2';
 
-function GrandPrix() {
+interface GrandPrixProps {
+    grandPrix: GrandPrixItem
+}
+
+function GrandPrix({ grandPrix }: GrandPrixProps) {
     return (
-        <div className="grandprix">
-            <img className="grandprix__bg" src={circuitBackground} alt="circuit bg image" />
+        <Link to={`/grandprix-detail/${grandPrix.id}`}>
+            <div className="grandprix">
+                <img className="grandprix__bg" src={circuitBackground} alt="circuit bg image" />
 
-            <div className="grandprix__header">
-                <div className="grandprix__header__title flex">
-                    <img className="flag" src={flag} alt="Flag of country GP" />
-                    <h3>Italian GP</h3>
+                <div className="grandprix__header">
+                    <div className="grandprix__header__title flex">
+                        <img className="flag" src={grandPrix.flag} alt="Flag of country GP" />
+                        <h3>{grandPrix.country} GP</h3>
+                    </div>
+                    <div className="tag detail">{grandPrix.circuitName}</div>
                 </div>
-                <div className="tag detail">
-                    Autodromo Nazionale Monza
+
+                <img className="grandprix__circuit" src={grandPrix.circuitImage} alt="Circuit of GP" />
+
+                <div className="grandprix__datetime">
+                    <h3 className="grandprix__datetime__date">{grandPrix.gpDate} | {grandPrix.gpHour}</h3>
+                    <p className="tag circuit"><i className="fa fa-clock-o" aria-hidden="true"></i> {grandPrix.timeUntilGP}</p>
                 </div>
+
+                <a className="button button-secondary skew" href="#"><span>{grandPrix.country} GP <i className="fa fa-chevron-right first-chevron" aria-hidden="true"></i><i className="fa fa-chevron-right" aria-hidden="true"></i></span></a>
             </div>
-
-            <img className="grandprix__circuit" src={circuit} alt="Circuit of GP" />
-
-            <div className="grandprix__datetime">
-                <h3 className="grandprix__datetime__date">24th april | 12:30</h3>
-                <p className="tag circuit"><i className="fa fa-clock-o" aria-hidden="true"></i> 2 days, 8 hours</p>
-            </div>
-
-            <a className="button button-secondary skew" href="#"><span>Italian GP <i className="fa fa-chevron-right first-chevron" aria-hidden="true"></i><i className="fa fa-chevron-right" aria-hidden="true"></i></span></a>
-        </div>
+        </Link>
     );
 }
 

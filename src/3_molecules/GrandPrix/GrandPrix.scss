@@ -37,6 +37,10 @@
 
     &__circuit {
         margin-bottom: 30px;
+        width: 200px;
+        height: auto;
+        max-height: 200px;
+        object-fit: contain;
     }
 
     &__datetime {
@@ -122,16 +126,16 @@
         }
 
         > div {
-            width: 183px;
+            width: 233px;
         }
 
         .button {
             display: block !important;
-            width: 183px;
+            width: 213px;
+            right: 60px;
         }
 
-        > div,
-        a {
+        > div, a {
             position: relative;
             right: 50px;
             margin-left: auto !important;

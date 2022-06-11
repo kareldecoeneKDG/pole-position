@@ -13,7 +13,7 @@ interface ArticleProps {
 function Article({ article }: ArticleProps) {
     return (
 
-        < Link to={`/detail/${article.id}`}>
+        <Link to={`/detail/${article.id}`}>
             {/*<article className="article">
                 <div className="article__content">
                     <div>

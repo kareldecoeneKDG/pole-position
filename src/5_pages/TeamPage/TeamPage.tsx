@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import FadeIn from 'react-fade-in';
+import { useParams } from 'react-router-dom';
 
 import Navbar from '../../4_organisms/NavBar/NavBar';
 import TeamDetailHeader from '../../4_organisms/TeamDetailHeader/TeamDetailHeader';
@@ -8,24 +9,29 @@ import LatestNews from '../../4_organisms/LatestNews/LatestNews';
 import FactsNumbers from '../../4_organisms/FactsNumbers/FactsNumbers';
 import HistoryHighlights from '../../4_organisms/HistoryHighlights/HistoryHighlights';
 import MoreRecentNews from '../../4_organisms/MoreRecentNews/MoreRecentNews';
+//?????????????
 import RecentShots from '../../4_organisms/RecentShots/RecentShots';
 import MightAlsoLikeTeams from '../../4_organisms/MightAlsoLikeTeams/MightAlsoLikeTeams';
 import Slideshow from '../../4_organisms/Slideshow/Slideshow';
 
 //types
-import { ArticleItem } from '../../types';
+import { ArticleItem, TeamItem } from '../../types';
 
 const Fade = require("react-reveal/Fade");
 
 interface TeamPageProps {
     articles: ArticleItem[],
+    teams: TeamItem[]
 }
 
-function TeamPage({articles} : TeamPageProps) {
+function TeamPage({articles, teams} : TeamPageProps) {
     useEffect(() => {
         //scroll to top on opening
         document.documentElement.scrollTo(0, 0);
     }, []);
+
+    let { id } = useParams();
+    let team = teams.find((team: TeamItem) => team.id === parseInt(id!))!;
 
     return (
         <FadeIn className="page-flex">
@@ -37,7 +43,7 @@ function TeamPage({articles} : TeamPageProps) {
                 <Navbar />
 
                 <Fade>
-                    <TeamDetailHeader />
+                    <TeamDetailHeader teams={teams} />
                 </Fade>
 
                 <Fade delay={500}>

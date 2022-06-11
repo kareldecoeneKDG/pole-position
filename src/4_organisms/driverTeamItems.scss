@@ -3,11 +3,14 @@
     margin-top: 50px;
 
     .item {
+        width: 100%;
         padding: 20px;
         background-color: $neutrals-200;
         border-radius: 20px;
         margin-bottom: 20px;
         justify-content: space-between;
+        flex-grow: 1;
+        flex-basis: 0;
 
         &:last-of-type {
             margin-bottom: 0px;
@@ -46,7 +49,7 @@
     .driver-team__items {
         .item {
             background-color: $neutrals-200;
-    
+
             &__title {
                 color: $neutrals-900;
             }
@@ -63,7 +66,7 @@
     .driver-team__items {
         .item {
             background-color: $neutrals-800;
-    
+
             &__title {
                 color: $neutrals-100;
             }

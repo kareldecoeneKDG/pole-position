@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import FadeIn from 'react-fade-in';
 
@@ -9,38 +9,46 @@ import Article from '../../3_molecules/Article/Article';
 import circuit from './gp-1.png';
 
 //types
-import { ArticleItem } from '../../types';
+import { ArticleItem, GrandPrixItem } from '../../types';
 
 interface GrandPrixDetailPageProps {
     articles: ArticleItem[],
+    grandPrixs: GrandPrixItem[]
 }
 
-function GrandPrixDetailPage({ articles }: GrandPrixDetailPageProps) {
+interface ParamTypes {
+    id: string | undefined
+}
+
+function GrandPrixDetailPage({ articles, grandPrixs }: GrandPrixDetailPageProps) {
     useEffect(() => {
         //scroll to top on opening
         document.documentElement.scrollTo(0, 0);
     }, []);
 
+    let { id } = useParams();
+    let grandPrix = grandPrixs.find((grandPrix: GrandPrixItem) => grandPrix.id === parseInt(id!))!;
+
     return (
         <FadeIn className="page-flex">
             <div className="grandprixDetail">
                 <Helmet>
-                    <title>Barcelona GP | Pole Positon - F1 Blog</title>
+                    <title>{grandPrix.country} GP | Pole Positon - F1 Blog</title>
                 </Helmet>
 
                 <Navbar />
 
                 <div className="banner">
-                    <div className="banner__bg"></div>
+                    <div className="banner__bg" style={{backgroundImage: `url(../${grandPrix.headerImage})`}}></div>
 
                     <div className="banner__info">
                         <div className="banner__info__circuit">
-                            <img className="banner__info__circuit__img" src={circuit} alt="Circuit preview" />
+                            <img className="banner__info__circuit__img" src={`../${grandPrix.circuitImage}`} alt="Circuit preview" />
                         </div>
 
-                        <h2 className="banner__info__title">2022 Barcelona GP</h2>
+                        <h2 className="banner__info__title">2022 {grandPrix.country} GP</h2>
 
-                        <p className="button button-secondary skew"><span><i className="fa fa-calendar" aria-hidden="true"></i> 27 - 29 may</span></p>
+                        <p className="button button-secondary skew"><span><i className="fa fa-calendar" aria-hidden="true"></i> {grandPrix.gpWeekend}</span></p>
                     </div>
                 </div>
 
@@ -48,10 +56,10 @@ function GrandPrixDetailPage({ articles }: GrandPrixDetailPageProps) {
                     <div className="breadcrumbs">
                         <Link to="/grandprixs" className="breadcrumbs__item">Grand Prixs</Link>
                         <i className="fa fa-chevron-right" aria-hidden="true"></i>
-                        <NavLink to="/grandprix-detail" className="breadcrumbs__item">Spanisch Grand Prix</NavLink>
+                        <NavLink to="/grandprix-detail" className="breadcrumbs__item">{grandPrix.country} Grand Prix</NavLink>
                     </div>
 
-                    <h2 className="section__title">2022 Barcelona GP</h2>
+                    <h2 className="section__title">2022 {grandPrix.country} GP</h2>
 
                     <div className="grandprixDetail__articles__articles">
                         {/*<Link to="/blog-detail">

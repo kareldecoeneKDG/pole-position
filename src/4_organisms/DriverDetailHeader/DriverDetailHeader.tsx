@@ -88,23 +88,7 @@ function DriverDetailHeader({ drivers }: DriverDetailHeaderProps) {
                             <h2 className="item__number">{driver.worldChampionships}x</h2>
                         </div>
 
-                        {/* world championships */}
-                        <div className="item flex">
-                            <div className="flex">
-                                <div className="item__icon-bg icon-bg-lg">
-                                    <i className="fa fa-clock-o" aria-hidden="true"></i>
-                                </div>
-
-                                <p className="item__title">
-                                    Fastest<br />
-                                    Laps
-                                </p>
-                            </div>
-
-                            <h2 className="item__number">{driver.fastestLaps}x</h2>
-                        </div>
-
-                        {/* world championships */}
+                        {/* pole positions */}
                         <div className="item flex">
                             <div className="flex">
                                 <div className="item__icon-bg icon-bg-lg">
@@ -118,6 +102,22 @@ function DriverDetailHeader({ drivers }: DriverDetailHeaderProps) {
                             </div>
 
                             <h2 className="item__number">{driver.polePositions}x</h2>
+                        </div>
+
+                        {/* fastest laps */}
+                        <div className="item flex">
+                            <div className="flex">
+                                <div className="item__icon-bg icon-bg-lg">
+                                    <i className="fa fa-clock-o" aria-hidden="true"></i>
+                                </div>
+
+                                <p className="item__title">
+                                    Fastest<br />
+                                    Laps
+                                </p>
+                            </div>
+
+                            <h2 className="item__number">{driver.fastestLaps}x</h2>
                         </div>
                     </div>
                 </div>
