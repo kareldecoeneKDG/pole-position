@@ -12,19 +12,28 @@ import MightAlsoLikeDriver from '../../4_organisms/MightAlsoLikeDriver/MightAlso
 import Slideshow from '../../4_organisms/Slideshow/Slideshow';
 
 //types
-import { ArticleItem } from '../../types';
+import { ArticleItem, DriverItem } from '../../types';
+import { useParams } from 'react-router-dom';
 
 const Fade = require("react-reveal/Fade");
 
 interface DriverPageProps {
     articles: ArticleItem[],
+    drivers: DriverItem[]
 }
 
-function DriverPage({articles} : DriverPageProps) {
+interface ParamTypes {
+    id: string | undefined
+}
+
+function DriverPage({articles, drivers} : DriverPageProps) {
     useEffect(() => {
         //scroll to top on opening
         document.documentElement.scrollTo(0, 0);
     }, []);
+
+    let { id } = useParams();
+    let driver = drivers.find((driver: DriverItem) => driver.id === parseInt(id!))!;
 
     return (
         <FadeIn className="page-flex">
@@ -36,7 +45,7 @@ function DriverPage({articles} : DriverPageProps) {
                 <Navbar />
 
                 <Fade>
-                    <DriverDetailHeader />
+                    <DriverDetailHeader drivers={drivers} />
                 </Fade>
 
                 <Fade delay={500}>

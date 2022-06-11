@@ -5,12 +5,12 @@
 
     &__item {
         background-color: $primary-600;
+        transition: all $transition-time-short;
 
         &:hover {
             border-radius: 5px !important;
             transform: skew(-11deg);
             background-color: $primary-500;
-            transition: all $transition-time-short;
 
             i {
                 transition: all $transition-time-short;

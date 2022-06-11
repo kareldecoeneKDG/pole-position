@@ -7,9 +7,16 @@ import StandingDriver from '../../3_molecules/StandingDriver/StandingDriver';
 import Subnav from '../../4_organisms/SubNav/SubNav';
 import NavBar from '../../4_organisms/NavBar/NavBar';
 
+//types
+import { DriverItem } from '../../types';
+
+interface DriverStandingsPageProps {
+    drivers: DriverItem[],
+}
+
 const Fade = require("react-reveal/Fade");
 
-function DriverStandingsPage() {
+function DriverStandingsPage({ drivers }: DriverStandingsPageProps) {
     useEffect(() => {
         //scroll to top on opening
         document.documentElement.scrollTo(0, 0);
@@ -35,7 +42,12 @@ function DriverStandingsPage() {
 
                 <Fade>
                     <section className="standings__drivers">
-                        <Link to="/driver">
+
+                        {drivers.map((driver: DriverItem) => {
+                            return <StandingDriver driver={driver} />
+                        })}
+
+                        {/* <Link to="/driver">
                             <StandingDriver />
                         </Link>
 
@@ -47,23 +59,7 @@ function DriverStandingsPage() {
                             <StandingDriver />
                         </Link>
 
-                        {/* <hr className="standings__drivers__line line" /> */}
-
-                        <Link to="/driver">
-                            <StandingDriver />
-                        </Link>
-
-                        <Link to="/driver">
-                            <StandingDriver />
-                        </Link>
-
-                        <Link to="/driver">
-                            <StandingDriver />
-                        </Link>
-
-                        <Link to="/driver">
-                            <StandingDriver />
-                        </Link>
+                        <hr className="standings__drivers__line line" />
 
                         <Link to="/driver">
                             <StandingDriver />
@@ -116,6 +112,22 @@ function DriverStandingsPage() {
                         <Link to="/driver">
                             <StandingDriver />
                         </Link>
+
+                        <Link to="/driver">
+                            <StandingDriver />
+                        </Link>
+
+                        <Link to="/driver">
+                            <StandingDriver />
+                        </Link>
+
+                        <Link to="/driver">
+                            <StandingDriver />
+                        </Link>
+
+                        <Link to="/driver">
+                            <StandingDriver />
+                        </Link> */}
                     </section>
                 </Fade>
             </div>

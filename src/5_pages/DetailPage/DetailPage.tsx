@@ -41,7 +41,7 @@ function DetailPage({ articles }: DetailPageProps) {
                     <p className="blogDetail__content__intro">{article.intro}</p>
 
                     {/* <img className="blogDetail__content__img header-img" src={"../" + process.env.PUBLIC_URL + "images" + article.image} alt="detail picture blogpost" /> */}
-                    <img className="blogDetail__content__img header-img" src={article.image} alt="detail picture blogpost" />
+                    <img className="blogDetail__content__img header-img" src={`../${article.image}`} alt="detail picture blogpost" />
 
                     <div className="flex-desktop">
                         <div className="first-block">
