@@ -29,15 +29,15 @@ function StandingDriver({ driver }: StandingDriverProps) {
                 <div className="standing__bottom">
                     <div className="standing__bottom__place flex">
                         <div className="tag detail standing__bottom__place__div standing-div-border desktop">
-                            {driver.polePositions} poles
+                            {driver.id + 1} place
                         </div>
 
                         <div className="tag detail standing__bottom__place__div standing-div-border mobile">
-                            {driver.polePositions} poles
+                            {driver.id + 1} place
                         </div>
 
                         <div className="tag detail standing__bottom__place__div">
-                            {driver.fastestLaps} fastest laps
+                            {driver.wins} wins
                         </div>
                     </div>
 

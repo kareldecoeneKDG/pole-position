@@ -30,10 +30,11 @@ interface PlatformItemType {
 }
 
 interface DriverItem {
-    id?: number,
+    id: number,
     image: string,
     raceNumber: number,
     points: number,
+    wins: number,
     team: string,
     teamLogo: string,
     firstName: string,
@@ -52,4 +53,24 @@ interface DriverItem {
     instagram: string | null
 }
 
-export type { ArticleItem, BenefitItem, PlatformItemType, DriverItem }
+interface TeamItem {
+    id: number,
+    team: string,
+    teamName: string,
+    teamLogo: string,
+    points: number,
+    wins: number,
+    podiums: number,
+    firstDriver: string,
+    secondDriver: string,
+    originCountry: string,
+    firstEntry: number,
+    worldChampionships: number,
+    fastestLaps: number,
+    polePositions: number,
+    twitter: string | null,
+    facebook: string | null,
+    instagram: string | null
+}
+
+export type { ArticleItem, BenefitItem, PlatformItemType, DriverItem, TeamItem }

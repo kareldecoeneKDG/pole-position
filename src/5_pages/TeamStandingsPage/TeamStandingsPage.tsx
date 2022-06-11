@@ -7,7 +7,14 @@ import StandingTeam from '../../3_molecules/StandingTeam/StandingTeam';
 import Subnav from '../../4_organisms/SubNav/SubNav';
 import NavBar from '../../4_organisms/NavBar/NavBar';
 
-function TeamStandingsPage() {
+//types
+import { TeamItem } from '../../types';
+
+interface TeamStandingsPageProps {
+    teams: TeamItem[],
+}
+
+function TeamStandingsPage({ teams }: TeamStandingsPageProps) {
     useEffect(() => {
         //scroll to top on opening
         document.documentElement.scrollTo(0, 0);
@@ -32,7 +39,11 @@ function TeamStandingsPage() {
                 <Subnav selected={selected} setSelected={setSelected} />
 
                 <section className="standings__drivers">
-                    <Link to="/team">
+                    {teams.map((team: TeamItem) => {
+                        return <StandingTeam team={team} />
+                    })}
+
+                    {/* <Link to="/team">
                         <StandingTeam />
                     </Link>
 
@@ -44,23 +55,7 @@ function TeamStandingsPage() {
                         <StandingTeam />
                     </Link>
 
-                    {/* <hr className="standings__drivers__line line" /> */}
-
-                    <Link to="/team">
-                        <StandingTeam />
-                    </Link>
-
-                    <Link to="/team">
-                        <StandingTeam />
-                    </Link>
-
-                    <Link to="/team">
-                        <StandingTeam />
-                    </Link>
-
-                    <Link to="/team">
-                        <StandingTeam />
-                    </Link>
+                    <hr className="standings__drivers__line line" />
 
                     <Link to="/team">
                         <StandingTeam />
@@ -73,6 +68,22 @@ function TeamStandingsPage() {
                     <Link to="/team">
                         <StandingTeam />
                     </Link>
+
+                    <Link to="/team">
+                        <StandingTeam />
+                    </Link>
+
+                    <Link to="/team">
+                        <StandingTeam />
+                    </Link>
+
+                    <Link to="/team">
+                        <StandingTeam />
+                    </Link>
+
+                    <Link to="/team">
+                        <StandingTeam />
+                    </Link> */}
                 </section>
             </div>
         </FadeIn>
