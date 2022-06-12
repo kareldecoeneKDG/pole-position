@@ -175,7 +175,7 @@
     .grandprixDetail {
         .banner {
             &__bg {
-                height: 264px;
+                height: 264px; //409
                 //background-position: center 90%;
                 background-position: center;
             }
@@ -235,10 +235,10 @@
 @media only screen and (min-width: $desktop-1) {
     .grandprixDetail {
         .banner {
-            height: 500px;
+            height: 500px; //500
 
             &__bg {
-                height: 350px;
+                height: 350px; //350
                 background-position: center 90%;
             }
 
@@ -291,6 +291,10 @@
 @media only screen and (min-width: $desktop-3) {
     .grandprixDetail {
         .banner {
+            &__bg {
+                //height: 576px;
+            }
+
             &__info {
                 &__title {
                     padding-top: 48px;
@@ -304,6 +308,10 @@
 @media only screen and (min-width: $desktop-5) {
     .grandprixDetail {
         .banner {
+            &__bg {
+                //height: 640px;
+            }
+
             &__info {
                 &__circuit {
                     left: 200px;
@@ -325,6 +333,10 @@
 @media only screen and (min-width: $desktop-hd) {
     .grandprixDetail {
         .banner {
+            &__bg {
+                //height: 768px;
+            }
+
             &__info {
                 &__circuit {
                     left: 360px;
@@ -346,6 +358,10 @@
 @media only screen and (min-width: $desktop-qhd) {
     .grandprixDetail {
         .banner {
+            &__bg {
+                //height: 1024px;
+            }
+
             &__info {
                 &__circuit {
                     left: 680px;

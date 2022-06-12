@@ -17,7 +17,7 @@ function StandingDriver({ driver }: StandingDriverProps) {
             <div className={`standing standing-driver ${driver.team}-bg flex-column`}>
                 <div className="standing__top flex">
                     <div className="standing__top__team-logo">
-                        <img className="standing__top__team-logo__img" src={driver.teamLogo} alt="team logo" />
+                        <img className="standing__top__team-logo__img" src={driver.teamLogo} alt={`${driver.team} F1 team logo`} />
                     </div>
 
                     <div className="standing__top__driver">
@@ -29,11 +29,11 @@ function StandingDriver({ driver }: StandingDriverProps) {
                 <div className="standing__bottom">
                     <div className="standing__bottom__place flex">
                         <div className="tag detail standing__bottom__place__div standing-div-border desktop">
-                            {driver.id + 1} place
+                            #{driver.id + 1}
                         </div>
 
                         <div className="tag detail standing__bottom__place__div standing-div-border mobile">
-                            {driver.id + 1} place
+                            #{driver.id + 1}
                         </div>
 
                         <div className="tag detail standing__bottom__place__div">
@@ -47,7 +47,7 @@ function StandingDriver({ driver }: StandingDriverProps) {
                 <div className={`standing__number ${driver.team} desktop`}>{driver.raceNumber}</div>
 
                 <div className="standing__driver-img">
-                    <img src={driver.image} alt="picture of driver" />
+                    <img src={driver.image} alt={`${driver.firstName} ${driver.lastName} avatar`} />
                 </div>
             </div>
         </Link>

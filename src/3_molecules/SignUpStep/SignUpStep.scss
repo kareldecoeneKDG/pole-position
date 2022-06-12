@@ -7,6 +7,12 @@
             padding: 20px;
             margin-bottom: 20px;
             position: relative;
+            filter: $card-shadow;
+            transition: $transition-time-short;
+
+            &:hover {
+                filter: $card-shadow-hover;
+            }
 
             &:last-of-type {
                 margin-bottom: 0;
@@ -38,15 +44,16 @@
         &__steps {
             .step {
                 background-color: $neutrals-200;
-    
+                border: 1px solid $neutrals-500;
+
                 &__title {
                     color: $neutrals-900;
                 }
-    
+
                 &__p {
                     color: $neutrals-700;
                 }
-    
+
                 &__number {
                     opacity: 15%;
                 }

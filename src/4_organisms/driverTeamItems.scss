@@ -11,6 +11,12 @@
         justify-content: space-between;
         flex-grow: 1;
         flex-basis: 0;
+        filter: $card-shadow;
+        transition: $transition-time-short;
+
+        &:hover {
+            filter: $card-shadow-hover;
+        }
 
         &:last-of-type {
             margin-bottom: 0px;
@@ -49,6 +55,7 @@
     .driver-team__items {
         .item {
             background-color: $neutrals-200;
+            border: 1px solid $neutrals-500;
 
             &__title {
                 color: $neutrals-900;

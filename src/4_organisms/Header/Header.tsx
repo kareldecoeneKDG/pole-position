@@ -18,8 +18,8 @@ function Header() {
         <header className="header">
 
             {/* BG RECTANGLES 1 */}
-            <img className="bg-rect bg-rect1 light" src={backgroundRectangles} alt="Background rectangles" />
-            <img className="bg-rect bg-rect1 dark" src={backgroundRectanglesDark} alt="Background rectangles dark" />
+            <img className="bg-rect bg-rect1 light" src={backgroundRectangles} alt="Background rectangles illustration" />
+            <img className="bg-rect bg-rect1 dark" src={backgroundRectanglesDark} alt="Background rectangles dark illustration" />
 
             {/* HEADER CONTENT */}
             <div className="header__container">
@@ -53,8 +53,8 @@ function Header() {
             </a>
 
             {/* BG RECTANGLES 2 */}
-            <img className="bg-rect bg-rect2 light" src={backgroundRectangles} alt="Background rectangles" />
-            <img className="bg-rect bg-rect2 dark" src={backgroundRectanglesDark} alt="Background rectangles dark" />
+            <img className="bg-rect bg-rect2 light" src={backgroundRectangles} alt="Background rectangles illustration" />
+            <img className="bg-rect bg-rect2 dark" src={backgroundRectanglesDark} alt="Background rectangles dark illustration" />
         </header>
     );
 }

@@ -31,8 +31,8 @@ function TeamDetailHeader({ teams }: TeamDetailHeaderProps) {
                 <div className="top__drivers top-team">
 
                     {/* INSERT DRIVER LINKS */}
-                    <img className="top-team__img" src={`../${team.firstDriver}`} alt="Picture of driver" />
-                    <img className="top-team__img" src={`../${team.secondDriver}`} alt="Picture of driver" />
+                    <img className="top-team__img" src={`../${team.firstDriver}`} alt={`${team.firstDriverName} avatar`} />
+                    <img className="top-team__img" src={`../${team.secondDriver}`} alt={`${team.secondDriverName} avatar`} />
                 </div>
 
                 <div className="top__info">

@@ -149,7 +149,7 @@ function LoginPage() {
                         </div>
 
                         {/* FORMPAGE IMAGE */}
-                        <img className="formPage__flexbox__img" src={bannerImg} alt="Banner img login page" />
+                        <img className="formPage__flexbox__img" src={bannerImg} alt="Max Verstappen on track" />
                     </div>
                 </Fade>
             </section>

@@ -64,7 +64,7 @@ function Newsletter() {
     return (
         <section id="newsletter" className="newsletter section">
             <div className="newsletter__content">
-                <img className="newsletter__content__img" src={newsletterImage} alt="" />
+                <img className="newsletter__content__img" src={newsletterImage} alt="close up Max Verstappen" />
 
                 <div className="newsletter__content__container">
                     <h3 className="newsletter__content__title">Make sure you don't miss anything!</h3>

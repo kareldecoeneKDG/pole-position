@@ -10,6 +10,12 @@
             background-image: url(./article1.jpeg);
             background: linear-gradient(180deg, #9999a1 0%, rgba(0, 0, 0, 0.1) 100%), url(./article1.jpeg) no-repeat;
             background-size: cover;
+            filter: $card-shadow;
+            transition: $transition-time-short;
+
+            &:hover {
+                filter: $card-shadow-hover;
+            }
 
             h4 {
                 position: absolute;

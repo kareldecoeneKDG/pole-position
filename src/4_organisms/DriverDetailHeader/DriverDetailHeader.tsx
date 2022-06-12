@@ -30,7 +30,7 @@ function DriverDetailHeader({ drivers }: DriverDetailHeaderProps) {
 
             <div className="top flex">
                 <div className="top__drivers top-driver">
-                    <img className="top-driver__img" src={`../${driver.image}`} alt="Picture of driver" />
+                    <img className="top-driver__img" src={`../${driver.image}`} alt={`${driver.firstName} ${driver.lastName} avatar`} />
                 </div>
 
                 <div className="top__info">

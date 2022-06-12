@@ -61,7 +61,7 @@ function DetailPage({ articles }: DetailPageProps) {
                         </div>
                     </div>
 
-                    <img className="blogDetail__content__img" src={article.imageSecond} alt="detail picture blogpost" />
+                    <img className="blogDetail__content__img" src={article.imageSecond} alt={article.altTextSecond} />
 
                     <div className="regular-block">
                         <h4 className="blogDetail__content__subtitle">{article.subtitleSecond}</h4>

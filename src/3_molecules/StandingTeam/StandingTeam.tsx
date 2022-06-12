@@ -32,7 +32,7 @@ function StandingTeam({ team }: StandingTeamProps) {
                         </div>
 
                         <div className="tag detail standing__bottom__place__div standing-div-border mobile">
-                            {team.id + 1} place
+                            #{team.id + 1}
                         </div>
 
                         <div className="tag detail standing__bottom__place__div">
@@ -46,10 +46,10 @@ function StandingTeam({ team }: StandingTeamProps) {
                 <div className={`standing__number ${team.team} desktop`}>{team.id + 1}</div>
 
                 <div className="standing-team__driver driver1">
-                    <img src={team.firstDriver} alt="picture of driver" />
+                    <img src={team.firstDriver} alt={`${team.firstDriverName} avatar`} />
                 </div>
                 <div className="standing-team__driver driver2">
-                    <img src={team.secondDriver} alt="picture of driver" />
+                    <img src={team.secondDriver} alt={`${team.secondDriverName} avatar`} />
                 </div>
             </div>
         </Link>

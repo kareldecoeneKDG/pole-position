@@ -43,7 +43,7 @@ function GrandPrixDetailPage({ articles, grandPrixs }: GrandPrixDetailPageProps)
 
                     <div className="banner__info">
                         <div className="banner__info__circuit">
-                            <img className="banner__info__circuit__img" src={`../${grandPrix.circuitImage}`} alt="Circuit preview" />
+                            <img className="banner__info__circuit__img" src={`../${grandPrix.circuitImage}`} alt={`${grandPrix.circuitName} map`} />
                         </div>
 
                         <h2 className="banner__info__title">2022 {grandPrix.country} GP</h2>

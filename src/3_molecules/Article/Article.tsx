@@ -45,7 +45,7 @@ function Article({ article }: ArticleProps) {
                 <div className="article__content">
                     <div>
                         <div className="article__img">
-                            <img src={article.image} alt="article cover image" />
+                            <img src={article.image} alt={article.altText} />
                         </div>
 
                         <div className="article__content__top flex">

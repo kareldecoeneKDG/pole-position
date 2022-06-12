@@ -27,7 +27,7 @@ function GrandPrix({ grandPrix }: GrandPrixProps) {
                     <div className="tag detail">{grandPrix.circuitName}</div>
                 </div>
 
-                <img className="grandprix__circuit" src={grandPrix.circuitImage} alt="Circuit of GP" />
+                <img className="grandprix__circuit" src={grandPrix.circuitImage} alt={`${grandPrix.circuitName} map`} />
 
                 <div className="grandprix__datetime">
                     <h3 className="grandprix__datetime__date">{grandPrix.gpDate} | {grandPrix.gpHour}</h3>
