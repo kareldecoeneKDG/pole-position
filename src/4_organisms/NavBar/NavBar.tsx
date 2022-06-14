@@ -1,11 +1,43 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 
 import logo from './logo-hollow.png';
 import sun from './sun.png';
 import moon from './moon.png';
+import i18n from "i18next";
+import { useTranslation } from "react-i18next";
+
+// Multilanguage cookies
+const cookies = require('js-cookie');
+
+const languages = [
+    {
+        code: 'fr',
+        name: 'Français',
+        country_code: 'FR'
+    },
+    {
+        code: 'en',
+        name: 'English',
+        country_code: 'EN',
+        dir: 'empty'
+    },
+]
 
 function NavBar() {
+
+    const currentLanguageCode = cookies.get('i18next') || 'en'
+    const currentLanguage = languages.find(element => element.code === currentLanguageCode)
+
+    const { t } = useTranslation()
+
+    useEffect(() => {
+        document.body.dir = currentLanguage!.dir || 'ltr';
+        document.title = t('app_title');
+        localStorage.setItem("lang", currentLanguageCode); // save lang to local strorage
+        document.documentElement.setAttribute("lang", currentLanguageCode);
+    }, [currentLanguage, t])
+
 
     /* --- MOBILE MENU --- */
     // Mobile menu switcher
@@ -110,9 +142,9 @@ function NavBar() {
 
             {/* Desktop nav items */}
             <div className="links-desktop nav-website desktop">
-                <a href="/#benefits" className="links-desktop__link">Benefits</a>
-                <a href="/#platform" className="links-desktop__link">Pricing</a>
-                <a href="/#newsletter" className="links-desktop__link">Newsletter</a>
+                <a href="/#benefits" className="links-desktop__link">{t('nav_website_benefits_anchor')}</a>
+                <a href="/#platform" className="links-desktop__link">{t('nav_website_pricing_anchor')}</a>
+                <a href="/#newsletter" className="links-desktop__link">{t('nav_website_newsletter_anchor')}</a>
             </div>
 
             {/* Desktop light/dark theme switch */}
@@ -127,9 +159,24 @@ function NavBar() {
                 <span><i className="chevron-first fa fa-user" aria-hidden="true"></i> Karel Decoene</span>
             </Link>
 
+            {/* Desktop multilanguage button */}
+            <div className="multilingual desktop">
+                <ul className="multilingual__list">
+                    {/* <li><span>{t('language')}</span></li> */}
+                    {languages.map(({ code, name, country_code }) => (
+                        <li className="multilingual__list__item" key={country_code}>
+                            <button className="button button-secondary skew" onClick={() => i18n.changeLanguage(code)}
+                                disabled={code === currentLanguageCode}>
+                                <span>{country_code}</span>
+                            </button>
+                        </li>
+                    ))}
+                </ul>
+            </div>
+
             {/* Desktop account button */}
             <Link className="button button-primary desktop skew nav-website" to="/dashboard">
-                <span><i className="chevron-first fa fa-sign-in" aria-hidden="true"></i> Sign in</span>
+                <span><i className="chevron-first fa fa-sign-in" aria-hidden="true"></i> {t('nav_website_login_anchor')}</span>
             </Link>
 
             {/* Mobile account button */}
@@ -139,6 +186,21 @@ function NavBar() {
 
             {/* Mobile sliding nav */}
             <div className={`nav-items ${isOpen && "open"}`}>
+                {/* Desktop multilanguage button */}
+                <div className="multilingual mobile">
+                    <ul className="multilingual__list">
+                        {/* <li><span>{t('language')}</span></li> */}
+                        {languages.map(({ code, name, country_code }) => (
+                            <li className="multilingual__list__item" key={country_code}>
+                                <button className="button button-secondary" onClick={() => i18n.changeLanguage(code)}
+                                    disabled={code === currentLanguageCode}>
+                                    <span>{country_code}</span>
+                                </button>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+
                 <div className="top">
                     <Link to="/">
                         <img className="logo logo-menu" src={logo} alt="Pole Position logo mobile"></img>
@@ -159,9 +221,9 @@ function NavBar() {
                 </div>
 
                 <div className="links nav-website">
-                    <Link to="/#benefits" className="mobile-link">Benefits</Link>
-                    <Link to="/#platform" className="mobile-link">Pricing</Link>
-                    <Link to="/#newsletter" className="mobile-link">Newsletter</Link>
+                    <Link to="/#benefits" className="mobile-link">{t('nav_website_benefits_anchor')}</Link>
+                    <Link to="/#platform" className="mobile-link">{t('nav_website_pricing_anchor')}</Link>
+                    <Link to="/#newsletter" className="mobile-link">{t('nav_website_newsletter_anchor')}</Link>
                 </div>
 
                 <div className="bottom">
@@ -170,7 +232,7 @@ function NavBar() {
                     </Link>
 
                     <Link className="button button-primary skew nav-website" to="/dashboard">
-                        <span><i className="chevron-first fa fa-sign-in" aria-hidden="true"></i> Login</span>
+                        <span><i className="chevron-first fa fa-sign-in" aria-hidden="true"></i> {t('nav_website_login_anchor')}</span>
                     </Link>
 
                     <a className="button button-secondary skew" href="/"><span><i className="chevron-first fa fa-sign-out" aria-hidden="true"></i> Sign out</span></a>

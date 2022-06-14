@@ -175,7 +175,7 @@ function App() {
         }
     ]
 
-    // "dynamic" benefits -> just for showcase
+    // "dynamic" benefits -> just for showcase //not active now
     let benefits: BenefitItem[] = [
         {
             id: 0,
@@ -203,7 +203,7 @@ function App() {
         },
     ]
 
-    // "dynamic" platformItems -> just for showcase
+    // "dynamic" platformItems -> just for showcase //not active now
     let platformItems: PlatformItemType[] = [
         {
             id: 0,
@@ -970,6 +970,20 @@ function App() {
     return (
         <Router>
             <div id="container" className="container">
+                {/* <div className="dropdown">
+                    <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                         <li><span>{t('language')}</span></li>
+                        {languages.map(({ code, name, country_code }) => (
+                            <li key={country_code}>
+                                <button onClick={() => i18n.changeLanguage(code)}
+                                    disabled={code === currentLanguageCode}>
+                                    {name}
+                                </button>
+                            </li>
+                        ))}
+                    </ul>
+                </div> */}
+
                 <Routes>
                     <Route path="/" element={<HomePage benefits={benefits} platformItems={platformItems} />} />
                     <Route path="/dashboard" element={<DashboardPage articles={articles} />} />
@@ -998,28 +1012,13 @@ function App() {
 
                 <Footer />
 
-                {/*<div className="dropdown">
-                        <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                            <li><span>{t('language')}</span></li>
-                            {languages.map(({ code, name, country_code }) => (
-                                <li key={country_code}>
-                                    <button onClick={() => i18n.changeLanguage(code)}
-                                    disabled={code === currentLanguageCode}>
-                                        {name}
-                                    </button>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
+                {/*Hello world!
+                {t('welcome_message')}
+                <p>{t('days_since_release', { number_of_days })}</p>
 
-                    Hello world!
-                    {t('welcome_message')}
-                    <p>{t('days_since_release', { number_of_days })}</p>
+                <Test />*/}
 
-                    <Test />
-                    
-                    <button onClick={() => themeToggler()}>Change theme</button>
-                    */}
+                {/* <button onClick={() => themeToggler()}>Change theme</button> */}
             </div>
         </Router>
     );

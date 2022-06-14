@@ -25,6 +25,32 @@
                     }
                 }
             }
+
+            &.open {
+                .top {
+                    width: calc(100% - 126px);
+                }
+            }
+        }
+
+        .multilingual {
+            display: block;
+        }
+    }
+}
+
+/* TABLET PORTRAIT */
+@media only screen and (min-width: $tablet-portrait) {
+    .homePage {
+        .Navbar {
+            /* SLIDING NAV */
+            .nav-items {
+                &.open {
+                    .top {
+                        width: calc(100% - 186px);
+                    }
+                }
+            }
         }
     }
 }
@@ -43,12 +69,6 @@
                 }
             }
 
-            .toggle-container {
-                &.desktop {
-                    right: 243px;
-                }
-            }
-
             .nav-website {
                 display: block !important;
             }
@@ -58,15 +78,57 @@
             }
         }
     }
+
+    /* ENGLISH WEBSITE */
+    [lang="en"] {
+        .homePage {
+            .Navbar {
+                .toggle-container {
+                    &.desktop {
+                        right: 311px;
+                    }
+                }
+            }
+        }
+    }
+
+    /* FRENCH WEBSITE */
+    [lang="fr"] {
+        .homePage {
+            .Navbar {
+                .toggle-container {
+                    &.desktop {
+                        right: 338px;
+                    }
+                }
+            }
+        }
+    }
 }
 
 /* DESKTOP 1600PX */
 @media only screen and (min-width: $desktop-5) {
-    .homePage {
-        .Navbar {
-            .toggle-container {
-                &.desktop {
-                    right: 323px;
+    /* ENGLISH WEBSITE */
+    [lang="en"] {
+        .homePage {
+            .Navbar {
+                .toggle-container {
+                    &.desktop {
+                        right: 391px;
+                    }
+                }
+            }
+        }
+    }
+
+    /* FRENCH WEBSITE */
+    [lang="fr"] {
+        .homePage {
+            .Navbar {
+                .toggle-container {
+                    &.desktop {
+                        right: 418px;
+                    }
                 }
             }
         }
@@ -75,11 +137,27 @@
 
 /* DESKTOP 1920PX */
 @media only screen and (min-width: $desktop-hd) {
-    .homePage {
-        .Navbar {
-            .toggle-container {
-                &.desktop {
-                    right: 483px;
+    /* ENGLISH WEBSITE */
+    [lang="en"] {
+        .homePage {
+            .Navbar {
+                .toggle-container {
+                    &.desktop {
+                        right: 551px;
+                    }
+                }
+            }
+        }
+    }
+
+    /* FRENCH WEBSITE */
+    [lang="fr"] {
+        .homePage {
+            .Navbar {
+                .toggle-container {
+                    &.desktop {
+                        right: 581px;
+                    }
                 }
             }
         }
@@ -88,11 +166,27 @@
 
 /* DESKTOP 2560PX */
 @media only screen and (min-width: $desktop-qhd) {
-    .homePage {
-        .Navbar {
-            .toggle-container {
-                &.desktop {
-                    right: 803px;
+    /* ENGLISH WEBSITE */
+    [lang="en"] {
+        .homePage {
+            .Navbar {
+                .toggle-container {
+                    &.desktop {
+                        right: 871px;
+                    }
+                }
+            }
+        }
+    }
+
+    /* FRENCH WEBSITE */
+    [lang="fr"] {
+        .homePage {
+            .Navbar {
+                .toggle-container {
+                    &.desktop {
+                        right: 901px;
+                    }
                 }
             }
         }
@@ -101,11 +195,27 @@
 
 /* DESKTOP 3440PX */
 @media only screen and (min-width: $desktop-wqhd) {
-    .homePage {
-        .Navbar {
-            .toggle-container {
-                &.desktop {
-                    right: 1243px;
+    /* ENGLISH WEBSITE */
+    [lang="en"] {
+        .homePage {
+            .Navbar {
+                .toggle-container {
+                    &.desktop {
+                        right: 1311px;
+                    }
+                }
+            }
+        }
+    }
+
+    /* FRENCH WEBSITE */
+    [lang="fr"] {
+        .homePage {
+            .Navbar {
+                .toggle-container {
+                    &.desktop {
+                        right: 1341px;
+                    }
                 }
             }
         }
@@ -114,11 +224,27 @@
 
 /* DESKTOP 3840PX */
 @media only screen and (min-width: $desktop-4k) {
-    .homePage {
-        .Navbar {
-            .toggle-container {
-                &.desktop {
-                    right: 1443px;
+    /* ENGLISH WEBSITE */
+    [lang="en"] {
+        .homePage {
+            .Navbar {
+                .toggle-container {
+                    &.desktop {
+                        right: 1511px;
+                    }
+                }
+            }
+        }
+    }
+
+    /* FRENCH WEBSITE */
+    [lang="fr"] {
+        .homePage {
+            .Navbar {
+                .toggle-container {
+                    &.desktop {
+                        right: 1541px;
+                    }
                 }
             }
         }

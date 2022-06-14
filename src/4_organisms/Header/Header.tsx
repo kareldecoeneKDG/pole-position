@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 import headerLogoLight from './Logo-big-light.png';
@@ -11,9 +11,39 @@ import mobilePreview from './mobile.webp';
 import tabletDarkPreview from './tablet-dark.webp';
 import tabletLightkPreview from './tablet-light.webp';
 import desktopDarkPreview from './desktop-dark.webp';
-import desktopLightPreview from './desktop-light.webp';
+//import desktopLightPreview from './desktop-light.webp';
+
+import { i18n, t } from "i18next";
+import { useTranslation } from "react-i18next";
+
+// Multilanguage cookies
+const cookies = require('js-cookie');
+
+const languages = [
+    {
+        code: 'fr',
+        name: 'Français',
+        country_code: 'fr'
+    },
+    {
+        code: 'en',
+        name: 'English',
+        country_code: 'gb',
+        dir: 'empty'
+    },
+]
 
 function Header() {
+    const currentLanguageCode = cookies.get('i18next') || 'en'
+    const currentLanguage = languages.find(element => element.code === currentLanguageCode)
+
+    const { t } = useTranslation()
+
+    useEffect(() => {
+        document.body.dir = currentLanguage!.dir || 'ltr';
+        document.title = t('app_title');
+    }, [currentLanguage, t])
+
     return (
         <header className="header">
 
@@ -27,11 +57,11 @@ function Header() {
                 <img className="header__logo dark" src={headerLogoDark} alt="Full logo Pole Position" />
 
                 <p className="header__p p">
-                    Pole Position is the place where you find all latest F1 News.<br className="desktop" /> Are you a true passionate F1 fan?
+                    {t('header_intro')}
                 </p>
 
                 <Link className="button button-primary skew" to="/register">
-                    <span>Join the community <i className="fa fa-chevron-right first-chevron" aria-hidden="true"></i><i className="fa fa-chevron-right" aria-hidden="true"></i></span>
+                    <span>{t('header_cta')} <i className="fa fa-chevron-right first-chevron" aria-hidden="true"></i><i className="fa fa-chevron-right" aria-hidden="true"></i></span>
                 </Link>
 
                 {/* <img className="header__img-placeholder" src={placeholder} alt="Full logo Pole Position" /> */}
@@ -40,8 +70,14 @@ function Header() {
                 <img className="header__img-placeholder mobile" src={mobilePreview} alt="Preview mobile Pole Position" />
                 <img className="header__img-placeholder tablet light" src={tabletLightkPreview} alt="Preview tablet Pole Position" />
                 <img className="header__img-placeholder tablet dark" src={tabletDarkPreview} alt="Preview tablet Pole Position" />
-                <img className="header__img-placeholder desktop light" src={desktopLightPreview} alt="Preview tablet Pole Position" />
-                <img className="header__img-placeholder desktop dark" src={desktopDarkPreview} alt="Preview tablet Pole Position" />
+
+                <picture>
+                    <source srcSet="/images/pages/webp/desktop-light.webp" type="image/webp"></source>
+                    <source srcSet="/images/pages/jpg/desktop-light.jpg" type="image/jpg"></source>
+                    <img className="header__img-placeholder desktop light" src="/images/pages/jpg/desktop-light.jpg" alt="Preview desktop Pole Position" />
+                </picture>
+
+                <img className="header__img-placeholder desktop dark" src={desktopDarkPreview} alt="Preview desktop Pole Position" />
             </div>
 
             {/* SCROLL DOWN ICON 
