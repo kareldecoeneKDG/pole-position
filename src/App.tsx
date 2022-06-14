@@ -37,22 +37,10 @@ import './style.scss';
 //types
 import { ArticleItem, BenefitItem, DriverItem, GrandPrixItem, PlatformItemType, TeamItem } from './types';
 
+import languages from "./languages";
+
 // Multilanguage cookies
 const cookies = require('js-cookie');
-
-const languages = [
-    {
-        code: 'fr',
-        name: 'Français',
-        country_code: 'fr'
-    },
-    {
-        code: 'en',
-        name: 'English',
-        country_code: 'gb',
-        dir: 'empty'
-    },
-]
 
 function App() {
     useEffect(() => {
@@ -75,6 +63,8 @@ function App() {
     useEffect(() => {
         document.body.dir = currentLanguage!.dir || 'ltr';
         document.title = t('app_title');
+        localStorage.setItem("lang", currentLanguageCode); // save lang to local strorage
+        document.documentElement.setAttribute("lang", currentLanguageCode);
     }, [currentLanguage, t])
 
 

@@ -12,20 +12,6 @@ import languages from "../../languages";
 // Multilanguage cookies
 const cookies = require('js-cookie');
 
-/*const languages = [
-    {
-        code: 'fr',
-        name: 'Français',
-        country_code: 'FR'
-    },
-    {
-        code: 'en',
-        name: 'English',
-        country_code: 'EN',
-        dir: 'empty'
-    },
-]*/
-
 function NavBar() {
 
     const currentLanguageCode = cookies.get('i18next') || 'en'
