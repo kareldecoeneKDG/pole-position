@@ -62,30 +62,8 @@ function GrandPrixDetailPage({ articles, grandPrixs }: GrandPrixDetailPageProps)
                     <h2 className="section__title">2022 {grandPrix.country} GP</h2>
 
                     <div className="grandprixDetail__articles__articles">
-                        {/*<Link to="/blog-detail">
-                            <Article />
-                        </Link>
 
-                        <Link to="/blog-detail">
-                            <Article />
-                        </Link>
-
-                        <Link to="/blog-detail">
-                            <Article />
-                        </Link>
-
-                        <Link to="/blog-detail">
-                            <Article />
-                        </Link>
-
-                        <Link to="/blog-detail">
-                            <Article />
-                        </Link>
-
-                        <Link to="/blog-detail">
-                            <Article />
-                        </Link>*/}
-
+                        {/* All articles from specific GP */}
                         {articles.map((article: ArticleItem) => {
                             return <Article article={article} />
                         })}

@@ -158,6 +158,16 @@
                     }
                 }
 
+                &__title {
+                    display: block;
+                    text-align: center;
+                    padding-top: 25px;
+
+                    i {
+                        margin-left: 10px;
+                    }
+                }
+
                 .button {
                     right: 50px;
                 }
@@ -166,6 +176,10 @@
 
         &__articles {
             padding: 50px 150px 75px 150px;
+
+            .section__title {
+                display: none;
+            }
         }
     }
 }
@@ -196,19 +210,13 @@
                 }
 
                 &__title {
-                    display: block;
-                    text-align: center;
                     padding-top: 33px;
-
-                    i {
-                        margin-left: 10px;
-                    }
                 }
             }
         }
 
         &__articles {
-            padding: 75px 50px; 
+            padding: 75px 50px;
 
             .section__title {
                 display: none;
