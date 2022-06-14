@@ -7,10 +7,12 @@ import moon from './moon.png';
 import i18n from "i18next";
 import { useTranslation } from "react-i18next";
 
+import languages from "../../languages";
+
 // Multilanguage cookies
 const cookies = require('js-cookie');
 
-const languages = [
+/*const languages = [
     {
         code: 'fr',
         name: 'Français',
@@ -22,7 +24,7 @@ const languages = [
         country_code: 'EN',
         dir: 'empty'
     },
-]
+]*/
 
 function NavBar() {
 

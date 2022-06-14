@@ -1,7 +1,7 @@
 .multilingual {
     position: absolute;
     z-index: 999;
-    display: none;
+    display: none !important;
 
     &__list {
         list-style-type: none;

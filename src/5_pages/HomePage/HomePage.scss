@@ -27,14 +27,14 @@
             }
 
             &.open {
+                .multilingual {
+                    display: block !important;
+                }
+
                 .top {
                     width: calc(100% - 126px);
                 }
             }
-        }
-
-        .multilingual {
-            display: block;
         }
     }
 }
@@ -76,6 +76,10 @@
             .nav-webapp {
                 display: none !important;
             }
+        }
+
+        .multilingual {
+            display: block !important;
         }
     }
 
