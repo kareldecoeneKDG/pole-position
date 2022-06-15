@@ -996,7 +996,8 @@ function App() {
                     <Route path="*" element={<NotFoundPage />} />
 
                     {/* Test routes */}
-                    <Route path="/test" element={<ListPage articles={articles} />} />
+                    <Route path="/list" element={<ListPage articles={articles} />} />
+
                     <Route path="/detail/:id" element={<DetailPage articles={articles} />} />
                 </Routes>
 

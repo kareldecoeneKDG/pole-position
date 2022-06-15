@@ -46,8 +46,8 @@ function Header() {
                 <img className="header__img-placeholder tablet dark" src={tabletDarkPreview} alt="Preview tablet Pole Position" />
 
                 <picture>
-                    <source srcSet="/images/pages/webp/desktop-light.webp" type="image/webp"></source>
-                    <source srcSet="/images/pages/jpg/desktop-light.jpg" type="image/jpg"></source>
+                    <source srcSet="/images/pages/webp/desktop-light.webp" type="image/webp" />
+                    <source srcSet="/images/pages/jpg/desktop-light.jpg" type="image/jpg" />
                     <img className="header__img-placeholder desktop light" src="/images/pages/jpg/desktop-light.jpg" alt="Preview desktop Pole Position" />
                 </picture>
 
