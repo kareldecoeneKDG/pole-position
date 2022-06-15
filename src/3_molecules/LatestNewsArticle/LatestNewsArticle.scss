@@ -83,3 +83,60 @@
         }
     }
 }
+
+/* DESKTOP 1280PX */
+@media only screen and (min-width: $desktop-1) {
+    .latestnews {
+        &__articles {
+            .big-article {
+                @supports not (aspect-ratio: 3/2) {
+                    height: 489px;
+                }
+            }
+
+            &__article {
+                @supports not (aspect-ratio: 3/2) {
+                    height: 230px;
+                }
+            }
+        }
+    }
+}
+
+/* DESKTOP 1366PX */
+@media only screen and (min-width: $desktop-2) {
+    .latestnews {
+        &__articles {
+            .big-article {
+                @supports not (aspect-ratio: 3/2) {
+                    height: 530px;
+                }
+            }
+
+            &__article {
+                @supports not (aspect-ratio: 3/2) {
+                    height: 250px;
+                }
+            }
+        }
+    }
+}
+
+/* DESKTOP 1440PX */
+@media only screen and (min-width: $desktop-3) {
+    .latestnews {
+        &__articles {
+            .big-article {
+                @supports not (aspect-ratio: 3/2) {
+                    height: 566px;
+                }
+            }
+
+            &__article {
+                @supports not (aspect-ratio: 3/2) {
+                    height: 268px;
+                }
+            }
+        }
+    }
+}
