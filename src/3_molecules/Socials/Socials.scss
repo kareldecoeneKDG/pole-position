@@ -1,7 +1,12 @@
 .socials {
-    gap: 7px;
+    //gap: 7px;
     justify-content: flex-start;
     padding-bottom: 30px;
+
+    //Simulate flex-gap
+    > * + * {
+        margin-left: 7px;
+    }
 
     &__item {
         background-color: $primary-600;

@@ -91,8 +91,13 @@
 
             .footer__sections {
                 justify-content: flex-start;
-                gap: 113px;
+                //gap: 113px;
                 margin-bottom: 30px;
+
+                //Simulate flex-gap
+                > * + * {
+                    margin-left: 113px;
+                }
 
                 .footer__section {
                     margin-bottom: 0;
