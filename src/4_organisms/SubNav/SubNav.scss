@@ -112,7 +112,11 @@
             &__links {
                 justify-content: flex-start;
                 align-items: center;
-                gap: 10px;
+
+                //Simulate flex-gap
+                > * + * {
+                    margin-left: 10px;
+                }
             }
 
             .signout-button {
@@ -123,7 +127,11 @@
             &.standings-subnav {
                 justify-content: flex-start;
                 align-items: center;
-                gap: 10px;
+
+                //Simulate flex-gap
+                > * + * {
+                    margin-left: 10px;
+                }
             }
         }
 

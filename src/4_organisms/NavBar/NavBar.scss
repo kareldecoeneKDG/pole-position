@@ -125,11 +125,6 @@
             transform: translate(0%, -50%);
             top: 45%;
 
-            //Simulate flex-gap
-            > * + * {
-                //margin-bottom: 20px;
-            }
-
             &.nav-website {
                 display: none !important;
             }

@@ -13,7 +13,7 @@ interface ArticleProps {
 function Article({ article }: ArticleProps) {
     return (
 
-        <Link to={`/detail/${article.id}`}>
+        <Link className="article-container" to={`/detail/${article.id}`}>
             {/*<article className="article">
                 <div className="article__content">
                     <div>
@@ -41,7 +41,7 @@ function Article({ article }: ArticleProps) {
             </article>*/}
 
             {/* Actual article */}
-            < article className="article" >
+            <article className="article" >
                 <div className="article__content">
                     <div>
                         <div className="article__img">
@@ -49,7 +49,7 @@ function Article({ article }: ArticleProps) {
                         </div>
 
                         <div className="article__content__top flex">
-                            <p className={`tag ${article.mainTagColor} ${article.mainTagBackgroundColor}`}>{article.mainTag}</p>
+                            <p className={`tag tag-search ${article.mainTagColor} ${article.mainTagBackgroundColor}`}>{article.mainTag}</p>
                             <p className="tag detail">{article.minutesRead} min read</p>
                         </div>
 
