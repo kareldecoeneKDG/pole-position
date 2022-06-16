@@ -1,18 +1,12 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-
 import { useTranslation } from "react-i18next";
 
 import Benefit from '../../3_molecules/Benefit/Benefit';
 
-//types
-import { BenefitItem } from '../../types';
 
-interface BenefitsProps {
-    benefits: BenefitItem[]
-}
 
-function Benefits({ benefits }: { benefits: BenefitItem[] }) {
+function Benefits() {
     const { t } = useTranslation()
 
     return (
@@ -63,14 +57,6 @@ function Benefits({ benefits }: { benefits: BenefitItem[] }) {
 
                     <p className="benefit__p">{t('benefits_item4_p')}</p>
                 </div>
-
-                {/*<Benefit />
-                <Benefit />
-                <Benefit />
-                <Benefit />*/}
-                {/* {benefits.map((benefit: BenefitItem) => {
-                    return <Benefit benefit={benefit} />
-                })}*/}
             </div>
 
             <p className="cta__p">{t('benefits_cta_p')}</p>

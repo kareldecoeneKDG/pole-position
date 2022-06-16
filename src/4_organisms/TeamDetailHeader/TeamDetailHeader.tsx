@@ -7,9 +7,6 @@ import Socials from '../../3_molecules/Socials/Socials';
 //types
 import { TeamItem } from '../../types';
 
-import Max from './max.png';
-import RedBullLogo from './redbull.png';
-
 interface TeamDetailHeaderProps {
     teams: TeamItem[]
 }
@@ -53,11 +50,6 @@ function TeamDetailHeader({ teams }: TeamDetailHeaderProps) {
                                 <h5 className="top__info__driver-stats__item__title">First Entry</h5>
                                 <p className="top__info__driver-stats__item__p">{team.firstEntry}</p>
                             </div>
-
-                            {/*<div className="top__info__driver-stats__item">
-                                <h5 className="top__info__driver-stats__item__title">Experience</h5>
-                                <p className="top__info__driver-stats__item__p">7 years</p>
-                            </div>*/}
                         </div>
 
                         <Socials />
@@ -68,10 +60,6 @@ function TeamDetailHeader({ teams }: TeamDetailHeaderProps) {
                     </div>
 
                     <div className="driver-team__items desktop">
-                        {/* <DriverTeamDetailItem />
-                        <DriverTeamDetailItem />
-                        <DriverTeamDetailItem /> */}
-
                         {/* world championships */}
                         <div className="item flex">
                             <div className="flex">
@@ -124,9 +112,53 @@ function TeamDetailHeader({ teams }: TeamDetailHeaderProps) {
             </div>
 
             <div className="driver-team__items mobile">
-                <DriverTeamDetailItem />
-                <DriverTeamDetailItem />
-                <DriverTeamDetailItem />
+                {/* world championships */}
+                <div className="item flex">
+                    <div className="flex">
+                        <div className="item__icon-bg icon-bg-lg">
+                            <i className="fa fa-trophy" aria-hidden="true"></i>
+                        </div>
+
+                        <p className="item__title">
+                            World<br />
+                            Championships
+                        </p>
+                    </div>
+
+                    <h2 className="item__number">{team.worldChampionships}x</h2>
+                </div>
+
+                {/* pole positions */}
+                <div className="item flex">
+                    <div className="flex">
+                        <div className="item__icon-bg icon-bg-lg">
+                            <i className="fa fa-rocket" aria-hidden="true"></i>
+                        </div>
+
+                        <p className="item__title">
+                            Pole<br />
+                            Positions
+                        </p>
+                    </div>
+
+                    <h2 className="item__number">{team.polePositions}x</h2>
+                </div>
+
+                {/* fastest laps */}
+                <div className="item flex">
+                    <div className="flex">
+                        <div className="item__icon-bg icon-bg-lg">
+                            <i className="fa fa-clock-o" aria-hidden="true"></i>
+                        </div>
+
+                        <p className="item__title">
+                            Fastest<br />
+                            Laps
+                        </p>
+                    </div>
+
+                    <h2 className="item__number">{team.fastestLaps}x</h2>
+                </div>
             </div>
         </div>
     );

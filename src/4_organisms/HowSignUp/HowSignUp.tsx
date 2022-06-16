@@ -1,8 +1,5 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-
-import SignUpStep from '../../3_molecules/SignUpStep/SignUpStep';
-
 import { useTranslation } from "react-i18next";
 
 function HowSignUp() {
@@ -42,11 +39,6 @@ function HowSignUp() {
 
                     <div className="step__number">4</div>
                 </div>
-
-                {/*<SignUpStep />
-                <SignUpStep />
-                <SignUpStep />
-                <SignUpStep />*/}
             </div>
 
             <div className="center">

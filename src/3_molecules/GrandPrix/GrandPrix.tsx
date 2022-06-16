@@ -1,8 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import circuit from './gp-1.png';
-import flag from './flag-italy.png';
 import circuitBackground from './circuit-background.png';
 
 //types
@@ -17,6 +15,8 @@ function GrandPrix({ grandPrix }: GrandPrixProps) {
     return (
         <Link to={`/grandprix-detail/${grandPrix.id}`}>
             <div className="grandprix">
+
+                {/* GREY RECTANGLE ON OVERVIEW */}
                 <img className="grandprix__bg" src={circuitBackground} alt="circuit bg image" />
 
                 <div className="grandprix__header">

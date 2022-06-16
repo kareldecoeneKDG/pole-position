@@ -21,30 +21,6 @@ function SavedBlogposts({ articles }: { articles: ArticleItem[] }) {
             </div>
 
             <div className="savedBlogposts__articles">
-                {/*<Link to="/blog-detail">
-                    <Article />
-                </Link>
-
-                <Link to="/blog-detail">
-                    <Article />
-                </Link>
-
-                <Link to="/blog-detail">
-                    <Article />
-                </Link>
-
-                <Link to="/blog-detail">
-                    <Article />
-                </Link>
-
-                <Link to="/blog-detail">
-                    <Article />
-                </Link>
-
-                <Link to="/blog-detail">
-                    <Article />
-                </Link>*/}
-
                 {articles.map((article: ArticleItem) => {
                     return <Article article={article} />
                 })}

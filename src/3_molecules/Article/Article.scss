@@ -1,4 +1,3 @@
-/* STANDARD CSS RULES */
 .article {
     border-radius: 20px;
     height: 100%;
@@ -17,30 +16,6 @@
             }
         }
     }
-
-    // Roll animation article
-    /*&:hover {
-        .article__content {
-            &__bottom {
-                .icon-bg {
-                    animation: rollIn 0.3s linear;
-                    opacity: 1;
-                    transition: opacity $transition-time-short;
-                }
-
-                @keyframes rollIn {
-                    0% {
-                        opacity: 0;
-                        transform: translateX(-100%) rotate(-120deg);
-                    }
-                    100% {
-                        opacity: 1;
-                        transform: translateX(0px) rotate(0deg);
-                    }
-                }
-            }
-        }
-    }*/
 
     &__img {
         border-radius: 20px 20px 0px 0px;
@@ -63,8 +38,6 @@
         flex-direction: column;
         justify-content: space-between;
         height: 100%;
-        //height: calc(100% - (100% * 2 / 3));
-        //padding: 20px;
 
         &__top {
             justify-content: space-between;
@@ -98,7 +71,6 @@
 
             .icon-bg {
                 background-color: $neutrals-900;
-                //opacity: 0;
 
                 i {
                     color: $neutrals-100;
@@ -151,15 +123,6 @@
             &__paragraph {
                 color: $neutrals-500;
             }
-        }
-    }
-}
-
-/* TABLET PORTRAIT */
-@media only screen and (min-width: $tablet-portrait) {
-    .article {
-        &__img {
-            //height: 309px;
         }
     }
 }

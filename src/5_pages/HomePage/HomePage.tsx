@@ -10,17 +10,11 @@ import Platform from '../../4_organisms/Platform/Platform';
 import HowSignUp from '../../4_organisms/HowSignUp/HowSignUp';
 import Newsletter from '../../4_organisms/Newsletter/Newsletter';
 
-//types
-import { BenefitItem, PlatformItemType } from '../../types';
-
 const Fade = require("react-reveal/Fade");
 
-interface HomePageProps {
-    benefits: BenefitItem[],
-    platformItems: PlatformItemType[]
-}
 
-function HomePage({benefits, platformItems} : HomePageProps) {
+
+function HomePage() {
     useEffect(() => {
         //scroll to top on opening
         document.documentElement.scrollTo(0, 0);
@@ -44,11 +38,11 @@ function HomePage({benefits, platformItems} : HomePageProps) {
                 </Fade>
 
                 <Fade delay={500}>
-                    <Benefits benefits={benefits} />
+                    <Benefits />
                 </Fade>
 
                 <Fade delay={500}>
-                    <Platform platformItems={platformItems} />
+                    <Platform />
                 </Fade>
 
                 <Fade delay={500}>

@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
+import { useTranslation } from "react-i18next";
 
 import Socials from '../../3_molecules/Socials/Socials';
+import newsletterImage from './max-verstappen-red-bull.jpeg';
 
-import newsletterImage from './article1.jpeg';
 
-import { useTranslation } from "react-i18next";
 
 function Newsletter() {
     const { t } = useTranslation()
@@ -63,6 +63,8 @@ function Newsletter() {
     function isEmail(email: string) {
         return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
     }
+
+
 
     return (
         <section id="newsletter" className="newsletter section">

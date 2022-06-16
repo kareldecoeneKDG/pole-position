@@ -16,6 +16,8 @@ interface GrandPrixsPageProps {
 
 const Fade = require("react-reveal/Fade");
 
+
+
 function GrandPrixsPage({ grandPrixs }: GrandPrixsPageProps) {
     useEffect(() => {
         //scroll to top on opening
@@ -40,22 +42,6 @@ function GrandPrixsPage({ grandPrixs }: GrandPrixsPageProps) {
                         <h2 className="section__title">All 2022 Grand Prixs</h2>
 
                         <div className="grandprixs-section__items">
-                            {/*<Link to="/grandprix-detail">
-                                <GrandPrix />
-                            </Link>
-
-                            <Link to="/grandprix-detail">
-                                <GrandPrix />
-                            </Link>
-
-                            <Link to="/grandprix-detail">
-                                <GrandPrix />
-                            </Link>
-
-                            <Link to="/grandprix-detail">
-                                <GrandPrix />
-                            </Link>*/}
-
                             {grandPrixs.map((grandPrix: GrandPrixItem) => {
                                 return <GrandPrix grandPrix={grandPrix} />
                             })}

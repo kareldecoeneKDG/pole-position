@@ -176,18 +176,6 @@
                 transform: translate(0%, -50%);
                 border: 4px solid $primary-600;
             }
-
-            &:nth-child(1)::before {
-                //background-image: url('./highlight.webp');
-            }
-
-            &:nth-child(2)::before {
-                //set background image
-            }
-
-            &:nth-child(3)::before {
-                //set background image
-            }
         }
 
         ul::after {
@@ -198,7 +186,7 @@
 
         li {
             &::before {
-                background-image: url("./highlight.webp");
+                background-image: url("./max-verstappen-red-bull.jpeg");
                 background-repeat: no-repeat;
                 background-size: cover;
                 background-position: center;

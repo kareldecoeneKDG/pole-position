@@ -1,12 +1,11 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from "react-i18next";
 
-import headerLogoLight from './Logo-big-light.png';
-import headerLogoDark from './Logo-big-dark.png';
 import backgroundRectangles from './bg-rectangles.png';
 import backgroundRectanglesDark from './bg-rectangles-dark.png';
 
-import { useTranslation } from "react-i18next";
+
 
 function Header() {
     const { t } = useTranslation()
@@ -22,8 +21,8 @@ function Header() {
 
             {/* HEADER CONTENT */}
             <div className="header__container">
-                <img className="header__logo light" src={headerLogoLight} alt="Full logo Pole Position" />
-                <img className="header__logo dark" src={headerLogoDark} alt="Full logo Pole Position" />
+                <img className="header__logo light" src="/images/logos/pole-position-logo-big-light.svg" alt="Full logo Pole Position" />
+                <img className="header__logo dark" src="/images/logos/pole-position-logo-big-dark.svg" alt="Full logo Pole Position" />
 
                 <p className="header__p p">
                     {t('header_intro')}
@@ -34,13 +33,6 @@ function Header() {
                 </Link>
 
 
-
-                {/* <img className="header__img-placeholder" src={placeholder} alt="Full logo Pole Position" /> */}
-
-                {/* PREVIEWS
-                <img className="header__img-placeholder mobile" src={mobilePreview} alt="Preview mobile Pole Position" />
-                <img className="header__img-placeholder tablet light" src={tabletLightkPreview} alt="Preview tablet Pole Position" />
-                <img className="header__img-placeholder tablet dark" src={tabletDarkPreview} alt="Preview tablet Pole Position" /> */}
 
                 {/* MOBILE PREVIEW */}
                 <picture>

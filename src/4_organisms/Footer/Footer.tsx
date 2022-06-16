@@ -1,11 +1,8 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from "react-i18next";
 
 import Socials from '../../3_molecules/Socials/Socials';
-
-import logoFooter from './logo-footer-mobile.png';
-
-import { useTranslation } from "react-i18next";
 
 function Footer() {
     const { t } = useTranslation()
@@ -16,16 +13,12 @@ function Footer() {
                 {/* LOGO + SCROLLUP */}
                 <div className="top flex">
                     <Link to="/">
-                        <img className="logoFooter" src={logoFooter} alt="logo Pole Position footer" />
+                        <img className="logoFooter" src="/images/logos/pole-position-logo-big-dark.svg" alt="logo Pole Position footer" />
                     </Link>
 
                     <a className="scrollup icon-bg" href="#container">
                         <i className="scrollup__icon fa fa-chevron-up" aria-hidden="true"></i>
                     </a>
-
-                    {/*<div className="scrollup icon-bg">
-                        <i className="scrollup__icon fa fa-chevron-up" aria-hidden="true"></i>
-                    </div>*/}
                 </div>
 
                 {/* CONTACT */}
@@ -83,7 +76,7 @@ function Footer() {
             <div className="desktop">
                 {/* LOGO + SCROLLUP */}
                 <div className="top flex">
-                    <img className="logoFooter" src={logoFooter} alt="logo Pole Position footer" />
+                    <img className="logoFooter" src="/images/logos/pole-position-logo-big-dark.svg" alt="logo Pole Position footer" />
 
                     <a className="button button-primary skew" href="#container">
                         <span>{t('footer_backtotop')} <i className="scrollup__icon fa fa-chevron-up first-chevron" aria-hidden="true"></i></span>

@@ -9,8 +9,6 @@ import LatestNews from '../../4_organisms/LatestNews/LatestNews';
 import FactsNumbers from '../../4_organisms/FactsNumbers/FactsNumbers';
 import HistoryHighlights from '../../4_organisms/HistoryHighlights/HistoryHighlights';
 import MoreRecentNews from '../../4_organisms/MoreRecentNews/MoreRecentNews';
-//?????????????
-import RecentShots from '../../4_organisms/RecentShots/RecentShots';
 import MightAlsoLikeTeams from '../../4_organisms/MightAlsoLikeTeams/MightAlsoLikeTeams';
 import Slideshow from '../../4_organisms/Slideshow/Slideshow';
 

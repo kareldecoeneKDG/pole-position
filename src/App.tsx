@@ -18,7 +18,6 @@ import GrandPrixDetailPage from './5_pages/GrandPrixDetailPage/GrandPrixDetailPa
 import DriverPage from './5_pages/DriverPage/DriverPage';
 import TeamPage from './5_pages/TeamPage/TeamPage';
 import BlogPage from './5_pages/BlogPage/BlogPage';
-import BlogDetailPage from './5_pages/BlogDetailPage/BlogDetailPage';
 import PrivacyPolicyPage from './5_pages/PrivacyPolicyPage/PrivacyPolicyPage';
 import LoginPage from './5_pages/LoginPage/LoginPage';
 import RegisterPage from './5_pages/RegisterPage/RegisterPage';
@@ -28,14 +27,13 @@ import TestPage from './5_pages/TestPage/TestPage';
 import AccountPage from './5_pages/AccountPage/AccountPage';
 import DriverStandingsPage from './5_pages/DriverStandingsPage/DriverStandingsPage';
 import TeamStandingsPage from './5_pages/TeamStandingsPage/TeamStandingsPage';
-import ListPage from './5_pages/ListPage/ListPage';
 import DetailPage from './5_pages/DetailPage/DetailPage';
 
 // Global styles
 import './style.scss';
 
 //types
-import { ArticleItem, BenefitItem, DriverItem, GrandPrixItem, PlatformItemType, TeamItem } from './types';
+import { ArticleItem, DriverItem, GrandPrixItem, TeamItem } from './types';
 
 import languages from "./languages";
 
@@ -168,58 +166,6 @@ function App() {
             subtitleSecond: "I will continue to smile or at least try to smile",
             paragraphSecond: "After a run of points scores at Monaco from 2014-19, the Honey Badger has finished outside the top 10 for McLaren in 2021 and 2022. He explained why this year's Monaco Grand Prix didn't go quite as well as past iterations. \"It’s tough. I mean, no mistake, Monaco you need confidence. You need to be at one with the car; for sure if you’re not quite there it can show on the stopwatch. So as much as I love this place, at the core, that’s what you need.",
             publisher: "Karel Decoene"
-        }
-    ]
-
-    // "dynamic" benefits -> just for showcase //not active now
-    let benefits: BenefitItem[] = [
-        {
-            id: 0,
-            icon: "fa-users",
-            title: "Community",
-            paragraph: "Join a community of true F1 enthusiasts. Only they will share your level of passion."
-        },
-        {
-            id: 1,
-            icon: "fa-bell",
-            title: "Real time news",
-            paragraph: "Don't rely on rumors but on true real time info instead. Never miss anything F1 again."
-        },
-        {
-            id: 2,
-            icon: "fa-comment",
-            title: "Discuss recent news",
-            paragraph: "Nothing goes above explaining why a time-penalty was correct to a stranger on the internet."
-        },
-        {
-            id: 3,
-            icon: "fa-clock-o",
-            title: "Comment on live GP",
-            paragraph: "You want to share your exitement during the GP? We see you. You're not the only one, join others now."
-        },
-    ]
-
-    // "dynamic" platformItems -> just for showcase //not active now
-    let platformItems: PlatformItemType[] = [
-        {
-            id: 0,
-            title: "test title 1",
-            paragraph: "paragraph 1"
-        },
-        {
-            id: 1,
-            title: "test title 2",
-            paragraph: "paragraph 2"
-        },
-        {
-            id: 2,
-            title: "test title 3",
-            paragraph: "paragraph 3"
-        },
-        {
-            id: 3,
-            title: "test title 4",
-            paragraph: "paragraph 4"
         }
     ]
 
@@ -966,22 +912,8 @@ function App() {
     return (
         <Router>
             <div id="container" className="container">
-                {/* <div className="dropdown">
-                    <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                         <li><span>{t('language')}</span></li>
-                        {languages.map(({ code, name, country_code }) => (
-                            <li key={country_code}>
-                                <button onClick={() => i18n.changeLanguage(code)}
-                                    disabled={code === currentLanguageCode}>
-                                    {name}
-                                </button>
-                            </li>
-                        ))}
-                    </ul>
-                </div> */}
-
                 <Routes>
-                    <Route path="/" element={<HomePage benefits={benefits} platformItems={platformItems} />} />
+                    <Route path="/" element={<HomePage />} />
                     <Route path="/dashboard" element={<DashboardPage articles={articles} />} />
                     <Route path="/account" element={<AccountPage />} />
                     <Route path="/grandprixs" element={<GrandPrixsPage grandPrixs={grandPrixs} />} />
@@ -992,30 +924,18 @@ function App() {
                     <Route path="/team/:id" element={<TeamPage articles={articles} teams={teams} />} />
 
                     <Route path="/blog" element={<BlogPage articles={articles} />} />
-                    {/* <Route path="/article/:id" element={<ArticleDetailPage />} /> */}
+                    <Route path="/detail/:id" element={<DetailPage articles={articles} />} />
 
-                    <Route path="/blog-detail" element={<BlogDetailPage articles={articles} />} />
                     <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+
                     <Route path="/login" element={<LoginPage />} />
                     <Route path="/register" element={<RegisterPage />} />
                     <Route path="/payment" element={<PaymentPage />} />
+
                     <Route path="*" element={<NotFoundPage />} />
-
-                    {/* Test routes */}
-                    <Route path="/list" element={<ListPage articles={articles} />} />
-
-                    <Route path="/detail/:id" element={<DetailPage articles={articles} />} />
                 </Routes>
 
                 <Footer />
-
-                {/*Hello world!
-                {t('welcome_message')}
-                <p>{t('days_since_release', { number_of_days })}</p>
-
-                <Test />*/}
-
-                {/* <button onClick={() => themeToggler()}>Change theme</button> */}
             </div>
         </Router>
     );

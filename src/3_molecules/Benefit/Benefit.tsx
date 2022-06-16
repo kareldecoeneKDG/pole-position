@@ -1,8 +1,4 @@
 import React, { useEffect } from 'react';
-
-//types
-import { BenefitItem } from '../../types';
-
 import { i18n, t } from "i18next";
 import { useTranslation } from "react-i18next";
 
@@ -23,21 +19,11 @@ const languages = [
     },
 ]
 
+
+
 //not needed now
-interface BenefitProps {
-    benefit: BenefitItem
-}
-
 function Benefit() {
-    const currentLanguageCode = cookies.get('i18next') || 'en'
-    const currentLanguage = languages.find(element => element.code === currentLanguageCode)
-
     const { t } = useTranslation()
-    
-    useEffect(() => {
-        document.body.dir = currentLanguage!.dir || 'ltr';
-        document.title = t('app_title');
-    }, [currentLanguage, t])
     
     return (
         <div className="benefit">

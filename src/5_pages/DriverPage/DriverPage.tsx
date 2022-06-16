@@ -1,19 +1,17 @@
 import React, { useEffect } from 'react';
 import FadeIn from 'react-fade-in';
 import { Helmet } from 'react-helmet';
+import { useParams } from 'react-router-dom';
 
 import Navbar from '../../4_organisms/NavBar/NavBar';
 import DriverDetailHeader from '../../4_organisms/DriverDetailHeader/DriverDetailHeader';
-import LatestNews from '../../4_organisms/LatestNews/LatestNews';
 import FactsNumbers from '../../4_organisms/FactsNumbers/FactsNumbers';
 import MoreRecentNews from '../../4_organisms/MoreRecentNews/MoreRecentNews';
-import RecentShots from '../../4_organisms/RecentShots/RecentShots';
 import MightAlsoLikeDriver from '../../4_organisms/MightAlsoLikeDriver/MightAlsoLikeDriver';
 import Slideshow from '../../4_organisms/Slideshow/Slideshow';
 
 //types
 import { ArticleItem, DriverItem } from '../../types';
-import { useParams } from 'react-router-dom';
 
 const Fade = require("react-reveal/Fade");
 

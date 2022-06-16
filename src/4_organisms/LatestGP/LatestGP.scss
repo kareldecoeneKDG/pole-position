@@ -34,9 +34,9 @@
 [data-theme="dark"] {
     .latestGP {
         background: linear-gradient(0deg, rgba(34, 34, 34, 0.85), rgba(34, 34, 34, 0.85)), url("./latest-gp-bg.webp");
-        background-position: center; /* Center the image */
-        background-repeat: no-repeat; /* Do not repeat the image */
-        background-size: cover; /* Resize the background image to cover the entire container */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
 
         &__title {
             color: $neutrals-100;

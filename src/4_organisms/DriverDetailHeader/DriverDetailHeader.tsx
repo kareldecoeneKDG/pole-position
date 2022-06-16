@@ -3,9 +3,6 @@ import React from 'react';
 import DriverTeamDetailItem from '../../3_molecules/DriverTeamDetailItem/DriverTeamDetailItem';
 import Socials from '../../3_molecules/Socials/Socials';
 
-import Max from './max.png';
-import MaxLogo from './Max-logo.png';
-import RedBullLogo from './redbull.png';
 import { Link, NavLink, useParams } from 'react-router-dom';
 
 //types
@@ -38,10 +35,6 @@ function DriverDetailHeader({ drivers }: DriverDetailHeaderProps) {
                         <Link to="/team">
                             <img className="top__info__logos__team-logo" src={`../${driver.teamLogo}`} alt="F1 team logo" />
                         </Link>
-
-                        {/*<a href="https://nl.verstappen.com/" target="_blank">
-                            <img className="top__info__logos__driver-logo" src={MaxLogo} alt="F1 driver personal logo" />
-                        </a>*/}
                     </div>
 
                     <h2 className="top__info__title">{driver.firstName}<br /> {driver.lastName}</h2>
@@ -124,9 +117,53 @@ function DriverDetailHeader({ drivers }: DriverDetailHeaderProps) {
             </div>
 
             <div className="driver-team__items mobile">
-                <DriverTeamDetailItem />
-                <DriverTeamDetailItem />
-                <DriverTeamDetailItem />
+                {/* world championships */}
+                <div className="item flex">
+                    <div className="flex">
+                        <div className="item__icon-bg icon-bg-lg">
+                            <i className="fa fa-trophy" aria-hidden="true"></i>
+                        </div>
+
+                        <p className="item__title">
+                            World<br />
+                            Championships
+                        </p>
+                    </div>
+
+                    <h2 className="item__number">{driver.worldChampionships}x</h2>
+                </div>
+
+                {/* pole positions */}
+                <div className="item flex">
+                    <div className="flex">
+                        <div className="item__icon-bg icon-bg-lg">
+                            <i className="fa fa-rocket" aria-hidden="true"></i>
+                        </div>
+
+                        <p className="item__title">
+                            Pole<br />
+                            Positions
+                        </p>
+                    </div>
+
+                    <h2 className="item__number">{driver.polePositions}x</h2>
+                </div>
+
+                {/* fastest laps */}
+                <div className="item flex">
+                    <div className="flex">
+                        <div className="item__icon-bg icon-bg-lg">
+                            <i className="fa fa-clock-o" aria-hidden="true"></i>
+                        </div>
+
+                        <p className="item__title">
+                            Fastest<br />
+                            Laps
+                        </p>
+                    </div>
+
+                    <h2 className="item__number">{driver.fastestLaps}x</h2>
+                </div>
             </div>
         </div>
     );

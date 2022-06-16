@@ -15,20 +15,6 @@ function MoreRecentNews({ articles }: { articles: ArticleItem[] }) {
         <div className="moreRecentNews section">
             <h2 className="section__title">More recent news</h2>
 
-            {/*<div className="moreRecentNews__articles">
-                <Link to="/blog-detail">
-                    <Article />
-                </Link>
-
-                <Link to="/blog-detail">
-                    <Article />
-                </Link>
-
-                <Link to="/blog-detail">
-                    <Article />
-                </Link>
-            </div>*/}
-
             <div className="moreRecentNews__articles">
                 {articles.map((article: ArticleItem) => {
                     return <Article article={article} />

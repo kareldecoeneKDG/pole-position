@@ -20,19 +20,6 @@ interface ArticleItem {
     publisher: string
 }
 
-interface BenefitItem {
-    id?: number,
-    icon: string,
-    title: string,
-    paragraph: string
-}
-
-interface PlatformItemType {
-    id?: number,
-    title: string,
-    paragraph: string
-}
-
 interface DriverItem {
     id: number,
     image: string,
@@ -92,4 +79,4 @@ interface GrandPrixItem {
     timeUntilGP: string,
 }
 
-export type { ArticleItem, BenefitItem, PlatformItemType, DriverItem, TeamItem, GrandPrixItem }
+export type { ArticleItem, DriverItem, TeamItem, GrandPrixItem }

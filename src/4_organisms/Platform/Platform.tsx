@@ -1,18 +1,10 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from "react-i18next";
 
 import PlatformItem from '../../3_molecules/PlatformItem/PlatformItem';
 
-//types
-import { PlatformItemType } from '../../types';
-
-import { useTranslation } from "react-i18next";
-
-interface PlatformProps {
-    platformItems: PlatformItemType[]
-}
-
-function Platform({ platformItems }: { platformItems: PlatformItemType[] }) {
+function Platform() {
     const { t } = useTranslation()
 
     return (
@@ -69,15 +61,6 @@ function Platform({ platformItems }: { platformItems: PlatformItemType[] }) {
                             {t('platform_item4_p')}
                         </p>
                     </div>
-
-                    {/*<PlatformItem />
-                    <PlatformItem />
-                    <PlatformItem />
-                    <PlatformItem />*/}
-
-                    {/*{platformItems.map((platformItem: PlatformItemType) => {
-                        return <PlatformItem platformItem={platformItem} />
-                    })}*/}
                 </div>
             </div>
 

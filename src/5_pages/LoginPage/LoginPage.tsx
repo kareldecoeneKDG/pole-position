@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import FadeIn from 'react-fade-in';
 
 import Navbar from '../../4_organisms/NavBar/NavBar';
-import bannerImg from './article1.jpeg';
+import bannerImg from './max-verstappen-red-bull.jpeg';
 
 const Fade = require("react-reveal/Fade");
 

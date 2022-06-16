@@ -4,9 +4,6 @@ import { Link } from 'react-router-dom';
 //types
 import { TeamItem } from '../../types';
 
-import Max from './max.png';
-import RedBullLogo from './redbull.png';
-
 interface StandingTeamProps {
     team: TeamItem
 }

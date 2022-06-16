@@ -6,7 +6,6 @@ import FadeIn from 'react-fade-in';
 
 import Navbar from '../../4_organisms/NavBar/NavBar';
 import Article from '../../3_molecules/Article/Article';
-import circuit from './gp-1.png';
 
 //types
 import { ArticleItem, GrandPrixItem } from '../../types';
@@ -20,6 +19,8 @@ interface ParamTypes {
     id: string | undefined
 }
 
+
+
 function GrandPrixDetailPage({ articles, grandPrixs }: GrandPrixDetailPageProps) {
     useEffect(() => {
         //scroll to top on opening
@@ -28,6 +29,8 @@ function GrandPrixDetailPage({ articles, grandPrixs }: GrandPrixDetailPageProps)
 
     let { id } = useParams();
     let grandPrix = grandPrixs.find((grandPrix: GrandPrixItem) => grandPrix.id === parseInt(id!))!;
+
+
 
     return (
         <FadeIn className="page-flex">

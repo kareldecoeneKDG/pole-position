@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 
-import logo from './logo-hollow.png';
 import sun from './sun.png';
 import moon from './moon.png';
 import i18n from "i18next";
@@ -117,7 +116,7 @@ function NavBar() {
 
             {/* Pole Position logo */}
             <Link to="/">
-                <img className="logo" src={logo} alt="Pole Position logo mobile"></img>
+                <img className="logo" src="/images/logos/pole-position-logo-small.svg" alt="Pole Position logo mobile"></img>
             </Link>
 
             {/* Desktop nav items */}
@@ -191,7 +190,7 @@ function NavBar() {
 
                 <div className="top">
                     <Link to="/">
-                        <img className="logo logo-menu" src={logo} alt="Pole Position logo mobile"></img>
+                        <img className="logo logo-menu" src="/images/logos/pole-position-logo-small.svg" alt="Pole Position logo mobile"></img>
                     </Link>
 
                     <div className="toggle-container">
