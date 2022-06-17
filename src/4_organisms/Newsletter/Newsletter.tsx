@@ -69,7 +69,13 @@ function Newsletter() {
     return (
         <section id="newsletter" className="newsletter section">
             <div className="newsletter__content">
-                <img className="newsletter__content__img" src={newsletterImage} alt="close up Max Verstappen" />
+
+                {/* IMAGE */}
+                <picture>
+                    <source srcSet="/images/articles/webp/max-verstappen-red-bull.webp" type="image/webp" />
+                    <source srcSet="/images/articles/jpg/max-verstappen-red-bull.jpg" type="image/jpg" />
+                    <img className="newsletter__content__img" src="/images/articles/jpg/max-verstappen-red-bull.jpg" alt="close up Max Verstappen" />
+                </picture>
 
                 <div className="newsletter__content__container">
                     <h3 className="newsletter__content__title">{t('newsletter_title')}</h3>

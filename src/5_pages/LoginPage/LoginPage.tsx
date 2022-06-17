@@ -148,8 +148,12 @@ function LoginPage() {
                             </form>
                         </div>
 
-                        {/* FORMPAGE IMAGE */}
-                        <img className="formPage__flexbox__img" src={bannerImg} alt="Max Verstappen on track" />
+                        {/* IMAGE */}
+                        <picture>
+                            <source srcSet="/images/articles/webp/max-verstappen-red-bull.webp" type="image/webp" />
+                            <source srcSet="/images/articles/jpg/max-verstappen-red-bull.jpg" type="image/jpg" />
+                            <img className="formPage__flexbox__img" src="/images/articles/jpg/max-verstappen-red-bull.jpg" alt="Max Verstappen on track" />
+                        </picture>
                     </div>
                 </Fade>
             </section>
